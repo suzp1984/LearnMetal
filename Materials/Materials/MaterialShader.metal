@@ -28,7 +28,14 @@ vertex RasterizerData vertexShader(uint vertexID [[vertex_id]],
     float3 fragPos = (uniforms.modelMatrix * vector_float4(position, 1.0)).xyz;
     
     out.fragPos = fragPos;
-    out.normal = vertices[vertexID].normal;
+    float4x4 transposed = transpose(uniforms.inverseModelMatrix);
+    float3x3 transpose3x3;
+    transpose3x3.columns[0] = transposed.columns[0].xyz;
+    transpose3x3.columns[1] = transposed.columns[1].xyz;
+    transpose3x3.columns[2] = transposed.columns[2].xyz;
+    
+    //out.normal = (transpose(uniforms.inverseModelMatrix) * float4(vertices[vertexID].normal, 1.0)).xyz;
+    out.normal = transpose3x3 * vertices[vertexID].normal;
     
     out.position = uniforms.projectionMatrix * uniforms.viewMatrix * vector_float4(fragPos, 1.0);
     

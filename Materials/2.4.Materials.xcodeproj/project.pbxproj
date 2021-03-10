@@ -77,6 +77,7 @@
 		376F8F1525F8644C00C3B287 /* MaterialShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MaterialShader.metal; sourceTree = "<group>"; };
 		376F8F1925F867BD00C3B287 /* MetalBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalBuffer.swift; sourceTree = "<group>"; };
 		376F8F1D25F8680E00C3B287 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		376F8F7925F8B9E900C3B287 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; wrapsLines = 1; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +111,7 @@
 		376F8ECB25F8627A00C3B287 = {
 			isa = PBXGroup;
 			children = (
+				376F8F7925F8B9E900C3B287 /* README.md */,
 				376F8ED625F8627B00C3B287 /* Materials */,
 				376F8EE925F8627E00C3B287 /* MaterialsTests */,
 				376F8EF425F8627E00C3B287 /* MaterialsUITests */,

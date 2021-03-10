@@ -154,13 +154,13 @@ class Renderer: NSObject {
         
         objectUniforms.modelMatrix = matrix_multiply(matrix4x4_translation(objectPosition), matrix_multiply(matrix4x4_rotation(Float(PI * 0.35), vector_float3(0.2, 0.1, 0.8)),
                     matrix4x4_scale(400.0, 400.0, 400.0)))
-        
+        objectUniforms.inverseModelMatrix = simd_inverse(objectUniforms.modelMatrix)
         objectUniforms.viewMatrix = camera.getViewMatrix()
         objectUniforms.projectionMatrix = matrix_perspective_left_hand(Float(PI / 4.0), Float(width / height), 0.1, 8000)
         
         lampUniforms.modelMatrix = matrix_multiply(matrix4x4_translation(lampPosition), matrix_multiply(matrix4x4_rotation(Float(PI * 0.35), vector_float3(0.2, 0.1, 0.8)),
                             matrix4x4_scale(200.0, 200.0, 200.0)))
-        
+        lampUniforms.inverseModelMatrix = simd_inverse(lampUniforms.modelMatrix)
         lampUniforms.viewMatrix = camera.getViewMatrix()
         lampUniforms.projectionMatrix = matrix_perspective_left_hand(Float(PI / 4.0), Float(width / height), 0.1, 8000)
         
