@@ -1,0 +1,649 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		376F8E2725F71A9900C3B287 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F8E2625F71A9900C3B287 /* AppDelegate.swift */; };
+		376F8E2925F71A9900C3B287 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F8E2825F71A9900C3B287 /* ViewController.swift */; };
+		376F8E2B25F71A9A00C3B287 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 376F8E2A25F71A9A00C3B287 /* Assets.xcassets */; };
+		376F8E2E25F71A9A00C3B287 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376F8E2C25F71A9A00C3B287 /* Main.storyboard */; };
+		376F8E3A25F71A9A00C3B287 /* DiffuseLightingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F8E3925F71A9A00C3B287 /* DiffuseLightingTests.swift */; };
+		376F8E4525F71A9A00C3B287 /* DiffuseLightingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F8E4425F71A9A00C3B287 /* DiffuseLightingUITests.swift */; };
+		376F8E5725F71ABA00C3B287 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 376F8E5625F71ABA00C3B287 /* Metal.framework */; };
+		376F8E5925F71AC900C3B287 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 376F8E5825F71AC900C3B287 /* MetalKit.framework */; };
+		376F8E5B25F71AD000C3B287 /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 376F8E5A25F71AD000C3B287 /* common.framework */; };
+		376F8E5C25F71AD000C3B287 /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 376F8E5A25F71AD000C3B287 /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		376F8E6225F71B7100C3B287 /* DiffuseLightingShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 376F8E6125F71B7100C3B287 /* DiffuseLightingShader.metal */; };
+		376F8E6625F71EDE00C3B287 /* MetalBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F8E6525F71EDE00C3B287 /* MetalBuffer.swift */; };
+		376F8E6B25F71F1300C3B287 /* ShapeShaderType.m in Sources */ = {isa = PBXBuildFile; fileRef = 376F8E6A25F71F1300C3B287 /* ShapeShaderType.m */; };
+		376F8E6F25F71FB500C3B287 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F8E6E25F71FB500C3B287 /* Renderer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		376F8E3625F71A9A00C3B287 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 376F8E1B25F71A9900C3B287 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 376F8E2225F71A9900C3B287;
+			remoteInfo = DiffuseLighting;
+		};
+		376F8E4125F71A9A00C3B287 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 376F8E1B25F71A9900C3B287 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 376F8E2225F71A9900C3B287;
+			remoteInfo = DiffuseLighting;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		376F8E5D25F71AD000C3B287 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				376F8E5C25F71AD000C3B287 /* common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		376F8E2325F71A9900C3B287 /* DiffuseLighting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiffuseLighting.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		376F8E2625F71A9900C3B287 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		376F8E2825F71A9900C3B287 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		376F8E2A25F71A9A00C3B287 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		376F8E2D25F71A9A00C3B287 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		376F8E2F25F71A9A00C3B287 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		376F8E3025F71A9A00C3B287 /* DiffuseLighting.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DiffuseLighting.entitlements; sourceTree = "<group>"; };
+		376F8E3525F71A9A00C3B287 /* DiffuseLightingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiffuseLightingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		376F8E3925F71A9A00C3B287 /* DiffuseLightingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffuseLightingTests.swift; sourceTree = "<group>"; };
+		376F8E3B25F71A9A00C3B287 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		376F8E4025F71A9A00C3B287 /* DiffuseLightingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiffuseLightingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		376F8E4425F71A9A00C3B287 /* DiffuseLightingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffuseLightingUITests.swift; sourceTree = "<group>"; };
+		376F8E4625F71A9A00C3B287 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		376F8E5625F71ABA00C3B287 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		376F8E5825F71AC900C3B287 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		376F8E5A25F71AD000C3B287 /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		376F8E6025F71B2500C3B287 /* ShapeShaderType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShapeShaderType.h; sourceTree = "<group>"; };
+		376F8E6125F71B7100C3B287 /* DiffuseLightingShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = DiffuseLightingShader.metal; sourceTree = "<group>"; };
+		376F8E6525F71EDE00C3B287 /* MetalBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalBuffer.swift; sourceTree = "<group>"; };
+		376F8E6925F71F1300C3B287 /* DiffuseLighting-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DiffuseLighting-Bridging-Header.h"; sourceTree = "<group>"; };
+		376F8E6A25F71F1300C3B287 /* ShapeShaderType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShapeShaderType.m; sourceTree = "<group>"; };
+		376F8E6E25F71FB500C3B287 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		376F8E2025F71A9900C3B287 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376F8E5725F71ABA00C3B287 /* Metal.framework in Frameworks */,
+				376F8E5B25F71AD000C3B287 /* common.framework in Frameworks */,
+				376F8E5925F71AC900C3B287 /* MetalKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376F8E3225F71A9A00C3B287 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376F8E3D25F71A9A00C3B287 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		376F8E1A25F71A9900C3B287 = {
+			isa = PBXGroup;
+			children = (
+				376F8E2525F71A9900C3B287 /* DiffuseLighting */,
+				376F8E3825F71A9A00C3B287 /* DiffuseLightingTests */,
+				376F8E4325F71A9A00C3B287 /* DiffuseLightingUITests */,
+				376F8E2425F71A9900C3B287 /* Products */,
+				376F8E5525F71ABA00C3B287 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		376F8E2425F71A9900C3B287 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				376F8E2325F71A9900C3B287 /* DiffuseLighting.app */,
+				376F8E3525F71A9A00C3B287 /* DiffuseLightingTests.xctest */,
+				376F8E4025F71A9A00C3B287 /* DiffuseLightingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		376F8E2525F71A9900C3B287 /* DiffuseLighting */ = {
+			isa = PBXGroup;
+			children = (
+				376F8E2625F71A9900C3B287 /* AppDelegate.swift */,
+				376F8E2825F71A9900C3B287 /* ViewController.swift */,
+				376F8E2A25F71A9A00C3B287 /* Assets.xcassets */,
+				376F8E2C25F71A9A00C3B287 /* Main.storyboard */,
+				376F8E2F25F71A9A00C3B287 /* Info.plist */,
+				376F8E3025F71A9A00C3B287 /* DiffuseLighting.entitlements */,
+				376F8E6025F71B2500C3B287 /* ShapeShaderType.h */,
+				376F8E6125F71B7100C3B287 /* DiffuseLightingShader.metal */,
+				376F8E6525F71EDE00C3B287 /* MetalBuffer.swift */,
+				376F8E6A25F71F1300C3B287 /* ShapeShaderType.m */,
+				376F8E6925F71F1300C3B287 /* DiffuseLighting-Bridging-Header.h */,
+				376F8E6E25F71FB500C3B287 /* Renderer.swift */,
+			);
+			path = DiffuseLighting;
+			sourceTree = "<group>";
+		};
+		376F8E3825F71A9A00C3B287 /* DiffuseLightingTests */ = {
+			isa = PBXGroup;
+			children = (
+				376F8E3925F71A9A00C3B287 /* DiffuseLightingTests.swift */,
+				376F8E3B25F71A9A00C3B287 /* Info.plist */,
+			);
+			path = DiffuseLightingTests;
+			sourceTree = "<group>";
+		};
+		376F8E4325F71A9A00C3B287 /* DiffuseLightingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				376F8E4425F71A9A00C3B287 /* DiffuseLightingUITests.swift */,
+				376F8E4625F71A9A00C3B287 /* Info.plist */,
+			);
+			path = DiffuseLightingUITests;
+			sourceTree = "<group>";
+		};
+		376F8E5525F71ABA00C3B287 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				376F8E5A25F71AD000C3B287 /* common.framework */,
+				376F8E5825F71AC900C3B287 /* MetalKit.framework */,
+				376F8E5625F71ABA00C3B287 /* Metal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		376F8E2225F71A9900C3B287 /* DiffuseLighting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 376F8E4925F71A9A00C3B287 /* Build configuration list for PBXNativeTarget "DiffuseLighting" */;
+			buildPhases = (
+				376F8E1F25F71A9900C3B287 /* Sources */,
+				376F8E2025F71A9900C3B287 /* Frameworks */,
+				376F8E2125F71A9900C3B287 /* Resources */,
+				376F8E5D25F71AD000C3B287 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DiffuseLighting;
+			productName = DiffuseLighting;
+			productReference = 376F8E2325F71A9900C3B287 /* DiffuseLighting.app */;
+			productType = "com.apple.product-type.application";
+		};
+		376F8E3425F71A9A00C3B287 /* DiffuseLightingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 376F8E4C25F71A9A00C3B287 /* Build configuration list for PBXNativeTarget "DiffuseLightingTests" */;
+			buildPhases = (
+				376F8E3125F71A9A00C3B287 /* Sources */,
+				376F8E3225F71A9A00C3B287 /* Frameworks */,
+				376F8E3325F71A9A00C3B287 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				376F8E3725F71A9A00C3B287 /* PBXTargetDependency */,
+			);
+			name = DiffuseLightingTests;
+			productName = DiffuseLightingTests;
+			productReference = 376F8E3525F71A9A00C3B287 /* DiffuseLightingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		376F8E3F25F71A9A00C3B287 /* DiffuseLightingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 376F8E4F25F71A9A00C3B287 /* Build configuration list for PBXNativeTarget "DiffuseLightingUITests" */;
+			buildPhases = (
+				376F8E3C25F71A9A00C3B287 /* Sources */,
+				376F8E3D25F71A9A00C3B287 /* Frameworks */,
+				376F8E3E25F71A9A00C3B287 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				376F8E4225F71A9A00C3B287 /* PBXTargetDependency */,
+			);
+			name = DiffuseLightingUITests;
+			productName = DiffuseLightingUITests;
+			productReference = 376F8E4025F71A9A00C3B287 /* DiffuseLightingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		376F8E1B25F71A9900C3B287 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					376F8E2225F71A9900C3B287 = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+					};
+					376F8E3425F71A9A00C3B287 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 376F8E2225F71A9900C3B287;
+					};
+					376F8E3F25F71A9A00C3B287 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 376F8E2225F71A9900C3B287;
+					};
+				};
+			};
+			buildConfigurationList = 376F8E1E25F71A9900C3B287 /* Build configuration list for PBXProject "2.2.DiffuseLighting" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 376F8E1A25F71A9900C3B287;
+			productRefGroup = 376F8E2425F71A9900C3B287 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				376F8E2225F71A9900C3B287 /* DiffuseLighting */,
+				376F8E3425F71A9A00C3B287 /* DiffuseLightingTests */,
+				376F8E3F25F71A9A00C3B287 /* DiffuseLightingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		376F8E2125F71A9900C3B287 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376F8E2B25F71A9A00C3B287 /* Assets.xcassets in Resources */,
+				376F8E2E25F71A9A00C3B287 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376F8E3325F71A9A00C3B287 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376F8E3E25F71A9A00C3B287 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		376F8E1F25F71A9900C3B287 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376F8E2925F71A9900C3B287 /* ViewController.swift in Sources */,
+				376F8E6625F71EDE00C3B287 /* MetalBuffer.swift in Sources */,
+				376F8E6225F71B7100C3B287 /* DiffuseLightingShader.metal in Sources */,
+				376F8E6B25F71F1300C3B287 /* ShapeShaderType.m in Sources */,
+				376F8E6F25F71FB500C3B287 /* Renderer.swift in Sources */,
+				376F8E2725F71A9900C3B287 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376F8E3125F71A9A00C3B287 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376F8E3A25F71A9A00C3B287 /* DiffuseLightingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376F8E3C25F71A9A00C3B287 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376F8E4525F71A9A00C3B287 /* DiffuseLightingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		376F8E3725F71A9A00C3B287 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 376F8E2225F71A9900C3B287 /* DiffuseLighting */;
+			targetProxy = 376F8E3625F71A9A00C3B287 /* PBXContainerItemProxy */;
+		};
+		376F8E4225F71A9A00C3B287 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 376F8E2225F71A9900C3B287 /* DiffuseLighting */;
+			targetProxy = 376F8E4125F71A9A00C3B287 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		376F8E2C25F71A9A00C3B287 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				376F8E2D25F71A9A00C3B287 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		376F8E4725F71A9A00C3B287 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		376F8E4825F71A9A00C3B287 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		376F8E4A25F71A9A00C3B287 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = DiffuseLighting/DiffuseLighting.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = DiffuseLighting/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.DiffuseLighting;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DiffuseLighting/DiffuseLighting-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		376F8E4B25F71A9A00C3B287 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = DiffuseLighting/DiffuseLighting.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = DiffuseLighting/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.DiffuseLighting;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DiffuseLighting/DiffuseLighting-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		376F8E4D25F71A9A00C3B287 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = DiffuseLightingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.DiffuseLightingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DiffuseLighting.app/Contents/MacOS/DiffuseLighting";
+			};
+			name = Debug;
+		};
+		376F8E4E25F71A9A00C3B287 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = DiffuseLightingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.DiffuseLightingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DiffuseLighting.app/Contents/MacOS/DiffuseLighting";
+			};
+			name = Release;
+		};
+		376F8E5025F71A9A00C3B287 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = DiffuseLightingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.DiffuseLightingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = DiffuseLighting;
+			};
+			name = Debug;
+		};
+		376F8E5125F71A9A00C3B287 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = DiffuseLightingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.DiffuseLightingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = DiffuseLighting;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		376F8E1E25F71A9900C3B287 /* Build configuration list for PBXProject "2.2.DiffuseLighting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				376F8E4725F71A9A00C3B287 /* Debug */,
+				376F8E4825F71A9A00C3B287 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		376F8E4925F71A9A00C3B287 /* Build configuration list for PBXNativeTarget "DiffuseLighting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				376F8E4A25F71A9A00C3B287 /* Debug */,
+				376F8E4B25F71A9A00C3B287 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		376F8E4C25F71A9A00C3B287 /* Build configuration list for PBXNativeTarget "DiffuseLightingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				376F8E4D25F71A9A00C3B287 /* Debug */,
+				376F8E4E25F71A9A00C3B287 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		376F8E4F25F71A9A00C3B287 /* Build configuration list for PBXNativeTarget "DiffuseLightingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				376F8E5025F71A9A00C3B287 /* Debug */,
+				376F8E5125F71A9A00C3B287 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 376F8E1B25F71A9900C3B287 /* Project object */;
+}

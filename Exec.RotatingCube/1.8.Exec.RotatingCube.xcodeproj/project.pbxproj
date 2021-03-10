@@ -1,0 +1,643 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		370BCE0F25F1BEB3001BA50D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370BCE0E25F1BEB3001BA50D /* AppDelegate.swift */; };
+		370BCE1125F1BEB3001BA50D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370BCE1025F1BEB3001BA50D /* ViewController.swift */; };
+		370BCE1325F1BEB4001BA50D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 370BCE1225F1BEB4001BA50D /* Assets.xcassets */; };
+		370BCE1625F1BEB4001BA50D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370BCE1425F1BEB4001BA50D /* Main.storyboard */; };
+		370BCE2225F1BEB4001BA50D /* Exec_RotatingCubeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370BCE2125F1BEB4001BA50D /* Exec_RotatingCubeTests.swift */; };
+		370BCE2D25F1BEB4001BA50D /* Exec_RotatingCubeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370BCE2C25F1BEB4001BA50D /* Exec_RotatingCubeUITests.swift */; };
+		370BCE3F25F1BED6001BA50D /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 370BCE3E25F1BED6001BA50D /* Metal.framework */; };
+		370BCE4125F1BEDC001BA50D /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 370BCE4025F1BEDC001BA50D /* MetalKit.framework */; };
+		370BCE4E25F1C2A0001BA50D /* CubeShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 370BCE4D25F1C2A0001BA50D /* CubeShader.metal */; };
+		370BCE5725F1C3D1001BA50D /* CubeRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 370BCE5625F1C3D1001BA50D /* CubeRenderer.m */; };
+		37DD60AC25F379A1005D7A42 /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DD60AB25F379A1005D7A42 /* common.framework */; };
+		37DD60AD25F379A1005D7A42 /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37DD60AB25F379A1005D7A42 /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		370BCE1E25F1BEB4001BA50D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 370BCE0325F1BEB3001BA50D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 370BCE0A25F1BEB3001BA50D;
+			remoteInfo = Exec.RotatingCube;
+		};
+		370BCE2925F1BEB4001BA50D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 370BCE0325F1BEB3001BA50D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 370BCE0A25F1BEB3001BA50D;
+			remoteInfo = Exec.RotatingCube;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		37DD60AE25F379A1005D7A42 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				37DD60AD25F379A1005D7A42 /* common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		370BCE0B25F1BEB3001BA50D /* Exec.RotatingCube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exec.RotatingCube.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		370BCE0E25F1BEB3001BA50D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		370BCE1025F1BEB3001BA50D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		370BCE1225F1BEB4001BA50D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		370BCE1525F1BEB4001BA50D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		370BCE1725F1BEB4001BA50D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		370BCE1825F1BEB4001BA50D /* Exec_RotatingCube.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Exec_RotatingCube.entitlements; sourceTree = "<group>"; };
+		370BCE1D25F1BEB4001BA50D /* Exec.RotatingCubeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Exec.RotatingCubeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		370BCE2125F1BEB4001BA50D /* Exec_RotatingCubeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exec_RotatingCubeTests.swift; sourceTree = "<group>"; };
+		370BCE2325F1BEB4001BA50D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		370BCE2825F1BEB4001BA50D /* Exec.RotatingCubeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Exec.RotatingCubeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		370BCE2C25F1BEB4001BA50D /* Exec_RotatingCubeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exec_RotatingCubeUITests.swift; sourceTree = "<group>"; };
+		370BCE2E25F1BEB4001BA50D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		370BCE3E25F1BED6001BA50D /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		370BCE4025F1BEDC001BA50D /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		370BCE4625F1BFAB001BA50D /* Exec.RotatingCube-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Exec.RotatingCube-Bridging-Header.h"; sourceTree = "<group>"; };
+		370BCE4C25F1C24E001BA50D /* CubeShaderType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CubeShaderType.h; sourceTree = "<group>"; };
+		370BCE4D25F1C2A0001BA50D /* CubeShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = CubeShader.metal; sourceTree = "<group>"; };
+		370BCE5525F1C3C3001BA50D /* CubeRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CubeRenderer.h; sourceTree = "<group>"; };
+		370BCE5625F1C3D1001BA50D /* CubeRenderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CubeRenderer.m; sourceTree = "<group>"; };
+		37DD60AB25F379A1005D7A42 /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		370BCE0825F1BEB3001BA50D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				370BCE3F25F1BED6001BA50D /* Metal.framework in Frameworks */,
+				37DD60AC25F379A1005D7A42 /* common.framework in Frameworks */,
+				370BCE4125F1BEDC001BA50D /* MetalKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		370BCE1A25F1BEB4001BA50D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		370BCE2525F1BEB4001BA50D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		370BCE0225F1BEB3001BA50D = {
+			isa = PBXGroup;
+			children = (
+				370BCE0D25F1BEB3001BA50D /* Exec.RotatingCube */,
+				370BCE2025F1BEB4001BA50D /* Exec.RotatingCubeTests */,
+				370BCE2B25F1BEB4001BA50D /* Exec.RotatingCubeUITests */,
+				370BCE0C25F1BEB3001BA50D /* Products */,
+				370BCE3D25F1BED6001BA50D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		370BCE0C25F1BEB3001BA50D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				370BCE0B25F1BEB3001BA50D /* Exec.RotatingCube.app */,
+				370BCE1D25F1BEB4001BA50D /* Exec.RotatingCubeTests.xctest */,
+				370BCE2825F1BEB4001BA50D /* Exec.RotatingCubeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		370BCE0D25F1BEB3001BA50D /* Exec.RotatingCube */ = {
+			isa = PBXGroup;
+			children = (
+				370BCE0E25F1BEB3001BA50D /* AppDelegate.swift */,
+				370BCE1025F1BEB3001BA50D /* ViewController.swift */,
+				370BCE1225F1BEB4001BA50D /* Assets.xcassets */,
+				370BCE1425F1BEB4001BA50D /* Main.storyboard */,
+				370BCE1725F1BEB4001BA50D /* Info.plist */,
+				370BCE1825F1BEB4001BA50D /* Exec_RotatingCube.entitlements */,
+				370BCE4625F1BFAB001BA50D /* Exec.RotatingCube-Bridging-Header.h */,
+				370BCE4C25F1C24E001BA50D /* CubeShaderType.h */,
+				370BCE4D25F1C2A0001BA50D /* CubeShader.metal */,
+				370BCE5525F1C3C3001BA50D /* CubeRenderer.h */,
+				370BCE5625F1C3D1001BA50D /* CubeRenderer.m */,
+			);
+			path = Exec.RotatingCube;
+			sourceTree = "<group>";
+		};
+		370BCE2025F1BEB4001BA50D /* Exec.RotatingCubeTests */ = {
+			isa = PBXGroup;
+			children = (
+				370BCE2125F1BEB4001BA50D /* Exec_RotatingCubeTests.swift */,
+				370BCE2325F1BEB4001BA50D /* Info.plist */,
+			);
+			path = Exec.RotatingCubeTests;
+			sourceTree = "<group>";
+		};
+		370BCE2B25F1BEB4001BA50D /* Exec.RotatingCubeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				370BCE2C25F1BEB4001BA50D /* Exec_RotatingCubeUITests.swift */,
+				370BCE2E25F1BEB4001BA50D /* Info.plist */,
+			);
+			path = Exec.RotatingCubeUITests;
+			sourceTree = "<group>";
+		};
+		370BCE3D25F1BED6001BA50D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37DD60AB25F379A1005D7A42 /* common.framework */,
+				370BCE4025F1BEDC001BA50D /* MetalKit.framework */,
+				370BCE3E25F1BED6001BA50D /* Metal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		370BCE0A25F1BEB3001BA50D /* Exec.RotatingCube */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 370BCE3125F1BEB4001BA50D /* Build configuration list for PBXNativeTarget "Exec.RotatingCube" */;
+			buildPhases = (
+				370BCE0725F1BEB3001BA50D /* Sources */,
+				370BCE0825F1BEB3001BA50D /* Frameworks */,
+				370BCE0925F1BEB3001BA50D /* Resources */,
+				37DD60AE25F379A1005D7A42 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Exec.RotatingCube;
+			productName = Exec.RotatingCube;
+			productReference = 370BCE0B25F1BEB3001BA50D /* Exec.RotatingCube.app */;
+			productType = "com.apple.product-type.application";
+		};
+		370BCE1C25F1BEB4001BA50D /* Exec.RotatingCubeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 370BCE3425F1BEB4001BA50D /* Build configuration list for PBXNativeTarget "Exec.RotatingCubeTests" */;
+			buildPhases = (
+				370BCE1925F1BEB4001BA50D /* Sources */,
+				370BCE1A25F1BEB4001BA50D /* Frameworks */,
+				370BCE1B25F1BEB4001BA50D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				370BCE1F25F1BEB4001BA50D /* PBXTargetDependency */,
+			);
+			name = Exec.RotatingCubeTests;
+			productName = Exec.RotatingCubeTests;
+			productReference = 370BCE1D25F1BEB4001BA50D /* Exec.RotatingCubeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		370BCE2725F1BEB4001BA50D /* Exec.RotatingCubeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 370BCE3725F1BEB4001BA50D /* Build configuration list for PBXNativeTarget "Exec.RotatingCubeUITests" */;
+			buildPhases = (
+				370BCE2425F1BEB4001BA50D /* Sources */,
+				370BCE2525F1BEB4001BA50D /* Frameworks */,
+				370BCE2625F1BEB4001BA50D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				370BCE2A25F1BEB4001BA50D /* PBXTargetDependency */,
+			);
+			name = Exec.RotatingCubeUITests;
+			productName = Exec.RotatingCubeUITests;
+			productReference = 370BCE2825F1BEB4001BA50D /* Exec.RotatingCubeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		370BCE0325F1BEB3001BA50D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					370BCE0A25F1BEB3001BA50D = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+					};
+					370BCE1C25F1BEB4001BA50D = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 370BCE0A25F1BEB3001BA50D;
+					};
+					370BCE2725F1BEB4001BA50D = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 370BCE0A25F1BEB3001BA50D;
+					};
+				};
+			};
+			buildConfigurationList = 370BCE0625F1BEB3001BA50D /* Build configuration list for PBXProject "1.8.Exec.RotatingCube" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 370BCE0225F1BEB3001BA50D;
+			productRefGroup = 370BCE0C25F1BEB3001BA50D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				370BCE0A25F1BEB3001BA50D /* Exec.RotatingCube */,
+				370BCE1C25F1BEB4001BA50D /* Exec.RotatingCubeTests */,
+				370BCE2725F1BEB4001BA50D /* Exec.RotatingCubeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		370BCE0925F1BEB3001BA50D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				370BCE1325F1BEB4001BA50D /* Assets.xcassets in Resources */,
+				370BCE1625F1BEB4001BA50D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		370BCE1B25F1BEB4001BA50D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		370BCE2625F1BEB4001BA50D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		370BCE0725F1BEB3001BA50D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				370BCE1125F1BEB3001BA50D /* ViewController.swift in Sources */,
+				370BCE5725F1C3D1001BA50D /* CubeRenderer.m in Sources */,
+				370BCE4E25F1C2A0001BA50D /* CubeShader.metal in Sources */,
+				370BCE0F25F1BEB3001BA50D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		370BCE1925F1BEB4001BA50D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				370BCE2225F1BEB4001BA50D /* Exec_RotatingCubeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		370BCE2425F1BEB4001BA50D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				370BCE2D25F1BEB4001BA50D /* Exec_RotatingCubeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		370BCE1F25F1BEB4001BA50D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 370BCE0A25F1BEB3001BA50D /* Exec.RotatingCube */;
+			targetProxy = 370BCE1E25F1BEB4001BA50D /* PBXContainerItemProxy */;
+		};
+		370BCE2A25F1BEB4001BA50D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 370BCE0A25F1BEB3001BA50D /* Exec.RotatingCube */;
+			targetProxy = 370BCE2925F1BEB4001BA50D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		370BCE1425F1BEB4001BA50D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				370BCE1525F1BEB4001BA50D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		370BCE2F25F1BEB4001BA50D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		370BCE3025F1BEB4001BA50D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		370BCE3225F1BEB4001BA50D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Exec.RotatingCube/Exec_RotatingCube.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Exec.RotatingCube/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.suzp1984.Exec-RotatingCube";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Exec.RotatingCube/Exec.RotatingCube-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		370BCE3325F1BEB4001BA50D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Exec.RotatingCube/Exec_RotatingCube.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Exec.RotatingCube/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.suzp1984.Exec-RotatingCube";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Exec.RotatingCube/Exec.RotatingCube-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		370BCE3525F1BEB4001BA50D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = Exec.RotatingCubeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.suzp1984.Exec-RotatingCubeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Exec.RotatingCube.app/Contents/MacOS/Exec.RotatingCube";
+			};
+			name = Debug;
+		};
+		370BCE3625F1BEB4001BA50D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = Exec.RotatingCubeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.suzp1984.Exec-RotatingCubeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Exec.RotatingCube.app/Contents/MacOS/Exec.RotatingCube";
+			};
+			name = Release;
+		};
+		370BCE3825F1BEB4001BA50D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = Exec.RotatingCubeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.suzp1984.Exec-RotatingCubeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Exec.RotatingCube;
+			};
+			name = Debug;
+		};
+		370BCE3925F1BEB4001BA50D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = Exec.RotatingCubeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.suzp1984.Exec-RotatingCubeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Exec.RotatingCube;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		370BCE0625F1BEB3001BA50D /* Build configuration list for PBXProject "1.8.Exec.RotatingCube" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				370BCE2F25F1BEB4001BA50D /* Debug */,
+				370BCE3025F1BEB4001BA50D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		370BCE3125F1BEB4001BA50D /* Build configuration list for PBXNativeTarget "Exec.RotatingCube" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				370BCE3225F1BEB4001BA50D /* Debug */,
+				370BCE3325F1BEB4001BA50D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		370BCE3425F1BEB4001BA50D /* Build configuration list for PBXNativeTarget "Exec.RotatingCubeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				370BCE3525F1BEB4001BA50D /* Debug */,
+				370BCE3625F1BEB4001BA50D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		370BCE3725F1BEB4001BA50D /* Build configuration list for PBXNativeTarget "Exec.RotatingCubeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				370BCE3825F1BEB4001BA50D /* Debug */,
+				370BCE3925F1BEB4001BA50D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 370BCE0325F1BEB3001BA50D /* Project object */;
+}

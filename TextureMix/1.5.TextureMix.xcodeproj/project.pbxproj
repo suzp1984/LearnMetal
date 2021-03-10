@@ -1,0 +1,643 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		370BCCEA25EFAD9F001BA50D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370BCCE925EFAD9F001BA50D /* AppDelegate.swift */; };
+		370BCCEC25EFAD9F001BA50D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370BCCEB25EFAD9F001BA50D /* ViewController.swift */; };
+		370BCCEE25EFADA2001BA50D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 370BCCED25EFADA2001BA50D /* Assets.xcassets */; };
+		370BCCF125EFADA2001BA50D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370BCCEF25EFADA2001BA50D /* Main.storyboard */; };
+		370BCCFD25EFADA2001BA50D /* TextureMixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370BCCFC25EFADA2001BA50D /* TextureMixTests.swift */; };
+		370BCD0825EFADA2001BA50D /* TextureMixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370BCD0725EFADA2001BA50D /* TextureMixUITests.swift */; };
+		370BCD1C25EFAEBD001BA50D /* TextureMix.metal in Sources */ = {isa = PBXBuildFile; fileRef = 370BCD1B25EFAEBD001BA50D /* TextureMix.metal */; };
+		370BCD2425EFAF04001BA50D /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 370BCD2325EFAF04001BA50D /* Metal.framework */; };
+		370BCD2625EFAF0A001BA50D /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 370BCD2525EFAF0A001BA50D /* MetalKit.framework */; };
+		370BCD2C25EFB26F001BA50D /* SquareRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 370BCD2B25EFB26F001BA50D /* SquareRenderer.m */; };
+		37DD609325F37628005D7A42 /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DD609225F37628005D7A42 /* common.framework */; };
+		37DD609425F37628005D7A42 /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37DD609225F37628005D7A42 /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		370BCCF925EFADA2001BA50D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 370BCCDE25EFAD9F001BA50D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 370BCCE525EFAD9F001BA50D;
+			remoteInfo = TextureMix;
+		};
+		370BCD0425EFADA2001BA50D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 370BCCDE25EFAD9F001BA50D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 370BCCE525EFAD9F001BA50D;
+			remoteInfo = TextureMix;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		37DD609525F37628005D7A42 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				37DD609425F37628005D7A42 /* common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		370BCCE625EFAD9F001BA50D /* TextureMix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextureMix.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		370BCCE925EFAD9F001BA50D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		370BCCEB25EFAD9F001BA50D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		370BCCED25EFADA2001BA50D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		370BCCF025EFADA2001BA50D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		370BCCF225EFADA2001BA50D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		370BCCF325EFADA2001BA50D /* TextureMix.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TextureMix.entitlements; sourceTree = "<group>"; };
+		370BCCF825EFADA2001BA50D /* TextureMixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextureMixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		370BCCFC25EFADA2001BA50D /* TextureMixTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureMixTests.swift; sourceTree = "<group>"; };
+		370BCCFE25EFADA2001BA50D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		370BCD0325EFADA2001BA50D /* TextureMixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextureMixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		370BCD0725EFADA2001BA50D /* TextureMixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureMixUITests.swift; sourceTree = "<group>"; };
+		370BCD0925EFADA2001BA50D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		370BCD1B25EFAEBD001BA50D /* TextureMix.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = TextureMix.metal; sourceTree = "<group>"; };
+		370BCD2025EFAEDC001BA50D /* SquareShaderType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SquareShaderType.h; sourceTree = "<group>"; };
+		370BCD2125EFAEEE001BA50D /* SquareRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SquareRenderer.h; sourceTree = "<group>"; };
+		370BCD2325EFAF04001BA50D /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		370BCD2525EFAF0A001BA50D /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		370BCD2A25EFB26F001BA50D /* TextureMix-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TextureMix-Bridging-Header.h"; sourceTree = "<group>"; };
+		370BCD2B25EFB26F001BA50D /* SquareRenderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SquareRenderer.m; sourceTree = "<group>"; };
+		37DD609225F37628005D7A42 /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		370BCCE325EFAD9F001BA50D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				370BCD2425EFAF04001BA50D /* Metal.framework in Frameworks */,
+				37DD609325F37628005D7A42 /* common.framework in Frameworks */,
+				370BCD2625EFAF0A001BA50D /* MetalKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		370BCCF525EFADA2001BA50D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		370BCD0025EFADA2001BA50D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		370BCCDD25EFAD9F001BA50D = {
+			isa = PBXGroup;
+			children = (
+				370BCCE825EFAD9F001BA50D /* TextureMix */,
+				370BCCFB25EFADA2001BA50D /* TextureMixTests */,
+				370BCD0625EFADA2001BA50D /* TextureMixUITests */,
+				370BCCE725EFAD9F001BA50D /* Products */,
+				370BCD2225EFAF04001BA50D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		370BCCE725EFAD9F001BA50D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				370BCCE625EFAD9F001BA50D /* TextureMix.app */,
+				370BCCF825EFADA2001BA50D /* TextureMixTests.xctest */,
+				370BCD0325EFADA2001BA50D /* TextureMixUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		370BCCE825EFAD9F001BA50D /* TextureMix */ = {
+			isa = PBXGroup;
+			children = (
+				370BCCE925EFAD9F001BA50D /* AppDelegate.swift */,
+				370BCCEB25EFAD9F001BA50D /* ViewController.swift */,
+				370BCCED25EFADA2001BA50D /* Assets.xcassets */,
+				370BCCEF25EFADA2001BA50D /* Main.storyboard */,
+				370BCCF225EFADA2001BA50D /* Info.plist */,
+				370BCCF325EFADA2001BA50D /* TextureMix.entitlements */,
+				370BCD1B25EFAEBD001BA50D /* TextureMix.metal */,
+				370BCD2025EFAEDC001BA50D /* SquareShaderType.h */,
+				370BCD2125EFAEEE001BA50D /* SquareRenderer.h */,
+				370BCD2B25EFB26F001BA50D /* SquareRenderer.m */,
+				370BCD2A25EFB26F001BA50D /* TextureMix-Bridging-Header.h */,
+			);
+			path = TextureMix;
+			sourceTree = "<group>";
+		};
+		370BCCFB25EFADA2001BA50D /* TextureMixTests */ = {
+			isa = PBXGroup;
+			children = (
+				370BCCFC25EFADA2001BA50D /* TextureMixTests.swift */,
+				370BCCFE25EFADA2001BA50D /* Info.plist */,
+			);
+			path = TextureMixTests;
+			sourceTree = "<group>";
+		};
+		370BCD0625EFADA2001BA50D /* TextureMixUITests */ = {
+			isa = PBXGroup;
+			children = (
+				370BCD0725EFADA2001BA50D /* TextureMixUITests.swift */,
+				370BCD0925EFADA2001BA50D /* Info.plist */,
+			);
+			path = TextureMixUITests;
+			sourceTree = "<group>";
+		};
+		370BCD2225EFAF04001BA50D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37DD609225F37628005D7A42 /* common.framework */,
+				370BCD2525EFAF0A001BA50D /* MetalKit.framework */,
+				370BCD2325EFAF04001BA50D /* Metal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		370BCCE525EFAD9F001BA50D /* TextureMix */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 370BCD0C25EFADA2001BA50D /* Build configuration list for PBXNativeTarget "TextureMix" */;
+			buildPhases = (
+				370BCCE225EFAD9F001BA50D /* Sources */,
+				370BCCE325EFAD9F001BA50D /* Frameworks */,
+				370BCCE425EFAD9F001BA50D /* Resources */,
+				37DD609525F37628005D7A42 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TextureMix;
+			productName = TextureMix;
+			productReference = 370BCCE625EFAD9F001BA50D /* TextureMix.app */;
+			productType = "com.apple.product-type.application";
+		};
+		370BCCF725EFADA2001BA50D /* TextureMixTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 370BCD0F25EFADA2001BA50D /* Build configuration list for PBXNativeTarget "TextureMixTests" */;
+			buildPhases = (
+				370BCCF425EFADA2001BA50D /* Sources */,
+				370BCCF525EFADA2001BA50D /* Frameworks */,
+				370BCCF625EFADA2001BA50D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				370BCCFA25EFADA2001BA50D /* PBXTargetDependency */,
+			);
+			name = TextureMixTests;
+			productName = TextureMixTests;
+			productReference = 370BCCF825EFADA2001BA50D /* TextureMixTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		370BCD0225EFADA2001BA50D /* TextureMixUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 370BCD1225EFADA2001BA50D /* Build configuration list for PBXNativeTarget "TextureMixUITests" */;
+			buildPhases = (
+				370BCCFF25EFADA2001BA50D /* Sources */,
+				370BCD0025EFADA2001BA50D /* Frameworks */,
+				370BCD0125EFADA2001BA50D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				370BCD0525EFADA2001BA50D /* PBXTargetDependency */,
+			);
+			name = TextureMixUITests;
+			productName = TextureMixUITests;
+			productReference = 370BCD0325EFADA2001BA50D /* TextureMixUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		370BCCDE25EFAD9F001BA50D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					370BCCE525EFAD9F001BA50D = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+					};
+					370BCCF725EFADA2001BA50D = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 370BCCE525EFAD9F001BA50D;
+					};
+					370BCD0225EFADA2001BA50D = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 370BCCE525EFAD9F001BA50D;
+					};
+				};
+			};
+			buildConfigurationList = 370BCCE125EFAD9F001BA50D /* Build configuration list for PBXProject "1.5.TextureMix" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 370BCCDD25EFAD9F001BA50D;
+			productRefGroup = 370BCCE725EFAD9F001BA50D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				370BCCE525EFAD9F001BA50D /* TextureMix */,
+				370BCCF725EFADA2001BA50D /* TextureMixTests */,
+				370BCD0225EFADA2001BA50D /* TextureMixUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		370BCCE425EFAD9F001BA50D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				370BCCEE25EFADA2001BA50D /* Assets.xcassets in Resources */,
+				370BCCF125EFADA2001BA50D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		370BCCF625EFADA2001BA50D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		370BCD0125EFADA2001BA50D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		370BCCE225EFAD9F001BA50D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				370BCCEC25EFAD9F001BA50D /* ViewController.swift in Sources */,
+				370BCCEA25EFAD9F001BA50D /* AppDelegate.swift in Sources */,
+				370BCD1C25EFAEBD001BA50D /* TextureMix.metal in Sources */,
+				370BCD2C25EFB26F001BA50D /* SquareRenderer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		370BCCF425EFADA2001BA50D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				370BCCFD25EFADA2001BA50D /* TextureMixTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		370BCCFF25EFADA2001BA50D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				370BCD0825EFADA2001BA50D /* TextureMixUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		370BCCFA25EFADA2001BA50D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 370BCCE525EFAD9F001BA50D /* TextureMix */;
+			targetProxy = 370BCCF925EFADA2001BA50D /* PBXContainerItemProxy */;
+		};
+		370BCD0525EFADA2001BA50D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 370BCCE525EFAD9F001BA50D /* TextureMix */;
+			targetProxy = 370BCD0425EFADA2001BA50D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		370BCCEF25EFADA2001BA50D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				370BCCF025EFADA2001BA50D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		370BCD0A25EFADA2001BA50D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		370BCD0B25EFADA2001BA50D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		370BCD0D25EFADA2001BA50D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = TextureMix/TextureMix.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = TextureMix/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.TextureMix;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TextureMix/TextureMix-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		370BCD0E25EFADA2001BA50D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = TextureMix/TextureMix.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = TextureMix/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.TextureMix;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TextureMix/TextureMix-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		370BCD1025EFADA2001BA50D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = TextureMixTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.TextureMixTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TextureMix.app/Contents/MacOS/TextureMix";
+			};
+			name = Debug;
+		};
+		370BCD1125EFADA2001BA50D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = TextureMixTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.TextureMixTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TextureMix.app/Contents/MacOS/TextureMix";
+			};
+			name = Release;
+		};
+		370BCD1325EFADA2001BA50D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = TextureMixUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.TextureMixUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = TextureMix;
+			};
+			name = Debug;
+		};
+		370BCD1425EFADA2001BA50D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = TextureMixUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.TextureMixUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = TextureMix;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		370BCCE125EFAD9F001BA50D /* Build configuration list for PBXProject "1.5.TextureMix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				370BCD0A25EFADA2001BA50D /* Debug */,
+				370BCD0B25EFADA2001BA50D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		370BCD0C25EFADA2001BA50D /* Build configuration list for PBXNativeTarget "TextureMix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				370BCD0D25EFADA2001BA50D /* Debug */,
+				370BCD0E25EFADA2001BA50D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		370BCD0F25EFADA2001BA50D /* Build configuration list for PBXNativeTarget "TextureMixTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				370BCD1025EFADA2001BA50D /* Debug */,
+				370BCD1125EFADA2001BA50D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		370BCD1225EFADA2001BA50D /* Build configuration list for PBXNativeTarget "TextureMixUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				370BCD1325EFADA2001BA50D /* Debug */,
+				370BCD1425EFADA2001BA50D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 370BCCDE25EFAD9F001BA50D /* Project object */;
+}
