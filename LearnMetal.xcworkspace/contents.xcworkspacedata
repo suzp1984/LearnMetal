@@ -55,4 +55,7 @@
    <FileRef
       location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/DiffuseMap/2.5.DiffuseMap.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/SpecularMap/2.6.SpecularMap.xcodeproj">
+   </FileRef>
 </Workspace>

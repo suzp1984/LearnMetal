@@ -1,0 +1,649 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		376F8F8925F8BF5E00C3B287 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F8F8825F8BF5E00C3B287 /* AppDelegate.swift */; };
+		376F8F8B25F8BF5E00C3B287 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F8F8A25F8BF5E00C3B287 /* ViewController.swift */; };
+		376F8F8D25F8BF6000C3B287 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 376F8F8C25F8BF6000C3B287 /* Assets.xcassets */; };
+		376F8F9025F8BF6000C3B287 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376F8F8E25F8BF6000C3B287 /* Main.storyboard */; };
+		376F8F9C25F8BF6100C3B287 /* SpecularMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F8F9B25F8BF6100C3B287 /* SpecularMapTests.swift */; };
+		376F8FA725F8BF6100C3B287 /* SpecularMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F8FA625F8BF6100C3B287 /* SpecularMapUITests.swift */; };
+		376F8FBF25F8BFDF00C3B287 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 376F8FBE25F8BFDF00C3B287 /* Metal.framework */; };
+		376F8FC125F8BFE500C3B287 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 376F8FC025F8BFE500C3B287 /* MetalKit.framework */; };
+		376F8FC325F8BFED00C3B287 /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 376F8FC225F8BFED00C3B287 /* common.framework */; };
+		376F8FC425F8BFED00C3B287 /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 376F8FC225F8BFED00C3B287 /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		376F8FC925F8C0A600C3B287 /* ShapeShaderType.m in Sources */ = {isa = PBXBuildFile; fileRef = 376F8FC825F8C0A600C3B287 /* ShapeShaderType.m */; };
+		376F8FCD25F8C0DC00C3B287 /* SpecularShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 376F8FCC25F8C0DC00C3B287 /* SpecularShader.metal */; };
+		376F8FD125F8C19900C3B287 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F8FD025F8C19900C3B287 /* Renderer.swift */; };
+		376F8FD525F8C1B200C3B287 /* MetalBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F8FD425F8C1B200C3B287 /* MetalBuffer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		376F8F9825F8BF6100C3B287 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 376F8F7D25F8BF5E00C3B287 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 376F8F8425F8BF5E00C3B287;
+			remoteInfo = SpecularMap;
+		};
+		376F8FA325F8BF6100C3B287 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 376F8F7D25F8BF5E00C3B287 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 376F8F8425F8BF5E00C3B287;
+			remoteInfo = SpecularMap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		376F8FC525F8BFED00C3B287 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				376F8FC425F8BFED00C3B287 /* common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		376F8F8525F8BF5E00C3B287 /* SpecularMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpecularMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		376F8F8825F8BF5E00C3B287 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		376F8F8A25F8BF5E00C3B287 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		376F8F8C25F8BF6000C3B287 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		376F8F8F25F8BF6000C3B287 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		376F8F9125F8BF6000C3B287 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		376F8F9225F8BF6000C3B287 /* SpecularMap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SpecularMap.entitlements; sourceTree = "<group>"; };
+		376F8F9725F8BF6000C3B287 /* SpecularMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpecularMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		376F8F9B25F8BF6100C3B287 /* SpecularMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecularMapTests.swift; sourceTree = "<group>"; };
+		376F8F9D25F8BF6100C3B287 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		376F8FA225F8BF6100C3B287 /* SpecularMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpecularMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		376F8FA625F8BF6100C3B287 /* SpecularMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecularMapUITests.swift; sourceTree = "<group>"; };
+		376F8FA825F8BF6100C3B287 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		376F8FBE25F8BFDF00C3B287 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		376F8FC025F8BFE500C3B287 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		376F8FC225F8BFED00C3B287 /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		376F8FC625F8C07400C3B287 /* ShapeShaderType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShapeShaderType.h; sourceTree = "<group>"; };
+		376F8FC725F8C0A500C3B287 /* SpecularMap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpecularMap-Bridging-Header.h"; sourceTree = "<group>"; };
+		376F8FC825F8C0A600C3B287 /* ShapeShaderType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShapeShaderType.m; sourceTree = "<group>"; };
+		376F8FCC25F8C0DC00C3B287 /* SpecularShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = SpecularShader.metal; sourceTree = "<group>"; };
+		376F8FD025F8C19900C3B287 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		376F8FD425F8C1B200C3B287 /* MetalBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalBuffer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		376F8F8225F8BF5E00C3B287 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376F8FBF25F8BFDF00C3B287 /* Metal.framework in Frameworks */,
+				376F8FC325F8BFED00C3B287 /* common.framework in Frameworks */,
+				376F8FC125F8BFE500C3B287 /* MetalKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376F8F9425F8BF6000C3B287 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376F8F9F25F8BF6100C3B287 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		376F8F7C25F8BF5E00C3B287 = {
+			isa = PBXGroup;
+			children = (
+				376F8F8725F8BF5E00C3B287 /* SpecularMap */,
+				376F8F9A25F8BF6100C3B287 /* SpecularMapTests */,
+				376F8FA525F8BF6100C3B287 /* SpecularMapUITests */,
+				376F8F8625F8BF5E00C3B287 /* Products */,
+				376F8FBD25F8BFDF00C3B287 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		376F8F8625F8BF5E00C3B287 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				376F8F8525F8BF5E00C3B287 /* SpecularMap.app */,
+				376F8F9725F8BF6000C3B287 /* SpecularMapTests.xctest */,
+				376F8FA225F8BF6100C3B287 /* SpecularMapUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		376F8F8725F8BF5E00C3B287 /* SpecularMap */ = {
+			isa = PBXGroup;
+			children = (
+				376F8F8825F8BF5E00C3B287 /* AppDelegate.swift */,
+				376F8F8A25F8BF5E00C3B287 /* ViewController.swift */,
+				376F8F8C25F8BF6000C3B287 /* Assets.xcassets */,
+				376F8F8E25F8BF6000C3B287 /* Main.storyboard */,
+				376F8F9125F8BF6000C3B287 /* Info.plist */,
+				376F8F9225F8BF6000C3B287 /* SpecularMap.entitlements */,
+				376F8FC625F8C07400C3B287 /* ShapeShaderType.h */,
+				376F8FC825F8C0A600C3B287 /* ShapeShaderType.m */,
+				376F8FC725F8C0A500C3B287 /* SpecularMap-Bridging-Header.h */,
+				376F8FCC25F8C0DC00C3B287 /* SpecularShader.metal */,
+				376F8FD025F8C19900C3B287 /* Renderer.swift */,
+				376F8FD425F8C1B200C3B287 /* MetalBuffer.swift */,
+			);
+			path = SpecularMap;
+			sourceTree = "<group>";
+		};
+		376F8F9A25F8BF6100C3B287 /* SpecularMapTests */ = {
+			isa = PBXGroup;
+			children = (
+				376F8F9B25F8BF6100C3B287 /* SpecularMapTests.swift */,
+				376F8F9D25F8BF6100C3B287 /* Info.plist */,
+			);
+			path = SpecularMapTests;
+			sourceTree = "<group>";
+		};
+		376F8FA525F8BF6100C3B287 /* SpecularMapUITests */ = {
+			isa = PBXGroup;
+			children = (
+				376F8FA625F8BF6100C3B287 /* SpecularMapUITests.swift */,
+				376F8FA825F8BF6100C3B287 /* Info.plist */,
+			);
+			path = SpecularMapUITests;
+			sourceTree = "<group>";
+		};
+		376F8FBD25F8BFDF00C3B287 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				376F8FC225F8BFED00C3B287 /* common.framework */,
+				376F8FC025F8BFE500C3B287 /* MetalKit.framework */,
+				376F8FBE25F8BFDF00C3B287 /* Metal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		376F8F8425F8BF5E00C3B287 /* SpecularMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 376F8FAB25F8BF6100C3B287 /* Build configuration list for PBXNativeTarget "SpecularMap" */;
+			buildPhases = (
+				376F8F8125F8BF5E00C3B287 /* Sources */,
+				376F8F8225F8BF5E00C3B287 /* Frameworks */,
+				376F8F8325F8BF5E00C3B287 /* Resources */,
+				376F8FC525F8BFED00C3B287 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpecularMap;
+			productName = SpecularMap;
+			productReference = 376F8F8525F8BF5E00C3B287 /* SpecularMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		376F8F9625F8BF6000C3B287 /* SpecularMapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 376F8FAE25F8BF6100C3B287 /* Build configuration list for PBXNativeTarget "SpecularMapTests" */;
+			buildPhases = (
+				376F8F9325F8BF6000C3B287 /* Sources */,
+				376F8F9425F8BF6000C3B287 /* Frameworks */,
+				376F8F9525F8BF6000C3B287 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				376F8F9925F8BF6100C3B287 /* PBXTargetDependency */,
+			);
+			name = SpecularMapTests;
+			productName = SpecularMapTests;
+			productReference = 376F8F9725F8BF6000C3B287 /* SpecularMapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		376F8FA125F8BF6100C3B287 /* SpecularMapUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 376F8FB125F8BF6100C3B287 /* Build configuration list for PBXNativeTarget "SpecularMapUITests" */;
+			buildPhases = (
+				376F8F9E25F8BF6100C3B287 /* Sources */,
+				376F8F9F25F8BF6100C3B287 /* Frameworks */,
+				376F8FA025F8BF6100C3B287 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				376F8FA425F8BF6100C3B287 /* PBXTargetDependency */,
+			);
+			name = SpecularMapUITests;
+			productName = SpecularMapUITests;
+			productReference = 376F8FA225F8BF6100C3B287 /* SpecularMapUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		376F8F7D25F8BF5E00C3B287 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					376F8F8425F8BF5E00C3B287 = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+					};
+					376F8F9625F8BF6000C3B287 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 376F8F8425F8BF5E00C3B287;
+					};
+					376F8FA125F8BF6100C3B287 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 376F8F8425F8BF5E00C3B287;
+					};
+				};
+			};
+			buildConfigurationList = 376F8F8025F8BF5E00C3B287 /* Build configuration list for PBXProject "2.6.SpecularMap" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 376F8F7C25F8BF5E00C3B287;
+			productRefGroup = 376F8F8625F8BF5E00C3B287 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				376F8F8425F8BF5E00C3B287 /* SpecularMap */,
+				376F8F9625F8BF6000C3B287 /* SpecularMapTests */,
+				376F8FA125F8BF6100C3B287 /* SpecularMapUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		376F8F8325F8BF5E00C3B287 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376F8F8D25F8BF6000C3B287 /* Assets.xcassets in Resources */,
+				376F8F9025F8BF6000C3B287 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376F8F9525F8BF6000C3B287 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376F8FA025F8BF6100C3B287 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		376F8F8125F8BF5E00C3B287 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376F8FC925F8C0A600C3B287 /* ShapeShaderType.m in Sources */,
+				376F8F8B25F8BF5E00C3B287 /* ViewController.swift in Sources */,
+				376F8F8925F8BF5E00C3B287 /* AppDelegate.swift in Sources */,
+				376F8FD125F8C19900C3B287 /* Renderer.swift in Sources */,
+				376F8FCD25F8C0DC00C3B287 /* SpecularShader.metal in Sources */,
+				376F8FD525F8C1B200C3B287 /* MetalBuffer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376F8F9325F8BF6000C3B287 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376F8F9C25F8BF6100C3B287 /* SpecularMapTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376F8F9E25F8BF6100C3B287 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376F8FA725F8BF6100C3B287 /* SpecularMapUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		376F8F9925F8BF6100C3B287 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 376F8F8425F8BF5E00C3B287 /* SpecularMap */;
+			targetProxy = 376F8F9825F8BF6100C3B287 /* PBXContainerItemProxy */;
+		};
+		376F8FA425F8BF6100C3B287 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 376F8F8425F8BF5E00C3B287 /* SpecularMap */;
+			targetProxy = 376F8FA325F8BF6100C3B287 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		376F8F8E25F8BF6000C3B287 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				376F8F8F25F8BF6000C3B287 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		376F8FA925F8BF6100C3B287 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		376F8FAA25F8BF6100C3B287 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		376F8FAC25F8BF6100C3B287 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SpecularMap/SpecularMap.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = SpecularMap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.SpecularMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SpecularMap/SpecularMap-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		376F8FAD25F8BF6100C3B287 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SpecularMap/SpecularMap.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = SpecularMap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.SpecularMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SpecularMap/SpecularMap-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		376F8FAF25F8BF6100C3B287 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = SpecularMapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.SpecularMapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpecularMap.app/Contents/MacOS/SpecularMap";
+			};
+			name = Debug;
+		};
+		376F8FB025F8BF6100C3B287 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = SpecularMapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.SpecularMapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpecularMap.app/Contents/MacOS/SpecularMap";
+			};
+			name = Release;
+		};
+		376F8FB225F8BF6100C3B287 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = SpecularMapUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.SpecularMapUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = SpecularMap;
+			};
+			name = Debug;
+		};
+		376F8FB325F8BF6100C3B287 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = SpecularMapUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.SpecularMapUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = SpecularMap;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		376F8F8025F8BF5E00C3B287 /* Build configuration list for PBXProject "2.6.SpecularMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				376F8FA925F8BF6100C3B287 /* Debug */,
+				376F8FAA25F8BF6100C3B287 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		376F8FAB25F8BF6100C3B287 /* Build configuration list for PBXNativeTarget "SpecularMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				376F8FAC25F8BF6100C3B287 /* Debug */,
+				376F8FAD25F8BF6100C3B287 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		376F8FAE25F8BF6100C3B287 /* Build configuration list for PBXNativeTarget "SpecularMapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				376F8FAF25F8BF6100C3B287 /* Debug */,
+				376F8FB025F8BF6100C3B287 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		376F8FB125F8BF6100C3B287 /* Build configuration list for PBXNativeTarget "SpecularMapUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				376F8FB225F8BF6100C3B287 /* Debug */,
+				376F8FB325F8BF6100C3B287 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 376F8F7D25F8BF5E00C3B287 /* Project object */;
+}
