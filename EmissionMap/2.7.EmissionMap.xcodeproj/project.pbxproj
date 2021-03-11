@@ -1,0 +1,651 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3721921125F9B17D00558BBB /* EmissionShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3721921025F9B17D00558BBB /* EmissionShader.metal */; };
+		3721921525F9B45C00558BBB /* MetalBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3721921425F9B45C00558BBB /* MetalBuffer.swift */; };
+		3721921A25F9B49B00558BBB /* ShapeShaderType.m in Sources */ = {isa = PBXBuildFile; fileRef = 3721921925F9B49B00558BBB /* ShapeShaderType.m */; };
+		3721921E25F9B4D100558BBB /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3721921D25F9B4D100558BBB /* Renderer.swift */; };
+		37893B6225F99B8B00E89475 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37893B6125F99B8B00E89475 /* AppDelegate.swift */; };
+		37893B6425F99B8B00E89475 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37893B6325F99B8B00E89475 /* ViewController.swift */; };
+		37893B6625F99B8C00E89475 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37893B6525F99B8C00E89475 /* Assets.xcassets */; };
+		37893B6925F99B8C00E89475 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37893B6725F99B8C00E89475 /* Main.storyboard */; };
+		37893B7525F99B8C00E89475 /* EmissionMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37893B7425F99B8C00E89475 /* EmissionMapTests.swift */; };
+		37893B8025F99B8C00E89475 /* EmissionMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37893B7F25F99B8C00E89475 /* EmissionMapUITests.swift */; };
+		37893B9225F99BAF00E89475 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37893B9125F99BAF00E89475 /* Metal.framework */; };
+		37893B9425F99BB500E89475 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37893B9325F99BB500E89475 /* MetalKit.framework */; };
+		37893B9625F99BBB00E89475 /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37893B9525F99BBB00E89475 /* common.framework */; };
+		37893B9725F99BBB00E89475 /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37893B9525F99BBB00E89475 /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		37893B7125F99B8C00E89475 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37893B5625F99B8B00E89475 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37893B5D25F99B8B00E89475;
+			remoteInfo = EmissionMap;
+		};
+		37893B7C25F99B8C00E89475 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37893B5625F99B8B00E89475 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37893B5D25F99B8B00E89475;
+			remoteInfo = EmissionMap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		37893B9825F99BBB00E89475 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				37893B9725F99BBB00E89475 /* common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		372191D525F9AD8E00558BBB /* Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3721920F25F9B14E00558BBB /* ShapeShaderType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShapeShaderType.h; sourceTree = "<group>"; };
+		3721921025F9B17D00558BBB /* EmissionShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = EmissionShader.metal; sourceTree = "<group>"; };
+		3721921425F9B45C00558BBB /* MetalBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalBuffer.swift; sourceTree = "<group>"; };
+		3721921825F9B49A00558BBB /* EmissionMap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EmissionMap-Bridging-Header.h"; sourceTree = "<group>"; };
+		3721921925F9B49B00558BBB /* ShapeShaderType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShapeShaderType.m; sourceTree = "<group>"; };
+		3721921D25F9B4D100558BBB /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		37893B5E25F99B8B00E89475 /* EmissionMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmissionMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37893B6125F99B8B00E89475 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		37893B6325F99B8B00E89475 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		37893B6525F99B8C00E89475 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37893B6825F99B8C00E89475 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		37893B6A25F99B8C00E89475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37893B6B25F99B8C00E89475 /* EmissionMap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EmissionMap.entitlements; sourceTree = "<group>"; };
+		37893B7025F99B8C00E89475 /* EmissionMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmissionMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37893B7425F99B8C00E89475 /* EmissionMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmissionMapTests.swift; sourceTree = "<group>"; };
+		37893B7625F99B8C00E89475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37893B7B25F99B8C00E89475 /* EmissionMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmissionMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37893B7F25F99B8C00E89475 /* EmissionMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmissionMapUITests.swift; sourceTree = "<group>"; };
+		37893B8125F99B8C00E89475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37893B9125F99BAF00E89475 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		37893B9325F99BB500E89475 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		37893B9525F99BBB00E89475 /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37893B5B25F99B8B00E89475 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37893B9225F99BAF00E89475 /* Metal.framework in Frameworks */,
+				37893B9625F99BBB00E89475 /* common.framework in Frameworks */,
+				37893B9425F99BB500E89475 /* MetalKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37893B6D25F99B8C00E89475 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37893B7825F99B8C00E89475 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		37893B5525F99B8B00E89475 = {
+			isa = PBXGroup;
+			children = (
+				37893B6025F99B8B00E89475 /* EmissionMap */,
+				37893B7325F99B8C00E89475 /* EmissionMapTests */,
+				37893B7E25F99B8C00E89475 /* EmissionMapUITests */,
+				37893B5F25F99B8B00E89475 /* Products */,
+				37893B9025F99BAF00E89475 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		37893B5F25F99B8B00E89475 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37893B5E25F99B8B00E89475 /* EmissionMap.app */,
+				37893B7025F99B8C00E89475 /* EmissionMapTests.xctest */,
+				37893B7B25F99B8C00E89475 /* EmissionMapUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37893B6025F99B8B00E89475 /* EmissionMap */ = {
+			isa = PBXGroup;
+			children = (
+				37893B6125F99B8B00E89475 /* AppDelegate.swift */,
+				37893B6325F99B8B00E89475 /* ViewController.swift */,
+				37893B6525F99B8C00E89475 /* Assets.xcassets */,
+				37893B6725F99B8C00E89475 /* Main.storyboard */,
+				37893B6A25F99B8C00E89475 /* Info.plist */,
+				37893B6B25F99B8C00E89475 /* EmissionMap.entitlements */,
+				3721920F25F9B14E00558BBB /* ShapeShaderType.h */,
+				3721921025F9B17D00558BBB /* EmissionShader.metal */,
+				3721921425F9B45C00558BBB /* MetalBuffer.swift */,
+				3721921925F9B49B00558BBB /* ShapeShaderType.m */,
+				3721921825F9B49A00558BBB /* EmissionMap-Bridging-Header.h */,
+				3721921D25F9B4D100558BBB /* Renderer.swift */,
+			);
+			path = EmissionMap;
+			sourceTree = "<group>";
+		};
+		37893B7325F99B8C00E89475 /* EmissionMapTests */ = {
+			isa = PBXGroup;
+			children = (
+				37893B7425F99B8C00E89475 /* EmissionMapTests.swift */,
+				37893B7625F99B8C00E89475 /* Info.plist */,
+			);
+			path = EmissionMapTests;
+			sourceTree = "<group>";
+		};
+		37893B7E25F99B8C00E89475 /* EmissionMapUITests */ = {
+			isa = PBXGroup;
+			children = (
+				37893B7F25F99B8C00E89475 /* EmissionMapUITests.swift */,
+				37893B8125F99B8C00E89475 /* Info.plist */,
+			);
+			path = EmissionMapUITests;
+			sourceTree = "<group>";
+		};
+		37893B9025F99BAF00E89475 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				372191D525F9AD8E00558BBB /* Utils.framework */,
+				37893B9525F99BBB00E89475 /* common.framework */,
+				37893B9325F99BB500E89475 /* MetalKit.framework */,
+				37893B9125F99BAF00E89475 /* Metal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37893B5D25F99B8B00E89475 /* EmissionMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37893B8425F99B8C00E89475 /* Build configuration list for PBXNativeTarget "EmissionMap" */;
+			buildPhases = (
+				37893B5A25F99B8B00E89475 /* Sources */,
+				37893B5B25F99B8B00E89475 /* Frameworks */,
+				37893B5C25F99B8B00E89475 /* Resources */,
+				37893B9825F99BBB00E89475 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EmissionMap;
+			productName = EmissionMap;
+			productReference = 37893B5E25F99B8B00E89475 /* EmissionMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		37893B6F25F99B8C00E89475 /* EmissionMapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37893B8725F99B8C00E89475 /* Build configuration list for PBXNativeTarget "EmissionMapTests" */;
+			buildPhases = (
+				37893B6C25F99B8C00E89475 /* Sources */,
+				37893B6D25F99B8C00E89475 /* Frameworks */,
+				37893B6E25F99B8C00E89475 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37893B7225F99B8C00E89475 /* PBXTargetDependency */,
+			);
+			name = EmissionMapTests;
+			productName = EmissionMapTests;
+			productReference = 37893B7025F99B8C00E89475 /* EmissionMapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		37893B7A25F99B8C00E89475 /* EmissionMapUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37893B8A25F99B8C00E89475 /* Build configuration list for PBXNativeTarget "EmissionMapUITests" */;
+			buildPhases = (
+				37893B7725F99B8C00E89475 /* Sources */,
+				37893B7825F99B8C00E89475 /* Frameworks */,
+				37893B7925F99B8C00E89475 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37893B7D25F99B8C00E89475 /* PBXTargetDependency */,
+			);
+			name = EmissionMapUITests;
+			productName = EmissionMapUITests;
+			productReference = 37893B7B25F99B8C00E89475 /* EmissionMapUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		37893B5625F99B8B00E89475 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					37893B5D25F99B8B00E89475 = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+					};
+					37893B6F25F99B8C00E89475 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 37893B5D25F99B8B00E89475;
+					};
+					37893B7A25F99B8C00E89475 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 37893B5D25F99B8B00E89475;
+					};
+				};
+			};
+			buildConfigurationList = 37893B5925F99B8B00E89475 /* Build configuration list for PBXProject "2.7.EmissionMap" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 37893B5525F99B8B00E89475;
+			productRefGroup = 37893B5F25F99B8B00E89475 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37893B5D25F99B8B00E89475 /* EmissionMap */,
+				37893B6F25F99B8C00E89475 /* EmissionMapTests */,
+				37893B7A25F99B8C00E89475 /* EmissionMapUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		37893B5C25F99B8B00E89475 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37893B6625F99B8C00E89475 /* Assets.xcassets in Resources */,
+				37893B6925F99B8C00E89475 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37893B6E25F99B8C00E89475 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37893B7925F99B8C00E89475 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		37893B5A25F99B8B00E89475 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37893B6425F99B8B00E89475 /* ViewController.swift in Sources */,
+				3721921525F9B45C00558BBB /* MetalBuffer.swift in Sources */,
+				3721921125F9B17D00558BBB /* EmissionShader.metal in Sources */,
+				3721921A25F9B49B00558BBB /* ShapeShaderType.m in Sources */,
+				3721921E25F9B4D100558BBB /* Renderer.swift in Sources */,
+				37893B6225F99B8B00E89475 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37893B6C25F99B8C00E89475 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37893B7525F99B8C00E89475 /* EmissionMapTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37893B7725F99B8C00E89475 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37893B8025F99B8C00E89475 /* EmissionMapUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		37893B7225F99B8C00E89475 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37893B5D25F99B8B00E89475 /* EmissionMap */;
+			targetProxy = 37893B7125F99B8C00E89475 /* PBXContainerItemProxy */;
+		};
+		37893B7D25F99B8C00E89475 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37893B5D25F99B8B00E89475 /* EmissionMap */;
+			targetProxy = 37893B7C25F99B8C00E89475 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		37893B6725F99B8C00E89475 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37893B6825F99B8C00E89475 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		37893B8225F99B8C00E89475 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		37893B8325F99B8C00E89475 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		37893B8525F99B8C00E89475 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = EmissionMap/EmissionMap.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = EmissionMap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.EmissionMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EmissionMap/EmissionMap-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		37893B8625F99B8C00E89475 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = EmissionMap/EmissionMap.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = EmissionMap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.EmissionMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EmissionMap/EmissionMap-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		37893B8825F99B8C00E89475 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = EmissionMapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.EmissionMapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EmissionMap.app/Contents/MacOS/EmissionMap";
+			};
+			name = Debug;
+		};
+		37893B8925F99B8C00E89475 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = EmissionMapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.EmissionMapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EmissionMap.app/Contents/MacOS/EmissionMap";
+			};
+			name = Release;
+		};
+		37893B8B25F99B8C00E89475 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = EmissionMapUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.EmissionMapUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = EmissionMap;
+			};
+			name = Debug;
+		};
+		37893B8C25F99B8C00E89475 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = EmissionMapUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.EmissionMapUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = EmissionMap;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		37893B5925F99B8B00E89475 /* Build configuration list for PBXProject "2.7.EmissionMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37893B8225F99B8C00E89475 /* Debug */,
+				37893B8325F99B8C00E89475 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37893B8425F99B8C00E89475 /* Build configuration list for PBXNativeTarget "EmissionMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37893B8525F99B8C00E89475 /* Debug */,
+				37893B8625F99B8C00E89475 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37893B8725F99B8C00E89475 /* Build configuration list for PBXNativeTarget "EmissionMapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37893B8825F99B8C00E89475 /* Debug */,
+				37893B8925F99B8C00E89475 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37893B8A25F99B8C00E89475 /* Build configuration list for PBXNativeTarget "EmissionMapUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37893B8B25F99B8C00E89475 /* Debug */,
+				37893B8C25F99B8C00E89475 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 37893B5625F99B8B00E89475 /* Project object */;
+}

@@ -58,4 +58,7 @@
    <FileRef
       location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/SpecularMap/2.6.SpecularMap.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/EmissionMap/2.7.EmissionMap.xcodeproj">
+   </FileRef>
 </Workspace>
