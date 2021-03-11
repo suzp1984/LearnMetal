@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3721927725F9CB9600558BBB /* MetalBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3721927625F9CB9600558BBB /* MetalBuffer.swift */; };
 		37DD617325F38714005D7A42 /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DD616925F38714005D7A42 /* common.framework */; };
 		37DD617825F38714005D7A42 /* commonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD617725F38714005D7A42 /* commonTests.m */; };
 		37DD617A25F38714005D7A42 /* common.h in Headers */ = {isa = PBXBuildFile; fileRef = 37DD616C25F38714005D7A42 /* common.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3721927625F9CB9600558BBB /* MetalBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalBuffer.swift; sourceTree = "<group>"; };
 		37DD616925F38714005D7A42 /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DD616C25F38714005D7A42 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		37DD616D25F38714005D7A42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				37DD618C25F38790005D7A42 /* Assets.xcassets */,
 				37DD624425F5D5EF005D7A42 /* Camera.h */,
 				37DD624525F5D61B005D7A42 /* Camera.m */,
+				3721927625F9CB9600558BBB /* MetalBuffer.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 				TargetAttributes = {
 					37DD616825F38714005D7A42 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					37DD617125F38714005D7A42 = {
 						CreatedOnToolsVersion = 12.4;
@@ -213,6 +217,7 @@
 			files = (
 				37DD624625F5D61B005D7A42 /* Camera.m in Sources */,
 				37DD618725F38769005D7A42 /* AAPLMathUtilities.m in Sources */,
+				3721927725F9CB9600558BBB /* MetalBuffer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +360,7 @@
 		37DD617E25F38714005D7A42 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -372,12 +378,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.common;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		37DD617F25F38714005D7A42 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -395,12 +404,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.common;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 		37DD618125F38714005D7A42 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 4X75RZ9C85;
@@ -418,6 +429,7 @@
 		37DD618225F38714005D7A42 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 4X75RZ9C85;

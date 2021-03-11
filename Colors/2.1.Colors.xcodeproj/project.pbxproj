@@ -19,7 +19,6 @@
 		37DD62B325F5F109005D7A42 /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37DD62B125F5F109005D7A42 /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		37DD62B925F5F188005D7A42 /* ShapeShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 37DD62B825F5F188005D7A42 /* ShapeShader.metal */; };
 		37DD62C425F5F437005D7A42 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD62C325F5F437005D7A42 /* Renderer.swift */; };
-		37DD62C825F5F59D005D7A42 /* MetalBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DD62C725F5F59D005D7A42 /* MetalBuffer.swift */; };
 		37DD62CC25F5F73E005D7A42 /* ShapeShaderType.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD62CB25F5F73E005D7A42 /* ShapeShaderType.m */; };
 /* End PBXBuildFile section */
 
@@ -75,7 +74,6 @@
 		37DD62B825F5F188005D7A42 /* ShapeShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ShapeShader.metal; sourceTree = "<group>"; };
 		37DD62BC25F5F3CF005D7A42 /* Colors-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Colors-Bridging-Header.h"; sourceTree = "<group>"; };
 		37DD62C325F5F437005D7A42 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
-		37DD62C725F5F59D005D7A42 /* MetalBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalBuffer.swift; sourceTree = "<group>"; };
 		37DD62CB25F5F73E005D7A42 /* ShapeShaderType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShapeShaderType.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,7 +139,6 @@
 				37DD62B825F5F188005D7A42 /* ShapeShader.metal */,
 				37DD62BC25F5F3CF005D7A42 /* Colors-Bridging-Header.h */,
 				37DD62C325F5F437005D7A42 /* Renderer.swift */,
-				37DD62C725F5F59D005D7A42 /* MetalBuffer.swift */,
 				37DD62CB25F5F73E005D7A42 /* ShapeShaderType.m */,
 			);
 			path = Colors;
@@ -308,7 +305,6 @@
 			files = (
 				37DD62CC25F5F73E005D7A42 /* ShapeShaderType.m in Sources */,
 				37DD62C425F5F437005D7A42 /* Renderer.swift in Sources */,
-				37DD62C825F5F59D005D7A42 /* MetalBuffer.swift in Sources */,
 				37DD62B925F5F188005D7A42 /* ShapeShader.metal in Sources */,
 				37DD626525F5EF73005D7A42 /* ViewController.swift in Sources */,
 				37DD626325F5EF73005D7A42 /* AppDelegate.swift in Sources */,

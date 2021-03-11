@@ -20,7 +20,6 @@
 		376F8FC925F8C0A600C3B287 /* ShapeShaderType.m in Sources */ = {isa = PBXBuildFile; fileRef = 376F8FC825F8C0A600C3B287 /* ShapeShaderType.m */; };
 		376F8FCD25F8C0DC00C3B287 /* SpecularShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 376F8FCC25F8C0DC00C3B287 /* SpecularShader.metal */; };
 		376F8FD125F8C19900C3B287 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F8FD025F8C19900C3B287 /* Renderer.swift */; };
-		376F8FD525F8C1B200C3B287 /* MetalBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F8FD425F8C1B200C3B287 /* MetalBuffer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +75,6 @@
 		376F8FC825F8C0A600C3B287 /* ShapeShaderType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShapeShaderType.m; sourceTree = "<group>"; };
 		376F8FCC25F8C0DC00C3B287 /* SpecularShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = SpecularShader.metal; sourceTree = "<group>"; };
 		376F8FD025F8C19900C3B287 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
-		376F8FD425F8C1B200C3B287 /* MetalBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalBuffer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +140,6 @@
 				376F8FC725F8C0A500C3B287 /* SpecularMap-Bridging-Header.h */,
 				376F8FCC25F8C0DC00C3B287 /* SpecularShader.metal */,
 				376F8FD025F8C19900C3B287 /* Renderer.swift */,
-				376F8FD425F8C1B200C3B287 /* MetalBuffer.swift */,
 			);
 			path = SpecularMap;
 			sourceTree = "<group>";
@@ -311,7 +308,6 @@
 				376F8F8925F8BF5E00C3B287 /* AppDelegate.swift in Sources */,
 				376F8FD125F8C19900C3B287 /* Renderer.swift in Sources */,
 				376F8FCD25F8C0DC00C3B287 /* SpecularShader.metal in Sources */,
-				376F8FD525F8C1B200C3B287 /* MetalBuffer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

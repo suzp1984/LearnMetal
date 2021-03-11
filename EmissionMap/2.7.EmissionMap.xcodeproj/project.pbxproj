@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3721921125F9B17D00558BBB /* EmissionShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3721921025F9B17D00558BBB /* EmissionShader.metal */; };
-		3721921525F9B45C00558BBB /* MetalBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3721921425F9B45C00558BBB /* MetalBuffer.swift */; };
 		3721921A25F9B49B00558BBB /* ShapeShaderType.m in Sources */ = {isa = PBXBuildFile; fileRef = 3721921925F9B49B00558BBB /* ShapeShaderType.m */; };
 		3721921E25F9B4D100558BBB /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3721921D25F9B4D100558BBB /* Renderer.swift */; };
 		37893B6225F99B8B00E89475 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37893B6125F99B8B00E89475 /* AppDelegate.swift */; };
@@ -58,7 +57,6 @@
 		372191D525F9AD8E00558BBB /* Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3721920F25F9B14E00558BBB /* ShapeShaderType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShapeShaderType.h; sourceTree = "<group>"; };
 		3721921025F9B17D00558BBB /* EmissionShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = EmissionShader.metal; sourceTree = "<group>"; };
-		3721921425F9B45C00558BBB /* MetalBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalBuffer.swift; sourceTree = "<group>"; };
 		3721921825F9B49A00558BBB /* EmissionMap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EmissionMap-Bridging-Header.h"; sourceTree = "<group>"; };
 		3721921925F9B49B00558BBB /* ShapeShaderType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShapeShaderType.m; sourceTree = "<group>"; };
 		3721921D25F9B4D100558BBB /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
@@ -140,7 +138,6 @@
 				37893B6B25F99B8C00E89475 /* EmissionMap.entitlements */,
 				3721920F25F9B14E00558BBB /* ShapeShaderType.h */,
 				3721921025F9B17D00558BBB /* EmissionShader.metal */,
-				3721921425F9B45C00558BBB /* MetalBuffer.swift */,
 				3721921925F9B49B00558BBB /* ShapeShaderType.m */,
 				3721921825F9B49A00558BBB /* EmissionMap-Bridging-Header.h */,
 				3721921D25F9B4D100558BBB /* Renderer.swift */,
@@ -309,7 +306,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				37893B6425F99B8B00E89475 /* ViewController.swift in Sources */,
-				3721921525F9B45C00558BBB /* MetalBuffer.swift in Sources */,
 				3721921125F9B17D00558BBB /* EmissionShader.metal in Sources */,
 				3721921A25F9B49B00558BBB /* ShapeShaderType.m in Sources */,
 				3721921E25F9B4D100558BBB /* Renderer.swift in Sources */,

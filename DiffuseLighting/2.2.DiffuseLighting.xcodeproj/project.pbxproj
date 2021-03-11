@@ -18,7 +18,6 @@
 		376F8E5B25F71AD000C3B287 /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 376F8E5A25F71AD000C3B287 /* common.framework */; };
 		376F8E5C25F71AD000C3B287 /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 376F8E5A25F71AD000C3B287 /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		376F8E6225F71B7100C3B287 /* DiffuseLightingShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 376F8E6125F71B7100C3B287 /* DiffuseLightingShader.metal */; };
-		376F8E6625F71EDE00C3B287 /* MetalBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F8E6525F71EDE00C3B287 /* MetalBuffer.swift */; };
 		376F8E6B25F71F1300C3B287 /* ShapeShaderType.m in Sources */ = {isa = PBXBuildFile; fileRef = 376F8E6A25F71F1300C3B287 /* ShapeShaderType.m */; };
 		376F8E6F25F71FB500C3B287 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F8E6E25F71FB500C3B287 /* Renderer.swift */; };
 /* End PBXBuildFile section */
@@ -73,7 +72,6 @@
 		376F8E5A25F71AD000C3B287 /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		376F8E6025F71B2500C3B287 /* ShapeShaderType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShapeShaderType.h; sourceTree = "<group>"; };
 		376F8E6125F71B7100C3B287 /* DiffuseLightingShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = DiffuseLightingShader.metal; sourceTree = "<group>"; };
-		376F8E6525F71EDE00C3B287 /* MetalBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalBuffer.swift; sourceTree = "<group>"; };
 		376F8E6925F71F1300C3B287 /* DiffuseLighting-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DiffuseLighting-Bridging-Header.h"; sourceTree = "<group>"; };
 		376F8E6A25F71F1300C3B287 /* ShapeShaderType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShapeShaderType.m; sourceTree = "<group>"; };
 		376F8E6E25F71FB500C3B287 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
@@ -139,7 +137,6 @@
 				376F8E3025F71A9A00C3B287 /* DiffuseLighting.entitlements */,
 				376F8E6025F71B2500C3B287 /* ShapeShaderType.h */,
 				376F8E6125F71B7100C3B287 /* DiffuseLightingShader.metal */,
-				376F8E6525F71EDE00C3B287 /* MetalBuffer.swift */,
 				376F8E6A25F71F1300C3B287 /* ShapeShaderType.m */,
 				376F8E6925F71F1300C3B287 /* DiffuseLighting-Bridging-Header.h */,
 				376F8E6E25F71FB500C3B287 /* Renderer.swift */,
@@ -307,7 +304,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				376F8E2925F71A9900C3B287 /* ViewController.swift in Sources */,
-				376F8E6625F71EDE00C3B287 /* MetalBuffer.swift in Sources */,
 				376F8E6225F71B7100C3B287 /* DiffuseLightingShader.metal in Sources */,
 				376F8E6B25F71F1300C3B287 /* ShapeShaderType.m in Sources */,
 				376F8E6F25F71FB500C3B287 /* Renderer.swift in Sources */,

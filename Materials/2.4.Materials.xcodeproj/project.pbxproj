@@ -19,7 +19,6 @@
 		376F8F0D25F862B500C3B287 /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 376F8F0B25F862B500C3B287 /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		376F8F1225F8641D00C3B287 /* ShapeShaderType.m in Sources */ = {isa = PBXBuildFile; fileRef = 376F8F1125F8641D00C3B287 /* ShapeShaderType.m */; };
 		376F8F1625F8644C00C3B287 /* MaterialShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 376F8F1525F8644C00C3B287 /* MaterialShader.metal */; };
-		376F8F1A25F867BD00C3B287 /* MetalBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F8F1925F867BD00C3B287 /* MetalBuffer.swift */; };
 		376F8F1E25F8680E00C3B287 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F8F1D25F8680E00C3B287 /* Renderer.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,7 +74,6 @@
 		376F8F1025F8641D00C3B287 /* Materials-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Materials-Bridging-Header.h"; sourceTree = "<group>"; };
 		376F8F1125F8641D00C3B287 /* ShapeShaderType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShapeShaderType.m; sourceTree = "<group>"; };
 		376F8F1525F8644C00C3B287 /* MaterialShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MaterialShader.metal; sourceTree = "<group>"; };
-		376F8F1925F867BD00C3B287 /* MetalBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalBuffer.swift; sourceTree = "<group>"; };
 		376F8F1D25F8680E00C3B287 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		376F8F7925F8B9E900C3B287 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; wrapsLines = 1; };
 /* End PBXFileReference section */
@@ -143,7 +141,6 @@
 				376F8F1125F8641D00C3B287 /* ShapeShaderType.m */,
 				376F8F1025F8641D00C3B287 /* Materials-Bridging-Header.h */,
 				376F8F1525F8644C00C3B287 /* MaterialShader.metal */,
-				376F8F1925F867BD00C3B287 /* MetalBuffer.swift */,
 				376F8F1D25F8680E00C3B287 /* Renderer.swift */,
 			);
 			path = Materials;
@@ -309,7 +306,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				376F8F1225F8641D00C3B287 /* ShapeShaderType.m in Sources */,
-				376F8F1A25F867BD00C3B287 /* MetalBuffer.swift in Sources */,
 				376F8EDA25F8627B00C3B287 /* ViewController.swift in Sources */,
 				376F8ED825F8627B00C3B287 /* AppDelegate.swift in Sources */,
 				376F8F1E25F8680E00C3B287 /* Renderer.swift in Sources */,

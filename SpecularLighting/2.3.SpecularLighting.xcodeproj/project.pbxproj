@@ -17,7 +17,6 @@
 		376F8EB125F7479600C3B287 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 376F8EB025F7479600C3B287 /* MetalKit.framework */; };
 		376F8EB325F7479E00C3B287 /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 376F8EB225F7479E00C3B287 /* common.framework */; };
 		376F8EB425F7479E00C3B287 /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 376F8EB225F7479E00C3B287 /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		376F8EB925F747D800C3B287 /* MetalBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F8EB825F747D800C3B287 /* MetalBuffer.swift */; };
 		376F8EBF25F7482900C3B287 /* ShapeShaderType.m in Sources */ = {isa = PBXBuildFile; fileRef = 376F8EBE25F7482900C3B287 /* ShapeShaderType.m */; };
 		376F8EC325F7490300C3B287 /* SpecularLightingShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 376F8EC225F7490300C3B287 /* SpecularLightingShader.metal */; };
 		376F8EC725F74BDA00C3B287 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F8EC625F74BDA00C3B287 /* Renderer.swift */; };
@@ -71,7 +70,6 @@
 		376F8EAE25F7478F00C3B287 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		376F8EB025F7479600C3B287 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		376F8EB225F7479E00C3B287 /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		376F8EB825F747D800C3B287 /* MetalBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalBuffer.swift; sourceTree = "<group>"; };
 		376F8EBC25F7480400C3B287 /* ShapeShaderType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShapeShaderType.h; sourceTree = "<group>"; };
 		376F8EBD25F7482800C3B287 /* SpecularLighting-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpecularLighting-Bridging-Header.h"; sourceTree = "<group>"; };
 		376F8EBE25F7482900C3B287 /* ShapeShaderType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShapeShaderType.m; sourceTree = "<group>"; };
@@ -137,7 +135,6 @@
 				376F8E8425F7474A00C3B287 /* Main.storyboard */,
 				376F8E8725F7474A00C3B287 /* Info.plist */,
 				376F8E8825F7474A00C3B287 /* SpecularLighting.entitlements */,
-				376F8EB825F747D800C3B287 /* MetalBuffer.swift */,
 				376F8EBC25F7480400C3B287 /* ShapeShaderType.h */,
 				376F8EBE25F7482900C3B287 /* ShapeShaderType.m */,
 				376F8EBD25F7482800C3B287 /* SpecularLighting-Bridging-Header.h */,
@@ -311,7 +308,6 @@
 				376F8E7F25F7474800C3B287 /* AppDelegate.swift in Sources */,
 				376F8EBF25F7482900C3B287 /* ShapeShaderType.m in Sources */,
 				376F8EC725F74BDA00C3B287 /* Renderer.swift in Sources */,
-				376F8EB925F747D800C3B287 /* MetalBuffer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

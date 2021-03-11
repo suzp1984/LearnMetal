@@ -19,7 +19,6 @@
 		376F8F6325F8923B00C3B287 /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 376F8F6125F8923B00C3B287 /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		376F8F6A25F892D900C3B287 /* ShapeShaderType.m in Sources */ = {isa = PBXBuildFile; fileRef = 376F8F6925F892D900C3B287 /* ShapeShaderType.m */; };
 		376F8F6E25F8930F00C3B287 /* DiffuseMapShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 376F8F6D25F8930F00C3B287 /* DiffuseMapShader.metal */; };
-		376F8F7225F89D3900C3B287 /* MetalBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F8F7125F89D3900C3B287 /* MetalBuffer.swift */; };
 		376F8F7625F89D6700C3B287 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F8F7525F89D6700C3B287 /* Renderer.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,7 +74,6 @@
 		376F8F6825F892D900C3B287 /* DiffuseMap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DiffuseMap-Bridging-Header.h"; sourceTree = "<group>"; };
 		376F8F6925F892D900C3B287 /* ShapeShaderType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShapeShaderType.m; sourceTree = "<group>"; };
 		376F8F6D25F8930F00C3B287 /* DiffuseMapShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = DiffuseMapShader.metal; sourceTree = "<group>"; };
-		376F8F7125F89D3900C3B287 /* MetalBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalBuffer.swift; sourceTree = "<group>"; };
 		376F8F7525F89D6700C3B287 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,7 +139,6 @@
 				376F8F6925F892D900C3B287 /* ShapeShaderType.m */,
 				376F8F6825F892D900C3B287 /* DiffuseMap-Bridging-Header.h */,
 				376F8F6D25F8930F00C3B287 /* DiffuseMapShader.metal */,
-				376F8F7125F89D3900C3B287 /* MetalBuffer.swift */,
 				376F8F7525F89D6700C3B287 /* Renderer.swift */,
 			);
 			path = DiffuseMap;
@@ -307,7 +304,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				376F8F6A25F892D900C3B287 /* ShapeShaderType.m in Sources */,
-				376F8F7225F89D3900C3B287 /* MetalBuffer.swift in Sources */,
 				376F8F3025F8920800C3B287 /* ViewController.swift in Sources */,
 				376F8F6E25F8930F00C3B287 /* DiffuseMapShader.metal in Sources */,
 				376F8F7625F89D6700C3B287 /* Renderer.swift in Sources */,

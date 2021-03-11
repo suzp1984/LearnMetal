@@ -1,19 +1,19 @@
 //
 //  MetalBuffer.swift
-//  Colors
+//  common
 //
-//  Created by Jacob Su on 3/8/21.
+//  Created by Jacob Su on 3/11/21.
 //
 
 import MetalKit
 
-protocol Resource {
+public protocol Resource {
     associatedtype Element
 }
 
 /// A wrapper around MTLBuffer which provides type safe access and assignment to the underlying MTLBuffer's contents.
 
-struct MetalBuffer<Element>: Resource {
+public struct MetalBuffer<Element>: Resource {
     
     /// The underlying MTLBuffer.
     fileprivate let buffer: MTLBuffer
@@ -23,13 +23,13 @@ struct MetalBuffer<Element>: Resource {
     fileprivate let index: Int
     
     /// The number of elements of T the buffer can hold.
-    let count: Int
-    var stride: Int {
+    public let count: Int
+    public var stride: Int {
         MemoryLayout<Element>.stride
     }
 
     /// Initializes the buffer with zeros, the buffer is given an appropriate length based on the provided element count.
-    init(device: MTLDevice, count: Int, index: UInt32, label: String? = nil, options: MTLResourceOptions = []) {
+    public init(device: MTLDevice, count: Int, index: UInt32, label: String? = nil, options: MTLResourceOptions = []) {
         
         guard let buffer = device.makeBuffer(length: MemoryLayout<Element>.stride * count, options: options) else {
             fatalError("Failed to create MTLBuffer.")
@@ -41,7 +41,7 @@ struct MetalBuffer<Element>: Resource {
     }
     
     /// Initializes the buffer with the contents of the provided array.
-    init(device: MTLDevice, array: [Element], index: UInt32, options: MTLResourceOptions = []) {
+    public init(device: MTLDevice, array: [Element], index: UInt32, options: MTLResourceOptions = []) {
         
         guard let buffer = device.makeBuffer(bytes: array, length: MemoryLayout<Element>.stride * array.count, options: .storageModeShared) else {
             fatalError("Failed to create MTLBuffer")
@@ -52,7 +52,7 @@ struct MetalBuffer<Element>: Resource {
     }
     
     /// Replaces the buffer's memory at the specified element index with the provided value.
-    func assign<T>(_ value: T, at index: Int = 0) {
+    public func assign<T>(_ value: T, at index: Int = 0) {
         precondition(index <= count - 1, "Index \(index) is greater than maximum allowable index of \(count - 1) for this buffer.")
         withUnsafePointer(to: value) {
             buffer.contents().advanced(by: index * stride).copyMemory(from: $0, byteCount: stride)
@@ -60,14 +60,14 @@ struct MetalBuffer<Element>: Resource {
     }
     
     /// Replaces the buffer's memory with the values in the array.
-    func assign<Element>(with array: [Element]) {
+    public func assign<Element>(with array: [Element]) {
         let byteCount = array.count * stride
         precondition(byteCount == buffer.length, "Mismatch between the byte count of the array's contents and the MTLBuffer length.")
         buffer.contents().copyMemory(from: array, byteCount: byteCount)
     }
     
     /// Returns a copy of the value at the specified element index in the buffer.
-    subscript(index: Int) -> Element {
+    public subscript(index: Int) -> Element {
         get {
             precondition(stride * index <= buffer.length - stride, "This buffer is not large enough to have an element at the index: \(index)")
             return buffer.contents().advanced(by: index * stride).load(as: Element.self)
@@ -83,15 +83,15 @@ struct MetalBuffer<Element>: Resource {
 // Note: This extension is in this file because access to Buffer<T>.buffer is fileprivate.
 // Access to Buffer<T>.buffer was made fileprivate to ensure that only this file can touch the underlying MTLBuffer.
 extension MTLRenderCommandEncoder {
-    func setVertexBuffer<T>(_ vertexBuffer: MetalBuffer<T>, offset: Int = 0) {
+    public func setVertexBuffer<T>(_ vertexBuffer: MetalBuffer<T>, offset: Int = 0) {
         setVertexBuffer(vertexBuffer.buffer, offset: offset, index: vertexBuffer.index)
     }
     
-    func setFragmentBuffer<T>(_ fragmentBuffer: MetalBuffer<T>, offset: Int = 0) {
+    public func setFragmentBuffer<T>(_ fragmentBuffer: MetalBuffer<T>, offset: Int = 0) {
         setFragmentBuffer(fragmentBuffer.buffer, offset: offset, index: fragmentBuffer.index)
     }
     
-    func setVertexResource<R: Resource>(_ resource: R) {
+    public func setVertexResource<R: Resource>(_ resource: R) {
         if let buffer = resource as? MetalBuffer<R.Element> {
             setVertexBuffer(buffer)
         }
@@ -101,7 +101,7 @@ extension MTLRenderCommandEncoder {
         }
     }
     
-    func setFragmentResource<R: Resource>(_ resource: R) {
+    public func setFragmentResource<R: Resource>(_ resource: R) {
         if let buffer = resource as? MetalBuffer<R.Element> {
             setFragmentBuffer(buffer)
         }
@@ -112,12 +112,9 @@ extension MTLRenderCommandEncoder {
     }
 }
 
-struct Texture: Resource {
-    typealias Element = Any
+public struct Texture: Resource {
+    public typealias Element = Any
     
-    let texture: MTLTexture
-    let index: Int
+    public let texture: MTLTexture
+    public let index: Int
 }
-
-
-
