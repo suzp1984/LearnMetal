@@ -1,0 +1,645 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		372192EB25F9EB6500558BBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372192EA25F9EB6500558BBB /* AppDelegate.swift */; };
+		372192ED25F9EB6500558BBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372192EC25F9EB6500558BBB /* ViewController.swift */; };
+		372192EF25F9EB6700558BBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 372192EE25F9EB6700558BBB /* Assets.xcassets */; };
+		372192F225F9EB6700558BBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372192F025F9EB6700558BBB /* Main.storyboard */; };
+		372192FE25F9EB6700558BBB /* DirectionalLightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372192FD25F9EB6700558BBB /* DirectionalLightTests.swift */; };
+		3721930925F9EB6700558BBB /* DirectionalLightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3721930825F9EB6700558BBB /* DirectionalLightUITests.swift */; };
+		3721932125F9EB8D00558BBB /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3721932025F9EB8D00558BBB /* Metal.framework */; };
+		3721932325F9EB9400558BBB /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3721932225F9EB9400558BBB /* MetalKit.framework */; };
+		3721932525F9EB9B00558BBB /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3721932425F9EB9B00558BBB /* common.framework */; };
+		3721932625F9EB9B00558BBB /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3721932425F9EB9B00558BBB /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3721932D25F9EFA900558BBB /* ShapeShaderType.m in Sources */ = {isa = PBXBuildFile; fileRef = 3721932C25F9EFA900558BBB /* ShapeShaderType.m */; };
+		3721933125F9EFD800558BBB /* DirectionalLight.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3721933025F9EFD800558BBB /* DirectionalLight.metal */; };
+		3721933525F9F16F00558BBB /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3721933425F9F16F00558BBB /* Renderer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		372192FA25F9EB6700558BBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 372192DF25F9EB6500558BBB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 372192E625F9EB6500558BBB;
+			remoteInfo = DirectionalLight;
+		};
+		3721930525F9EB6700558BBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 372192DF25F9EB6500558BBB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 372192E625F9EB6500558BBB;
+			remoteInfo = DirectionalLight;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3721932725F9EB9B00558BBB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3721932625F9EB9B00558BBB /* common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		372192E725F9EB6500558BBB /* DirectionalLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DirectionalLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		372192EA25F9EB6500558BBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		372192EC25F9EB6500558BBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		372192EE25F9EB6700558BBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		372192F125F9EB6700558BBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		372192F325F9EB6700558BBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		372192F425F9EB6700558BBB /* DirectionalLight.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DirectionalLight.entitlements; sourceTree = "<group>"; };
+		372192F925F9EB6700558BBB /* DirectionalLightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DirectionalLightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		372192FD25F9EB6700558BBB /* DirectionalLightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionalLightTests.swift; sourceTree = "<group>"; };
+		372192FF25F9EB6700558BBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3721930425F9EB6700558BBB /* DirectionalLightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DirectionalLightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3721930825F9EB6700558BBB /* DirectionalLightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionalLightUITests.swift; sourceTree = "<group>"; };
+		3721930A25F9EB6700558BBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3721932025F9EB8D00558BBB /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		3721932225F9EB9400558BBB /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		3721932425F9EB9B00558BBB /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3721932A25F9EF7600558BBB /* ShapeShaderType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShapeShaderType.h; sourceTree = "<group>"; };
+		3721932B25F9EFA900558BBB /* DirectionalLight-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DirectionalLight-Bridging-Header.h"; sourceTree = "<group>"; };
+		3721932C25F9EFA900558BBB /* ShapeShaderType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShapeShaderType.m; sourceTree = "<group>"; };
+		3721933025F9EFD800558BBB /* DirectionalLight.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = DirectionalLight.metal; sourceTree = "<group>"; };
+		3721933425F9F16F00558BBB /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		372192E425F9EB6500558BBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3721932125F9EB8D00558BBB /* Metal.framework in Frameworks */,
+				3721932525F9EB9B00558BBB /* common.framework in Frameworks */,
+				3721932325F9EB9400558BBB /* MetalKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372192F625F9EB6700558BBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3721930125F9EB6700558BBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		372192DE25F9EB6500558BBB = {
+			isa = PBXGroup;
+			children = (
+				372192E925F9EB6500558BBB /* DirectionalLight */,
+				372192FC25F9EB6700558BBB /* DirectionalLightTests */,
+				3721930725F9EB6700558BBB /* DirectionalLightUITests */,
+				372192E825F9EB6500558BBB /* Products */,
+				3721931F25F9EB8D00558BBB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		372192E825F9EB6500558BBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				372192E725F9EB6500558BBB /* DirectionalLight.app */,
+				372192F925F9EB6700558BBB /* DirectionalLightTests.xctest */,
+				3721930425F9EB6700558BBB /* DirectionalLightUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		372192E925F9EB6500558BBB /* DirectionalLight */ = {
+			isa = PBXGroup;
+			children = (
+				372192EA25F9EB6500558BBB /* AppDelegate.swift */,
+				372192EC25F9EB6500558BBB /* ViewController.swift */,
+				372192EE25F9EB6700558BBB /* Assets.xcassets */,
+				372192F025F9EB6700558BBB /* Main.storyboard */,
+				372192F325F9EB6700558BBB /* Info.plist */,
+				372192F425F9EB6700558BBB /* DirectionalLight.entitlements */,
+				3721932A25F9EF7600558BBB /* ShapeShaderType.h */,
+				3721932C25F9EFA900558BBB /* ShapeShaderType.m */,
+				3721932B25F9EFA900558BBB /* DirectionalLight-Bridging-Header.h */,
+				3721933025F9EFD800558BBB /* DirectionalLight.metal */,
+				3721933425F9F16F00558BBB /* Renderer.swift */,
+			);
+			path = DirectionalLight;
+			sourceTree = "<group>";
+		};
+		372192FC25F9EB6700558BBB /* DirectionalLightTests */ = {
+			isa = PBXGroup;
+			children = (
+				372192FD25F9EB6700558BBB /* DirectionalLightTests.swift */,
+				372192FF25F9EB6700558BBB /* Info.plist */,
+			);
+			path = DirectionalLightTests;
+			sourceTree = "<group>";
+		};
+		3721930725F9EB6700558BBB /* DirectionalLightUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3721930825F9EB6700558BBB /* DirectionalLightUITests.swift */,
+				3721930A25F9EB6700558BBB /* Info.plist */,
+			);
+			path = DirectionalLightUITests;
+			sourceTree = "<group>";
+		};
+		3721931F25F9EB8D00558BBB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3721932425F9EB9B00558BBB /* common.framework */,
+				3721932225F9EB9400558BBB /* MetalKit.framework */,
+				3721932025F9EB8D00558BBB /* Metal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		372192E625F9EB6500558BBB /* DirectionalLight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3721930D25F9EB6700558BBB /* Build configuration list for PBXNativeTarget "DirectionalLight" */;
+			buildPhases = (
+				372192E325F9EB6500558BBB /* Sources */,
+				372192E425F9EB6500558BBB /* Frameworks */,
+				372192E525F9EB6500558BBB /* Resources */,
+				3721932725F9EB9B00558BBB /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DirectionalLight;
+			productName = DirectionalLight;
+			productReference = 372192E725F9EB6500558BBB /* DirectionalLight.app */;
+			productType = "com.apple.product-type.application";
+		};
+		372192F825F9EB6700558BBB /* DirectionalLightTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3721931025F9EB6700558BBB /* Build configuration list for PBXNativeTarget "DirectionalLightTests" */;
+			buildPhases = (
+				372192F525F9EB6700558BBB /* Sources */,
+				372192F625F9EB6700558BBB /* Frameworks */,
+				372192F725F9EB6700558BBB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				372192FB25F9EB6700558BBB /* PBXTargetDependency */,
+			);
+			name = DirectionalLightTests;
+			productName = DirectionalLightTests;
+			productReference = 372192F925F9EB6700558BBB /* DirectionalLightTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3721930325F9EB6700558BBB /* DirectionalLightUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3721931325F9EB6700558BBB /* Build configuration list for PBXNativeTarget "DirectionalLightUITests" */;
+			buildPhases = (
+				3721930025F9EB6700558BBB /* Sources */,
+				3721930125F9EB6700558BBB /* Frameworks */,
+				3721930225F9EB6700558BBB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3721930625F9EB6700558BBB /* PBXTargetDependency */,
+			);
+			name = DirectionalLightUITests;
+			productName = DirectionalLightUITests;
+			productReference = 3721930425F9EB6700558BBB /* DirectionalLightUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		372192DF25F9EB6500558BBB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					372192E625F9EB6500558BBB = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+					};
+					372192F825F9EB6700558BBB = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 372192E625F9EB6500558BBB;
+					};
+					3721930325F9EB6700558BBB = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 372192E625F9EB6500558BBB;
+					};
+				};
+			};
+			buildConfigurationList = 372192E225F9EB6500558BBB /* Build configuration list for PBXProject "2.8.DirectionalLight" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 372192DE25F9EB6500558BBB;
+			productRefGroup = 372192E825F9EB6500558BBB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				372192E625F9EB6500558BBB /* DirectionalLight */,
+				372192F825F9EB6700558BBB /* DirectionalLightTests */,
+				3721930325F9EB6700558BBB /* DirectionalLightUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		372192E525F9EB6500558BBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372192EF25F9EB6700558BBB /* Assets.xcassets in Resources */,
+				372192F225F9EB6700558BBB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372192F725F9EB6700558BBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3721930225F9EB6700558BBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		372192E325F9EB6500558BBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3721932D25F9EFA900558BBB /* ShapeShaderType.m in Sources */,
+				3721933125F9EFD800558BBB /* DirectionalLight.metal in Sources */,
+				372192ED25F9EB6500558BBB /* ViewController.swift in Sources */,
+				3721933525F9F16F00558BBB /* Renderer.swift in Sources */,
+				372192EB25F9EB6500558BBB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372192F525F9EB6700558BBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372192FE25F9EB6700558BBB /* DirectionalLightTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3721930025F9EB6700558BBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3721930925F9EB6700558BBB /* DirectionalLightUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		372192FB25F9EB6700558BBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 372192E625F9EB6500558BBB /* DirectionalLight */;
+			targetProxy = 372192FA25F9EB6700558BBB /* PBXContainerItemProxy */;
+		};
+		3721930625F9EB6700558BBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 372192E625F9EB6500558BBB /* DirectionalLight */;
+			targetProxy = 3721930525F9EB6700558BBB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		372192F025F9EB6700558BBB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				372192F125F9EB6700558BBB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3721930B25F9EB6700558BBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3721930C25F9EB6700558BBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		3721930E25F9EB6700558BBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = DirectionalLight/DirectionalLight.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = DirectionalLight/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.DirectionalLight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DirectionalLight/DirectionalLight-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3721930F25F9EB6700558BBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = DirectionalLight/DirectionalLight.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = DirectionalLight/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.DirectionalLight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DirectionalLight/DirectionalLight-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		3721931125F9EB6700558BBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = DirectionalLightTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.DirectionalLightTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DirectionalLight.app/Contents/MacOS/DirectionalLight";
+			};
+			name = Debug;
+		};
+		3721931225F9EB6700558BBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = DirectionalLightTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.DirectionalLightTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DirectionalLight.app/Contents/MacOS/DirectionalLight";
+			};
+			name = Release;
+		};
+		3721931425F9EB6700558BBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = DirectionalLightUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.DirectionalLightUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = DirectionalLight;
+			};
+			name = Debug;
+		};
+		3721931525F9EB6700558BBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = DirectionalLightUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.DirectionalLightUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = DirectionalLight;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		372192E225F9EB6500558BBB /* Build configuration list for PBXProject "2.8.DirectionalLight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3721930B25F9EB6700558BBB /* Debug */,
+				3721930C25F9EB6700558BBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3721930D25F9EB6700558BBB /* Build configuration list for PBXNativeTarget "DirectionalLight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3721930E25F9EB6700558BBB /* Debug */,
+				3721930F25F9EB6700558BBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3721931025F9EB6700558BBB /* Build configuration list for PBXNativeTarget "DirectionalLightTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3721931125F9EB6700558BBB /* Debug */,
+				3721931225F9EB6700558BBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3721931325F9EB6700558BBB /* Build configuration list for PBXNativeTarget "DirectionalLightUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3721931425F9EB6700558BBB /* Debug */,
+				3721931525F9EB6700558BBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 372192DF25F9EB6500558BBB /* Project object */;
+}
