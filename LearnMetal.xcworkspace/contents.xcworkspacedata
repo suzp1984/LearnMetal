@@ -64,4 +64,7 @@
    <FileRef
       location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/DirectionalLight/2.8.DirectionalLight.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/PointLight/2.9.PointLight.xcodeproj">
+   </FileRef>
 </Workspace>

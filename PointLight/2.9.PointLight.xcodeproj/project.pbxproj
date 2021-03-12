@@ -1,0 +1,645 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		376CC38725FAEB6F00FB6FEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376CC38625FAEB6F00FB6FEC /* AppDelegate.swift */; };
+		376CC38925FAEB6F00FB6FEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376CC38825FAEB6F00FB6FEC /* ViewController.swift */; };
+		376CC38B25FAEB6F00FB6FEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 376CC38A25FAEB6F00FB6FEC /* Assets.xcassets */; };
+		376CC38E25FAEB6F00FB6FEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376CC38C25FAEB6F00FB6FEC /* Main.storyboard */; };
+		376CC39A25FAEB7000FB6FEC /* PointLightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376CC39925FAEB7000FB6FEC /* PointLightTests.swift */; };
+		376CC3A525FAEB7000FB6FEC /* PointLightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376CC3A425FAEB7000FB6FEC /* PointLightUITests.swift */; };
+		376CC3BD25FAEDE800FB6FEC /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 376CC3BC25FAEDE800FB6FEC /* Metal.framework */; };
+		376CC3BF25FAEDF200FB6FEC /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 376CC3BE25FAEDF200FB6FEC /* MetalKit.framework */; };
+		376CC3C125FAEDFA00FB6FEC /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 376CC3C025FAEDFA00FB6FEC /* common.framework */; };
+		376CC3C225FAEDFA00FB6FEC /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 376CC3C025FAEDFA00FB6FEC /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		376CC3C725FAEE7A00FB6FEC /* ShapeShaderType.m in Sources */ = {isa = PBXBuildFile; fileRef = 376CC3C625FAEE7A00FB6FEC /* ShapeShaderType.m */; };
+		376CC3CB25FAEEA800FB6FEC /* PointLightShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 376CC3CA25FAEEA800FB6FEC /* PointLightShader.metal */; };
+		376CC3CF25FAF48700FB6FEC /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376CC3CE25FAF48700FB6FEC /* Renderer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		376CC39625FAEB7000FB6FEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 376CC37B25FAEB6F00FB6FEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 376CC38225FAEB6F00FB6FEC;
+			remoteInfo = PointLight;
+		};
+		376CC3A125FAEB7000FB6FEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 376CC37B25FAEB6F00FB6FEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 376CC38225FAEB6F00FB6FEC;
+			remoteInfo = PointLight;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		376CC3C325FAEDFA00FB6FEC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				376CC3C225FAEDFA00FB6FEC /* common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		376CC38325FAEB6F00FB6FEC /* PointLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PointLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		376CC38625FAEB6F00FB6FEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		376CC38825FAEB6F00FB6FEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		376CC38A25FAEB6F00FB6FEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		376CC38D25FAEB6F00FB6FEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		376CC38F25FAEB6F00FB6FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		376CC39025FAEB6F00FB6FEC /* PointLight.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PointLight.entitlements; sourceTree = "<group>"; };
+		376CC39525FAEB7000FB6FEC /* PointLightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PointLightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		376CC39925FAEB7000FB6FEC /* PointLightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointLightTests.swift; sourceTree = "<group>"; };
+		376CC39B25FAEB7000FB6FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		376CC3A025FAEB7000FB6FEC /* PointLightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PointLightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		376CC3A425FAEB7000FB6FEC /* PointLightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointLightUITests.swift; sourceTree = "<group>"; };
+		376CC3A625FAEB7000FB6FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		376CC3BC25FAEDE800FB6FEC /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		376CC3BE25FAEDF200FB6FEC /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		376CC3C025FAEDFA00FB6FEC /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		376CC3C425FAEE3C00FB6FEC /* ShapeShaderType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShapeShaderType.h; sourceTree = "<group>"; };
+		376CC3C525FAEE7A00FB6FEC /* PointLight-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PointLight-Bridging-Header.h"; sourceTree = "<group>"; };
+		376CC3C625FAEE7A00FB6FEC /* ShapeShaderType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShapeShaderType.m; sourceTree = "<group>"; };
+		376CC3CA25FAEEA800FB6FEC /* PointLightShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = PointLightShader.metal; sourceTree = "<group>"; };
+		376CC3CE25FAF48700FB6FEC /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		376CC38025FAEB6F00FB6FEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376CC3BD25FAEDE800FB6FEC /* Metal.framework in Frameworks */,
+				376CC3C125FAEDFA00FB6FEC /* common.framework in Frameworks */,
+				376CC3BF25FAEDF200FB6FEC /* MetalKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376CC39225FAEB7000FB6FEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376CC39D25FAEB7000FB6FEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		376CC37A25FAEB6F00FB6FEC = {
+			isa = PBXGroup;
+			children = (
+				376CC38525FAEB6F00FB6FEC /* PointLight */,
+				376CC39825FAEB7000FB6FEC /* PointLightTests */,
+				376CC3A325FAEB7000FB6FEC /* PointLightUITests */,
+				376CC38425FAEB6F00FB6FEC /* Products */,
+				376CC3BB25FAEDE800FB6FEC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		376CC38425FAEB6F00FB6FEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				376CC38325FAEB6F00FB6FEC /* PointLight.app */,
+				376CC39525FAEB7000FB6FEC /* PointLightTests.xctest */,
+				376CC3A025FAEB7000FB6FEC /* PointLightUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		376CC38525FAEB6F00FB6FEC /* PointLight */ = {
+			isa = PBXGroup;
+			children = (
+				376CC38625FAEB6F00FB6FEC /* AppDelegate.swift */,
+				376CC38825FAEB6F00FB6FEC /* ViewController.swift */,
+				376CC38A25FAEB6F00FB6FEC /* Assets.xcassets */,
+				376CC38C25FAEB6F00FB6FEC /* Main.storyboard */,
+				376CC38F25FAEB6F00FB6FEC /* Info.plist */,
+				376CC39025FAEB6F00FB6FEC /* PointLight.entitlements */,
+				376CC3C425FAEE3C00FB6FEC /* ShapeShaderType.h */,
+				376CC3C625FAEE7A00FB6FEC /* ShapeShaderType.m */,
+				376CC3C525FAEE7A00FB6FEC /* PointLight-Bridging-Header.h */,
+				376CC3CA25FAEEA800FB6FEC /* PointLightShader.metal */,
+				376CC3CE25FAF48700FB6FEC /* Renderer.swift */,
+			);
+			path = PointLight;
+			sourceTree = "<group>";
+		};
+		376CC39825FAEB7000FB6FEC /* PointLightTests */ = {
+			isa = PBXGroup;
+			children = (
+				376CC39925FAEB7000FB6FEC /* PointLightTests.swift */,
+				376CC39B25FAEB7000FB6FEC /* Info.plist */,
+			);
+			path = PointLightTests;
+			sourceTree = "<group>";
+		};
+		376CC3A325FAEB7000FB6FEC /* PointLightUITests */ = {
+			isa = PBXGroup;
+			children = (
+				376CC3A425FAEB7000FB6FEC /* PointLightUITests.swift */,
+				376CC3A625FAEB7000FB6FEC /* Info.plist */,
+			);
+			path = PointLightUITests;
+			sourceTree = "<group>";
+		};
+		376CC3BB25FAEDE800FB6FEC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				376CC3C025FAEDFA00FB6FEC /* common.framework */,
+				376CC3BE25FAEDF200FB6FEC /* MetalKit.framework */,
+				376CC3BC25FAEDE800FB6FEC /* Metal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		376CC38225FAEB6F00FB6FEC /* PointLight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 376CC3A925FAEB7000FB6FEC /* Build configuration list for PBXNativeTarget "PointLight" */;
+			buildPhases = (
+				376CC37F25FAEB6F00FB6FEC /* Sources */,
+				376CC38025FAEB6F00FB6FEC /* Frameworks */,
+				376CC38125FAEB6F00FB6FEC /* Resources */,
+				376CC3C325FAEDFA00FB6FEC /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PointLight;
+			productName = PointLight;
+			productReference = 376CC38325FAEB6F00FB6FEC /* PointLight.app */;
+			productType = "com.apple.product-type.application";
+		};
+		376CC39425FAEB7000FB6FEC /* PointLightTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 376CC3AC25FAEB7000FB6FEC /* Build configuration list for PBXNativeTarget "PointLightTests" */;
+			buildPhases = (
+				376CC39125FAEB7000FB6FEC /* Sources */,
+				376CC39225FAEB7000FB6FEC /* Frameworks */,
+				376CC39325FAEB7000FB6FEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				376CC39725FAEB7000FB6FEC /* PBXTargetDependency */,
+			);
+			name = PointLightTests;
+			productName = PointLightTests;
+			productReference = 376CC39525FAEB7000FB6FEC /* PointLightTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		376CC39F25FAEB7000FB6FEC /* PointLightUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 376CC3AF25FAEB7000FB6FEC /* Build configuration list for PBXNativeTarget "PointLightUITests" */;
+			buildPhases = (
+				376CC39C25FAEB7000FB6FEC /* Sources */,
+				376CC39D25FAEB7000FB6FEC /* Frameworks */,
+				376CC39E25FAEB7000FB6FEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				376CC3A225FAEB7000FB6FEC /* PBXTargetDependency */,
+			);
+			name = PointLightUITests;
+			productName = PointLightUITests;
+			productReference = 376CC3A025FAEB7000FB6FEC /* PointLightUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		376CC37B25FAEB6F00FB6FEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					376CC38225FAEB6F00FB6FEC = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+					};
+					376CC39425FAEB7000FB6FEC = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 376CC38225FAEB6F00FB6FEC;
+					};
+					376CC39F25FAEB7000FB6FEC = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 376CC38225FAEB6F00FB6FEC;
+					};
+				};
+			};
+			buildConfigurationList = 376CC37E25FAEB6F00FB6FEC /* Build configuration list for PBXProject "2.9.PointLight" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 376CC37A25FAEB6F00FB6FEC;
+			productRefGroup = 376CC38425FAEB6F00FB6FEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				376CC38225FAEB6F00FB6FEC /* PointLight */,
+				376CC39425FAEB7000FB6FEC /* PointLightTests */,
+				376CC39F25FAEB7000FB6FEC /* PointLightUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		376CC38125FAEB6F00FB6FEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376CC38B25FAEB6F00FB6FEC /* Assets.xcassets in Resources */,
+				376CC38E25FAEB6F00FB6FEC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376CC39325FAEB7000FB6FEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376CC39E25FAEB7000FB6FEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		376CC37F25FAEB6F00FB6FEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376CC3CB25FAEEA800FB6FEC /* PointLightShader.metal in Sources */,
+				376CC3C725FAEE7A00FB6FEC /* ShapeShaderType.m in Sources */,
+				376CC38925FAEB6F00FB6FEC /* ViewController.swift in Sources */,
+				376CC3CF25FAF48700FB6FEC /* Renderer.swift in Sources */,
+				376CC38725FAEB6F00FB6FEC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376CC39125FAEB7000FB6FEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376CC39A25FAEB7000FB6FEC /* PointLightTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376CC39C25FAEB7000FB6FEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376CC3A525FAEB7000FB6FEC /* PointLightUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		376CC39725FAEB7000FB6FEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 376CC38225FAEB6F00FB6FEC /* PointLight */;
+			targetProxy = 376CC39625FAEB7000FB6FEC /* PBXContainerItemProxy */;
+		};
+		376CC3A225FAEB7000FB6FEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 376CC38225FAEB6F00FB6FEC /* PointLight */;
+			targetProxy = 376CC3A125FAEB7000FB6FEC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		376CC38C25FAEB6F00FB6FEC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				376CC38D25FAEB6F00FB6FEC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		376CC3A725FAEB7000FB6FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		376CC3A825FAEB7000FB6FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		376CC3AA25FAEB7000FB6FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = PointLight/PointLight.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = PointLight/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.PointLight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PointLight/PointLight-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		376CC3AB25FAEB7000FB6FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = PointLight/PointLight.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = PointLight/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.PointLight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PointLight/PointLight-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		376CC3AD25FAEB7000FB6FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = PointLightTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.PointLightTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PointLight.app/Contents/MacOS/PointLight";
+			};
+			name = Debug;
+		};
+		376CC3AE25FAEB7000FB6FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = PointLightTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.PointLightTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PointLight.app/Contents/MacOS/PointLight";
+			};
+			name = Release;
+		};
+		376CC3B025FAEB7000FB6FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = PointLightUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.PointLightUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = PointLight;
+			};
+			name = Debug;
+		};
+		376CC3B125FAEB7000FB6FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = PointLightUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.PointLightUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = PointLight;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		376CC37E25FAEB6F00FB6FEC /* Build configuration list for PBXProject "2.9.PointLight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				376CC3A725FAEB7000FB6FEC /* Debug */,
+				376CC3A825FAEB7000FB6FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		376CC3A925FAEB7000FB6FEC /* Build configuration list for PBXNativeTarget "PointLight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				376CC3AA25FAEB7000FB6FEC /* Debug */,
+				376CC3AB25FAEB7000FB6FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		376CC3AC25FAEB7000FB6FEC /* Build configuration list for PBXNativeTarget "PointLightTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				376CC3AD25FAEB7000FB6FEC /* Debug */,
+				376CC3AE25FAEB7000FB6FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		376CC3AF25FAEB7000FB6FEC /* Build configuration list for PBXNativeTarget "PointLightUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				376CC3B025FAEB7000FB6FEC /* Debug */,
+				376CC3B125FAEB7000FB6FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 376CC37B25FAEB6F00FB6FEC /* Project object */;
+}
