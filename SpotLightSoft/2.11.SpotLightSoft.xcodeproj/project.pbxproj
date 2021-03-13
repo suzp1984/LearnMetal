@@ -1,0 +1,645 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		376CC43625FC4FAA00FB6FEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376CC43525FC4FAA00FB6FEC /* AppDelegate.swift */; };
+		376CC43825FC4FAA00FB6FEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376CC43725FC4FAA00FB6FEC /* ViewController.swift */; };
+		376CC43A25FC4FAC00FB6FEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 376CC43925FC4FAC00FB6FEC /* Assets.xcassets */; };
+		376CC43D25FC4FAC00FB6FEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376CC43B25FC4FAC00FB6FEC /* Main.storyboard */; };
+		376CC44925FC4FAC00FB6FEC /* SpotLightSoftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376CC44825FC4FAC00FB6FEC /* SpotLightSoftTests.swift */; };
+		376CC45425FC4FAC00FB6FEC /* SpotLightSoftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376CC45325FC4FAC00FB6FEC /* SpotLightSoftUITests.swift */; };
+		376CC46C25FC521E00FB6FEC /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 376CC46B25FC521E00FB6FEC /* Metal.framework */; };
+		376CC46E25FC522400FB6FEC /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 376CC46D25FC522400FB6FEC /* MetalKit.framework */; };
+		376CC47025FC522900FB6FEC /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 376CC46F25FC522900FB6FEC /* common.framework */; };
+		376CC47125FC522900FB6FEC /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 376CC46F25FC522900FB6FEC /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		376CC47825FC529100FB6FEC /* ShapeShaderType.m in Sources */ = {isa = PBXBuildFile; fileRef = 376CC47725FC529100FB6FEC /* ShapeShaderType.m */; };
+		376CC47C25FC52CD00FB6FEC /* SpotLightShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 376CC47B25FC52CD00FB6FEC /* SpotLightShader.metal */; };
+		376CC48025FC549F00FB6FEC /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376CC47F25FC549F00FB6FEC /* Renderer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		376CC44525FC4FAC00FB6FEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 376CC42A25FC4FAA00FB6FEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 376CC43125FC4FAA00FB6FEC;
+			remoteInfo = SpotLightSoft;
+		};
+		376CC45025FC4FAC00FB6FEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 376CC42A25FC4FAA00FB6FEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 376CC43125FC4FAA00FB6FEC;
+			remoteInfo = SpotLightSoft;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		376CC47225FC522900FB6FEC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				376CC47125FC522900FB6FEC /* common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		376CC43225FC4FAA00FB6FEC /* SpotLightSoft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotLightSoft.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		376CC43525FC4FAA00FB6FEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		376CC43725FC4FAA00FB6FEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		376CC43925FC4FAC00FB6FEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		376CC43C25FC4FAC00FB6FEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		376CC43E25FC4FAC00FB6FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		376CC43F25FC4FAC00FB6FEC /* SpotLightSoft.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SpotLightSoft.entitlements; sourceTree = "<group>"; };
+		376CC44425FC4FAC00FB6FEC /* SpotLightSoftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpotLightSoftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		376CC44825FC4FAC00FB6FEC /* SpotLightSoftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotLightSoftTests.swift; sourceTree = "<group>"; };
+		376CC44A25FC4FAC00FB6FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		376CC44F25FC4FAC00FB6FEC /* SpotLightSoftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpotLightSoftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		376CC45325FC4FAC00FB6FEC /* SpotLightSoftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotLightSoftUITests.swift; sourceTree = "<group>"; };
+		376CC45525FC4FAC00FB6FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		376CC46B25FC521E00FB6FEC /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		376CC46D25FC522400FB6FEC /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		376CC46F25FC522900FB6FEC /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		376CC47525FC526800FB6FEC /* ShapeShaderType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShapeShaderType.h; sourceTree = "<group>"; };
+		376CC47625FC529100FB6FEC /* SpotLightSoft-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpotLightSoft-Bridging-Header.h"; sourceTree = "<group>"; };
+		376CC47725FC529100FB6FEC /* ShapeShaderType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShapeShaderType.m; sourceTree = "<group>"; };
+		376CC47B25FC52CD00FB6FEC /* SpotLightShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = SpotLightShader.metal; sourceTree = "<group>"; };
+		376CC47F25FC549F00FB6FEC /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		376CC42F25FC4FAA00FB6FEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376CC46C25FC521E00FB6FEC /* Metal.framework in Frameworks */,
+				376CC47025FC522900FB6FEC /* common.framework in Frameworks */,
+				376CC46E25FC522400FB6FEC /* MetalKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376CC44125FC4FAC00FB6FEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376CC44C25FC4FAC00FB6FEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		376CC42925FC4FAA00FB6FEC = {
+			isa = PBXGroup;
+			children = (
+				376CC43425FC4FAA00FB6FEC /* SpotLightSoft */,
+				376CC44725FC4FAC00FB6FEC /* SpotLightSoftTests */,
+				376CC45225FC4FAC00FB6FEC /* SpotLightSoftUITests */,
+				376CC43325FC4FAA00FB6FEC /* Products */,
+				376CC46A25FC521E00FB6FEC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		376CC43325FC4FAA00FB6FEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				376CC43225FC4FAA00FB6FEC /* SpotLightSoft.app */,
+				376CC44425FC4FAC00FB6FEC /* SpotLightSoftTests.xctest */,
+				376CC44F25FC4FAC00FB6FEC /* SpotLightSoftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		376CC43425FC4FAA00FB6FEC /* SpotLightSoft */ = {
+			isa = PBXGroup;
+			children = (
+				376CC43525FC4FAA00FB6FEC /* AppDelegate.swift */,
+				376CC43725FC4FAA00FB6FEC /* ViewController.swift */,
+				376CC43925FC4FAC00FB6FEC /* Assets.xcassets */,
+				376CC43B25FC4FAC00FB6FEC /* Main.storyboard */,
+				376CC43E25FC4FAC00FB6FEC /* Info.plist */,
+				376CC43F25FC4FAC00FB6FEC /* SpotLightSoft.entitlements */,
+				376CC47525FC526800FB6FEC /* ShapeShaderType.h */,
+				376CC47725FC529100FB6FEC /* ShapeShaderType.m */,
+				376CC47625FC529100FB6FEC /* SpotLightSoft-Bridging-Header.h */,
+				376CC47B25FC52CD00FB6FEC /* SpotLightShader.metal */,
+				376CC47F25FC549F00FB6FEC /* Renderer.swift */,
+			);
+			path = SpotLightSoft;
+			sourceTree = "<group>";
+		};
+		376CC44725FC4FAC00FB6FEC /* SpotLightSoftTests */ = {
+			isa = PBXGroup;
+			children = (
+				376CC44825FC4FAC00FB6FEC /* SpotLightSoftTests.swift */,
+				376CC44A25FC4FAC00FB6FEC /* Info.plist */,
+			);
+			path = SpotLightSoftTests;
+			sourceTree = "<group>";
+		};
+		376CC45225FC4FAC00FB6FEC /* SpotLightSoftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				376CC45325FC4FAC00FB6FEC /* SpotLightSoftUITests.swift */,
+				376CC45525FC4FAC00FB6FEC /* Info.plist */,
+			);
+			path = SpotLightSoftUITests;
+			sourceTree = "<group>";
+		};
+		376CC46A25FC521E00FB6FEC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				376CC46F25FC522900FB6FEC /* common.framework */,
+				376CC46D25FC522400FB6FEC /* MetalKit.framework */,
+				376CC46B25FC521E00FB6FEC /* Metal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		376CC43125FC4FAA00FB6FEC /* SpotLightSoft */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 376CC45825FC4FAC00FB6FEC /* Build configuration list for PBXNativeTarget "SpotLightSoft" */;
+			buildPhases = (
+				376CC42E25FC4FAA00FB6FEC /* Sources */,
+				376CC42F25FC4FAA00FB6FEC /* Frameworks */,
+				376CC43025FC4FAA00FB6FEC /* Resources */,
+				376CC47225FC522900FB6FEC /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpotLightSoft;
+			productName = SpotLightSoft;
+			productReference = 376CC43225FC4FAA00FB6FEC /* SpotLightSoft.app */;
+			productType = "com.apple.product-type.application";
+		};
+		376CC44325FC4FAC00FB6FEC /* SpotLightSoftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 376CC45B25FC4FAC00FB6FEC /* Build configuration list for PBXNativeTarget "SpotLightSoftTests" */;
+			buildPhases = (
+				376CC44025FC4FAC00FB6FEC /* Sources */,
+				376CC44125FC4FAC00FB6FEC /* Frameworks */,
+				376CC44225FC4FAC00FB6FEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				376CC44625FC4FAC00FB6FEC /* PBXTargetDependency */,
+			);
+			name = SpotLightSoftTests;
+			productName = SpotLightSoftTests;
+			productReference = 376CC44425FC4FAC00FB6FEC /* SpotLightSoftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		376CC44E25FC4FAC00FB6FEC /* SpotLightSoftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 376CC45E25FC4FAC00FB6FEC /* Build configuration list for PBXNativeTarget "SpotLightSoftUITests" */;
+			buildPhases = (
+				376CC44B25FC4FAC00FB6FEC /* Sources */,
+				376CC44C25FC4FAC00FB6FEC /* Frameworks */,
+				376CC44D25FC4FAC00FB6FEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				376CC45125FC4FAC00FB6FEC /* PBXTargetDependency */,
+			);
+			name = SpotLightSoftUITests;
+			productName = SpotLightSoftUITests;
+			productReference = 376CC44F25FC4FAC00FB6FEC /* SpotLightSoftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		376CC42A25FC4FAA00FB6FEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					376CC43125FC4FAA00FB6FEC = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+					};
+					376CC44325FC4FAC00FB6FEC = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 376CC43125FC4FAA00FB6FEC;
+					};
+					376CC44E25FC4FAC00FB6FEC = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 376CC43125FC4FAA00FB6FEC;
+					};
+				};
+			};
+			buildConfigurationList = 376CC42D25FC4FAA00FB6FEC /* Build configuration list for PBXProject "2.11.SpotLightSoft" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 376CC42925FC4FAA00FB6FEC;
+			productRefGroup = 376CC43325FC4FAA00FB6FEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				376CC43125FC4FAA00FB6FEC /* SpotLightSoft */,
+				376CC44325FC4FAC00FB6FEC /* SpotLightSoftTests */,
+				376CC44E25FC4FAC00FB6FEC /* SpotLightSoftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		376CC43025FC4FAA00FB6FEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376CC43A25FC4FAC00FB6FEC /* Assets.xcassets in Resources */,
+				376CC43D25FC4FAC00FB6FEC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376CC44225FC4FAC00FB6FEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376CC44D25FC4FAC00FB6FEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		376CC42E25FC4FAA00FB6FEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376CC47825FC529100FB6FEC /* ShapeShaderType.m in Sources */,
+				376CC43825FC4FAA00FB6FEC /* ViewController.swift in Sources */,
+				376CC43625FC4FAA00FB6FEC /* AppDelegate.swift in Sources */,
+				376CC48025FC549F00FB6FEC /* Renderer.swift in Sources */,
+				376CC47C25FC52CD00FB6FEC /* SpotLightShader.metal in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376CC44025FC4FAC00FB6FEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376CC44925FC4FAC00FB6FEC /* SpotLightSoftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376CC44B25FC4FAC00FB6FEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376CC45425FC4FAC00FB6FEC /* SpotLightSoftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		376CC44625FC4FAC00FB6FEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 376CC43125FC4FAA00FB6FEC /* SpotLightSoft */;
+			targetProxy = 376CC44525FC4FAC00FB6FEC /* PBXContainerItemProxy */;
+		};
+		376CC45125FC4FAC00FB6FEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 376CC43125FC4FAA00FB6FEC /* SpotLightSoft */;
+			targetProxy = 376CC45025FC4FAC00FB6FEC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		376CC43B25FC4FAC00FB6FEC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				376CC43C25FC4FAC00FB6FEC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		376CC45625FC4FAC00FB6FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		376CC45725FC4FAC00FB6FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		376CC45925FC4FAC00FB6FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SpotLightSoft/SpotLightSoft.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = SpotLightSoft/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.SpotLightSoft;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SpotLightSoft/SpotLightSoft-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		376CC45A25FC4FAC00FB6FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SpotLightSoft/SpotLightSoft.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = SpotLightSoft/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.SpotLightSoft;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SpotLightSoft/SpotLightSoft-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		376CC45C25FC4FAC00FB6FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = SpotLightSoftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.SpotLightSoftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpotLightSoft.app/Contents/MacOS/SpotLightSoft";
+			};
+			name = Debug;
+		};
+		376CC45D25FC4FAC00FB6FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = SpotLightSoftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.SpotLightSoftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpotLightSoft.app/Contents/MacOS/SpotLightSoft";
+			};
+			name = Release;
+		};
+		376CC45F25FC4FAC00FB6FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = SpotLightSoftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.SpotLightSoftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = SpotLightSoft;
+			};
+			name = Debug;
+		};
+		376CC46025FC4FAC00FB6FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = SpotLightSoftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.SpotLightSoftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = SpotLightSoft;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		376CC42D25FC4FAA00FB6FEC /* Build configuration list for PBXProject "2.11.SpotLightSoft" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				376CC45625FC4FAC00FB6FEC /* Debug */,
+				376CC45725FC4FAC00FB6FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		376CC45825FC4FAC00FB6FEC /* Build configuration list for PBXNativeTarget "SpotLightSoft" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				376CC45925FC4FAC00FB6FEC /* Debug */,
+				376CC45A25FC4FAC00FB6FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		376CC45B25FC4FAC00FB6FEC /* Build configuration list for PBXNativeTarget "SpotLightSoftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				376CC45C25FC4FAC00FB6FEC /* Debug */,
+				376CC45D25FC4FAC00FB6FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		376CC45E25FC4FAC00FB6FEC /* Build configuration list for PBXNativeTarget "SpotLightSoftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				376CC45F25FC4FAC00FB6FEC /* Debug */,
+				376CC46025FC4FAC00FB6FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 376CC42A25FC4FAA00FB6FEC /* Project object */;
+}

@@ -19,6 +19,7 @@
 - (void) handleMouseScrollDeltaX:(float) deltaX deltaY:(float) deltaY;
 - (matrix_float4x4) getViewMatrix;
 - (vector_float3) getCameraPosition;
+- (vector_float3) getFrontDirection;
 
 @end
 

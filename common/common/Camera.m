@@ -84,4 +84,9 @@ const float PI = 3.1415926;
     return _position;
 }
 
+- (vector_float3) getFrontDirection
+{
+    return _target - _position;
+}
+
 @end

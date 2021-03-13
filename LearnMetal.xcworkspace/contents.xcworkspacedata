@@ -67,4 +67,10 @@
    <FileRef
       location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/PointLight/2.9.PointLight.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/SpotLight/2.10.SpotLight.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/SpotLightSoft/2.11.SpotLightSoft.xcodeproj">
+   </FileRef>
 </Workspace>
