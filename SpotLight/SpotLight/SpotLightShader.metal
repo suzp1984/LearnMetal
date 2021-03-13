@@ -55,7 +55,6 @@ typedef struct FragmentMaterialArguments {
 
 typedef struct FragmentLightArguments {
     device Light  *light  [[id(FragmentArgumentLightBufferIDLight)]];
-    float3 viewPos [[id(FragmentArgumentLightBufferIDViewPosition)]];
 } FragmentLightArguments;
 
 fragment float4 fragmentObjectShader(RasterizerData in [[stage_in]],
@@ -65,6 +64,7 @@ fragment float4 fragmentObjectShader(RasterizerData in [[stage_in]],
     constexpr sampler textureSampler (mag_filter::linear, min_filter::linear);
 
     Light light = lightBuffer.light[0];
+    float3 viewPos = light.position;
     
     float3 lightDir = normalize(light.position - in.fragPos);
     
@@ -82,7 +82,7 @@ fragment float4 fragmentObjectShader(RasterizerData in [[stage_in]],
         float3 diffuse = light.diffuse * (diff * float3(material.diffuseTexture.sample(textureSampler, in.texCoords).rgb));
         
         // specular
-        float3 viewDir = normalize(lightBuffer.viewPos - in.fragPos);
+        float3 viewDir = normalize(viewPos - in.fragPos);
         float3 reflectDir = reflect(-lightDir, norm);
         float spec = pow(max(dot(viewDir, reflectDir), 0.0), material.shininess);
         float3 specular = light.specular * (spec * float3(material.specularTexture.sample(textureSampler, in.texCoords).rgb));

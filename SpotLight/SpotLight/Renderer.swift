@@ -183,11 +183,6 @@ class Renderer: NSObject {
         lightBuffer = device.makeBuffer(bytes: &light, length: MemoryLayout<Light>.stride, options: MTLResourceOptions.storageModeShared)
         lightArgumentEncoder.setBuffer(lightBuffer, offset: 0, index: Int(FragmentArgumentLightBufferIDLight.rawValue))
         
-//        let lightPtr = lightArgumentEncoder.constantData(at: Int(FragmentArgumentLightBufferIDLight.rawValue))
-//        lightPtr.assumingMemoryBound(to: Light.self).initialize(to: light)
-        let viewPosPtr = lightArgumentEncoder.constantData(at: Int(FragmentArgumentLightBufferIDViewPosition.rawValue))
-        viewPosPtr.assumingMemoryBound(to: vector_float3.self).initialize(to: camera.getPosition())
-        
         let width = metalView.frame.width
         let height = metalView.frame.height
         

@@ -1,6 +1,6 @@
 //
 //  Renderer.swift
-//  SpotLightSoft
+//  MultipleLight
 //
 //  Created by Jacob Su on 3/13/21.
 //
@@ -15,9 +15,13 @@ class Renderer: NSObject {
     private let date = Date()
     private var cubeVertexBuffer: MetalBuffer<Vertex>!
     private var uniformBuffer: MetalBuffer<Uniforms>!
-    private var lightBuffer: MTLBuffer!
+    private var lampUniformBuffer: MetalBuffer<Uniforms>!
+    private var dirLightBuffer: MTLBuffer!
+    private var pointLightsBuffer: MTLBuffer!
+    private var spotLightBuffer: MTLBuffer!
     private var depthState: MTLDepthStencilState!
     private var objectRenderPipelineState: MTLRenderPipelineState!
+    private var lampRenderPipelineState: MTLRenderPipelineState!
     private var commandQueue: MTLCommandQueue!
     private var camera: Camera!
     private var viewportSize: vector_float2!
@@ -31,7 +35,9 @@ class Renderer: NSObject {
     private var specularTexture: MTLTexture!
     private var instanceNumber: Int!
     
-    private var light: Light = Light()
+    private var dirLight: DirLight!
+    private var spotLight: SpotLight!
+    private var pointLightNumber: Int!
     
     static let cubeVerties: [Vertex] = [
         Vertex(position: vector_float3(-0.5, -0.5, -0.5), normal: vector_float3( 0.0,  0.0, -1.0), texCoords: vector_float2(0.0, 0.0)),
@@ -90,6 +96,13 @@ class Renderer: NSObject {
         vector_float3(-1.3,  1.0, -1.5),
     ]
     
+    static let pointLightPositions: [vector_float3] = [
+        vector_float3( 0.7,  0.2,  2.0),
+        vector_float3( 2.3, -3.3, -4.0),
+        vector_float3(-4.0,  2.0, -12.0),
+        vector_float3( 0.0,  0.0, -3.0),
+    ]
+    
     init(withMetalView metalView : MTKView) {
         super.init()
         
@@ -98,17 +111,7 @@ class Renderer: NSObject {
                         withUp: vector_float3(0.0, 1.0, 0.0))
         
         instanceNumber = Renderer.cubePositions.count
-        
-        light.position = camera.getPosition()
-        light.direction = camera.getFrontDirection()
-        light.ambient = vector_float3(0.4, 0.4, 0.4)
-        light.diffuse = vector_float3(1.0, 1.0, 1.0)
-        light.specular = vector_float3(1.0, 1.0, 1.0)
-        light.constants = 1.0
-        light.linear = 0.09
-        light.quadratic = 0.032
-        light.cutOff = Float(cos(12.5 * PI / 180.0))
-        light.outerCutOff = Float(cos(17.5 * PI / 180.0))
+        pointLightNumber = Renderer.pointLightPositions.count
         
         viewportSize = vector_float2(Float(metalView.frame.width),
                                      Float(metalView.frame.height))
@@ -146,6 +149,10 @@ class Renderer: NSObject {
             assert(false, "can not found fragmentObjectShader")
         }
         
+        guard let fragmentLampFunc = library.makeFunction(name: "fragmentLampShader") else {
+            assert(false, "can not found fragmentLampShader")
+        }
+        
         let objectRenderPipelineDescriptor = MTLRenderPipelineDescriptor()
         objectRenderPipelineDescriptor.label = "Object pipeline"
         objectRenderPipelineDescriptor.vertexFunction = vertexFunc
@@ -155,6 +162,16 @@ class Renderer: NSObject {
 
         objectRenderPipelineState = try? device.makeRenderPipelineState(descriptor: objectRenderPipelineDescriptor)
         assert(objectRenderPipelineState != nil, "Object Render Pipeline is nil")
+        
+        let lampRenderPipelineDescriptor = MTLRenderPipelineDescriptor()
+        lampRenderPipelineDescriptor.label = "Lamp pipeline"
+        lampRenderPipelineDescriptor.vertexFunction = vertexFunc
+        lampRenderPipelineDescriptor.fragmentFunction = fragmentLampFunc
+        lampRenderPipelineDescriptor.colorAttachments[0].pixelFormat = metalView.colorPixelFormat
+        lampRenderPipelineDescriptor.depthAttachmentPixelFormat = metalView.depthStencilPixelFormat
+        
+        lampRenderPipelineState = try? device.makeRenderPipelineState(descriptor: lampRenderPipelineDescriptor)
+        assert(lampRenderPipelineState != nil, "Lamp Render Pipeline is nil")
         
         let bundle = Bundle(identifier: "io.github.suzp1984.common")
         let textureLoader = MTKTextureLoader(device: device)
@@ -181,8 +198,51 @@ class Renderer: NSObject {
         lightArgumentBuffer.label = "Light ArgumentBuffer"
         lightArgumentEncoder.setArgumentBuffer(lightArgumentBuffer, offset: 0)
         
-        lightBuffer = device.makeBuffer(bytes: &light, length: MemoryLayout<Light>.stride, options: MTLResourceOptions.storageModeShared)
-        lightArgumentEncoder.setBuffer(lightBuffer, offset: 0, index: Int(FragmentArgumentLightBufferIDLight.rawValue))
+        dirLight = DirLight(direction: vector_float3(-0.2, -1.0, -0.3),
+                            ambient: vector_float3(0.05, 0.05, 0.05),
+                            diffuse: vector_float3(0.4, 0.4, 0.4),
+                            specular: vector_float3(0.5, 0.5, 0.5))
+        
+        dirLightBuffer = device.makeBuffer(bytes: &dirLight,
+                                           length: MemoryLayout<DirLight>.stride,
+                                           options: MTLResourceOptions.storageModeShared)
+        lightArgumentEncoder.setBuffer(dirLightBuffer, offset: 0, index: Int(FragmentArgumentLightBufferIDDirLight.rawValue))
+        
+        var pointLight = PointLight(position: vector_float3(0.0, 0.0, 0.0),
+                                    ambient: vector_float3(0.05, 0.05, 0.05),
+                                    diffuse: vector_float3(0.8, 0.8, 0.8),
+                                    specular: vector_float3(1.0, 1.0, 1.0),
+                                    constants: 1.0,
+                                    linear: 0.09,
+                                    quadratic: 0.032)
+        
+        var pointLights: [PointLight] = []
+        for i in 0..<pointLightNumber {
+            pointLight.position = Renderer.pointLightPositions[i]
+            pointLights.append(pointLight)
+        }
+        pointLightsBuffer = device.makeBuffer(bytes: pointLights,
+                                              length: MemoryLayout<PointLight>.stride * pointLights.count,
+                                              options: MTLResourceOptions.storageModeShared)
+        lightArgumentEncoder.setBuffer(pointLightsBuffer, offset: 0, index: Int(FragmentArgumentLightBufferIDPointLight.rawValue))
+        
+        spotLight = SpotLight(position: camera.getPosition(),
+                              direction: camera.getFrontDirection(),
+                              ambient: vector_float3(0.0, 0.0, 0.0),
+                              diffuse: vector_float3(1.0, 1.0, 1.0),
+                              specular: vector_float3(1.0, 1.0, 1.0),
+                              cutOff: Float(cos(12.5 * PI / 180.0)),
+                              outerCutOff: Float(cos(15.0 * PI / 180.0)),
+                              constants: 1.0,
+                              linear: 0.09,
+                              quadratic: 0.032)
+        spotLightBuffer = device.makeBuffer(bytes: &spotLight,
+                                            length: MemoryLayout<SpotLight>.stride,
+                                            options: MTLResourceOptions.storageModeShared)
+        lightArgumentEncoder.setBuffer(spotLightBuffer, offset: 0, index: Int(FragmentArgumentLightBufferIDSpotLight.rawValue))
+
+        let pointLightNumberPtr = lightArgumentEncoder.constantData(at: Int(FragmentArgumentLightBufferIDPointNumber.rawValue))
+        pointLightNumberPtr.assumingMemoryBound(to: Int.self).initialize(to: pointLightNumber)
         
         let width = metalView.frame.width
         let height = metalView.frame.height
@@ -209,6 +269,24 @@ class Renderer: NSObject {
             uniformBuffer.assign(uniform, at: i)
         }
         
+        lampUniformBuffer = MetalBuffer<Uniforms>(device: device,
+                                                  count: pointLightNumber,
+                                                  index: UInt32(VertexInputIndexUniforms.rawValue),
+                                                  label: "lamp uniforms",
+                                                  options: MTLResourceOptions.storageModeShared)
+        (0 ..< pointLightNumber).forEach { i in
+            let modelMatrix = matrix_multiply(matrix4x4_translation(Renderer.pointLightPositions[i]),
+                                              matrix4x4_scale(0.2, 0.2, 0.2))
+            let inverseModelMatrix = simd_inverse(modelMatrix)
+            let viewMatrix = camera.getViewMatrix()
+            let projectionMatrix = matrix_perspective_left_hand(Float(PI / 4.0), Float(width / height), 0.1, 100)
+            let uniform = Uniforms(modelMatrix: modelMatrix,
+                                   viewMatrix: viewMatrix,
+                                   projectionMatrix: projectionMatrix,
+                                   inverseModelMatrix: inverseModelMatrix)
+            lampUniformBuffer.assign(uniform, at: i)
+        }
+        
         commandQueue = device.makeCommandQueue()
     }
     
@@ -221,9 +299,16 @@ class Renderer: NSObject {
             uniformBuffer.assign(uniform, at: i)
         }
         
-        light.position = camera.getPosition()
-        light.direction = camera.getFrontDirection()
-        lightBuffer.contents().assumingMemoryBound(to: Light.self).initialize(to: light)
+        for i in 0..<pointLightNumber {
+            var uniform = lampUniformBuffer[i]
+            uniform.viewMatrix = camera.getViewMatrix()
+            
+            lampUniformBuffer.assign(uniform, at: i)
+        }
+        
+        spotLight.position = camera.getPosition()
+        spotLight.direction = camera.getFrontDirection()
+        spotLightBuffer.contents().assumingMemoryBound(to: SpotLight.self).initialize(to: spotLight)
     }
 }
 
@@ -238,6 +323,13 @@ extension Renderer : MTKViewDelegate
             uniform.projectionMatrix = matrix_perspective_left_hand(Float(PI / 4.0), Float(size.width / size.height), 0.1, 100)
             
             uniformBuffer.assign(uniform, at: i)
+        }
+        
+        for i in 0..<pointLightNumber {
+            var uniform = lampUniformBuffer[i]
+            uniform.projectionMatrix = matrix_perspective_left_hand(Float(PI / 4.0), Float(size.width / size.height), 0.1, 100)
+            
+            lampUniformBuffer.assign(uniform, at: i)
         }
     }
     
@@ -268,7 +360,9 @@ extension Renderer : MTKViewDelegate
         
         objectRenderEncoder.useResource(diffuseTexture, usage: MTLResourceUsage.sample)
         objectRenderEncoder.useResource(specularTexture, usage: MTLResourceUsage.sample)
-        objectRenderEncoder.useResource(lightBuffer, usage: MTLResourceUsage.read)
+        objectRenderEncoder.useResource(dirLightBuffer, usage: MTLResourceUsage.read)
+        objectRenderEncoder.useResource(pointLightsBuffer, usage: MTLResourceUsage.read)
+        objectRenderEncoder.useResource(spotLightBuffer, usage: MTLResourceUsage.read)
         
         objectRenderEncoder.setFragmentBuffer(materialArgumentBuffer, offset: 0, index: Int(FragmentInputIndexMaterial.rawValue))
         objectRenderEncoder.setFragmentBuffer(lightArgumentBuffer, offset: 0, index: Int(FragmentInputIndexLight.rawValue))
@@ -276,6 +370,29 @@ extension Renderer : MTKViewDelegate
         objectRenderEncoder.drawPrimitives(type: MTLPrimitiveType.triangle, vertexStart: 0, vertexCount: cubeVertexBuffer.count, instanceCount: instanceNumber)
         
         objectRenderEncoder.endEncoding()
+        
+        let lampRenderPassDescriptor = MTLRenderPassDescriptor()
+        lampRenderPassDescriptor.colorAttachments[0].texture = renderPassDescriptor.colorAttachments[0].texture
+        lampRenderPassDescriptor.colorAttachments[0].loadAction = MTLLoadAction.dontCare
+        lampRenderPassDescriptor.depthAttachment = renderPassDescriptor.depthAttachment
+        lampRenderPassDescriptor.depthAttachment.loadAction = MTLLoadAction.dontCare
+        
+        guard let lampRenderEncoder = commandBuffer.makeRenderCommandEncoder(descriptor: lampRenderPassDescriptor) else {
+            return
+        }
+        lampRenderEncoder.setViewport(MTLViewport(originX: 0.0, originY: 0.0,
+                                                  width: Double(viewportSize.x),
+                                                  height: Double(viewportSize.y),
+                                                  znear: 0.0, zfar: 1.0))
+        lampRenderEncoder.setDepthStencilState(depthState)
+        lampRenderEncoder.setRenderPipelineState(lampRenderPipelineState)
+        lampRenderEncoder.setVertexBuffer(cubeVertexBuffer)
+        lampRenderEncoder.setVertexBuffer(lampUniformBuffer)
+        lampRenderEncoder.drawPrimitives(type: MTLPrimitiveType.triangle,
+                                         vertexStart: 0,
+                                         vertexCount: cubeVertexBuffer.count,
+                                         instanceCount: pointLightNumber)
+        lampRenderEncoder.endEncoding()
         
         commandBuffer.present(view.currentDrawable!)
         commandBuffer.commit()

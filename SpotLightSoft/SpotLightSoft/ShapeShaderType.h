@@ -34,7 +34,6 @@ typedef enum FragmentArgumentMaterialBufferID {
 
 typedef enum FragmentArgumentLightBufferID {
     FragmentArgumentLightBufferIDLight        = 0,
-    FragmentArgumentLightBufferIDViewPosition = 9,
 } FragmentArgumentLightBufferID;
 
 typedef struct Uniforms

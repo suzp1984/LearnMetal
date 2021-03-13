@@ -1,13 +1,12 @@
 //
 //  ShapeShaderType.h
-//  2.10.SpotLight
+//  2.12.MultipleLight
 //
 //  Created by Jacob Su on 3/13/21.
 //
 
 #ifndef ShapeShaderType_h
 #define ShapeShaderType_h
-
 
 #include <simd/simd.h>
 
@@ -34,7 +33,10 @@ typedef enum FragmentArgumentMaterialBufferID {
 } FragmentArgumentMaterialBufferID;
 
 typedef enum FragmentArgumentLightBufferID {
-    FragmentArgumentLightBufferIDLight        = 0,
+    FragmentArgumentLightBufferIDDirLight    = 0,
+    FragmentArgumentLightBufferIDPointLight  = 1,
+    FragmentArgumentLightBufferIDSpotLight   = 2,
+    FragmentArgumentLightBufferIDPointNumber = 3,
 } FragmentArgumentLightBufferID;
 
 typedef struct Uniforms
@@ -54,10 +56,16 @@ typedef struct Material
     float shininess;
 } Material;
 
-typedef struct Light
-{
-    vector_float3 position;
+typedef struct DirLight {
     vector_float3 direction;
+    
+    vector_float3 ambient;
+    vector_float3 diffuse;
+    vector_float3 specular;
+} DirLight;
+
+typedef struct PointLight {
+    vector_float3 position;
     
     vector_float3 ambient;
     vector_float3 diffuse;
@@ -67,7 +75,22 @@ typedef struct Light
     float linear;
     float quadratic;
     
+} PointLight;
+
+typedef struct SpotLight {
+    vector_float3 position;
+    vector_float3 direction;
+    
+    vector_float3 ambient;
+    vector_float3 diffuse;
+    vector_float3 specular;
+    
     float cutOff;
-} Light;
+    float outerCutOff;
+    
+    float constants;
+    float linear;
+    float quadratic;
+} SpotLight;
 
 #endif /* ShapeShaderType_h */
