@@ -35,7 +35,10 @@
       location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/MultipleDrawByInstances/1.10.MultipleDrawByInstances.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/DrawTwoObjects/1.11.DrawTwoObjects.xcodeproj">
+      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/DrawTwoObjectsByOneEncoder/1.11.1.DrawTwoObjectsByOneEncoder.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/DrawTwoObjects/1.11.2.DrawTwoObjects.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/Camera/1.12.Camera.xcodeproj">

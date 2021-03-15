@@ -1,8 +1,8 @@
 //
 //  ShapeRenderer.m
-//  DrawTwoObjects
+//  DrawTwoObjectsByOneEncoder
 //
-//  Created by Jacob Su on 3/7/21.
+//  Created by Jacob Su on 3/15/21.
 //
 
 #import <Foundation/Foundation.h>
@@ -131,43 +131,36 @@
 - (void)drawInMTKView:(nonnull MTKView *)view
 {
     [self rotate];
-        
+    
+    // NSLog(@"render tick");
+    
     id<MTLCommandBuffer> commandBuffer = [_commandQueue commandBuffer];
-    commandBuffer.label = @"Render Command";
+    commandBuffer.label = @"Square Command";
     
     MTLRenderPassDescriptor *descriptor = [view currentRenderPassDescriptor];
     
-    id<MTLRenderCommandEncoder> squareRenderEncoder = [commandBuffer renderCommandEncoderWithDescriptor:descriptor];
-    [squareRenderEncoder setLabel:@"SquareEncoder"];
-        
-    [squareRenderEncoder setViewport:(MTLViewport){ 0.0, 0.0, _viewportSize.x, _viewportSize.y, 0.0, 1.0 }];
-    [squareRenderEncoder setRenderPipelineState:_renderPipelineState];
+    id<MTLRenderCommandEncoder> renderEncoder = [commandBuffer renderCommandEncoderWithDescriptor:descriptor];
+    [renderEncoder setLabel:@"Render Encoder"];
     
-    [squareRenderEncoder setVertexBuffer:_squareBuffer offset:0 atIndex:VertexInputIndexVertices];
-    [squareRenderEncoder setVertexBytes:&_squareUniform length:sizeof(_squareUniform) atIndex:VertexInputIndexUniforms];
+    // render square
+    [renderEncoder setViewport:(MTLViewport){ 0.0, 0.0, _viewportSize.x, _viewportSize.y, 0.0, 1.0 }];
+    [renderEncoder setRenderPipelineState:_renderPipelineState];
     
-    [squareRenderEncoder setFragmentTexture:_textureContainer atIndex:FragmentInputIndexTexture];
+    [renderEncoder setVertexBuffer:_squareBuffer offset:0 atIndex:VertexInputIndexVertices];
+    [renderEncoder setVertexBytes:&_squareUniform length:sizeof(_squareUniform) atIndex:VertexInputIndexUniforms];
     
-    [squareRenderEncoder drawPrimitives:MTLPrimitiveTypeTriangle
+    [renderEncoder setFragmentTexture:_textureContainer atIndex:FragmentInputIndexTexture];
+    
+    [renderEncoder drawPrimitives:MTLPrimitiveTypeTriangle
                       vertexStart:0
                       vertexCount:6];
+    // render triangle
+    [renderEncoder setVertexBuffer:_triangleBuffer offset:0 atIndex:VertexInputIndexVertices];
+    [renderEncoder setVertexBytes:&_triangleUniform length:sizeof(_triangleUniform) atIndex:VertexInputIndexUniforms];
+    [renderEncoder setFragmentTexture:_textureFace atIndex:FragmentInputIndexTexture];
+    [renderEncoder drawPrimitives:MTLPrimitiveTypeTriangle vertexStart:0 vertexCount:3];
     
-    [squareRenderEncoder endEncoding];
-    
-    MTLRenderPassDescriptor *triangleDescriptor = [MTLRenderPassDescriptor new];
-    triangleDescriptor.colorAttachments[0].texture = descriptor.colorAttachments[0].texture;
-    triangleDescriptor.colorAttachments[0].loadAction = MTLLoadActionDontCare;
-    
-    id<MTLRenderCommandEncoder> triangleRenderEncoder = [commandBuffer renderCommandEncoderWithDescriptor:triangleDescriptor];
-    [triangleRenderEncoder setLabel:@"TriangleEncoder"];
-    [triangleRenderEncoder setViewport:(MTLViewport) {
-        0.0, 0.0, _viewportSize.x, _viewportSize.y, 0.0, 1.0 }];
-    [triangleRenderEncoder setRenderPipelineState:_renderPipelineState];
-    [triangleRenderEncoder setVertexBuffer:_triangleBuffer offset:0 atIndex:VertexInputIndexVertices];
-    [triangleRenderEncoder setVertexBytes:&_triangleUniform length:sizeof(_triangleUniform) atIndex:VertexInputIndexUniforms];
-    [triangleRenderEncoder setFragmentTexture:_textureFace atIndex:FragmentInputIndexTexture];
-    [triangleRenderEncoder drawPrimitives:MTLPrimitiveTypeTriangle vertexStart:0 vertexCount:3];
-    [triangleRenderEncoder endEncoding];
+    [renderEncoder endEncoding];
 
     [commandBuffer presentDrawable:view.currentDrawable];
     [commandBuffer commit];
