@@ -241,29 +241,13 @@ extension Renderer : MTKViewDelegate
         
         objectRenderEncoder.drawPrimitives(type: MTLPrimitiveType.triangle, vertexStart: 0, vertexCount: cubeVertexBuffer.count)
         
+        // draw lamp
+        objectRenderEncoder.setRenderPipelineState(lampRenderPipelineState)
+        objectRenderEncoder.setVertexBuffer(cubeVertexBuffer)
+        objectRenderEncoder.setVertexBytes(&lampUniforms, length: MemoryLayout<Uniforms>.stride, index: Int(VertexInputIndexUniforms.rawValue))
+        objectRenderEncoder.drawPrimitives(type: MTLPrimitiveType.triangle, vertexStart: 0, vertexCount: cubeVertexBuffer.count)
+        
         objectRenderEncoder.endEncoding()
-        
-        let lampRenderPassDescriptor = MTLRenderPassDescriptor()
-        lampRenderPassDescriptor.colorAttachments[0].texture = renderPassDescriptor.colorAttachments[0].texture
-        lampRenderPassDescriptor.colorAttachments[0].loadAction = MTLLoadAction.dontCare
-        lampRenderPassDescriptor.depthAttachment = renderPassDescriptor.depthAttachment
-        lampRenderPassDescriptor.depthAttachment.loadAction = MTLLoadAction.dontCare
-        
-        guard let lampRenderEncoder = commandBuffer.makeRenderCommandEncoder(descriptor: lampRenderPassDescriptor) else {
-            return
-        }
-        lampRenderEncoder.setViewport(MTLViewport(originX: 0.0, originY: 0.0,
-                                                  width: Double(viewportSize.x),
-                                                  height: Double(viewportSize.y),
-                                                  znear: 0.0, zfar: 1.0))
-        lampRenderEncoder.setDepthStencilState(depthState)
-        lampRenderEncoder.setRenderPipelineState(lampRenderPipelineState)
-        lampRenderEncoder.setVertexBuffer(cubeVertexBuffer)
-        lampRenderEncoder.setVertexBytes(&lampUniforms,
-                                         length: MemoryLayout<Uniforms>.stride,
-                                         index: Int(VertexInputIndexUniforms.rawValue))
-        lampRenderEncoder.drawPrimitives(type: MTLPrimitiveType.triangle, vertexStart: 0, vertexCount: cubeVertexBuffer.count)
-        lampRenderEncoder.endEncoding()
         
         commandBuffer.present(view.currentDrawable!)
         commandBuffer.commit()
