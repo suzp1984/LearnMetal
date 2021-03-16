@@ -79,4 +79,7 @@
    <FileRef
       location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/MultipleLight/2.12.MultipleLight.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/ModelLoadingObj/3.1.ModelLoadingObj.xcodeproj">
+   </FileRef>
 </Workspace>
