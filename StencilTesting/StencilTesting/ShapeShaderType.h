@@ -1,12 +1,13 @@
 //
 //  ShapeShaderType.h
-//  4.1.DepthTesting
+//  StencilTesting
 //
 //  Created by Jacob Su on 3/17/21.
 //
 
 #ifndef ShapeShaderType_h
 #define ShapeShaderType_h
+
 
 #include <simd/simd.h>
 

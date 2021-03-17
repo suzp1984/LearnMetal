@@ -85,4 +85,7 @@
    <FileRef
       location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/DepthTesting/4.1.DepthTesting.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/StencilTesting/4.2.StencilTesting.xcodeproj">
+   </FileRef>
 </Workspace>
