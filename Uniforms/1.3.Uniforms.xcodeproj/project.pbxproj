@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		370BCC3B25EE6A41001BA50D /* Uniforms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uniforms.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		370BCC3B25EE6A41001BA50D /* 1.3.Uniforms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1.3.Uniforms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		370BCC3E25EE6A41001BA50D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		370BCC4025EE6A41001BA50D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		370BCC4225EE6A42001BA50D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 		370BCC3C25EE6A41001BA50D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				370BCC3B25EE6A41001BA50D /* Uniforms.app */,
+				370BCC3B25EE6A41001BA50D /* 1.3.Uniforms.app */,
 				370BCC4D25EE6A42001BA50D /* UniformsTests.xctest */,
 				370BCC5825EE6A42001BA50D /* UniformsUITests.xctest */,
 			);
@@ -155,9 +155,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		370BCC3A25EE6A41001BA50D /* Uniforms */ = {
+		370BCC3A25EE6A41001BA50D /* 1.3.Uniforms */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 370BCC6125EE6A42001BA50D /* Build configuration list for PBXNativeTarget "Uniforms" */;
+			buildConfigurationList = 370BCC6125EE6A42001BA50D /* Build configuration list for PBXNativeTarget "1.3.Uniforms" */;
 			buildPhases = (
 				370BCC3725EE6A41001BA50D /* Sources */,
 				370BCC3825EE6A41001BA50D /* Frameworks */,
@@ -167,9 +167,9 @@
 			);
 			dependencies = (
 			);
-			name = Uniforms;
+			name = 1.3.Uniforms;
 			productName = Uniforms;
-			productReference = 370BCC3B25EE6A41001BA50D /* Uniforms.app */;
+			productReference = 370BCC3B25EE6A41001BA50D /* 1.3.Uniforms.app */;
 			productType = "com.apple.product-type.application";
 		};
 		370BCC4C25EE6A42001BA50D /* UniformsTests */ = {
@@ -244,7 +244,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				370BCC3A25EE6A41001BA50D /* Uniforms */,
+				370BCC3A25EE6A41001BA50D /* 1.3.Uniforms */,
 				370BCC4C25EE6A42001BA50D /* UniformsTests */,
 				370BCC5725EE6A42001BA50D /* UniformsUITests */,
 			);
@@ -310,12 +310,12 @@
 /* Begin PBXTargetDependency section */
 		370BCC4F25EE6A42001BA50D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 370BCC3A25EE6A41001BA50D /* Uniforms */;
+			target = 370BCC3A25EE6A41001BA50D /* 1.3.Uniforms */;
 			targetProxy = 370BCC4E25EE6A42001BA50D /* PBXContainerItemProxy */;
 		};
 		370BCC5A25EE6A42001BA50D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 370BCC3A25EE6A41001BA50D /* Uniforms */;
+			target = 370BCC3A25EE6A41001BA50D /* 1.3.Uniforms */;
 			targetProxy = 370BCC5925EE6A42001BA50D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -590,7 +590,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		370BCC6125EE6A42001BA50D /* Build configuration list for PBXNativeTarget "Uniforms" */ = {
+		370BCC6125EE6A42001BA50D /* Build configuration list for PBXNativeTarget "1.3.Uniforms" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				370BCC6225EE6A42001BA50D /* Debug */,

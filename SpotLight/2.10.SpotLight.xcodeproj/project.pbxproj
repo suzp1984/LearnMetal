@@ -54,7 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		376CC3DB25FB071A00FB6FEC /* SpotLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		376CC3DB25FB071A00FB6FEC /* 2.10.SpotLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2.10.SpotLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		376CC3DE25FB071A00FB6FEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		376CC3E025FB071A00FB6FEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		376CC3E225FB071D00FB6FEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 		376CC3DC25FB071A00FB6FEC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				376CC3DB25FB071A00FB6FEC /* SpotLight.app */,
+				376CC3DB25FB071A00FB6FEC /* 2.10.SpotLight.app */,
 				376CC3ED25FB071D00FB6FEC /* SpotLightTests.xctest */,
 				376CC3F825FB071D00FB6FEC /* SpotLightUITests.xctest */,
 			);
@@ -175,9 +175,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		376CC3DA25FB071A00FB6FEC /* SpotLight */ = {
+		376CC3DA25FB071A00FB6FEC /* 2.10.SpotLight */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 376CC40125FB071D00FB6FEC /* Build configuration list for PBXNativeTarget "SpotLight" */;
+			buildConfigurationList = 376CC40125FB071D00FB6FEC /* Build configuration list for PBXNativeTarget "2.10.SpotLight" */;
 			buildPhases = (
 				376CC3D725FB071A00FB6FEC /* Sources */,
 				376CC3D825FB071A00FB6FEC /* Frameworks */,
@@ -188,9 +188,9 @@
 			);
 			dependencies = (
 			);
-			name = SpotLight;
+			name = 2.10.SpotLight;
 			productName = SpotLight;
-			productReference = 376CC3DB25FB071A00FB6FEC /* SpotLight.app */;
+			productReference = 376CC3DB25FB071A00FB6FEC /* 2.10.SpotLight.app */;
 			productType = "com.apple.product-type.application";
 		};
 		376CC3EC25FB071D00FB6FEC /* SpotLightTests */ = {
@@ -265,7 +265,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				376CC3DA25FB071A00FB6FEC /* SpotLight */,
+				376CC3DA25FB071A00FB6FEC /* 2.10.SpotLight */,
 				376CC3EC25FB071D00FB6FEC /* SpotLightTests */,
 				376CC3F725FB071D00FB6FEC /* SpotLightUITests */,
 			);
@@ -332,12 +332,12 @@
 /* Begin PBXTargetDependency section */
 		376CC3EF25FB071D00FB6FEC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 376CC3DA25FB071A00FB6FEC /* SpotLight */;
+			target = 376CC3DA25FB071A00FB6FEC /* 2.10.SpotLight */;
 			targetProxy = 376CC3EE25FB071D00FB6FEC /* PBXContainerItemProxy */;
 		};
 		376CC3FA25FB071D00FB6FEC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 376CC3DA25FB071A00FB6FEC /* SpotLight */;
+			target = 376CC3DA25FB071A00FB6FEC /* 2.10.SpotLight */;
 			targetProxy = 376CC3F925FB071D00FB6FEC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -612,7 +612,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		376CC40125FB071D00FB6FEC /* Build configuration list for PBXNativeTarget "SpotLight" */ = {
+		376CC40125FB071D00FB6FEC /* Build configuration list for PBXNativeTarget "2.10.SpotLight" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				376CC40225FB071D00FB6FEC /* Debug */,

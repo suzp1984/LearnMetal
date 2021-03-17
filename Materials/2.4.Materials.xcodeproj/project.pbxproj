@@ -54,7 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		376F8ED425F8627A00C3B287 /* Materials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Materials.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		376F8ED425F8627A00C3B287 /* 2.4.Materials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2.4.Materials.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		376F8ED725F8627B00C3B287 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		376F8ED925F8627B00C3B287 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		376F8EDB25F8627E00C3B287 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 		376F8ED525F8627A00C3B287 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				376F8ED425F8627A00C3B287 /* Materials.app */,
+				376F8ED425F8627A00C3B287 /* 2.4.Materials.app */,
 				376F8EE625F8627E00C3B287 /* MaterialsTests.xctest */,
 				376F8EF125F8627E00C3B287 /* MaterialsUITests.xctest */,
 			);
@@ -177,9 +177,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		376F8ED325F8627A00C3B287 /* Materials */ = {
+		376F8ED325F8627A00C3B287 /* 2.4.Materials */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 376F8EFA25F8627E00C3B287 /* Build configuration list for PBXNativeTarget "Materials" */;
+			buildConfigurationList = 376F8EFA25F8627E00C3B287 /* Build configuration list for PBXNativeTarget "2.4.Materials" */;
 			buildPhases = (
 				376F8ED025F8627A00C3B287 /* Sources */,
 				376F8ED125F8627A00C3B287 /* Frameworks */,
@@ -190,9 +190,9 @@
 			);
 			dependencies = (
 			);
-			name = Materials;
+			name = 2.4.Materials;
 			productName = Materials;
-			productReference = 376F8ED425F8627A00C3B287 /* Materials.app */;
+			productReference = 376F8ED425F8627A00C3B287 /* 2.4.Materials.app */;
 			productType = "com.apple.product-type.application";
 		};
 		376F8EE525F8627E00C3B287 /* MaterialsTests */ = {
@@ -267,7 +267,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				376F8ED325F8627A00C3B287 /* Materials */,
+				376F8ED325F8627A00C3B287 /* 2.4.Materials */,
 				376F8EE525F8627E00C3B287 /* MaterialsTests */,
 				376F8EF025F8627E00C3B287 /* MaterialsUITests */,
 			);
@@ -334,12 +334,12 @@
 /* Begin PBXTargetDependency section */
 		376F8EE825F8627E00C3B287 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 376F8ED325F8627A00C3B287 /* Materials */;
+			target = 376F8ED325F8627A00C3B287 /* 2.4.Materials */;
 			targetProxy = 376F8EE725F8627E00C3B287 /* PBXContainerItemProxy */;
 		};
 		376F8EF325F8627E00C3B287 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 376F8ED325F8627A00C3B287 /* Materials */;
+			target = 376F8ED325F8627A00C3B287 /* 2.4.Materials */;
 			targetProxy = 376F8EF225F8627E00C3B287 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -614,7 +614,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		376F8EFA25F8627E00C3B287 /* Build configuration list for PBXNativeTarget "Materials" */ = {
+		376F8EFA25F8627E00C3B287 /* Build configuration list for PBXNativeTarget "2.4.Materials" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				376F8EFB25F8627E00C3B287 /* Debug */,

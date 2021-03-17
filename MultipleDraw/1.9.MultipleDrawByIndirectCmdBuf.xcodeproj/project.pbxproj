@@ -53,7 +53,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		370BCE7025F20C5B001BA50D /* MultipleDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultipleDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		370BCE7025F20C5B001BA50D /* 1.9.MultipleDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1.9.MultipleDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		370BCE7325F20C5B001BA50D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		370BCE7525F20C5B001BA50D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		370BCE7725F20C5D001BA50D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 		370BCE7125F20C5B001BA50D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				370BCE7025F20C5B001BA50D /* MultipleDraw.app */,
+				370BCE7025F20C5B001BA50D /* 1.9.MultipleDraw.app */,
 				370BCE8225F20C5E001BA50D /* MultipleDrawTests.xctest */,
 				370BCE8D25F20C5E001BA50D /* MultipleDrawUITests.xctest */,
 			);
@@ -174,9 +174,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		370BCE6F25F20C5B001BA50D /* MultipleDraw */ = {
+		370BCE6F25F20C5B001BA50D /* 1.9.MultipleDraw */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 370BCE9625F20C5E001BA50D /* Build configuration list for PBXNativeTarget "MultipleDraw" */;
+			buildConfigurationList = 370BCE9625F20C5E001BA50D /* Build configuration list for PBXNativeTarget "1.9.MultipleDraw" */;
 			buildPhases = (
 				370BCE6C25F20C5B001BA50D /* Sources */,
 				370BCE6D25F20C5B001BA50D /* Frameworks */,
@@ -187,9 +187,9 @@
 			);
 			dependencies = (
 			);
-			name = MultipleDraw;
+			name = 1.9.MultipleDraw;
 			productName = MultipleDraw;
-			productReference = 370BCE7025F20C5B001BA50D /* MultipleDraw.app */;
+			productReference = 370BCE7025F20C5B001BA50D /* 1.9.MultipleDraw.app */;
 			productType = "com.apple.product-type.application";
 		};
 		370BCE8125F20C5E001BA50D /* MultipleDrawTests */ = {
@@ -264,7 +264,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				370BCE6F25F20C5B001BA50D /* MultipleDraw */,
+				370BCE6F25F20C5B001BA50D /* 1.9.MultipleDraw */,
 				370BCE8125F20C5E001BA50D /* MultipleDrawTests */,
 				370BCE8C25F20C5E001BA50D /* MultipleDrawUITests */,
 			);
@@ -330,12 +330,12 @@
 /* Begin PBXTargetDependency section */
 		370BCE8425F20C5E001BA50D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 370BCE6F25F20C5B001BA50D /* MultipleDraw */;
+			target = 370BCE6F25F20C5B001BA50D /* 1.9.MultipleDraw */;
 			targetProxy = 370BCE8325F20C5E001BA50D /* PBXContainerItemProxy */;
 		};
 		370BCE8F25F20C5E001BA50D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 370BCE6F25F20C5B001BA50D /* MultipleDraw */;
+			target = 370BCE6F25F20C5B001BA50D /* 1.9.MultipleDraw */;
 			targetProxy = 370BCE8E25F20C5E001BA50D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -610,7 +610,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		370BCE9625F20C5E001BA50D /* Build configuration list for PBXNativeTarget "MultipleDraw" */ = {
+		370BCE9625F20C5E001BA50D /* Build configuration list for PBXNativeTarget "1.9.MultipleDraw" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				370BCE9725F20C5E001BA50D /* Debug */,

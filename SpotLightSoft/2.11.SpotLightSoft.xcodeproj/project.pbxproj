@@ -54,7 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		376CC43225FC4FAA00FB6FEC /* SpotLightSoft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotLightSoft.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		376CC43225FC4FAA00FB6FEC /* 2.11.SpotLightSoft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2.11.SpotLightSoft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		376CC43525FC4FAA00FB6FEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		376CC43725FC4FAA00FB6FEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		376CC43925FC4FAC00FB6FEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 		376CC43325FC4FAA00FB6FEC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				376CC43225FC4FAA00FB6FEC /* SpotLightSoft.app */,
+				376CC43225FC4FAA00FB6FEC /* 2.11.SpotLightSoft.app */,
 				376CC44425FC4FAC00FB6FEC /* SpotLightSoftTests.xctest */,
 				376CC44F25FC4FAC00FB6FEC /* SpotLightSoftUITests.xctest */,
 			);
@@ -175,9 +175,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		376CC43125FC4FAA00FB6FEC /* SpotLightSoft */ = {
+		376CC43125FC4FAA00FB6FEC /* 2.11.SpotLightSoft */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 376CC45825FC4FAC00FB6FEC /* Build configuration list for PBXNativeTarget "SpotLightSoft" */;
+			buildConfigurationList = 376CC45825FC4FAC00FB6FEC /* Build configuration list for PBXNativeTarget "2.11.SpotLightSoft" */;
 			buildPhases = (
 				376CC42E25FC4FAA00FB6FEC /* Sources */,
 				376CC42F25FC4FAA00FB6FEC /* Frameworks */,
@@ -188,9 +188,9 @@
 			);
 			dependencies = (
 			);
-			name = SpotLightSoft;
+			name = 2.11.SpotLightSoft;
 			productName = SpotLightSoft;
-			productReference = 376CC43225FC4FAA00FB6FEC /* SpotLightSoft.app */;
+			productReference = 376CC43225FC4FAA00FB6FEC /* 2.11.SpotLightSoft.app */;
 			productType = "com.apple.product-type.application";
 		};
 		376CC44325FC4FAC00FB6FEC /* SpotLightSoftTests */ = {
@@ -265,7 +265,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				376CC43125FC4FAA00FB6FEC /* SpotLightSoft */,
+				376CC43125FC4FAA00FB6FEC /* 2.11.SpotLightSoft */,
 				376CC44325FC4FAC00FB6FEC /* SpotLightSoftTests */,
 				376CC44E25FC4FAC00FB6FEC /* SpotLightSoftUITests */,
 			);
@@ -332,12 +332,12 @@
 /* Begin PBXTargetDependency section */
 		376CC44625FC4FAC00FB6FEC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 376CC43125FC4FAA00FB6FEC /* SpotLightSoft */;
+			target = 376CC43125FC4FAA00FB6FEC /* 2.11.SpotLightSoft */;
 			targetProxy = 376CC44525FC4FAC00FB6FEC /* PBXContainerItemProxy */;
 		};
 		376CC45125FC4FAC00FB6FEC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 376CC43125FC4FAA00FB6FEC /* SpotLightSoft */;
+			target = 376CC43125FC4FAA00FB6FEC /* 2.11.SpotLightSoft */;
 			targetProxy = 376CC45025FC4FAC00FB6FEC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -612,7 +612,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		376CC45825FC4FAC00FB6FEC /* Build configuration list for PBXNativeTarget "SpotLightSoft" */ = {
+		376CC45825FC4FAC00FB6FEC /* Build configuration list for PBXNativeTarget "2.11.SpotLightSoft" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				376CC45925FC4FAC00FB6FEC /* Debug */,

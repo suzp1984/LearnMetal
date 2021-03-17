@@ -54,7 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		376CC38325FAEB6F00FB6FEC /* PointLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PointLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		376CC38325FAEB6F00FB6FEC /* 2.9.PointLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2.9.PointLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		376CC38625FAEB6F00FB6FEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		376CC38825FAEB6F00FB6FEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		376CC38A25FAEB6F00FB6FEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 		376CC38425FAEB6F00FB6FEC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				376CC38325FAEB6F00FB6FEC /* PointLight.app */,
+				376CC38325FAEB6F00FB6FEC /* 2.9.PointLight.app */,
 				376CC39525FAEB7000FB6FEC /* PointLightTests.xctest */,
 				376CC3A025FAEB7000FB6FEC /* PointLightUITests.xctest */,
 			);
@@ -175,9 +175,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		376CC38225FAEB6F00FB6FEC /* PointLight */ = {
+		376CC38225FAEB6F00FB6FEC /* 2.9.PointLight */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 376CC3A925FAEB7000FB6FEC /* Build configuration list for PBXNativeTarget "PointLight" */;
+			buildConfigurationList = 376CC3A925FAEB7000FB6FEC /* Build configuration list for PBXNativeTarget "2.9.PointLight" */;
 			buildPhases = (
 				376CC37F25FAEB6F00FB6FEC /* Sources */,
 				376CC38025FAEB6F00FB6FEC /* Frameworks */,
@@ -188,9 +188,9 @@
 			);
 			dependencies = (
 			);
-			name = PointLight;
+			name = 2.9.PointLight;
 			productName = PointLight;
-			productReference = 376CC38325FAEB6F00FB6FEC /* PointLight.app */;
+			productReference = 376CC38325FAEB6F00FB6FEC /* 2.9.PointLight.app */;
 			productType = "com.apple.product-type.application";
 		};
 		376CC39425FAEB7000FB6FEC /* PointLightTests */ = {
@@ -265,7 +265,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				376CC38225FAEB6F00FB6FEC /* PointLight */,
+				376CC38225FAEB6F00FB6FEC /* 2.9.PointLight */,
 				376CC39425FAEB7000FB6FEC /* PointLightTests */,
 				376CC39F25FAEB7000FB6FEC /* PointLightUITests */,
 			);
@@ -332,12 +332,12 @@
 /* Begin PBXTargetDependency section */
 		376CC39725FAEB7000FB6FEC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 376CC38225FAEB6F00FB6FEC /* PointLight */;
+			target = 376CC38225FAEB6F00FB6FEC /* 2.9.PointLight */;
 			targetProxy = 376CC39625FAEB7000FB6FEC /* PBXContainerItemProxy */;
 		};
 		376CC3A225FAEB7000FB6FEC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 376CC38225FAEB6F00FB6FEC /* PointLight */;
+			target = 376CC38225FAEB6F00FB6FEC /* 2.9.PointLight */;
 			targetProxy = 376CC3A125FAEB7000FB6FEC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -612,7 +612,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		376CC3A925FAEB7000FB6FEC /* Build configuration list for PBXNativeTarget "PointLight" */ = {
+		376CC3A925FAEB7000FB6FEC /* Build configuration list for PBXNativeTarget "2.9.PointLight" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				376CC3AA25FAEB7000FB6FEC /* Debug */,

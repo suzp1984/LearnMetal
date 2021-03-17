@@ -60,7 +60,7 @@
 		3721921825F9B49A00558BBB /* EmissionMap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EmissionMap-Bridging-Header.h"; sourceTree = "<group>"; };
 		3721921925F9B49B00558BBB /* ShapeShaderType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShapeShaderType.m; sourceTree = "<group>"; };
 		3721921D25F9B4D100558BBB /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
-		37893B5E25F99B8B00E89475 /* EmissionMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmissionMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37893B5E25F99B8B00E89475 /* 2.7.EmissionMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2.7.EmissionMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37893B6125F99B8B00E89475 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37893B6325F99B8B00E89475 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		37893B6525F99B8C00E89475 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 		37893B5F25F99B8B00E89475 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				37893B5E25F99B8B00E89475 /* EmissionMap.app */,
+				37893B5E25F99B8B00E89475 /* 2.7.EmissionMap.app */,
 				37893B7025F99B8C00E89475 /* EmissionMapTests.xctest */,
 				37893B7B25F99B8C00E89475 /* EmissionMapUITests.xctest */,
 			);
@@ -177,9 +177,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		37893B5D25F99B8B00E89475 /* EmissionMap */ = {
+		37893B5D25F99B8B00E89475 /* 2.7.EmissionMap */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 37893B8425F99B8C00E89475 /* Build configuration list for PBXNativeTarget "EmissionMap" */;
+			buildConfigurationList = 37893B8425F99B8C00E89475 /* Build configuration list for PBXNativeTarget "2.7.EmissionMap" */;
 			buildPhases = (
 				37893B5A25F99B8B00E89475 /* Sources */,
 				37893B5B25F99B8B00E89475 /* Frameworks */,
@@ -190,9 +190,9 @@
 			);
 			dependencies = (
 			);
-			name = EmissionMap;
+			name = 2.7.EmissionMap;
 			productName = EmissionMap;
-			productReference = 37893B5E25F99B8B00E89475 /* EmissionMap.app */;
+			productReference = 37893B5E25F99B8B00E89475 /* 2.7.EmissionMap.app */;
 			productType = "com.apple.product-type.application";
 		};
 		37893B6F25F99B8C00E89475 /* EmissionMapTests */ = {
@@ -267,7 +267,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				37893B5D25F99B8B00E89475 /* EmissionMap */,
+				37893B5D25F99B8B00E89475 /* 2.7.EmissionMap */,
 				37893B6F25F99B8C00E89475 /* EmissionMapTests */,
 				37893B7A25F99B8C00E89475 /* EmissionMapUITests */,
 			);
@@ -334,12 +334,12 @@
 /* Begin PBXTargetDependency section */
 		37893B7225F99B8C00E89475 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 37893B5D25F99B8B00E89475 /* EmissionMap */;
+			target = 37893B5D25F99B8B00E89475 /* 2.7.EmissionMap */;
 			targetProxy = 37893B7125F99B8C00E89475 /* PBXContainerItemProxy */;
 		};
 		37893B7D25F99B8C00E89475 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 37893B5D25F99B8B00E89475 /* EmissionMap */;
+			target = 37893B5D25F99B8B00E89475 /* 2.7.EmissionMap */;
 			targetProxy = 37893B7C25F99B8C00E89475 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -614,7 +614,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		37893B8425F99B8C00E89475 /* Build configuration list for PBXNativeTarget "EmissionMap" */ = {
+		37893B8425F99B8C00E89475 /* Build configuration list for PBXNativeTarget "2.7.EmissionMap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				37893B8525F99B8C00E89475 /* Debug */,

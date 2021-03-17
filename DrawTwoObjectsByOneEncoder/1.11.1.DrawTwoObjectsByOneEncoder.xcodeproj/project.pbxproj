@@ -54,7 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3742B50625FF807C00DE2669 /* DrawTwoObjectsByOneEncoder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawTwoObjectsByOneEncoder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3742B50625FF807C00DE2669 /* 1.11.1.DrawTwoObjectsByOneEncoder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1.11.1.DrawTwoObjectsByOneEncoder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3742B50925FF807C00DE2669 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3742B50A25FF807C00DE2669 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3742B50C25FF807C00DE2669 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 		3742B50725FF807C00DE2669 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3742B50625FF807C00DE2669 /* DrawTwoObjectsByOneEncoder.app */,
+				3742B50625FF807C00DE2669 /* 1.11.1.DrawTwoObjectsByOneEncoder.app */,
 				3742B51C25FF807D00DE2669 /* DrawTwoObjectsByOneEncoderTests.xctest */,
 				3742B52725FF807D00DE2669 /* DrawTwoObjectsByOneEncoderUITests.xctest */,
 			);
@@ -179,9 +179,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3742B50525FF807C00DE2669 /* DrawTwoObjectsByOneEncoder */ = {
+		3742B50525FF807C00DE2669 /* 1.11.1.DrawTwoObjectsByOneEncoder */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3742B53025FF807D00DE2669 /* Build configuration list for PBXNativeTarget "DrawTwoObjectsByOneEncoder" */;
+			buildConfigurationList = 3742B53025FF807D00DE2669 /* Build configuration list for PBXNativeTarget "1.11.1.DrawTwoObjectsByOneEncoder" */;
 			buildPhases = (
 				3742B50225FF807C00DE2669 /* Sources */,
 				3742B50325FF807C00DE2669 /* Frameworks */,
@@ -192,9 +192,9 @@
 			);
 			dependencies = (
 			);
-			name = DrawTwoObjectsByOneEncoder;
+			name = 1.11.1.DrawTwoObjectsByOneEncoder;
 			productName = DrawTwoObjectsByOneEncoder;
-			productReference = 3742B50625FF807C00DE2669 /* DrawTwoObjectsByOneEncoder.app */;
+			productReference = 3742B50625FF807C00DE2669 /* 1.11.1.DrawTwoObjectsByOneEncoder.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3742B51B25FF807D00DE2669 /* DrawTwoObjectsByOneEncoderTests */ = {
@@ -267,7 +267,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3742B50525FF807C00DE2669 /* DrawTwoObjectsByOneEncoder */,
+				3742B50525FF807C00DE2669 /* 1.11.1.DrawTwoObjectsByOneEncoder */,
 				3742B51B25FF807D00DE2669 /* DrawTwoObjectsByOneEncoderTests */,
 				3742B52625FF807D00DE2669 /* DrawTwoObjectsByOneEncoderUITests */,
 			);
@@ -334,12 +334,12 @@
 /* Begin PBXTargetDependency section */
 		3742B51E25FF807D00DE2669 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3742B50525FF807C00DE2669 /* DrawTwoObjectsByOneEncoder */;
+			target = 3742B50525FF807C00DE2669 /* 1.11.1.DrawTwoObjectsByOneEncoder */;
 			targetProxy = 3742B51D25FF807D00DE2669 /* PBXContainerItemProxy */;
 		};
 		3742B52925FF807D00DE2669 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3742B50525FF807C00DE2669 /* DrawTwoObjectsByOneEncoder */;
+			target = 3742B50525FF807C00DE2669 /* 1.11.1.DrawTwoObjectsByOneEncoder */;
 			targetProxy = 3742B52825FF807D00DE2669 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -595,7 +595,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3742B53025FF807D00DE2669 /* Build configuration list for PBXNativeTarget "DrawTwoObjectsByOneEncoder" */ = {
+		3742B53025FF807D00DE2669 /* Build configuration list for PBXNativeTarget "1.11.1.DrawTwoObjectsByOneEncoder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3742B53125FF807D00DE2669 /* Debug */,

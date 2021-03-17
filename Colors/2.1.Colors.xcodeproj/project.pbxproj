@@ -54,7 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		37DD625F25F5EF73005D7A42 /* Colors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Colors.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37DD625F25F5EF73005D7A42 /* 2.1.Colors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2.1.Colors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DD626225F5EF73005D7A42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37DD626425F5EF73005D7A42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		37DD626625F5EF74005D7A42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 		37DD626025F5EF73005D7A42 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				37DD625F25F5EF73005D7A42 /* Colors.app */,
+				37DD625F25F5EF73005D7A42 /* 2.1.Colors.app */,
 				37DD627125F5EF74005D7A42 /* ColorsTests.xctest */,
 				37DD627C25F5EF74005D7A42 /* ColorsUITests.xctest */,
 			);
@@ -175,9 +175,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		37DD625E25F5EF73005D7A42 /* Colors */ = {
+		37DD625E25F5EF73005D7A42 /* 2.1.Colors */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 37DD628525F5EF74005D7A42 /* Build configuration list for PBXNativeTarget "Colors" */;
+			buildConfigurationList = 37DD628525F5EF74005D7A42 /* Build configuration list for PBXNativeTarget "2.1.Colors" */;
 			buildPhases = (
 				37DD625B25F5EF73005D7A42 /* Sources */,
 				37DD625C25F5EF73005D7A42 /* Frameworks */,
@@ -188,9 +188,9 @@
 			);
 			dependencies = (
 			);
-			name = Colors;
+			name = 2.1.Colors;
 			productName = Colors;
-			productReference = 37DD625F25F5EF73005D7A42 /* Colors.app */;
+			productReference = 37DD625F25F5EF73005D7A42 /* 2.1.Colors.app */;
 			productType = "com.apple.product-type.application";
 		};
 		37DD627025F5EF74005D7A42 /* ColorsTests */ = {
@@ -265,7 +265,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				37DD625E25F5EF73005D7A42 /* Colors */,
+				37DD625E25F5EF73005D7A42 /* 2.1.Colors */,
 				37DD627025F5EF74005D7A42 /* ColorsTests */,
 				37DD627B25F5EF74005D7A42 /* ColorsUITests */,
 			);
@@ -332,12 +332,12 @@
 /* Begin PBXTargetDependency section */
 		37DD627325F5EF74005D7A42 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 37DD625E25F5EF73005D7A42 /* Colors */;
+			target = 37DD625E25F5EF73005D7A42 /* 2.1.Colors */;
 			targetProxy = 37DD627225F5EF74005D7A42 /* PBXContainerItemProxy */;
 		};
 		37DD627E25F5EF74005D7A42 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 37DD625E25F5EF73005D7A42 /* Colors */;
+			target = 37DD625E25F5EF73005D7A42 /* 2.1.Colors */;
 			targetProxy = 37DD627D25F5EF74005D7A42 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -612,7 +612,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		37DD628525F5EF74005D7A42 /* Build configuration list for PBXNativeTarget "Colors" */ = {
+		37DD628525F5EF74005D7A42 /* Build configuration list for PBXNativeTarget "2.1.Colors" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				37DD628625F5EF74005D7A42 /* Debug */,

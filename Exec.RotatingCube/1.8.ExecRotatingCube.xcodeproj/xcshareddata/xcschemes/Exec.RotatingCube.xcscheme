@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "370BCE0A25F1BEB3001BA50D"
-               BuildableName = "Exec.RotatingCube.app"
-               BlueprintName = "Exec.RotatingCube"
-               ReferencedContainer = "container:1.8.Exec.RotatingCube.xcodeproj">
+               BuildableName = "1.8ExecRotatingCube.app"
+               BlueprintName = "1.8ExecRotatingCube"
+               ReferencedContainer = "container:1.8.ExecRotatingCube.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "370BCE1C25F1BEB4001BA50D"
-               BuildableName = "Exec.RotatingCubeTests.xctest"
-               BlueprintName = "Exec.RotatingCubeTests"
-               ReferencedContainer = "container:1.8.Exec.RotatingCube.xcodeproj">
+               BuildableName = "ExecRotatingCubeTests.xctest"
+               BlueprintName = "ExecRotatingCubeTests"
+               ReferencedContainer = "container:1.8.ExecRotatingCube.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "370BCE2725F1BEB4001BA50D"
-               BuildableName = "Exec.RotatingCubeUITests.xctest"
-               BlueprintName = "Exec.RotatingCubeUITests"
-               ReferencedContainer = "container:1.8.Exec.RotatingCube.xcodeproj">
+               BuildableName = "ExecRotatingCubeUITests.xctest"
+               BlueprintName = "ExecRotatingCubeUITests"
+               ReferencedContainer = "container:1.8.ExecRotatingCube.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "370BCE0A25F1BEB3001BA50D"
-            BuildableName = "Exec.RotatingCube.app"
-            BlueprintName = "Exec.RotatingCube"
-            ReferencedContainer = "container:1.8.Exec.RotatingCube.xcodeproj">
+            BuildableName = "1.8ExecRotatingCube.app"
+            BlueprintName = "1.8ExecRotatingCube"
+            ReferencedContainer = "container:1.8.ExecRotatingCube.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -82,9 +82,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "370BCE0A25F1BEB3001BA50D"
-            BuildableName = "Exec.RotatingCube.app"
-            BlueprintName = "Exec.RotatingCube"
-            ReferencedContainer = "container:1.8.Exec.RotatingCube.xcodeproj">
+            BuildableName = "1.8ExecRotatingCube.app"
+            BlueprintName = "1.8ExecRotatingCube"
+            ReferencedContainer = "container:1.8.ExecRotatingCube.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

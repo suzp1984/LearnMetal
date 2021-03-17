@@ -53,7 +53,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		370BCC9125EF9834001BA50D /* Texture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Texture.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		370BCC9125EF9834001BA50D /* 1.4.Texture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1.4.Texture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		370BCC9425EF9834001BA50D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		370BCC9625EF9834001BA50D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		370BCC9825EF9837001BA50D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 		370BCC9225EF9834001BA50D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				370BCC9125EF9834001BA50D /* Texture.app */,
+				370BCC9125EF9834001BA50D /* 1.4.Texture.app */,
 				370BCCA325EF9837001BA50D /* TextureTests.xctest */,
 				370BCCAE25EF9837001BA50D /* TextureUITests.xctest */,
 			);
@@ -174,9 +174,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		370BCC9025EF9834001BA50D /* Texture */ = {
+		370BCC9025EF9834001BA50D /* 1.4.Texture */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 370BCCB725EF9837001BA50D /* Build configuration list for PBXNativeTarget "Texture" */;
+			buildConfigurationList = 370BCCB725EF9837001BA50D /* Build configuration list for PBXNativeTarget "1.4.Texture" */;
 			buildPhases = (
 				370BCC8D25EF9834001BA50D /* Sources */,
 				370BCC8E25EF9834001BA50D /* Frameworks */,
@@ -187,9 +187,9 @@
 			);
 			dependencies = (
 			);
-			name = Texture;
+			name = 1.4.Texture;
 			productName = Texture;
-			productReference = 370BCC9125EF9834001BA50D /* Texture.app */;
+			productReference = 370BCC9125EF9834001BA50D /* 1.4.Texture.app */;
 			productType = "com.apple.product-type.application";
 		};
 		370BCCA225EF9837001BA50D /* TextureTests */ = {
@@ -264,7 +264,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				370BCC9025EF9834001BA50D /* Texture */,
+				370BCC9025EF9834001BA50D /* 1.4.Texture */,
 				370BCCA225EF9837001BA50D /* TextureTests */,
 				370BCCAD25EF9837001BA50D /* TextureUITests */,
 			);
@@ -330,12 +330,12 @@
 /* Begin PBXTargetDependency section */
 		370BCCA525EF9837001BA50D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 370BCC9025EF9834001BA50D /* Texture */;
+			target = 370BCC9025EF9834001BA50D /* 1.4.Texture */;
 			targetProxy = 370BCCA425EF9837001BA50D /* PBXContainerItemProxy */;
 		};
 		370BCCB025EF9837001BA50D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 370BCC9025EF9834001BA50D /* Texture */;
+			target = 370BCC9025EF9834001BA50D /* 1.4.Texture */;
 			targetProxy = 370BCCAF25EF9837001BA50D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -610,7 +610,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		370BCCB725EF9837001BA50D /* Build configuration list for PBXNativeTarget "Texture" */ = {
+		370BCCB725EF9837001BA50D /* Build configuration list for PBXNativeTarget "1.4.Texture" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				370BCCB825EF9837001BA50D /* Debug */,

@@ -54,7 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		376F8F2A25F8920800C3B287 /* DiffuseMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiffuseMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		376F8F2A25F8920800C3B287 /* 2.5.DiffuseMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2.5.DiffuseMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		376F8F2D25F8920800C3B287 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		376F8F2F25F8920800C3B287 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		376F8F3125F8920B00C3B287 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 		376F8F2B25F8920800C3B287 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				376F8F2A25F8920800C3B287 /* DiffuseMap.app */,
+				376F8F2A25F8920800C3B287 /* 2.5.DiffuseMap.app */,
 				376F8F3C25F8920C00C3B287 /* DiffuseMapTests.xctest */,
 				376F8F4725F8920C00C3B287 /* DiffuseMapUITests.xctest */,
 			);
@@ -175,9 +175,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		376F8F2925F8920800C3B287 /* DiffuseMap */ = {
+		376F8F2925F8920800C3B287 /* 2.5.DiffuseMap */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 376F8F5025F8920C00C3B287 /* Build configuration list for PBXNativeTarget "DiffuseMap" */;
+			buildConfigurationList = 376F8F5025F8920C00C3B287 /* Build configuration list for PBXNativeTarget "2.5.DiffuseMap" */;
 			buildPhases = (
 				376F8F2625F8920800C3B287 /* Sources */,
 				376F8F2725F8920800C3B287 /* Frameworks */,
@@ -188,9 +188,9 @@
 			);
 			dependencies = (
 			);
-			name = DiffuseMap;
+			name = 2.5.DiffuseMap;
 			productName = DiffuseMap;
-			productReference = 376F8F2A25F8920800C3B287 /* DiffuseMap.app */;
+			productReference = 376F8F2A25F8920800C3B287 /* 2.5.DiffuseMap.app */;
 			productType = "com.apple.product-type.application";
 		};
 		376F8F3B25F8920C00C3B287 /* DiffuseMapTests */ = {
@@ -265,7 +265,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				376F8F2925F8920800C3B287 /* DiffuseMap */,
+				376F8F2925F8920800C3B287 /* 2.5.DiffuseMap */,
 				376F8F3B25F8920C00C3B287 /* DiffuseMapTests */,
 				376F8F4625F8920C00C3B287 /* DiffuseMapUITests */,
 			);
@@ -332,12 +332,12 @@
 /* Begin PBXTargetDependency section */
 		376F8F3E25F8920C00C3B287 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 376F8F2925F8920800C3B287 /* DiffuseMap */;
+			target = 376F8F2925F8920800C3B287 /* 2.5.DiffuseMap */;
 			targetProxy = 376F8F3D25F8920C00C3B287 /* PBXContainerItemProxy */;
 		};
 		376F8F4925F8920C00C3B287 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 376F8F2925F8920800C3B287 /* DiffuseMap */;
+			target = 376F8F2925F8920800C3B287 /* 2.5.DiffuseMap */;
 			targetProxy = 376F8F4825F8920C00C3B287 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -612,7 +612,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		376F8F5025F8920C00C3B287 /* Build configuration list for PBXNativeTarget "DiffuseMap" */ = {
+		376F8F5025F8920C00C3B287 /* Build configuration list for PBXNativeTarget "2.5.DiffuseMap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				376F8F5125F8920C00C3B287 /* Debug */,

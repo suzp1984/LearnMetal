@@ -75,7 +75,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		370BCD3925EFBE4C001BA50D /* mvp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mvp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		370BCD3925EFBE4C001BA50D /* 1.6.mvp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1.6.mvp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		370BCD3C25EFBE4C001BA50D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		370BCD3E25EFBE4C001BA50D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		370BCD4025EFBE4E001BA50D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 		370BCD3A25EFBE4C001BA50D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				370BCD3925EFBE4C001BA50D /* mvp.app */,
+				370BCD3925EFBE4C001BA50D /* 1.6.mvp.app */,
 				370BCD4B25EFBE4E001BA50D /* mvpTests.xctest */,
 				370BCD5625EFBE4E001BA50D /* mvpUITests.xctest */,
 			);
@@ -210,9 +210,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		370BCD3825EFBE4C001BA50D /* mvp */ = {
+		370BCD3825EFBE4C001BA50D /* 1.6.mvp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 370BCD5F25EFBE4E001BA50D /* Build configuration list for PBXNativeTarget "mvp" */;
+			buildConfigurationList = 370BCD5F25EFBE4E001BA50D /* Build configuration list for PBXNativeTarget "1.6.mvp" */;
 			buildPhases = (
 				370BCD3525EFBE4C001BA50D /* Sources */,
 				370BCD3625EFBE4C001BA50D /* Frameworks */,
@@ -223,9 +223,9 @@
 			);
 			dependencies = (
 			);
-			name = mvp;
+			name = 1.6.mvp;
 			productName = mvp;
-			productReference = 370BCD3925EFBE4C001BA50D /* mvp.app */;
+			productReference = 370BCD3925EFBE4C001BA50D /* 1.6.mvp.app */;
 			productType = "com.apple.product-type.application";
 		};
 		370BCD4A25EFBE4E001BA50D /* mvpTests */ = {
@@ -306,7 +306,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				370BCD3825EFBE4C001BA50D /* mvp */,
+				370BCD3825EFBE4C001BA50D /* 1.6.mvp */,
 				370BCD4A25EFBE4E001BA50D /* mvpTests */,
 				370BCD5525EFBE4E001BA50D /* mvpUITests */,
 			);
@@ -397,12 +397,12 @@
 /* Begin PBXTargetDependency section */
 		370BCD4D25EFBE4E001BA50D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 370BCD3825EFBE4C001BA50D /* mvp */;
+			target = 370BCD3825EFBE4C001BA50D /* 1.6.mvp */;
 			targetProxy = 370BCD4C25EFBE4E001BA50D /* PBXContainerItemProxy */;
 		};
 		370BCD5825EFBE4E001BA50D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 370BCD3825EFBE4C001BA50D /* mvp */;
+			target = 370BCD3825EFBE4C001BA50D /* 1.6.mvp */;
 			targetProxy = 370BCD5725EFBE4E001BA50D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -677,7 +677,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		370BCD5F25EFBE4E001BA50D /* Build configuration list for PBXNativeTarget "mvp" */ = {
+		370BCD5F25EFBE4E001BA50D /* Build configuration list for PBXNativeTarget "1.6.mvp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				370BCD6025EFBE4E001BA50D /* Debug */,

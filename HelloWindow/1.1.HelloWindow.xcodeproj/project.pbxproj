@@ -35,7 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		370BCB5325EE10B2001BA50D /* HelloWindow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWindow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		370BCB5325EE10B2001BA50D /* 1.1.HelloWindow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1.1.HelloWindow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		370BCB5625EE10B2001BA50D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		370BCB5825EE10B2001BA50D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		370BCB5A25EE10B4001BA50D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		370BCB5425EE10B2001BA50D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				370BCB5325EE10B2001BA50D /* HelloWindow.app */,
+				370BCB5325EE10B2001BA50D /* 1.1.HelloWindow.app */,
 				370BCB6525EE10B4001BA50D /* HelloWindowTests.xctest */,
 				370BCB7025EE10B4001BA50D /* HelloWindowUITests.xctest */,
 			);
@@ -143,9 +143,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		370BCB5225EE10B2001BA50D /* HelloWindow */ = {
+		370BCB5225EE10B2001BA50D /* 1.1.HelloWindow */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 370BCB7925EE10B4001BA50D /* Build configuration list for PBXNativeTarget "HelloWindow" */;
+			buildConfigurationList = 370BCB7925EE10B4001BA50D /* Build configuration list for PBXNativeTarget "1.1.HelloWindow" */;
 			buildPhases = (
 				370BCB4F25EE10B2001BA50D /* Sources */,
 				370BCB5025EE10B2001BA50D /* Frameworks */,
@@ -155,9 +155,9 @@
 			);
 			dependencies = (
 			);
-			name = HelloWindow;
+			name = 1.1.HelloWindow;
 			productName = HelloWindow;
-			productReference = 370BCB5325EE10B2001BA50D /* HelloWindow.app */;
+			productReference = 370BCB5325EE10B2001BA50D /* 1.1.HelloWindow.app */;
 			productType = "com.apple.product-type.application";
 		};
 		370BCB6425EE10B4001BA50D /* HelloWindowTests */ = {
@@ -231,7 +231,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				370BCB5225EE10B2001BA50D /* HelloWindow */,
+				370BCB5225EE10B2001BA50D /* 1.1.HelloWindow */,
 				370BCB6425EE10B4001BA50D /* HelloWindowTests */,
 				370BCB6F25EE10B4001BA50D /* HelloWindowUITests */,
 			);
@@ -295,12 +295,12 @@
 /* Begin PBXTargetDependency section */
 		370BCB6725EE10B4001BA50D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 370BCB5225EE10B2001BA50D /* HelloWindow */;
+			target = 370BCB5225EE10B2001BA50D /* 1.1.HelloWindow */;
 			targetProxy = 370BCB6625EE10B4001BA50D /* PBXContainerItemProxy */;
 		};
 		370BCB7225EE10B4001BA50D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 370BCB5225EE10B2001BA50D /* HelloWindow */;
+			target = 370BCB5225EE10B2001BA50D /* 1.1.HelloWindow */;
 			targetProxy = 370BCB7125EE10B4001BA50D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -570,7 +570,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		370BCB7925EE10B4001BA50D /* Build configuration list for PBXNativeTarget "HelloWindow" */ = {
+		370BCB7925EE10B4001BA50D /* Build configuration list for PBXNativeTarget "1.1.HelloWindow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				370BCB7A25EE10B4001BA50D /* Debug */,

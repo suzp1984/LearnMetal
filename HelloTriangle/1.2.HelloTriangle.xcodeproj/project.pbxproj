@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		370BCB9325EE1168001BA50D /* HelloTriangle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloTriangle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		370BCB9325EE1168001BA50D /* 1.2.HelloTriangle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1.2.HelloTriangle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		370BCB9625EE1168001BA50D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		370BCB9825EE1168001BA50D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		370BCB9A25EE1169001BA50D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 		370BCB9425EE1168001BA50D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				370BCB9325EE1168001BA50D /* HelloTriangle.app */,
+				370BCB9325EE1168001BA50D /* 1.2.HelloTriangle.app */,
 				370BCBA525EE1169001BA50D /* HelloTriangleTests.xctest */,
 				370BCBB025EE1169001BA50D /* HelloTriangleUITests.xctest */,
 			);
@@ -155,9 +155,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		370BCB9225EE1168001BA50D /* HelloTriangle */ = {
+		370BCB9225EE1168001BA50D /* 1.2.HelloTriangle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 370BCBB925EE1169001BA50D /* Build configuration list for PBXNativeTarget "HelloTriangle" */;
+			buildConfigurationList = 370BCBB925EE1169001BA50D /* Build configuration list for PBXNativeTarget "1.2.HelloTriangle" */;
 			buildPhases = (
 				370BCB8F25EE1168001BA50D /* Sources */,
 				370BCB9025EE1168001BA50D /* Frameworks */,
@@ -167,9 +167,9 @@
 			);
 			dependencies = (
 			);
-			name = HelloTriangle;
+			name = 1.2.HelloTriangle;
 			productName = HelloTriangle;
-			productReference = 370BCB9325EE1168001BA50D /* HelloTriangle.app */;
+			productReference = 370BCB9325EE1168001BA50D /* 1.2.HelloTriangle.app */;
 			productType = "com.apple.product-type.application";
 		};
 		370BCBA425EE1169001BA50D /* HelloTriangleTests */ = {
@@ -244,7 +244,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				370BCB9225EE1168001BA50D /* HelloTriangle */,
+				370BCB9225EE1168001BA50D /* 1.2.HelloTriangle */,
 				370BCBA425EE1169001BA50D /* HelloTriangleTests */,
 				370BCBAF25EE1169001BA50D /* HelloTriangleUITests */,
 			);
@@ -310,12 +310,12 @@
 /* Begin PBXTargetDependency section */
 		370BCBA725EE1169001BA50D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 370BCB9225EE1168001BA50D /* HelloTriangle */;
+			target = 370BCB9225EE1168001BA50D /* 1.2.HelloTriangle */;
 			targetProxy = 370BCBA625EE1169001BA50D /* PBXContainerItemProxy */;
 		};
 		370BCBB225EE1169001BA50D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 370BCB9225EE1168001BA50D /* HelloTriangle */;
+			target = 370BCB9225EE1168001BA50D /* 1.2.HelloTriangle */;
 			targetProxy = 370BCBB125EE1169001BA50D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -590,7 +590,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		370BCBB925EE1169001BA50D /* Build configuration list for PBXNativeTarget "HelloTriangle" */ = {
+		370BCBB925EE1169001BA50D /* Build configuration list for PBXNativeTarget "1.2.HelloTriangle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				370BCBBA25EE1169001BA50D /* Debug */,

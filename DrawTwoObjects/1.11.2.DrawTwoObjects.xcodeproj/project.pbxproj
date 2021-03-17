@@ -54,7 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		37DD612725F385B9005D7A42 /* DrawTwoObjects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawTwoObjects.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37DD612725F385B9005D7A42 /* 1.11.2.DrawTwoObjects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1.11.2.DrawTwoObjects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DD612A25F385B9005D7A42 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		37DD612B25F385B9005D7A42 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		37DD612D25F385B9005D7A42 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 		37DD612825F385B9005D7A42 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				37DD612725F385B9005D7A42 /* DrawTwoObjects.app */,
+				37DD612725F385B9005D7A42 /* 1.11.2.DrawTwoObjects.app */,
 				37DD613D25F385BC005D7A42 /* DrawTwoObjectsTests.xctest */,
 				37DD614825F385BC005D7A42 /* DrawTwoObjectsUITests.xctest */,
 			);
@@ -179,9 +179,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		37DD612625F385B9005D7A42 /* DrawTwoObjects */ = {
+		37DD612625F385B9005D7A42 /* 1.11.2.DrawTwoObjects */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 37DD615125F385BC005D7A42 /* Build configuration list for PBXNativeTarget "DrawTwoObjects" */;
+			buildConfigurationList = 37DD615125F385BC005D7A42 /* Build configuration list for PBXNativeTarget "1.11.2.DrawTwoObjects" */;
 			buildPhases = (
 				37DD612325F385B9005D7A42 /* Sources */,
 				37DD612425F385B9005D7A42 /* Frameworks */,
@@ -192,9 +192,9 @@
 			);
 			dependencies = (
 			);
-			name = DrawTwoObjects;
+			name = 1.11.2.DrawTwoObjects;
 			productName = DrawTwoObjects;
-			productReference = 37DD612725F385B9005D7A42 /* DrawTwoObjects.app */;
+			productReference = 37DD612725F385B9005D7A42 /* 1.11.2.DrawTwoObjects.app */;
 			productType = "com.apple.product-type.application";
 		};
 		37DD613C25F385BC005D7A42 /* DrawTwoObjectsTests */ = {
@@ -267,7 +267,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				37DD612625F385B9005D7A42 /* DrawTwoObjects */,
+				37DD612625F385B9005D7A42 /* 1.11.2.DrawTwoObjects */,
 				37DD613C25F385BC005D7A42 /* DrawTwoObjectsTests */,
 				37DD614725F385BC005D7A42 /* DrawTwoObjectsUITests */,
 			);
@@ -334,12 +334,12 @@
 /* Begin PBXTargetDependency section */
 		37DD613F25F385BC005D7A42 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 37DD612625F385B9005D7A42 /* DrawTwoObjects */;
+			target = 37DD612625F385B9005D7A42 /* 1.11.2.DrawTwoObjects */;
 			targetProxy = 37DD613E25F385BC005D7A42 /* PBXContainerItemProxy */;
 		};
 		37DD614A25F385BC005D7A42 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 37DD612625F385B9005D7A42 /* DrawTwoObjects */;
+			target = 37DD612625F385B9005D7A42 /* 1.11.2.DrawTwoObjects */;
 			targetProxy = 37DD614925F385BC005D7A42 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -595,7 +595,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		37DD615125F385BC005D7A42 /* Build configuration list for PBXNativeTarget "DrawTwoObjects" */ = {
+		37DD615125F385BC005D7A42 /* Build configuration list for PBXNativeTarget "1.11.2.DrawTwoObjects" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				37DD615225F385BC005D7A42 /* Debug */,

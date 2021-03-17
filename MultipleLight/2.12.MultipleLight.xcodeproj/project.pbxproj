@@ -54,7 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3742B41425FCBBEF00DE2669 /* MultipleLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultipleLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3742B41425FCBBEF00DE2669 /* 2.12.MultipleLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2.12.MultipleLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3742B41725FCBBEF00DE2669 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3742B41925FCBBEF00DE2669 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3742B41B25FCBBF100DE2669 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 		3742B41525FCBBEF00DE2669 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3742B41425FCBBEF00DE2669 /* MultipleLight.app */,
+				3742B41425FCBBEF00DE2669 /* 2.12.MultipleLight.app */,
 				3742B42625FCBBF100DE2669 /* MultipleLightTests.xctest */,
 				3742B43125FCBBF100DE2669 /* MultipleLightUITests.xctest */,
 			);
@@ -175,9 +175,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3742B41325FCBBEF00DE2669 /* MultipleLight */ = {
+		3742B41325FCBBEF00DE2669 /* 2.12.MultipleLight */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3742B43A25FCBBF100DE2669 /* Build configuration list for PBXNativeTarget "MultipleLight" */;
+			buildConfigurationList = 3742B43A25FCBBF100DE2669 /* Build configuration list for PBXNativeTarget "2.12.MultipleLight" */;
 			buildPhases = (
 				3742B41025FCBBEF00DE2669 /* Sources */,
 				3742B41125FCBBEF00DE2669 /* Frameworks */,
@@ -188,9 +188,9 @@
 			);
 			dependencies = (
 			);
-			name = MultipleLight;
+			name = 2.12.MultipleLight;
 			productName = MultipleLight;
-			productReference = 3742B41425FCBBEF00DE2669 /* MultipleLight.app */;
+			productReference = 3742B41425FCBBEF00DE2669 /* 2.12.MultipleLight.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3742B42525FCBBF100DE2669 /* MultipleLightTests */ = {
@@ -265,7 +265,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3742B41325FCBBEF00DE2669 /* MultipleLight */,
+				3742B41325FCBBEF00DE2669 /* 2.12.MultipleLight */,
 				3742B42525FCBBF100DE2669 /* MultipleLightTests */,
 				3742B43025FCBBF100DE2669 /* MultipleLightUITests */,
 			);
@@ -332,12 +332,12 @@
 /* Begin PBXTargetDependency section */
 		3742B42825FCBBF100DE2669 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3742B41325FCBBEF00DE2669 /* MultipleLight */;
+			target = 3742B41325FCBBEF00DE2669 /* 2.12.MultipleLight */;
 			targetProxy = 3742B42725FCBBF100DE2669 /* PBXContainerItemProxy */;
 		};
 		3742B43325FCBBF100DE2669 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3742B41325FCBBEF00DE2669 /* MultipleLight */;
+			target = 3742B41325FCBBEF00DE2669 /* 2.12.MultipleLight */;
 			targetProxy = 3742B43225FCBBF100DE2669 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -612,7 +612,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3742B43A25FCBBF100DE2669 /* Build configuration list for PBXNativeTarget "MultipleLight" */ = {
+		3742B43A25FCBBF100DE2669 /* Build configuration list for PBXNativeTarget "2.12.MultipleLight" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3742B43B25FCBBF100DE2669 /* Debug */,

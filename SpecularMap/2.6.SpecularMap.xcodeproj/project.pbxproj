@@ -54,7 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		376F8F8525F8BF5E00C3B287 /* SpecularMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpecularMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		376F8F8525F8BF5E00C3B287 /* 2.6.SpecularMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2.6.SpecularMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		376F8F8825F8BF5E00C3B287 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		376F8F8A25F8BF5E00C3B287 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		376F8F8C25F8BF6000C3B287 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 		376F8F8625F8BF5E00C3B287 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				376F8F8525F8BF5E00C3B287 /* SpecularMap.app */,
+				376F8F8525F8BF5E00C3B287 /* 2.6.SpecularMap.app */,
 				376F8F9725F8BF6000C3B287 /* SpecularMapTests.xctest */,
 				376F8FA225F8BF6100C3B287 /* SpecularMapUITests.xctest */,
 			);
@@ -175,9 +175,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		376F8F8425F8BF5E00C3B287 /* SpecularMap */ = {
+		376F8F8425F8BF5E00C3B287 /* 2.6.SpecularMap */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 376F8FAB25F8BF6100C3B287 /* Build configuration list for PBXNativeTarget "SpecularMap" */;
+			buildConfigurationList = 376F8FAB25F8BF6100C3B287 /* Build configuration list for PBXNativeTarget "2.6.SpecularMap" */;
 			buildPhases = (
 				376F8F8125F8BF5E00C3B287 /* Sources */,
 				376F8F8225F8BF5E00C3B287 /* Frameworks */,
@@ -188,9 +188,9 @@
 			);
 			dependencies = (
 			);
-			name = SpecularMap;
+			name = 2.6.SpecularMap;
 			productName = SpecularMap;
-			productReference = 376F8F8525F8BF5E00C3B287 /* SpecularMap.app */;
+			productReference = 376F8F8525F8BF5E00C3B287 /* 2.6.SpecularMap.app */;
 			productType = "com.apple.product-type.application";
 		};
 		376F8F9625F8BF6000C3B287 /* SpecularMapTests */ = {
@@ -265,7 +265,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				376F8F8425F8BF5E00C3B287 /* SpecularMap */,
+				376F8F8425F8BF5E00C3B287 /* 2.6.SpecularMap */,
 				376F8F9625F8BF6000C3B287 /* SpecularMapTests */,
 				376F8FA125F8BF6100C3B287 /* SpecularMapUITests */,
 			);
@@ -332,12 +332,12 @@
 /* Begin PBXTargetDependency section */
 		376F8F9925F8BF6100C3B287 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 376F8F8425F8BF5E00C3B287 /* SpecularMap */;
+			target = 376F8F8425F8BF5E00C3B287 /* 2.6.SpecularMap */;
 			targetProxy = 376F8F9825F8BF6100C3B287 /* PBXContainerItemProxy */;
 		};
 		376F8FA425F8BF6100C3B287 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 376F8F8425F8BF5E00C3B287 /* SpecularMap */;
+			target = 376F8F8425F8BF5E00C3B287 /* 2.6.SpecularMap */;
 			targetProxy = 376F8FA325F8BF6100C3B287 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -612,7 +612,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		376F8FAB25F8BF6100C3B287 /* Build configuration list for PBXNativeTarget "SpecularMap" */ = {
+		376F8FAB25F8BF6100C3B287 /* Build configuration list for PBXNativeTarget "2.6.SpecularMap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				376F8FAC25F8BF6100C3B287 /* Debug */,

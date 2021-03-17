@@ -53,17 +53,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		370BCE0B25F1BEB3001BA50D /* Exec.RotatingCube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exec.RotatingCube.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		370BCE0B25F1BEB3001BA50D /* 1.8ExecRotatingCube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1.8ExecRotatingCube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		370BCE0E25F1BEB3001BA50D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		370BCE1025F1BEB3001BA50D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		370BCE1225F1BEB4001BA50D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		370BCE1525F1BEB4001BA50D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		370BCE1725F1BEB4001BA50D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		370BCE1825F1BEB4001BA50D /* Exec_RotatingCube.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Exec_RotatingCube.entitlements; sourceTree = "<group>"; };
-		370BCE1D25F1BEB4001BA50D /* Exec.RotatingCubeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Exec.RotatingCubeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		370BCE1D25F1BEB4001BA50D /* ExecRotatingCubeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExecRotatingCubeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		370BCE2125F1BEB4001BA50D /* Exec_RotatingCubeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exec_RotatingCubeTests.swift; sourceTree = "<group>"; };
 		370BCE2325F1BEB4001BA50D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		370BCE2825F1BEB4001BA50D /* Exec.RotatingCubeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Exec.RotatingCubeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		370BCE2825F1BEB4001BA50D /* ExecRotatingCubeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExecRotatingCubeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		370BCE2C25F1BEB4001BA50D /* Exec_RotatingCubeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exec_RotatingCubeUITests.swift; sourceTree = "<group>"; };
 		370BCE2E25F1BEB4001BA50D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		370BCE3E25F1BED6001BA50D /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
@@ -107,9 +107,9 @@
 		370BCE0225F1BEB3001BA50D = {
 			isa = PBXGroup;
 			children = (
-				370BCE0D25F1BEB3001BA50D /* Exec.RotatingCube */,
-				370BCE2025F1BEB4001BA50D /* Exec.RotatingCubeTests */,
-				370BCE2B25F1BEB4001BA50D /* Exec.RotatingCubeUITests */,
+				370BCE0D25F1BEB3001BA50D /* ExecRotatingCube */,
+				370BCE2025F1BEB4001BA50D /* ExecRotatingCubeTests */,
+				370BCE2B25F1BEB4001BA50D /* ExecRotatingCubeUITests */,
 				370BCE0C25F1BEB3001BA50D /* Products */,
 				370BCE3D25F1BED6001BA50D /* Frameworks */,
 			);
@@ -118,14 +118,14 @@
 		370BCE0C25F1BEB3001BA50D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				370BCE0B25F1BEB3001BA50D /* Exec.RotatingCube.app */,
-				370BCE1D25F1BEB4001BA50D /* Exec.RotatingCubeTests.xctest */,
-				370BCE2825F1BEB4001BA50D /* Exec.RotatingCubeUITests.xctest */,
+				370BCE0B25F1BEB3001BA50D /* 1.8ExecRotatingCube.app */,
+				370BCE1D25F1BEB4001BA50D /* ExecRotatingCubeTests.xctest */,
+				370BCE2825F1BEB4001BA50D /* ExecRotatingCubeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		370BCE0D25F1BEB3001BA50D /* Exec.RotatingCube */ = {
+		370BCE0D25F1BEB3001BA50D /* ExecRotatingCube */ = {
 			isa = PBXGroup;
 			children = (
 				370BCE0E25F1BEB3001BA50D /* AppDelegate.swift */,
@@ -140,25 +140,25 @@
 				370BCE5525F1C3C3001BA50D /* CubeRenderer.h */,
 				370BCE5625F1C3D1001BA50D /* CubeRenderer.m */,
 			);
-			path = Exec.RotatingCube;
+			path = ExecRotatingCube;
 			sourceTree = "<group>";
 		};
-		370BCE2025F1BEB4001BA50D /* Exec.RotatingCubeTests */ = {
+		370BCE2025F1BEB4001BA50D /* ExecRotatingCubeTests */ = {
 			isa = PBXGroup;
 			children = (
 				370BCE2125F1BEB4001BA50D /* Exec_RotatingCubeTests.swift */,
 				370BCE2325F1BEB4001BA50D /* Info.plist */,
 			);
-			path = Exec.RotatingCubeTests;
+			path = ExecRotatingCubeTests;
 			sourceTree = "<group>";
 		};
-		370BCE2B25F1BEB4001BA50D /* Exec.RotatingCubeUITests */ = {
+		370BCE2B25F1BEB4001BA50D /* ExecRotatingCubeUITests */ = {
 			isa = PBXGroup;
 			children = (
 				370BCE2C25F1BEB4001BA50D /* Exec_RotatingCubeUITests.swift */,
 				370BCE2E25F1BEB4001BA50D /* Info.plist */,
 			);
-			path = Exec.RotatingCubeUITests;
+			path = ExecRotatingCubeUITests;
 			sourceTree = "<group>";
 		};
 		370BCE3D25F1BED6001BA50D /* Frameworks */ = {
@@ -174,9 +174,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		370BCE0A25F1BEB3001BA50D /* Exec.RotatingCube */ = {
+		370BCE0A25F1BEB3001BA50D /* 1.8ExecRotatingCube */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 370BCE3125F1BEB4001BA50D /* Build configuration list for PBXNativeTarget "Exec.RotatingCube" */;
+			buildConfigurationList = 370BCE3125F1BEB4001BA50D /* Build configuration list for PBXNativeTarget "1.8ExecRotatingCube" */;
 			buildPhases = (
 				370BCE0725F1BEB3001BA50D /* Sources */,
 				370BCE0825F1BEB3001BA50D /* Frameworks */,
@@ -187,14 +187,14 @@
 			);
 			dependencies = (
 			);
-			name = Exec.RotatingCube;
+			name = 1.8ExecRotatingCube;
 			productName = Exec.RotatingCube;
-			productReference = 370BCE0B25F1BEB3001BA50D /* Exec.RotatingCube.app */;
+			productReference = 370BCE0B25F1BEB3001BA50D /* 1.8ExecRotatingCube.app */;
 			productType = "com.apple.product-type.application";
 		};
-		370BCE1C25F1BEB4001BA50D /* Exec.RotatingCubeTests */ = {
+		370BCE1C25F1BEB4001BA50D /* ExecRotatingCubeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 370BCE3425F1BEB4001BA50D /* Build configuration list for PBXNativeTarget "Exec.RotatingCubeTests" */;
+			buildConfigurationList = 370BCE3425F1BEB4001BA50D /* Build configuration list for PBXNativeTarget "ExecRotatingCubeTests" */;
 			buildPhases = (
 				370BCE1925F1BEB4001BA50D /* Sources */,
 				370BCE1A25F1BEB4001BA50D /* Frameworks */,
@@ -205,14 +205,14 @@
 			dependencies = (
 				370BCE1F25F1BEB4001BA50D /* PBXTargetDependency */,
 			);
-			name = Exec.RotatingCubeTests;
+			name = ExecRotatingCubeTests;
 			productName = Exec.RotatingCubeTests;
-			productReference = 370BCE1D25F1BEB4001BA50D /* Exec.RotatingCubeTests.xctest */;
+			productReference = 370BCE1D25F1BEB4001BA50D /* ExecRotatingCubeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		370BCE2725F1BEB4001BA50D /* Exec.RotatingCubeUITests */ = {
+		370BCE2725F1BEB4001BA50D /* ExecRotatingCubeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 370BCE3725F1BEB4001BA50D /* Build configuration list for PBXNativeTarget "Exec.RotatingCubeUITests" */;
+			buildConfigurationList = 370BCE3725F1BEB4001BA50D /* Build configuration list for PBXNativeTarget "ExecRotatingCubeUITests" */;
 			buildPhases = (
 				370BCE2425F1BEB4001BA50D /* Sources */,
 				370BCE2525F1BEB4001BA50D /* Frameworks */,
@@ -223,9 +223,9 @@
 			dependencies = (
 				370BCE2A25F1BEB4001BA50D /* PBXTargetDependency */,
 			);
-			name = Exec.RotatingCubeUITests;
+			name = ExecRotatingCubeUITests;
 			productName = Exec.RotatingCubeUITests;
-			productReference = 370BCE2825F1BEB4001BA50D /* Exec.RotatingCubeUITests.xctest */;
+			productReference = 370BCE2825F1BEB4001BA50D /* ExecRotatingCubeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -251,7 +251,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 370BCE0625F1BEB3001BA50D /* Build configuration list for PBXProject "1.8.Exec.RotatingCube" */;
+			buildConfigurationList = 370BCE0625F1BEB3001BA50D /* Build configuration list for PBXProject "1.8.ExecRotatingCube" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -264,9 +264,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				370BCE0A25F1BEB3001BA50D /* Exec.RotatingCube */,
-				370BCE1C25F1BEB4001BA50D /* Exec.RotatingCubeTests */,
-				370BCE2725F1BEB4001BA50D /* Exec.RotatingCubeUITests */,
+				370BCE0A25F1BEB3001BA50D /* 1.8ExecRotatingCube */,
+				370BCE1C25F1BEB4001BA50D /* ExecRotatingCubeTests */,
+				370BCE2725F1BEB4001BA50D /* ExecRotatingCubeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -330,12 +330,12 @@
 /* Begin PBXTargetDependency section */
 		370BCE1F25F1BEB4001BA50D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 370BCE0A25F1BEB3001BA50D /* Exec.RotatingCube */;
+			target = 370BCE0A25F1BEB3001BA50D /* 1.8ExecRotatingCube */;
 			targetProxy = 370BCE1E25F1BEB4001BA50D /* PBXContainerItemProxy */;
 		};
 		370BCE2A25F1BEB4001BA50D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 370BCE0A25F1BEB3001BA50D /* Exec.RotatingCube */;
+			target = 370BCE0A25F1BEB3001BA50D /* 1.8ExecRotatingCube */;
 			targetProxy = 370BCE2925F1BEB4001BA50D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -601,7 +601,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		370BCE0625F1BEB3001BA50D /* Build configuration list for PBXProject "1.8.Exec.RotatingCube" */ = {
+		370BCE0625F1BEB3001BA50D /* Build configuration list for PBXProject "1.8.ExecRotatingCube" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				370BCE2F25F1BEB4001BA50D /* Debug */,
@@ -610,7 +610,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		370BCE3125F1BEB4001BA50D /* Build configuration list for PBXNativeTarget "Exec.RotatingCube" */ = {
+		370BCE3125F1BEB4001BA50D /* Build configuration list for PBXNativeTarget "1.8ExecRotatingCube" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				370BCE3225F1BEB4001BA50D /* Debug */,
@@ -619,7 +619,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		370BCE3425F1BEB4001BA50D /* Build configuration list for PBXNativeTarget "Exec.RotatingCubeTests" */ = {
+		370BCE3425F1BEB4001BA50D /* Build configuration list for PBXNativeTarget "ExecRotatingCubeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				370BCE3525F1BEB4001BA50D /* Debug */,
@@ -628,7 +628,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		370BCE3725F1BEB4001BA50D /* Build configuration list for PBXNativeTarget "Exec.RotatingCubeUITests" */ = {
+		370BCE3725F1BEB4001BA50D /* Build configuration list for PBXNativeTarget "ExecRotatingCubeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				370BCE3825F1BEB4001BA50D /* Debug */,

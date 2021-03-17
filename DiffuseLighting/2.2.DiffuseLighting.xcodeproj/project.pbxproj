@@ -54,7 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		376F8E2325F71A9900C3B287 /* DiffuseLighting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiffuseLighting.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		376F8E2325F71A9900C3B287 /* 2.2.DiffuseLighting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2.2.DiffuseLighting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		376F8E2625F71A9900C3B287 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		376F8E2825F71A9900C3B287 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		376F8E2A25F71A9A00C3B287 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 		376F8E2425F71A9900C3B287 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				376F8E2325F71A9900C3B287 /* DiffuseLighting.app */,
+				376F8E2325F71A9900C3B287 /* 2.2.DiffuseLighting.app */,
 				376F8E3525F71A9A00C3B287 /* DiffuseLightingTests.xctest */,
 				376F8E4025F71A9A00C3B287 /* DiffuseLightingUITests.xctest */,
 			);
@@ -175,9 +175,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		376F8E2225F71A9900C3B287 /* DiffuseLighting */ = {
+		376F8E2225F71A9900C3B287 /* 2.2.DiffuseLighting */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 376F8E4925F71A9A00C3B287 /* Build configuration list for PBXNativeTarget "DiffuseLighting" */;
+			buildConfigurationList = 376F8E4925F71A9A00C3B287 /* Build configuration list for PBXNativeTarget "2.2.DiffuseLighting" */;
 			buildPhases = (
 				376F8E1F25F71A9900C3B287 /* Sources */,
 				376F8E2025F71A9900C3B287 /* Frameworks */,
@@ -188,9 +188,9 @@
 			);
 			dependencies = (
 			);
-			name = DiffuseLighting;
+			name = 2.2.DiffuseLighting;
 			productName = DiffuseLighting;
-			productReference = 376F8E2325F71A9900C3B287 /* DiffuseLighting.app */;
+			productReference = 376F8E2325F71A9900C3B287 /* 2.2.DiffuseLighting.app */;
 			productType = "com.apple.product-type.application";
 		};
 		376F8E3425F71A9A00C3B287 /* DiffuseLightingTests */ = {
@@ -265,7 +265,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				376F8E2225F71A9900C3B287 /* DiffuseLighting */,
+				376F8E2225F71A9900C3B287 /* 2.2.DiffuseLighting */,
 				376F8E3425F71A9A00C3B287 /* DiffuseLightingTests */,
 				376F8E3F25F71A9A00C3B287 /* DiffuseLightingUITests */,
 			);
@@ -332,12 +332,12 @@
 /* Begin PBXTargetDependency section */
 		376F8E3725F71A9A00C3B287 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 376F8E2225F71A9900C3B287 /* DiffuseLighting */;
+			target = 376F8E2225F71A9900C3B287 /* 2.2.DiffuseLighting */;
 			targetProxy = 376F8E3625F71A9A00C3B287 /* PBXContainerItemProxy */;
 		};
 		376F8E4225F71A9A00C3B287 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 376F8E2225F71A9900C3B287 /* DiffuseLighting */;
+			target = 376F8E2225F71A9900C3B287 /* 2.2.DiffuseLighting */;
 			targetProxy = 376F8E4125F71A9A00C3B287 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -612,7 +612,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		376F8E4925F71A9A00C3B287 /* Build configuration list for PBXNativeTarget "DiffuseLighting" */ = {
+		376F8E4925F71A9A00C3B287 /* Build configuration list for PBXNativeTarget "2.2.DiffuseLighting" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				376F8E4A25F71A9A00C3B287 /* Debug */,
