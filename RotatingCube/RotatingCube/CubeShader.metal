@@ -1,8 +1,8 @@
 //
-//  CubShader.metal
-//  Exec.RotatingCube
+//  CubeShader.metal
+//  RotatingCube
 //
-//  Created by Jacob Su on 3/5/21.
+//  Created by Jacob Su on 3/17/21.
 //
 
 #include <metal_stdlib>

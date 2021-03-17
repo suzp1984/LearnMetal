@@ -1,13 +1,12 @@
 //
-//  CuberRenderer.h
-//  8.Exec.RotatingCube
+//  CubeRenderer.h
+//  RotatingCube
 //
-//  Created by Jacob Su on 3/5/21.
+//  Created by Jacob Su on 3/17/21.
 //
 
-#ifndef CuberRenderer_h
-#define CuberRenderer_h
-
+#ifndef CubeRenderer_h
+#define CubeRenderer_h
 
 @import MetalKit;
 
@@ -17,4 +16,4 @@
 
 @end
 
-#endif /* CuberRenderer_h */
+#endif /* CubeRenderer_h */

@@ -1,13 +1,13 @@
 //
-//  Exec_RotatingCubeUITests.swift
-//  Exec.RotatingCubeUITests
+//  RotatingCubeUITests.swift
+//  RotatingCubeUITests
 //
-//  Created by Jacob Su on 3/5/21.
+//  Created by Jacob Su on 3/17/21.
 //
 
 import XCTest
 
-class Exec_RotatingCubeUITests: XCTestCase {
+class RotatingCubeUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

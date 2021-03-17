@@ -1,16 +1,17 @@
 //
 //  ViewController.swift
-//  Exec.RotatingCube
+//  RotatingCube
 //
-//  Created by Jacob Su on 3/5/21.
+//  Created by Jacob Su on 3/17/21.
 //
 
 import Cocoa
+import MetalKit
 
 class ViewController: NSViewController {
 
     var cubeRenderer: CubeRenderer!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,13 +33,6 @@ class ViewController: NSViewController {
         
         cubeRenderer = CubeRenderer(metalKitView: metalView)
     }
-
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
-    }
-
 
 }
 

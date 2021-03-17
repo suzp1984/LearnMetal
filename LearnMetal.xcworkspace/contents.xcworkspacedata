@@ -26,7 +26,7 @@
       location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/IndexedElements/1.7.IndexedElements.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/Exec.RotatingCube/1.8.ExecRotatingCube.xcodeproj">
+      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/RotatingCube/1.8.RotatingCube.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/MultipleDraw/1.9.MultipleDrawByIndirectCmdBuf.xcodeproj">
