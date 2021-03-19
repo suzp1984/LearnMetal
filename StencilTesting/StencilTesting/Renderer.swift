@@ -273,7 +273,7 @@ extension Renderer : MTKViewDelegate
         renderPassDescriptor.stencilAttachment.clearStencil = 0
         renderPassDescriptor.stencilAttachment.loadAction = .clear
         renderPassDescriptor.stencilAttachment.storeAction = .store
-
+        
         
         let renderEncoder = commandBuffer.makeRenderCommandEncoder(descriptor: renderPassDescriptor)!
         renderEncoder.label = "depth testing"
@@ -286,6 +286,7 @@ extension Renderer : MTKViewDelegate
                                               znear: 0.0, zfar: 1.0))
         renderEncoder.setRenderPipelineState(renderPipelineState)
         renderEncoder.setDepthStencilState(stencilWriteDisabledState)
+        
         
         // draw plane
         for i in 0..<planeMesh.vertexBuffers.count {

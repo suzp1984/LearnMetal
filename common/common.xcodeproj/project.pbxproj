@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3706D2EB26043EED000568B4 /* MetalMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3706D2EA26043EED000568B4 /* MetalMesh.swift */; };
+		3706D2EF2604548A000568B4 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3706D2EE2604548A000568B4 /* Errors.swift */; };
 		3721927725F9CB9600558BBB /* MetalBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3721927625F9CB9600558BBB /* MetalBuffer.swift */; };
 		3742B5DC25FF93A800DE2669 /* nanosuit in Resources */ = {isa = PBXBuildFile; fileRef = 3742B5DB25FF93A700DE2669 /* nanosuit */; };
 		37DD617325F38714005D7A42 /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DD616925F38714005D7A42 /* common.framework */; };
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3706D2EA26043EED000568B4 /* MetalMesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalMesh.swift; sourceTree = "<group>"; };
+		3706D2EE2604548A000568B4 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		3721927625F9CB9600558BBB /* MetalBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalBuffer.swift; sourceTree = "<group>"; };
 		3742B5DB25FF93A700DE2669 /* nanosuit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = nanosuit; sourceTree = "<group>"; };
 		37DD616925F38714005D7A42 /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +106,8 @@
 				37DD624425F5D5EF005D7A42 /* Camera.h */,
 				37DD624525F5D61B005D7A42 /* Camera.m */,
 				3721927625F9CB9600558BBB /* MetalBuffer.swift */,
+				3706D2EA26043EED000568B4 /* MetalMesh.swift */,
+				3706D2EE2604548A000568B4 /* Errors.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -228,7 +234,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				37DD624625F5D61B005D7A42 /* Camera.m in Sources */,
+				3706D2EF2604548A000568B4 /* Errors.swift in Sources */,
 				37DD618725F38769005D7A42 /* AAPLMathUtilities.m in Sources */,
+				3706D2EB26043EED000568B4 /* MetalMesh.swift in Sources */,
 				3721927725F9CB9600558BBB /* MetalBuffer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -91,24 +91,41 @@ extension MTLRenderCommandEncoder {
         setFragmentBuffer(fragmentBuffer.buffer, offset: offset, index: fragmentBuffer.index)
     }
     
-    public func setVertexResource<R: Resource>(_ resource: R) {
+    public func setVertexResource<R: Resource>(_ resource: R) throws {
         if let buffer = resource as? MetalBuffer<R.Element> {
             setVertexBuffer(buffer)
         }
         
         if let texture = resource as? Texture {
-            setVertexTexture(texture.texture, index: texture.index)
+            if let index = texture.index {
+                setVertexTexture(texture.texture, index: index)
+            } else {
+                throw Errors.runtimeError("set Vertex Texture must has a index.")
+            }
         }
     }
     
-    public func setFragmentResource<R: Resource>(_ resource: R) {
+    public func setFragmentResource<R: Resource>(_ resource: R) throws {
         if let buffer = resource as? MetalBuffer<R.Element> {
             setFragmentBuffer(buffer)
         }
 
         if let texture = resource as? Texture {
-            setFragmentTexture(texture.texture, index: texture.index)
+            if let index = texture.index {
+                setFragmentTexture(texture.texture, index: index)
+            } else {
+                throw Errors.runtimeError("set fragment texture must has a index.")
+            }
         }
+    }
+    
+    public func setFragmentTexture(_ texture: Texture, index: Int? = nil) throws {
+        guard let index = index ?? texture.index else {
+            throw Errors.runtimeError("set fragment texture must has a index.")
+        }
+        
+        setFragmentTexture(texture.texture, index: index)
+        
     }
 }
 
@@ -116,5 +133,27 @@ public struct Texture: Resource {
     public typealias Element = Any
     
     public let texture: MTLTexture
-    public let index: Int
+    public let index: Int?
+}
+
+extension Texture {
+    public static func newTextureWithName(_ name: String,
+                                         scaleFactor: CGFloat,
+                                         device: MTLDevice,
+                                         index: Int? = nil,
+                                         bundle: Bundle? = nil,
+                                         options: [MTKTextureLoader.Option : Any]? = nil
+    ) throws -> Texture {
+        let textureLoader = MTKTextureLoader(device: device)
+        let texture = try textureLoader.newTexture(name: name,
+                                                   scaleFactor: scaleFactor,
+                                                   bundle: bundle ?? Bundle(identifier: "io.github.suzp1984.common"),
+                                                   options: options)
+        
+        return Texture(texture: texture, index: index)
+    }
+    
+    public func newTextureWithIndex(_ index: Int?) -> Texture {
+        return Texture(texture: texture, index: index)
+    }
 }

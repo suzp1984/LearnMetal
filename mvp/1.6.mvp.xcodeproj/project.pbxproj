@@ -13,7 +13,6 @@
 		370BCD4425EFBE4E001BA50D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370BCD4225EFBE4E001BA50D /* Main.storyboard */; };
 		370BCD5025EFBE4E001BA50D /* mvpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370BCD4F25EFBE4E001BA50D /* mvpTests.swift */; };
 		370BCD5B25EFBE4E001BA50D /* mvpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370BCD5A25EFBE4E001BA50D /* mvpUITests.swift */; };
-		370BCD6C25EFBE83001BA50D /* MetalBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370BCD6B25EFBE83001BA50D /* MetalBuffer.swift */; };
 		370BCD7225EFBE94001BA50D /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 370BCD7125EFBE94001BA50D /* MetalKit.framework */; };
 		370BCD7425EFBE9A001BA50D /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 370BCD7325EFBE9A001BA50D /* Metal.framework */; };
 		370BCD8425F0BE2D001BA50D /* SquareRenderer.metal in Sources */ = {isa = PBXBuildFile; fileRef = 370BCD8325F0BE2D001BA50D /* SquareRenderer.metal */; };
@@ -88,7 +87,6 @@
 		370BCD5625EFBE4E001BA50D /* mvpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mvpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		370BCD5A25EFBE4E001BA50D /* mvpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvpUITests.swift; sourceTree = "<group>"; };
 		370BCD5C25EFBE4E001BA50D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		370BCD6B25EFBE83001BA50D /* MetalBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalBuffer.swift; sourceTree = "<group>"; };
 		370BCD7125EFBE94001BA50D /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		370BCD7325EFBE9A001BA50D /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		370BCD7C25F0B5FE001BA50D /* mvp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mvp-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -158,7 +156,6 @@
 				370BCD4225EFBE4E001BA50D /* Main.storyboard */,
 				370BCD4525EFBE4E001BA50D /* Info.plist */,
 				370BCD4625EFBE4E001BA50D /* mvp.entitlements */,
-				370BCD6B25EFBE83001BA50D /* MetalBuffer.swift */,
 				370BCD7C25F0B5FE001BA50D /* mvp-Bridging-Header.h */,
 				370BCD8225F0B805001BA50D /* SquareShaderType.h */,
 				370BCD8325F0BE2D001BA50D /* SquareRenderer.metal */,
@@ -372,7 +369,6 @@
 				370BCD3D25EFBE4C001BA50D /* AppDelegate.swift in Sources */,
 				370BCD9225F0C7F1001BA50D /* SquareRenderer.m in Sources */,
 				370BCD8425F0BE2D001BA50D /* SquareRenderer.metal in Sources */,
-				370BCD6C25EFBE83001BA50D /* MetalBuffer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
