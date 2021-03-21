@@ -25,8 +25,8 @@ class Renderer: NSObject {
     private var camera: Camera!
     private var cubeMesh: MTKMesh!
     private var planeMesh: MTKMesh!
-    private var cubeTexture: MTLTexture!
-    private var floorTexture: MTLTexture!
+    private var cubeTexture: Texture!
+    private var floorTexture: Texture!
     private var depthTexture: MTLTexture!
     private var cubeOneUniforms: Uniforms!
     private var cubeTwoUniforms: Uniforms!
@@ -150,35 +150,27 @@ class Renderer: NSObject {
         commandQueue = device.makeCommandQueue()
         viewportSize = vector_uint2(UInt32(metalView.frame.width), UInt32(metalView.frame.height))
         
-        let modelIOVertexDescriptor = MTKModelIOVertexDescriptorFromMetal(mtlVertexDescriptor)
-        (modelIOVertexDescriptor.attributes[Int(VertexAttributeIndexPosition.rawValue)] as! MDLVertexAttribute).name = MDLVertexAttributePosition
-        (modelIOVertexDescriptor.attributes[Int(VertexAttributeIndexTexcoord.rawValue)] as! MDLVertexAttribute).name = MDLVertexAttributeTextureCoordinate
+        cubeMesh = try! MTKMesh.newBox(withVertexDescriptor: mtlVertexDescriptor,
+                                       withAttributesMap: [
+            Int(VertexAttributeIndexPosition.rawValue): MDLVertexAttributePosition,
+            Int(VertexAttributeIndexTexcoord.rawValue): MDLVertexAttributeTextureCoordinate],
+                                       withDevice: device)
         
-        let metalAllocator = MTKMeshBufferAllocator(device: device)
-        let cubeMDLMesh = MDLMesh.newBox(withDimensions: vector_float3(1.0, 1.0, 1.0),
-                                  segments: vector_uint3(1, 1, 1),
-                                  geometryType: MDLGeometryType.triangles,
-                                  inwardNormals: false,
-                                  allocator: metalAllocator)
+        planeMesh = try! MTKMesh.newPlane(withVertexDescriptor: mtlVertexDescriptor,
+                                          withAttributesMap: [
+               Int(VertexAttributeIndexPosition.rawValue): MDLVertexAttributePosition,
+               Int(VertexAttributeIndexTexcoord.rawValue): MDLVertexAttributeTextureCoordinate, ],
+                                          withDevice: device)
         
-        cubeMDLMesh.vertexDescriptor = modelIOVertexDescriptor
+        cubeTexture = try! Texture.newTextureWithName("marble",
+                                                      scaleFactor: 1.0,
+                                                      device: device,
+                                                      index: Int(FragmentInputIndexDiffuseTexture.rawValue))
         
-        cubeMesh = try! MTKMesh(mesh: cubeMDLMesh, device: device)
-        
-        let planeMDLMesh = MDLMesh.newPlane(withDimensions: vector_float2(1.0, 1.0),
-                                            segments: vector_uint2(1, 1),
-                                            geometryType: MDLGeometryType.triangles,
-                                            allocator: metalAllocator)
-        planeMDLMesh.vertexDescriptor = modelIOVertexDescriptor
-        planeMesh = try! MTKMesh(mesh: planeMDLMesh, device: device)
-        
-        let bundle = Bundle(identifier: "io.github.suzp1984.common")
-        let textureLoader = MTKTextureLoader(device: device)
-        
-        cubeTexture = try! textureLoader.newTexture(name: "marble", scaleFactor: 1.0, bundle: bundle, options: nil)
-        
-        floorTexture = try! textureLoader.newTexture(name: "metal", scaleFactor: 1.0, bundle: bundle, options: nil)
-        
+        floorTexture = try! Texture.newTextureWithName("metal",
+                                                       scaleFactor: 1.0,
+                                                       device: device,
+                                                       index: Int(FragmentInputIndexDiffuseTexture.rawValue))
         
         cubeOneUniforms = Uniforms(
             modelMatrix: matrix4x4_translation(-1.0, 0.0, -1.0),
@@ -299,8 +291,7 @@ extension Renderer : MTKViewDelegate
         renderEncoder.setVertexBytes(&floorUniforms,
                                      length: MemoryLayout<Uniforms>.stride,
                                      index: Int(VertexInputIndexUniforms.rawValue))
-        renderEncoder.setFragmentTexture(floorTexture,
-                                         index: Int(FragmentInputIndexDiffuseTexture.rawValue))
+        try! renderEncoder.setFragmentTexture(floorTexture)
         for i in 0..<planeMesh.submeshes.count {
             let subMesh = planeMesh.submeshes[i]
             renderEncoder.drawIndexedPrimitives(type: subMesh.primitiveType,
@@ -326,8 +317,7 @@ extension Renderer : MTKViewDelegate
         renderEncoder.setVertexBytes(&cubeOneUniforms,
                                      length: MemoryLayout<Uniforms>.stride,
                                      index: Int(VertexInputIndexUniforms.rawValue))
-        renderEncoder.setFragmentTexture(cubeTexture,
-                                         index: Int(FragmentInputIndexDiffuseTexture.rawValue))
+        try! renderEncoder.setFragmentTexture(cubeTexture)
         for i in 0..<cubeMesh.submeshes.count {
             let submesh = cubeMesh.submeshes[i]
             renderEncoder.drawIndexedPrimitives(type: submesh.primitiveType,
@@ -362,12 +352,10 @@ extension Renderer : MTKViewDelegate
                                           index: Int(VertexInputIndexPosition.rawValue))
         }
         
-
         renderEncoder.setVertexBytes(&borderOneUniforms,
                                      length: MemoryLayout<Uniforms>.stride,
                                      index: Int(VertexInputIndexUniforms.rawValue))
-        renderEncoder.setFragmentTexture(cubeTexture,
-                                         index: Int(FragmentInputIndexDiffuseTexture.rawValue))
+        try! renderEncoder.setFragmentTexture(cubeTexture)
         for i in 0..<cubeMesh.submeshes.count {
             let submesh = cubeMesh.submeshes[i]
             renderEncoder.drawIndexedPrimitives(type: submesh.primitiveType,

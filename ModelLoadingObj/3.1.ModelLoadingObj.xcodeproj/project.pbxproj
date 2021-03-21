@@ -55,6 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		372B52F22605821C00EAE90C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3742B5A425FF935E00DE2669 /* 3.1.ModelLoadingObj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3.1.ModelLoadingObj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3742B5A725FF935E00DE2669 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3742B5A825FF935E00DE2669 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -113,6 +114,7 @@
 		3742B59B25FF935E00DE2669 = {
 			isa = PBXGroup;
 			children = (
+				372B52F22605821C00EAE90C /* README.md */,
 				3742B5A625FF935E00DE2669 /* ModelLoadingObj */,
 				3742B5BD25FF936000DE2669 /* ModelLoadingObjTests */,
 				3742B5C825FF936000DE2669 /* ModelLoadingObjUITests */,
