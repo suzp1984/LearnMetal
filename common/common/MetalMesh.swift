@@ -21,6 +21,7 @@ import MetalKit
 //
 //}
 
+@objc
 extension MTKMesh {
     public class func newBox(withVertexDescriptor vertexDescriptor: MTLVertexDescriptor,
                              withAttributesMap attributesMap: [Int: String],
@@ -159,9 +160,26 @@ extension MTKMesh {
         
         return vertexAttributesMap.count > 0
     }
+    
+    public func setVertexBuffer(inRenderCommandEncoder encoder: MTLRenderCommandEncoder, index: Int) {
+        for vertexBuffer in vertexBuffers {
+            encoder.setVertexBuffer(vertexBuffer.buffer, offset: vertexBuffer.offset, index: index)
+        }
+    }
+    
+    public func draw(inRenderCommandEncoder encoder: MTLRenderCommandEncoder) {
+        for subMesh in submeshes {
+            encoder.drawIndexedPrimitives(type: subMesh.primitiveType,
+                                          indexCount: subMesh.indexCount,
+                                          indexType: subMesh.indexType,
+                                          indexBuffer: subMesh.indexBuffer.buffer,
+                                          indexBufferOffset: subMesh.indexBuffer.offset)
+        }
+    }
 }
 
 extension MTLRenderCommandEncoder {
+    // TODO: remove offset
     public func setVertexMeshBuffer(_ mesh: MTKMesh, index: Int, offset: Int = 0) {
         for vertexBuffer in mesh.vertexBuffers {
             setVertexBuffer(vertexBuffer.buffer, offset: offset + vertexBuffer.offset, index: index)

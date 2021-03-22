@@ -94,4 +94,7 @@
    <FileRef
       location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/BlendingSorted/4.4.BlendingSorted.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/FaceCulling/4.5.FaceCulling.xcodeproj">
+   </FileRef>
 </Workspace>
