@@ -97,4 +97,7 @@
    <FileRef
       location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/FaceCulling/4.5.FaceCulling.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/FrameBuffers/4.6.FrameBuffers.xcodeproj">
+   </FileRef>
 </Workspace>
