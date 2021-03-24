@@ -72,7 +72,7 @@ class Renderer : NSObject {
         
         let lessEqualDepthStateDescritpor = MTLDepthStencilDescriptor()
         lessEqualDepthStateDescritpor.depthCompareFunction = .lessEqual
-        lessEqualDepthStateDescritpor.isDepthWriteEnabled = false
+        lessEqualDepthStateDescritpor.isDepthWriteEnabled = true
         
         lessEqualDepthState = device.makeDepthStencilState(descriptor: lessEqualDepthStateDescritpor)
         
@@ -89,7 +89,6 @@ class Renderer : NSObject {
         skyBoxPipelineDescriptor.label = "sky box"
         skyBoxPipelineDescriptor.vertexFunction = cubeMapVertexFunc
         skyBoxPipelineDescriptor.fragmentFunction = cubeMapFragmentFunc
-        skyBoxPipelineDescriptor.vertexDescriptor = mtlVertexDescriptor
         skyBoxPipelineDescriptor.colorAttachments[0].pixelFormat = metalView.colorPixelFormat
         skyBoxPipelineDescriptor.depthAttachmentPixelFormat = depthFormat
         
@@ -210,7 +209,7 @@ extension Renderer: MTKViewDelegate {
     
     func draw(in view: MTKView) {
         let commandBuffer = commandQueue.makeCommandBuffer()!
-        // offscreen rendering
+        
         let renderPassDescriptor = MTLRenderPassDescriptor()
         renderPassDescriptor.colorAttachments[0].texture = view.currentDrawable!.texture
         renderPassDescriptor.colorAttachments[0].loadAction = .clear

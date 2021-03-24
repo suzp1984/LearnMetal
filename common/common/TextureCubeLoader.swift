@@ -9,6 +9,7 @@ import Foundation
 import Metal
 import AppKit
 
+@objc
 public class TextureCubeLoader: NSObject {
     
     class func fill(rawData: UnsafeMutableRawPointer,
@@ -35,6 +36,7 @@ public class TextureCubeLoader: NSObject {
         return
     }
     
+    @objc
     public class func load(withImageNames names: [String],
                            device: MTLDevice,
                            commandQueue: MTLCommandQueue) throws -> MTLTexture {
