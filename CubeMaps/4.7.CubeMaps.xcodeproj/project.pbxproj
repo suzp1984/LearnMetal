@@ -1,0 +1,645 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		372B53E4260A079B00EAE90C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372B53E3260A079B00EAE90C /* AppDelegate.swift */; };
+		372B53E6260A079B00EAE90C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372B53E5260A079B00EAE90C /* ViewController.swift */; };
+		372B53E8260A079E00EAE90C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 372B53E7260A079E00EAE90C /* Assets.xcassets */; };
+		372B53EB260A079E00EAE90C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372B53E9260A079E00EAE90C /* Main.storyboard */; };
+		372B53F7260A079E00EAE90C /* CubeMapsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372B53F6260A079E00EAE90C /* CubeMapsTests.swift */; };
+		372B5402260A079E00EAE90C /* CubeMapsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372B5401260A079E00EAE90C /* CubeMapsUITests.swift */; };
+		372B5414260A07B400EAE90C /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372B5413260A07B400EAE90C /* common.framework */; };
+		372B5415260A07B400EAE90C /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 372B5413260A07B400EAE90C /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		372B5419260A07BC00EAE90C /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372B5417260A07BC00EAE90C /* Metal.framework */; };
+		372B541A260A07BC00EAE90C /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372B5418260A07BC00EAE90C /* MetalKit.framework */; };
+		372B5429260A0CA400EAE90C /* CubeMapShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 372B5428260A0CA400EAE90C /* CubeMapShaders.metal */; };
+		372B5430260A17C800EAE90C /* ShapeShaderType.m in Sources */ = {isa = PBXBuildFile; fileRef = 372B542F260A17C800EAE90C /* ShapeShaderType.m */; };
+		372B5436260A182300EAE90C /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372B5435260A182300EAE90C /* Renderer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		372B53F3260A079E00EAE90C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 372B53D8260A079B00EAE90C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 372B53DF260A079B00EAE90C;
+			remoteInfo = CubeMaps;
+		};
+		372B53FE260A079E00EAE90C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 372B53D8260A079B00EAE90C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 372B53DF260A079B00EAE90C;
+			remoteInfo = CubeMaps;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		372B5416260A07B400EAE90C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				372B5415260A07B400EAE90C /* common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		372B53E0260A079B00EAE90C /* 4.7.CubeMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 4.7.CubeMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		372B53E3260A079B00EAE90C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		372B53E5260A079B00EAE90C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		372B53E7260A079E00EAE90C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		372B53EA260A079E00EAE90C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		372B53EC260A079E00EAE90C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		372B53ED260A079E00EAE90C /* CubeMaps.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CubeMaps.entitlements; sourceTree = "<group>"; };
+		372B53F2260A079E00EAE90C /* CubeMapsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CubeMapsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		372B53F6260A079E00EAE90C /* CubeMapsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeMapsTests.swift; sourceTree = "<group>"; };
+		372B53F8260A079E00EAE90C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		372B53FD260A079E00EAE90C /* CubeMapsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CubeMapsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		372B5401260A079E00EAE90C /* CubeMapsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeMapsUITests.swift; sourceTree = "<group>"; };
+		372B5403260A079E00EAE90C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		372B5413260A07B400EAE90C /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		372B5417260A07BC00EAE90C /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		372B5418260A07BC00EAE90C /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		372B5425260A0C3600EAE90C /* ShapeShaderType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShapeShaderType.h; sourceTree = "<group>"; };
+		372B5428260A0CA400EAE90C /* CubeMapShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = CubeMapShaders.metal; sourceTree = "<group>"; };
+		372B542E260A17C700EAE90C /* CubeMaps-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CubeMaps-Bridging-Header.h"; sourceTree = "<group>"; };
+		372B542F260A17C800EAE90C /* ShapeShaderType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShapeShaderType.m; sourceTree = "<group>"; };
+		372B5435260A182300EAE90C /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		372B53DD260A079B00EAE90C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372B541A260A07BC00EAE90C /* MetalKit.framework in Frameworks */,
+				372B5419260A07BC00EAE90C /* Metal.framework in Frameworks */,
+				372B5414260A07B400EAE90C /* common.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372B53EF260A079E00EAE90C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372B53FA260A079E00EAE90C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		372B53D7260A079B00EAE90C = {
+			isa = PBXGroup;
+			children = (
+				372B53E2260A079B00EAE90C /* CubeMaps */,
+				372B53F5260A079E00EAE90C /* CubeMapsTests */,
+				372B5400260A079E00EAE90C /* CubeMapsUITests */,
+				372B53E1260A079B00EAE90C /* Products */,
+				372B5412260A07B400EAE90C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		372B53E1260A079B00EAE90C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				372B53E0260A079B00EAE90C /* 4.7.CubeMaps.app */,
+				372B53F2260A079E00EAE90C /* CubeMapsTests.xctest */,
+				372B53FD260A079E00EAE90C /* CubeMapsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		372B53E2260A079B00EAE90C /* CubeMaps */ = {
+			isa = PBXGroup;
+			children = (
+				372B53E3260A079B00EAE90C /* AppDelegate.swift */,
+				372B53E5260A079B00EAE90C /* ViewController.swift */,
+				372B53E7260A079E00EAE90C /* Assets.xcassets */,
+				372B53E9260A079E00EAE90C /* Main.storyboard */,
+				372B53EC260A079E00EAE90C /* Info.plist */,
+				372B53ED260A079E00EAE90C /* CubeMaps.entitlements */,
+				372B5425260A0C3600EAE90C /* ShapeShaderType.h */,
+				372B5428260A0CA400EAE90C /* CubeMapShaders.metal */,
+				372B542F260A17C800EAE90C /* ShapeShaderType.m */,
+				372B542E260A17C700EAE90C /* CubeMaps-Bridging-Header.h */,
+				372B5435260A182300EAE90C /* Renderer.swift */,
+			);
+			path = CubeMaps;
+			sourceTree = "<group>";
+		};
+		372B53F5260A079E00EAE90C /* CubeMapsTests */ = {
+			isa = PBXGroup;
+			children = (
+				372B53F6260A079E00EAE90C /* CubeMapsTests.swift */,
+				372B53F8260A079E00EAE90C /* Info.plist */,
+			);
+			path = CubeMapsTests;
+			sourceTree = "<group>";
+		};
+		372B5400260A079E00EAE90C /* CubeMapsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				372B5401260A079E00EAE90C /* CubeMapsUITests.swift */,
+				372B5403260A079E00EAE90C /* Info.plist */,
+			);
+			path = CubeMapsUITests;
+			sourceTree = "<group>";
+		};
+		372B5412260A07B400EAE90C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				372B5417260A07BC00EAE90C /* Metal.framework */,
+				372B5418260A07BC00EAE90C /* MetalKit.framework */,
+				372B5413260A07B400EAE90C /* common.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		372B53DF260A079B00EAE90C /* 4.7.CubeMaps */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 372B5406260A079E00EAE90C /* Build configuration list for PBXNativeTarget "4.7.CubeMaps" */;
+			buildPhases = (
+				372B53DC260A079B00EAE90C /* Sources */,
+				372B53DD260A079B00EAE90C /* Frameworks */,
+				372B53DE260A079B00EAE90C /* Resources */,
+				372B5416260A07B400EAE90C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 4.7.CubeMaps;
+			productName = CubeMaps;
+			productReference = 372B53E0260A079B00EAE90C /* 4.7.CubeMaps.app */;
+			productType = "com.apple.product-type.application";
+		};
+		372B53F1260A079E00EAE90C /* CubeMapsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 372B5409260A079E00EAE90C /* Build configuration list for PBXNativeTarget "CubeMapsTests" */;
+			buildPhases = (
+				372B53EE260A079E00EAE90C /* Sources */,
+				372B53EF260A079E00EAE90C /* Frameworks */,
+				372B53F0260A079E00EAE90C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				372B53F4260A079E00EAE90C /* PBXTargetDependency */,
+			);
+			name = CubeMapsTests;
+			productName = CubeMapsTests;
+			productReference = 372B53F2260A079E00EAE90C /* CubeMapsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		372B53FC260A079E00EAE90C /* CubeMapsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 372B540C260A079E00EAE90C /* Build configuration list for PBXNativeTarget "CubeMapsUITests" */;
+			buildPhases = (
+				372B53F9260A079E00EAE90C /* Sources */,
+				372B53FA260A079E00EAE90C /* Frameworks */,
+				372B53FB260A079E00EAE90C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				372B53FF260A079E00EAE90C /* PBXTargetDependency */,
+			);
+			name = CubeMapsUITests;
+			productName = CubeMapsUITests;
+			productReference = 372B53FD260A079E00EAE90C /* CubeMapsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		372B53D8260A079B00EAE90C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					372B53DF260A079B00EAE90C = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+					};
+					372B53F1260A079E00EAE90C = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 372B53DF260A079B00EAE90C;
+					};
+					372B53FC260A079E00EAE90C = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 372B53DF260A079B00EAE90C;
+					};
+				};
+			};
+			buildConfigurationList = 372B53DB260A079B00EAE90C /* Build configuration list for PBXProject "4.7.CubeMaps" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 372B53D7260A079B00EAE90C;
+			productRefGroup = 372B53E1260A079B00EAE90C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				372B53DF260A079B00EAE90C /* 4.7.CubeMaps */,
+				372B53F1260A079E00EAE90C /* CubeMapsTests */,
+				372B53FC260A079E00EAE90C /* CubeMapsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		372B53DE260A079B00EAE90C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372B53E8260A079E00EAE90C /* Assets.xcassets in Resources */,
+				372B53EB260A079E00EAE90C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372B53F0260A079E00EAE90C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372B53FB260A079E00EAE90C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		372B53DC260A079B00EAE90C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372B53E6260A079B00EAE90C /* ViewController.swift in Sources */,
+				372B53E4260A079B00EAE90C /* AppDelegate.swift in Sources */,
+				372B5430260A17C800EAE90C /* ShapeShaderType.m in Sources */,
+				372B5436260A182300EAE90C /* Renderer.swift in Sources */,
+				372B5429260A0CA400EAE90C /* CubeMapShaders.metal in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372B53EE260A079E00EAE90C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372B53F7260A079E00EAE90C /* CubeMapsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372B53F9260A079E00EAE90C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372B5402260A079E00EAE90C /* CubeMapsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		372B53F4260A079E00EAE90C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 372B53DF260A079B00EAE90C /* 4.7.CubeMaps */;
+			targetProxy = 372B53F3260A079E00EAE90C /* PBXContainerItemProxy */;
+		};
+		372B53FF260A079E00EAE90C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 372B53DF260A079B00EAE90C /* 4.7.CubeMaps */;
+			targetProxy = 372B53FE260A079E00EAE90C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		372B53E9260A079E00EAE90C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				372B53EA260A079E00EAE90C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		372B5404260A079E00EAE90C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		372B5405260A079E00EAE90C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		372B5407260A079E00EAE90C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = CubeMaps/CubeMaps.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = CubeMaps/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.CubeMaps;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CubeMaps/CubeMaps-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		372B5408260A079E00EAE90C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = CubeMaps/CubeMaps.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = CubeMaps/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.CubeMaps;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CubeMaps/CubeMaps-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		372B540A260A079E00EAE90C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = CubeMapsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.CubeMapsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CubeMaps.app/Contents/MacOS/CubeMaps";
+			};
+			name = Debug;
+		};
+		372B540B260A079E00EAE90C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = CubeMapsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.CubeMapsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CubeMaps.app/Contents/MacOS/CubeMaps";
+			};
+			name = Release;
+		};
+		372B540D260A079E00EAE90C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = CubeMapsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.CubeMapsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = CubeMaps;
+			};
+			name = Debug;
+		};
+		372B540E260A079E00EAE90C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = CubeMapsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.CubeMapsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = CubeMaps;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		372B53DB260A079B00EAE90C /* Build configuration list for PBXProject "4.7.CubeMaps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				372B5404260A079E00EAE90C /* Debug */,
+				372B5405260A079E00EAE90C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		372B5406260A079E00EAE90C /* Build configuration list for PBXNativeTarget "4.7.CubeMaps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				372B5407260A079E00EAE90C /* Debug */,
+				372B5408260A079E00EAE90C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		372B5409260A079E00EAE90C /* Build configuration list for PBXNativeTarget "CubeMapsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				372B540A260A079E00EAE90C /* Debug */,
+				372B540B260A079E00EAE90C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		372B540C260A079E00EAE90C /* Build configuration list for PBXNativeTarget "CubeMapsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				372B540D260A079E00EAE90C /* Debug */,
+				372B540E260A079E00EAE90C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 372B53D8260A079B00EAE90C /* Project object */;
+}

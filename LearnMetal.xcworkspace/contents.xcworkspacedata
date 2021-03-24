@@ -100,4 +100,7 @@
    <FileRef
       location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/FrameBuffers/4.6.FrameBuffers.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/CubeMaps/4.7.CubeMaps.xcodeproj">
+   </FileRef>
 </Workspace>

@@ -147,7 +147,7 @@ extension Texture {
         let textureLoader = MTKTextureLoader(device: device)
         let texture = try textureLoader.newTexture(name: name,
                                                    scaleFactor: scaleFactor,
-                                                   bundle: bundle ?? Bundle(identifier: "io.github.suzp1984.common"),
+                                                   bundle: bundle ?? Bundle(for: TextureCubeLoader.self),
                                                    options: options)
         
         return Texture(texture: texture, index: index)
