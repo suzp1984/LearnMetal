@@ -12,6 +12,8 @@
 @implementation ViewController
 {
     Renderer *_renderer;
+    NSPopUpButton *_popupButton;
+    NSDictionary *_dictionary;
 }
 
 - (void)viewDidLoad {
@@ -32,6 +34,26 @@
     [metalView setClearColor:MTLClearColorMake(0.2, 0.3, 0.3, 1.0)];
     
     _renderer = [[Renderer alloc] initWithMetalKitView:metalView];
+    
+    _popupButton = [NSPopUpButton new];
+    _popupButton.target = self;
+    _popupButton.action = @selector(fragmentSelected);
+    
+    [self.view addSubview:_popupButton];
+    _popupButton.translatesAutoresizingMaskIntoConstraints = false;
+   
+    [NSLayoutConstraint activateConstraints:@[
+            [_popupButton.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:20.0],
+            [_popupButton.leftAnchor constraintEqualToAnchor:self.view.leftAnchor constant:20.0]
+    ]];
+    
+    _dictionary = @{
+        @"reflect": [NSNumber numberWithInt:kFragmentReflect],
+        @"refract": [NSNumber numberWithInt:kFragmentRefract]
+    };
+    
+    [_popupButton addItemsWithTitles:[_dictionary allKeys]];
+    [_popupButton selectItemAtIndex:0];
 }
 
 - (void)mouseDragged:(NSEvent *)event {
@@ -49,6 +71,13 @@
         [_renderer handleMouseScrollDeltaX:event.scrollingDeltaX
                                        deltaY:event.scrollingDeltaY];
     }
+}
+
+- (void)fragmentSelected {
+    FragmentType type = (FragmentType) [_dictionary[_popupButton.titleOfSelectedItem] intValue];
+    
+    [_renderer setFragmentType:type];
+    
 }
 
 @end

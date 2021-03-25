@@ -21,7 +21,8 @@ static const float PI = 3.1415926;
     Uniforms _uniform;
     id<MTLTexture> _skyBoxTexture;
     id<MTLTexture> _depthTexture;
-    id<MTLRenderPipelineState> _boxRenderPipelineState;
+    id<MTLRenderPipelineState> _reflectBoxPipelineState;
+    id<MTLRenderPipelineState> _refractBoxPipelienState;
     id<MTLRenderPipelineState> _skyRenderPipelineState;
     id<MTLDepthStencilState> _lessEqualDepthState;
     id<MTLDepthStencilState> _lessDepthState;
@@ -29,6 +30,7 @@ static const float PI = 3.1415926;
     id<MTLCommandQueue> _commandQueue;
     MTKMesh *_cubeMesh;
     id<MTLBuffer> _skyBoxBuffer;
+    FragmentType _fragmentType;
 }
 
 - (nonnull instancetype)initWithMetalKitView:(nonnull MTKView*)mtkView {
@@ -37,6 +39,7 @@ static const float PI = 3.1415926;
         _device = mtkView.device;
         mtkView.delegate = self;
         mtkView.depthStencilPixelFormat = MTLPixelFormatDepth32Float;
+        _fragmentType = kFragmentReflect;
         
         _camera = [[Camera alloc] initWithPosition:(vector_float3) {0.0, 0.0, 5.0}
                                         withTarget:(vector_float3) {0.0, 0.0, 0.0}
@@ -61,20 +64,24 @@ static const float PI = 3.1415926;
         _depthTexture = [self buildDepthTextureWithWidth:width height:height];
         id<MTLLibrary> library = [_device newDefaultLibrary];
         id<MTLFunction> vertexFunc = [library newFunctionWithName:@"vertexShader"];
-        id<MTLFunction> fragmentFunc = [library newFunctionWithName:@"fragmentShader"];
+        id<MTLFunction> refractFragmentFunc = [library newFunctionWithName:@"refractionFragmentShader"];
+        id<MTLFunction> reflectFragmentFunc = [library newFunctionWithName:@"reflectFragmentShader"];
         
         MTLRenderPipelineDescriptor *boxPipelineDescriptor = [MTLRenderPipelineDescriptor new];
         boxPipelineDescriptor.label = @"box pipeline";
         boxPipelineDescriptor.vertexFunction = vertexFunc;
-        boxPipelineDescriptor.fragmentFunction = fragmentFunc;
+        boxPipelineDescriptor.fragmentFunction = reflectFragmentFunc;
         boxPipelineDescriptor.vertexDescriptor = mtlVertexDescriptor;
         boxPipelineDescriptor.colorAttachments[0].pixelFormat = mtkView.colorPixelFormat;
         boxPipelineDescriptor.depthAttachmentPixelFormat = _depthTexture.pixelFormat;
         
         NSError *error;
-        _boxRenderPipelineState = [_device newRenderPipelineStateWithDescriptor:boxPipelineDescriptor error:&error];
+        _reflectBoxPipelineState = [_device newRenderPipelineStateWithDescriptor:boxPipelineDescriptor error:&error];
+        NSAssert(_reflectBoxPipelineState, @"reflect box render pipeline state error %@", error);
         
-        NSAssert(_boxRenderPipelineState, @"new box render pipeline state error %@", error);
+        boxPipelineDescriptor.fragmentFunction = refractFragmentFunc;
+        _refractBoxPipelienState = [_device newRenderPipelineStateWithDescriptor:boxPipelineDescriptor error:&error];
+        NSAssert(_refractBoxPipelienState, @"refract pipeline state error %@", error);
         
         id<MTLFunction> cubeMapVertexFunc = [library newFunctionWithName:@"cubeMapVertexShader"];
         id<MTLFunction> cubeMapFragmentFunc = [library newFunctionWithName:@"cubeMapFragmentShader"];
@@ -210,6 +217,10 @@ static const float PI = 3.1415926;
     _uniform.viewMatrix = [_camera getViewMatrix];
 }
 
+- (void) setFragmentType:(FragmentType) type {
+    _fragmentType = type;
+}
+
 - (void)drawInMTKView:(nonnull MTKView *)view {
     view.clearDepth = 1.0;
     
@@ -231,7 +242,18 @@ static const float PI = 3.1415926;
     [boxRenderEncoder setViewport:(MTLViewport) {0.0, 0.0, _viewportSize.x, _viewportSize.y, 0.0, 1.0}];
     
     // draw box
-    [boxRenderEncoder setRenderPipelineState:_boxRenderPipelineState];
+    switch (_fragmentType) {
+        case kFragmentReflect:
+            [boxRenderEncoder setRenderPipelineState:_reflectBoxPipelineState];
+            break;
+        case kFragmentRefract:
+            [boxRenderEncoder setRenderPipelineState:_refractBoxPipelienState];
+            break;
+        default:
+            [boxRenderEncoder setRenderPipelineState:_reflectBoxPipelineState];
+            break;
+    }
+    
     [boxRenderEncoder setDepthStencilState:_lessDepthState];
 
     for (int i = 0; i < _cubeMesh.vertexBuffers.count; i++) {

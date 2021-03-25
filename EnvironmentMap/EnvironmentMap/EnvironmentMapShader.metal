@@ -48,7 +48,7 @@ vertex RasterizerData vertexShader(uint vertexID [[vertex_id]],
     return out;
 }
 
-fragment float4 fragmentShader(RasterizerData in [[stage_in]],
+fragment float4 reflectFragmentShader(RasterizerData in [[stage_in]],
                                texturecube<half> cubeTexture [[texture(FragmentInputIndexCubeTexture)]])
 {
     float3 I = normalize(in.modelPosition - in.cameraPos);
@@ -56,6 +56,18 @@ fragment float4 fragmentShader(RasterizerData in [[stage_in]],
     
     constexpr sampler textureSampler (mag_filter::linear, min_filter::linear);
 //    const half4 colorSample = half4(cubeTexture.sample(textureSampler, R).rgb, 1.0);
+    
+    return float4(cubeTexture.sample(textureSampler, R));
+}
+
+fragment float4 refractionFragmentShader(RasterizerData in [[stage_in]],
+                                         texturecube<half> cubeTexture [[texture(FragmentInputIndexCubeTexture)]]) {
+    float ratio = 1.00 / 1.52;
+    
+    float3 I = normalize(in.modelPosition - in.cameraPos);
+    float3 R = refract(I, normalize(in.normal), ratio);
+    
+    constexpr sampler textureSampler (mag_filter::linear, min_filter::linear);
     
     return float4(cubeTexture.sample(textureSampler, R));
 }

@@ -10,10 +10,16 @@
 
 @import MetalKit;
 
+typedef enum FragmentType {
+    kFragmentReflect = 0,
+    kFragmentRefract = 1,
+} FragmentType;
+
 @interface Renderer : NSObject<MTKViewDelegate>
 
 - (nonnull instancetype)initWithMetalKitView:(nonnull MTKView*)mtkView;
 - (void) handleMouseScrollDeltaX:(float) deltaX deltaY:(float) deltaY;
+- (void) setFragmentType:(FragmentType) type;
 
 @end
 
