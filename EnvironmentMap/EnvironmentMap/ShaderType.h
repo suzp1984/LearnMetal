@@ -17,7 +17,6 @@ typedef enum VertexAttributeIndex {
 
 typedef enum FragmentInputIndex {
     FragmentInputIndexCubeTexture = 0,
-    FragmentInputIndexCameraPos   = 1,
 } FragmentInputIndex;
 
 typedef enum VertexInputIndex {

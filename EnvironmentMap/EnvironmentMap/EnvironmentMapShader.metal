@@ -22,7 +22,7 @@ struct RasterizerData
     float4 position [[position]];
     float3 modelPosition;
     float3 normal;
-   // float3 cameraPos [[flat]];
+    float3 cameraPos [[flat]];
 };
 
 vertex RasterizerData vertexShader(uint vertexID [[vertex_id]],
@@ -43,16 +43,15 @@ vertex RasterizerData vertexShader(uint vertexID [[vertex_id]],
     out.normal = transpose3x3 * vert.normal;
     out.modelPosition = (uniforms.modelMatrix * float4(vert.position, 1.0)).xyz;
     out.position = uniforms.projectionMatrix * uniforms.viewMatrix *uniforms.modelMatrix * float4(vert.position, 1.0);
-   //  out.cameraPos = uniforms.cameraPos;
+     out.cameraPos = uniforms.cameraPos;
     
     return out;
 }
 
 fragment float4 fragmentShader(RasterizerData in [[stage_in]],
-                               texturecube<half> cubeTexture [[texture(FragmentInputIndexCubeTexture)]],
-                               constant float3 &cameraPos [[buffer(FragmentInputIndexCameraPos)]])
+                               texturecube<half> cubeTexture [[texture(FragmentInputIndexCubeTexture)]])
 {
-    float3 I = normalize(in.modelPosition - cameraPos);
+    float3 I = normalize(in.modelPosition - in.cameraPos);
     float3 R = reflect(I, normalize(in.normal));
     
     constexpr sampler textureSampler (mag_filter::linear, min_filter::linear);

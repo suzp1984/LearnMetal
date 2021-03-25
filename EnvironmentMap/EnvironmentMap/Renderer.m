@@ -36,8 +36,9 @@ static const float PI = 3.1415926;
     if (self) {
         _device = mtkView.device;
         mtkView.delegate = self;
+        mtkView.depthStencilPixelFormat = MTLPixelFormatDepth32Float;
         
-        _camera = [[Camera alloc] initWithPosition:(vector_float3) {0.0, 0.0, 3.0}
+        _camera = [[Camera alloc] initWithPosition:(vector_float3) {0.0, 0.0, 5.0}
                                         withTarget:(vector_float3) {0.0, 0.0, 0.0}
                                             withUp:(vector_float3) {0.0, 1.0, 0.0}];
         
@@ -90,13 +91,13 @@ static const float PI = 3.1415926;
         
         MTLDepthStencilDescriptor *lessEqualDepthDescriptor = [MTLDepthStencilDescriptor new];
         lessEqualDepthDescriptor.depthCompareFunction = MTLCompareFunctionLessEqual;
-        [lessEqualDepthDescriptor setDepthWriteEnabled:YES];
+        lessEqualDepthDescriptor.depthWriteEnabled = YES;
         
         _lessEqualDepthState = [_device newDepthStencilStateWithDescriptor:lessEqualDepthDescriptor];
         
         MTLDepthStencilDescriptor *lessDepthDescriptor = [MTLDepthStencilDescriptor new];
         lessDepthDescriptor.depthCompareFunction = MTLCompareFunctionLess;
-        [lessDepthDescriptor setDepthWriteEnabled:YES];
+        lessDepthDescriptor.depthWriteEnabled = YES;
         
         _lessDepthState = [_device newDepthStencilStateWithDescriptor:lessDepthDescriptor];
         
@@ -115,16 +116,6 @@ static const float PI = 3.1415926;
                                           inwardNormals:false
                                                   error:&error];
         NSAssert(_cubeMesh, @"cube mesh error: %@", error);
-        
-//        id<MTLBuffer> buffer = _cubeMesh.vertexBuffers[0].buffer;
-//        void* ptr = [buffer contents];
-//        TestVertex *vptr = (TestVertex*) ptr;
-//
-//        for (int i = 0; i < _cubeMesh.vertexCount; i++) {
-//            TestVertex *p = vptr + i;
-//
-//            NSLog(@"position: (%.1f, %.1f, %.1f); (%.1f, %.1f, %.1f)", p->position.x, p->position.y, p->position.z, p->normal.x, p->normal.y, p->normal.z);
-//        }
         
         CubeMapVertex skyboxVertices[] =
         {
@@ -220,6 +211,8 @@ static const float PI = 3.1415926;
 }
 
 - (void)drawInMTKView:(nonnull MTKView *)view {
+    view.clearDepth = 1.0;
+    
     id<MTLCommandBuffer> commandBuffer = [_commandQueue commandBuffer];
     
     MTLRenderPassDescriptor *renderDescriptor = [MTLRenderPassDescriptor new];
@@ -230,7 +223,7 @@ static const float PI = 3.1415926;
     
     renderDescriptor.depthAttachment.texture = _depthTexture;
     renderDescriptor.depthAttachment.loadAction = MTLLoadActionClear;
-    renderDescriptor.depthAttachment.storeAction = MTLStoreActionStore;
+    renderDescriptor.depthAttachment.storeAction = MTLStoreActionDontCare;
     renderDescriptor.depthAttachment.clearDepth = 1.0;
     
     id<MTLRenderCommandEncoder> boxRenderEncoder = [commandBuffer renderCommandEncoderWithDescriptor:renderDescriptor];
@@ -247,7 +240,6 @@ static const float PI = 3.1415926;
 
     [boxRenderEncoder setVertexBytes:&_uniform length:sizeof(_uniform) atIndex:VertexInputIndexUniforms];
     [boxRenderEncoder setFragmentTexture:_skyBoxTexture atIndex:FragmentInputIndexCubeTexture];
-    [boxRenderEncoder setFragmentBytes:&(_uniform.cameraPos) length:sizeof(_uniform.cameraPos) atIndex:FragmentInputIndexCameraPos];
 
     for (int i = 0; i < _cubeMesh.submeshes.count; i++) {
         MTKSubmesh *mesh = _cubeMesh.submeshes[i];
@@ -263,8 +255,6 @@ static const float PI = 3.1415926;
     [boxRenderEncoder setDepthStencilState:_lessEqualDepthState];
 
     [boxRenderEncoder setVertexBuffer:_skyBoxBuffer offset:0 atIndex:VertexInputIndexPosition];
-    [boxRenderEncoder setVertexBytes:&_uniform length:sizeof(_uniform) atIndex:VertexInputIndexUniforms];
-    [boxRenderEncoder setFragmentTexture:_skyBoxTexture atIndex:FragmentInputIndexCubeTexture];
     [boxRenderEncoder drawPrimitives:MTLPrimitiveTypeTriangle vertexStart:0 vertexCount:36];
     
     [boxRenderEncoder endEncoding];
@@ -283,7 +273,7 @@ static const float PI = 3.1415926;
         _depthTexture = [self buildDepthTextureWithWidth:size.width height:size.height];
     }
 
-    _uniform.projectionMatrix = matrix_perspective_left_hand(PI / 4.0, (float) size.width / (float) size.height, 0.0, 100.0);
+    _uniform.projectionMatrix = matrix_perspective_left_hand(PI / 4.0, (float) size.width / (float) size.height, 0.1, 100.0);
 }
 
 @end
