@@ -106,4 +106,7 @@
    <FileRef
       location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/EnvironmentMap/4.8.EnvironmentMap.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/GeometryHouses/4.9.GeometryHouses.xcodeproj">
+   </FileRef>
 </Workspace>

@@ -1,0 +1,627 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		372B54BC260DBE5100EAE90C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372B54BB260DBE5100EAE90C /* AppDelegate.swift */; };
+		372B54BE260DBE5100EAE90C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372B54BD260DBE5100EAE90C /* ViewController.swift */; };
+		372B54C0260DBE5400EAE90C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 372B54BF260DBE5400EAE90C /* Assets.xcassets */; };
+		372B54C3260DBE5400EAE90C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372B54C1260DBE5400EAE90C /* Main.storyboard */; };
+		372B54CF260DBE5400EAE90C /* GeometryHousesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372B54CE260DBE5400EAE90C /* GeometryHousesTests.swift */; };
+		372B54DA260DBE5400EAE90C /* GeometryHousesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372B54D9260DBE5400EAE90C /* GeometryHousesUITests.swift */; };
+		372B54F0260DBE6D00EAE90C /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372B54EF260DBE6D00EAE90C /* Metal.framework */; };
+		372B54F2260DBE7300EAE90C /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372B54F1260DBE7300EAE90C /* MetalKit.framework */; };
+		372B54F8260DBEE600EAE90C /* ShapeType.m in Sources */ = {isa = PBXBuildFile; fileRef = 372B54F7260DBEE600EAE90C /* ShapeType.m */; };
+		372B54FC260DBF8100EAE90C /* HouseShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 372B54FB260DBF8100EAE90C /* HouseShader.metal */; };
+		372B5500260DCE8E00EAE90C /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372B54FF260DCE8E00EAE90C /* Renderer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		372B54CB260DBE5400EAE90C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 372B54B0260DBE5100EAE90C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 372B54B7260DBE5100EAE90C;
+			remoteInfo = GeometryHouses;
+		};
+		372B54D6260DBE5400EAE90C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 372B54B0260DBE5100EAE90C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 372B54B7260DBE5100EAE90C;
+			remoteInfo = GeometryHouses;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		372B54B8260DBE5100EAE90C /* 4.9.GeometryHouses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 4.9.GeometryHouses.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		372B54BB260DBE5100EAE90C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		372B54BD260DBE5100EAE90C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		372B54BF260DBE5400EAE90C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		372B54C2260DBE5400EAE90C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		372B54C4260DBE5400EAE90C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		372B54C5260DBE5400EAE90C /* GeometryHouses.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GeometryHouses.entitlements; sourceTree = "<group>"; };
+		372B54CA260DBE5400EAE90C /* GeometryHousesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeometryHousesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		372B54CE260DBE5400EAE90C /* GeometryHousesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryHousesTests.swift; sourceTree = "<group>"; };
+		372B54D0260DBE5400EAE90C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		372B54D5260DBE5400EAE90C /* GeometryHousesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeometryHousesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		372B54D9260DBE5400EAE90C /* GeometryHousesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryHousesUITests.swift; sourceTree = "<group>"; };
+		372B54DB260DBE5400EAE90C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		372B54EB260DBE6600EAE90C /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		372B54EF260DBE6D00EAE90C /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		372B54F1260DBE7300EAE90C /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		372B54F5260DBED300EAE90C /* ShapeType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShapeType.h; sourceTree = "<group>"; };
+		372B54F6260DBEE500EAE90C /* GeometryHouses-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GeometryHouses-Bridging-Header.h"; sourceTree = "<group>"; };
+		372B54F7260DBEE600EAE90C /* ShapeType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShapeType.m; sourceTree = "<group>"; };
+		372B54FB260DBF8100EAE90C /* HouseShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = HouseShader.metal; sourceTree = "<group>"; };
+		372B54FF260DCE8E00EAE90C /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		372B54B5260DBE5100EAE90C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372B54F2260DBE7300EAE90C /* MetalKit.framework in Frameworks */,
+				372B54F0260DBE6D00EAE90C /* Metal.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372B54C7260DBE5400EAE90C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372B54D2260DBE5400EAE90C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		372B54AF260DBE5100EAE90C = {
+			isa = PBXGroup;
+			children = (
+				372B54BA260DBE5100EAE90C /* GeometryHouses */,
+				372B54CD260DBE5400EAE90C /* GeometryHousesTests */,
+				372B54D8260DBE5400EAE90C /* GeometryHousesUITests */,
+				372B54B9260DBE5100EAE90C /* Products */,
+				372B54EA260DBE6600EAE90C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		372B54B9260DBE5100EAE90C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				372B54B8260DBE5100EAE90C /* 4.9.GeometryHouses.app */,
+				372B54CA260DBE5400EAE90C /* GeometryHousesTests.xctest */,
+				372B54D5260DBE5400EAE90C /* GeometryHousesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		372B54BA260DBE5100EAE90C /* GeometryHouses */ = {
+			isa = PBXGroup;
+			children = (
+				372B54BB260DBE5100EAE90C /* AppDelegate.swift */,
+				372B54BD260DBE5100EAE90C /* ViewController.swift */,
+				372B54BF260DBE5400EAE90C /* Assets.xcassets */,
+				372B54C1260DBE5400EAE90C /* Main.storyboard */,
+				372B54C4260DBE5400EAE90C /* Info.plist */,
+				372B54C5260DBE5400EAE90C /* GeometryHouses.entitlements */,
+				372B54F5260DBED300EAE90C /* ShapeType.h */,
+				372B54F7260DBEE600EAE90C /* ShapeType.m */,
+				372B54F6260DBEE500EAE90C /* GeometryHouses-Bridging-Header.h */,
+				372B54FB260DBF8100EAE90C /* HouseShader.metal */,
+				372B54FF260DCE8E00EAE90C /* Renderer.swift */,
+			);
+			path = GeometryHouses;
+			sourceTree = "<group>";
+		};
+		372B54CD260DBE5400EAE90C /* GeometryHousesTests */ = {
+			isa = PBXGroup;
+			children = (
+				372B54CE260DBE5400EAE90C /* GeometryHousesTests.swift */,
+				372B54D0260DBE5400EAE90C /* Info.plist */,
+			);
+			path = GeometryHousesTests;
+			sourceTree = "<group>";
+		};
+		372B54D8260DBE5400EAE90C /* GeometryHousesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				372B54D9260DBE5400EAE90C /* GeometryHousesUITests.swift */,
+				372B54DB260DBE5400EAE90C /* Info.plist */,
+			);
+			path = GeometryHousesUITests;
+			sourceTree = "<group>";
+		};
+		372B54EA260DBE6600EAE90C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				372B54F1260DBE7300EAE90C /* MetalKit.framework */,
+				372B54EF260DBE6D00EAE90C /* Metal.framework */,
+				372B54EB260DBE6600EAE90C /* common.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		372B54B7260DBE5100EAE90C /* 4.9.GeometryHouses */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 372B54DE260DBE5400EAE90C /* Build configuration list for PBXNativeTarget "4.9.GeometryHouses" */;
+			buildPhases = (
+				372B54B4260DBE5100EAE90C /* Sources */,
+				372B54B5260DBE5100EAE90C /* Frameworks */,
+				372B54B6260DBE5100EAE90C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 4.9.GeometryHouses;
+			productName = GeometryHouses;
+			productReference = 372B54B8260DBE5100EAE90C /* 4.9.GeometryHouses.app */;
+			productType = "com.apple.product-type.application";
+		};
+		372B54C9260DBE5400EAE90C /* GeometryHousesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 372B54E1260DBE5400EAE90C /* Build configuration list for PBXNativeTarget "GeometryHousesTests" */;
+			buildPhases = (
+				372B54C6260DBE5400EAE90C /* Sources */,
+				372B54C7260DBE5400EAE90C /* Frameworks */,
+				372B54C8260DBE5400EAE90C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				372B54CC260DBE5400EAE90C /* PBXTargetDependency */,
+			);
+			name = GeometryHousesTests;
+			productName = GeometryHousesTests;
+			productReference = 372B54CA260DBE5400EAE90C /* GeometryHousesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		372B54D4260DBE5400EAE90C /* GeometryHousesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 372B54E4260DBE5400EAE90C /* Build configuration list for PBXNativeTarget "GeometryHousesUITests" */;
+			buildPhases = (
+				372B54D1260DBE5400EAE90C /* Sources */,
+				372B54D2260DBE5400EAE90C /* Frameworks */,
+				372B54D3260DBE5400EAE90C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				372B54D7260DBE5400EAE90C /* PBXTargetDependency */,
+			);
+			name = GeometryHousesUITests;
+			productName = GeometryHousesUITests;
+			productReference = 372B54D5260DBE5400EAE90C /* GeometryHousesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		372B54B0260DBE5100EAE90C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					372B54B7260DBE5100EAE90C = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+					};
+					372B54C9260DBE5400EAE90C = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 372B54B7260DBE5100EAE90C;
+					};
+					372B54D4260DBE5400EAE90C = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 372B54B7260DBE5100EAE90C;
+					};
+				};
+			};
+			buildConfigurationList = 372B54B3260DBE5100EAE90C /* Build configuration list for PBXProject "4.9.GeometryHouses" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 372B54AF260DBE5100EAE90C;
+			productRefGroup = 372B54B9260DBE5100EAE90C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				372B54B7260DBE5100EAE90C /* 4.9.GeometryHouses */,
+				372B54C9260DBE5400EAE90C /* GeometryHousesTests */,
+				372B54D4260DBE5400EAE90C /* GeometryHousesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		372B54B6260DBE5100EAE90C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372B54C0260DBE5400EAE90C /* Assets.xcassets in Resources */,
+				372B54C3260DBE5400EAE90C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372B54C8260DBE5400EAE90C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372B54D3260DBE5400EAE90C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		372B54B4260DBE5100EAE90C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372B54BE260DBE5100EAE90C /* ViewController.swift in Sources */,
+				372B54FC260DBF8100EAE90C /* HouseShader.metal in Sources */,
+				372B54F8260DBEE600EAE90C /* ShapeType.m in Sources */,
+				372B5500260DCE8E00EAE90C /* Renderer.swift in Sources */,
+				372B54BC260DBE5100EAE90C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372B54C6260DBE5400EAE90C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372B54CF260DBE5400EAE90C /* GeometryHousesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372B54D1260DBE5400EAE90C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372B54DA260DBE5400EAE90C /* GeometryHousesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		372B54CC260DBE5400EAE90C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 372B54B7260DBE5100EAE90C /* 4.9.GeometryHouses */;
+			targetProxy = 372B54CB260DBE5400EAE90C /* PBXContainerItemProxy */;
+		};
+		372B54D7260DBE5400EAE90C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 372B54B7260DBE5100EAE90C /* 4.9.GeometryHouses */;
+			targetProxy = 372B54D6260DBE5400EAE90C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		372B54C1260DBE5400EAE90C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				372B54C2260DBE5400EAE90C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		372B54DC260DBE5400EAE90C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		372B54DD260DBE5400EAE90C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		372B54DF260DBE5400EAE90C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = GeometryHouses/GeometryHouses.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = GeometryHouses/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.GeometryHouses;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GeometryHouses/GeometryHouses-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		372B54E0260DBE5400EAE90C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = GeometryHouses/GeometryHouses.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = GeometryHouses/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.GeometryHouses;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GeometryHouses/GeometryHouses-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		372B54E2260DBE5400EAE90C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = GeometryHousesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.GeometryHousesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeometryHouses.app/Contents/MacOS/GeometryHouses";
+			};
+			name = Debug;
+		};
+		372B54E3260DBE5400EAE90C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = GeometryHousesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.GeometryHousesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeometryHouses.app/Contents/MacOS/GeometryHouses";
+			};
+			name = Release;
+		};
+		372B54E5260DBE5400EAE90C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = GeometryHousesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.GeometryHousesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = GeometryHouses;
+			};
+			name = Debug;
+		};
+		372B54E6260DBE5400EAE90C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = GeometryHousesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.GeometryHousesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = GeometryHouses;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		372B54B3260DBE5100EAE90C /* Build configuration list for PBXProject "4.9.GeometryHouses" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				372B54DC260DBE5400EAE90C /* Debug */,
+				372B54DD260DBE5400EAE90C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		372B54DE260DBE5400EAE90C /* Build configuration list for PBXNativeTarget "4.9.GeometryHouses" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				372B54DF260DBE5400EAE90C /* Debug */,
+				372B54E0260DBE5400EAE90C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		372B54E1260DBE5400EAE90C /* Build configuration list for PBXNativeTarget "GeometryHousesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				372B54E2260DBE5400EAE90C /* Debug */,
+				372B54E3260DBE5400EAE90C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		372B54E4260DBE5400EAE90C /* Build configuration list for PBXNativeTarget "GeometryHousesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				372B54E5260DBE5400EAE90C /* Debug */,
+				372B54E6260DBE5400EAE90C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 372B54B0260DBE5100EAE90C /* Project object */;
+}
