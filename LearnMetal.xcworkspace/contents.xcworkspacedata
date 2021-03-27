@@ -109,4 +109,7 @@
    <FileRef
       location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/GeometryHouses/4.9.GeometryHouses.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/ExploadingMesh/4.10.ExploadingMesh.xcodeproj">
+   </FileRef>
 </Workspace>

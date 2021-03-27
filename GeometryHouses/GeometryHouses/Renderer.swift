@@ -59,6 +59,17 @@ class Renderer: NSObject {
         
         viewPortSize = vector_uint2(UInt32(metalView.frame.width), UInt32(metalView.frame.height))
         commandQueue = device.makeCommandQueue()!
+        
+        let commandBuffer = commandQueue.makeCommandBuffer()!
+        let computeEncoder = commandBuffer.makeComputeCommandEncoder()!
+        computeEncoder.label = "compute command"
+        computeEncoder.setComputePipelineState(computePipelineState)
+        computeEncoder.setBuffer(housePostionBuffer, offset: 0, index: Int(ComputeInputIndexHousePosition.rawValue))
+        computeEncoder.setBuffer(housesVertexBuffer, offset: 0, index: Int(ComputeInputIndexHouseVertex.rawValue))
+        computeEncoder.dispatchThreadgroups(threadGroupsPerGrid, threadsPerThreadgroup: threadsPerGroup)
+        computeEncoder.endEncoding()
+        commandBuffer.commit()
+        commandBuffer.waitUntilCompleted()
     }
 }
 
@@ -71,14 +82,6 @@ extension Renderer: MTKViewDelegate {
     func draw(in view: MTKView) {
         let commandBuffer = commandQueue.makeCommandBuffer()!
         commandBuffer.label = "house render"
-        
-        let computeEncoder = commandBuffer.makeComputeCommandEncoder()!
-        computeEncoder.label = "compute command"
-        computeEncoder.setComputePipelineState(computePipelineState)
-        computeEncoder.setBuffer(housePostionBuffer, offset: 0, index: Int(ComputeInputIndexHousePosition.rawValue))
-        computeEncoder.setBuffer(housesVertexBuffer, offset: 0, index: Int(ComputeInputIndexHouseVertex.rawValue))
-        computeEncoder.dispatchThreadgroups(threadGroupsPerGrid, threadsPerThreadgroup: threadsPerGroup)
-        computeEncoder.endEncoding()
         
         let renderPassDescriptor = view.currentRenderPassDescriptor!
         let renderEncoder = commandBuffer.makeRenderCommandEncoder(descriptor: renderPassDescriptor)!
