@@ -1,0 +1,628 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		37951D8F260ED15000628968 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37951D8E260ED15000628968 /* AppDelegate.m */; };
+		37951D92260ED15000628968 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37951D91260ED15000628968 /* ViewController.m */; };
+		37951D94260ED15100628968 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37951D93260ED15100628968 /* Assets.xcassets */; };
+		37951D97260ED15100628968 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37951D95260ED15100628968 /* Main.storyboard */; };
+		37951D9A260ED15100628968 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37951D99260ED15100628968 /* main.m */; };
+		37951DA5260ED15100628968 /* GeometryNormalsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37951DA4260ED15100628968 /* GeometryNormalsTests.m */; };
+		37951DB0260ED15100628968 /* GeometryNormalsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37951DAF260ED15100628968 /* GeometryNormalsUITests.m */; };
+		37951DC2260ED16300628968 /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37951DC1260ED16300628968 /* common.framework */; };
+		37951DC3260ED16300628968 /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37951DC1260ED16300628968 /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		37951DC7260ED16900628968 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37951DC5260ED16900628968 /* MetalKit.framework */; };
+		37951DC8260ED16900628968 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37951DC6260ED16900628968 /* Metal.framework */; };
+		37951DCF260ED25200628968 /* ModelShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 37951DCE260ED25200628968 /* ModelShader.metal */; };
+		37951DD4260ED29200628968 /* Renderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 37951DD3260ED29200628968 /* Renderer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		37951DA1260ED15100628968 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37951D82260ED15000628968 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37951D89260ED15000628968;
+			remoteInfo = GeometryNormals;
+		};
+		37951DAC260ED15100628968 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37951D82260ED15000628968 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37951D89260ED15000628968;
+			remoteInfo = GeometryNormals;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		37951DC4260ED16300628968 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				37951DC3260ED16300628968 /* common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		37951D8A260ED15000628968 /* 4.11.GeometryNormals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 4.11.GeometryNormals.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37951D8D260ED15000628968 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		37951D8E260ED15000628968 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		37951D90260ED15000628968 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		37951D91260ED15000628968 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		37951D93260ED15100628968 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37951D96260ED15100628968 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		37951D98260ED15100628968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37951D99260ED15100628968 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		37951D9B260ED15100628968 /* GeometryNormals.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GeometryNormals.entitlements; sourceTree = "<group>"; };
+		37951DA0260ED15100628968 /* GeometryNormalsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeometryNormalsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37951DA4260ED15100628968 /* GeometryNormalsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeometryNormalsTests.m; sourceTree = "<group>"; };
+		37951DA6260ED15100628968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37951DAB260ED15100628968 /* GeometryNormalsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeometryNormalsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37951DAF260ED15100628968 /* GeometryNormalsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeometryNormalsUITests.m; sourceTree = "<group>"; };
+		37951DB1260ED15100628968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37951DC1260ED16300628968 /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37951DC5260ED16900628968 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		37951DC6260ED16900628968 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		37951DCB260ED23000628968 /* ModelShaderType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelShaderType.h; sourceTree = "<group>"; };
+		37951DCE260ED25200628968 /* ModelShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ModelShader.metal; sourceTree = "<group>"; };
+		37951DD2260ED27600628968 /* Renderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
+		37951DD3260ED29200628968 /* Renderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Renderer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37951D87260ED15000628968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37951DC2260ED16300628968 /* common.framework in Frameworks */,
+				37951DC8260ED16900628968 /* Metal.framework in Frameworks */,
+				37951DC7260ED16900628968 /* MetalKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37951D9D260ED15100628968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37951DA8260ED15100628968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		37951D81260ED15000628968 = {
+			isa = PBXGroup;
+			children = (
+				37951D8C260ED15000628968 /* GeometryNormals */,
+				37951DA3260ED15100628968 /* GeometryNormalsTests */,
+				37951DAE260ED15100628968 /* GeometryNormalsUITests */,
+				37951D8B260ED15000628968 /* Products */,
+				37951DC0260ED16300628968 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		37951D8B260ED15000628968 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37951D8A260ED15000628968 /* 4.11.GeometryNormals.app */,
+				37951DA0260ED15100628968 /* GeometryNormalsTests.xctest */,
+				37951DAB260ED15100628968 /* GeometryNormalsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37951D8C260ED15000628968 /* GeometryNormals */ = {
+			isa = PBXGroup;
+			children = (
+				37951D8D260ED15000628968 /* AppDelegate.h */,
+				37951D8E260ED15000628968 /* AppDelegate.m */,
+				37951D90260ED15000628968 /* ViewController.h */,
+				37951D91260ED15000628968 /* ViewController.m */,
+				37951D93260ED15100628968 /* Assets.xcassets */,
+				37951D95260ED15100628968 /* Main.storyboard */,
+				37951D98260ED15100628968 /* Info.plist */,
+				37951D99260ED15100628968 /* main.m */,
+				37951D9B260ED15100628968 /* GeometryNormals.entitlements */,
+				37951DCB260ED23000628968 /* ModelShaderType.h */,
+				37951DCE260ED25200628968 /* ModelShader.metal */,
+				37951DD2260ED27600628968 /* Renderer.h */,
+				37951DD3260ED29200628968 /* Renderer.m */,
+			);
+			path = GeometryNormals;
+			sourceTree = "<group>";
+		};
+		37951DA3260ED15100628968 /* GeometryNormalsTests */ = {
+			isa = PBXGroup;
+			children = (
+				37951DA4260ED15100628968 /* GeometryNormalsTests.m */,
+				37951DA6260ED15100628968 /* Info.plist */,
+			);
+			path = GeometryNormalsTests;
+			sourceTree = "<group>";
+		};
+		37951DAE260ED15100628968 /* GeometryNormalsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				37951DAF260ED15100628968 /* GeometryNormalsUITests.m */,
+				37951DB1260ED15100628968 /* Info.plist */,
+			);
+			path = GeometryNormalsUITests;
+			sourceTree = "<group>";
+		};
+		37951DC0260ED16300628968 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37951DC6260ED16900628968 /* Metal.framework */,
+				37951DC5260ED16900628968 /* MetalKit.framework */,
+				37951DC1260ED16300628968 /* common.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37951D89260ED15000628968 /* 4.11.GeometryNormals */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37951DB4260ED15100628968 /* Build configuration list for PBXNativeTarget "4.11.GeometryNormals" */;
+			buildPhases = (
+				37951D86260ED15000628968 /* Sources */,
+				37951D87260ED15000628968 /* Frameworks */,
+				37951D88260ED15000628968 /* Resources */,
+				37951DC4260ED16300628968 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 4.11.GeometryNormals;
+			productName = GeometryNormals;
+			productReference = 37951D8A260ED15000628968 /* 4.11.GeometryNormals.app */;
+			productType = "com.apple.product-type.application";
+		};
+		37951D9F260ED15100628968 /* GeometryNormalsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37951DB7260ED15100628968 /* Build configuration list for PBXNativeTarget "GeometryNormalsTests" */;
+			buildPhases = (
+				37951D9C260ED15100628968 /* Sources */,
+				37951D9D260ED15100628968 /* Frameworks */,
+				37951D9E260ED15100628968 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37951DA2260ED15100628968 /* PBXTargetDependency */,
+			);
+			name = GeometryNormalsTests;
+			productName = GeometryNormalsTests;
+			productReference = 37951DA0260ED15100628968 /* GeometryNormalsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		37951DAA260ED15100628968 /* GeometryNormalsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37951DBA260ED15100628968 /* Build configuration list for PBXNativeTarget "GeometryNormalsUITests" */;
+			buildPhases = (
+				37951DA7260ED15100628968 /* Sources */,
+				37951DA8260ED15100628968 /* Frameworks */,
+				37951DA9260ED15100628968 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37951DAD260ED15100628968 /* PBXTargetDependency */,
+			);
+			name = GeometryNormalsUITests;
+			productName = GeometryNormalsUITests;
+			productReference = 37951DAB260ED15100628968 /* GeometryNormalsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		37951D82260ED15000628968 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					37951D89260ED15000628968 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					37951D9F260ED15100628968 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 37951D89260ED15000628968;
+					};
+					37951DAA260ED15100628968 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 37951D89260ED15000628968;
+					};
+				};
+			};
+			buildConfigurationList = 37951D85260ED15000628968 /* Build configuration list for PBXProject "4.11.GeometryNormals" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 37951D81260ED15000628968;
+			productRefGroup = 37951D8B260ED15000628968 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37951D89260ED15000628968 /* 4.11.GeometryNormals */,
+				37951D9F260ED15100628968 /* GeometryNormalsTests */,
+				37951DAA260ED15100628968 /* GeometryNormalsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		37951D88260ED15000628968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37951D94260ED15100628968 /* Assets.xcassets in Resources */,
+				37951D97260ED15100628968 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37951D9E260ED15100628968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37951DA9260ED15100628968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		37951D86260ED15000628968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37951D92260ED15000628968 /* ViewController.m in Sources */,
+				37951D9A260ED15100628968 /* main.m in Sources */,
+				37951DCF260ED25200628968 /* ModelShader.metal in Sources */,
+				37951DD4260ED29200628968 /* Renderer.m in Sources */,
+				37951D8F260ED15000628968 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37951D9C260ED15100628968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37951DA5260ED15100628968 /* GeometryNormalsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37951DA7260ED15100628968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37951DB0260ED15100628968 /* GeometryNormalsUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		37951DA2260ED15100628968 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37951D89260ED15000628968 /* 4.11.GeometryNormals */;
+			targetProxy = 37951DA1260ED15100628968 /* PBXContainerItemProxy */;
+		};
+		37951DAD260ED15100628968 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37951D89260ED15000628968 /* 4.11.GeometryNormals */;
+			targetProxy = 37951DAC260ED15100628968 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		37951D95260ED15100628968 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37951D96260ED15100628968 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		37951DB2260ED15100628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		37951DB3260ED15100628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		37951DB5260ED15100628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GeometryNormals/GeometryNormals.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = GeometryNormals/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.GeometryNormals;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		37951DB6260ED15100628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GeometryNormals/GeometryNormals.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = GeometryNormals/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.GeometryNormals;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		37951DB8260ED15100628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = GeometryNormalsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.GeometryNormalsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeometryNormals.app/Contents/MacOS/GeometryNormals";
+			};
+			name = Debug;
+		};
+		37951DB9260ED15100628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = GeometryNormalsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.GeometryNormalsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeometryNormals.app/Contents/MacOS/GeometryNormals";
+			};
+			name = Release;
+		};
+		37951DBB260ED15100628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = GeometryNormalsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.GeometryNormalsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GeometryNormals;
+			};
+			name = Debug;
+		};
+		37951DBC260ED15100628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = GeometryNormalsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.GeometryNormalsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GeometryNormals;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		37951D85260ED15000628968 /* Build configuration list for PBXProject "4.11.GeometryNormals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37951DB2260ED15100628968 /* Debug */,
+				37951DB3260ED15100628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37951DB4260ED15100628968 /* Build configuration list for PBXNativeTarget "4.11.GeometryNormals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37951DB5260ED15100628968 /* Debug */,
+				37951DB6260ED15100628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37951DB7260ED15100628968 /* Build configuration list for PBXNativeTarget "GeometryNormalsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37951DB8260ED15100628968 /* Debug */,
+				37951DB9260ED15100628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37951DBA260ED15100628968 /* Build configuration list for PBXNativeTarget "GeometryNormalsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37951DBB260ED15100628968 /* Debug */,
+				37951DBC260ED15100628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 37951D82260ED15000628968 /* Project object */;
+}
