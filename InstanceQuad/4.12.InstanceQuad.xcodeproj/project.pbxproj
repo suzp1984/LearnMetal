@@ -18,6 +18,8 @@
 		37951F12261009A700628968 /* ShaderType.m in Sources */ = {isa = PBXBuildFile; fileRef = 37951F11261009A700628968 /* ShaderType.m */; };
 		37951F17261009DC00628968 /* QuadShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 37951F16261009DC00628968 /* QuadShader.metal */; };
 		37951F1C26100E2A00628968 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37951F1B26100E2A00628968 /* Renderer.swift */; };
+		37951F272610212700628968 /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37951F262610212700628968 /* common.framework */; };
+		37951F282610212700628968 /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37951F262610212700628968 /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +39,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		37951F292610212800628968 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				37951F282610212700628968 /* common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		37951ED52610082F00628968 /* InstanceQuad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstanceQuad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37951ED52610082F00628968 /* 4.12.InstanceQuad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 4.12.InstanceQuad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37951ED82610082F00628968 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37951EDA2610082F00628968 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		37951EDC2610083100628968 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,6 +74,7 @@
 		37951F11261009A700628968 /* ShaderType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShaderType.m; sourceTree = "<group>"; };
 		37951F16261009DC00628968 /* QuadShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = QuadShader.metal; sourceTree = "<group>"; };
 		37951F1B26100E2A00628968 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		37951F262610212700628968 /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +83,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37951F0A2610086500628968 /* Metal.framework in Frameworks */,
+				37951F272610212700628968 /* common.framework in Frameworks */,
 				37951F0B2610086500628968 /* MetalKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,7 +119,7 @@
 		37951ED62610082F00628968 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				37951ED52610082F00628968 /* InstanceQuad.app */,
+				37951ED52610082F00628968 /* 4.12.InstanceQuad.app */,
 				37951EE72610083200628968 /* InstanceQuadTests.xctest */,
 				37951EF22610083200628968 /* InstanceQuadUITests.xctest */,
 			);
@@ -147,6 +165,7 @@
 		37951F072610086400628968 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				37951F262610212700628968 /* common.framework */,
 				37951F082610086500628968 /* Metal.framework */,
 				37951F092610086500628968 /* MetalKit.framework */,
 			);
@@ -156,21 +175,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		37951ED42610082F00628968 /* InstanceQuad */ = {
+		37951ED42610082F00628968 /* 4.12.InstanceQuad */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 37951EFB2610083200628968 /* Build configuration list for PBXNativeTarget "InstanceQuad" */;
+			buildConfigurationList = 37951EFB2610083200628968 /* Build configuration list for PBXNativeTarget "4.12.InstanceQuad" */;
 			buildPhases = (
 				37951ED12610082F00628968 /* Sources */,
 				37951ED22610082F00628968 /* Frameworks */,
 				37951ED32610082F00628968 /* Resources */,
+				37951F292610212800628968 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = InstanceQuad;
+			name = 4.12.InstanceQuad;
 			productName = InstanceQuad;
-			productReference = 37951ED52610082F00628968 /* InstanceQuad.app */;
+			productReference = 37951ED52610082F00628968 /* 4.12.InstanceQuad.app */;
 			productType = "com.apple.product-type.application";
 		};
 		37951EE62610083200628968 /* InstanceQuadTests */ = {
@@ -232,7 +252,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 37951ED02610082F00628968 /* Build configuration list for PBXProject "InstanceQuad" */;
+			buildConfigurationList = 37951ED02610082F00628968 /* Build configuration list for PBXProject "4.12.InstanceQuad" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -245,7 +265,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				37951ED42610082F00628968 /* InstanceQuad */,
+				37951ED42610082F00628968 /* 4.12.InstanceQuad */,
 				37951EE62610083200628968 /* InstanceQuadTests */,
 				37951EF12610083200628968 /* InstanceQuadUITests */,
 			);
@@ -312,12 +332,12 @@
 /* Begin PBXTargetDependency section */
 		37951EE92610083200628968 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 37951ED42610082F00628968 /* InstanceQuad */;
+			target = 37951ED42610082F00628968 /* 4.12.InstanceQuad */;
 			targetProxy = 37951EE82610083200628968 /* PBXContainerItemProxy */;
 		};
 		37951EF42610083200628968 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 37951ED42610082F00628968 /* InstanceQuad */;
+			target = 37951ED42610082F00628968 /* 4.12.InstanceQuad */;
 			targetProxy = 37951EF32610083200628968 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -583,7 +603,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		37951ED02610082F00628968 /* Build configuration list for PBXProject "InstanceQuad" */ = {
+		37951ED02610082F00628968 /* Build configuration list for PBXProject "4.12.InstanceQuad" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				37951EF92610083200628968 /* Debug */,
@@ -592,7 +612,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		37951EFB2610083200628968 /* Build configuration list for PBXNativeTarget "InstanceQuad" */ = {
+		37951EFB2610083200628968 /* Build configuration list for PBXNativeTarget "4.12.InstanceQuad" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				37951EFC2610083200628968 /* Debug */,

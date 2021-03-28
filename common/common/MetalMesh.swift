@@ -9,17 +9,74 @@ import Foundation
 import Metal
 import MetalKit
 
-//public class MetalMesh {
-//
-//    fileprivate let mesh: MTKMesh
-//    fileprivate let index: Int
-//
-//    public init(mesh: MTKMesh, index: Int) {
-//        self.mesh = mesh
-//        self.index = index
-//    }
-//
-//}
+public class MetalMesh : NSObject {
+
+    fileprivate var mtkMesh: MTKMesh!
+    fileprivate var textures: [String : MTLTexture] = [:]
+
+    public init(withUrl url: URL,
+                device: MTLDevice,
+                mtlVertexDescriptor: MTLVertexDescriptor,
+                attributeMap: [Int : String]) throws {
+        // model io vertex descriptor
+        let mdlVertexDescriptor = MTKModelIOVertexDescriptorFromMetal(mtlVertexDescriptor)
+        for attr in attributeMap {
+            (mdlVertexDescriptor.attributes[attr.key] as! MDLVertexAttribute).name = attr.value
+        }
+        
+        // mesh allocator
+        let metalAllocator = MTKMeshBufferAllocator(device: device)
+        
+        let mdlAsset = MDLAsset(url: url,
+                                  vertexDescriptor: mdlVertexDescriptor,
+                                  bufferAllocator: metalAllocator)
+        
+        var mdlMesh : MDLMesh? = nil
+        
+        for i in 0..<mdlAsset.count {
+            guard let mdlObject = mdlAsset.object(at: i) as? MDLMesh else {
+                continue
+            }
+            
+            mdlMesh = mdlObject
+            let textureLoader = MTKTextureLoader(device: device)
+            
+            for subMesh in mdlObject.submeshes! {
+                guard let subMesh = subMesh as? MDLSubmesh else {
+                    break
+                }
+                
+                guard let material = subMesh.material else {
+                    break
+                }
+                                
+                guard let baseColorProperty = material.property(with: .baseColor) else {
+                    break
+                }
+                
+                guard let url = baseColorProperty.urlValue else {
+                    break
+                }
+                
+                guard let texture = try? textureLoader.newTexture(URL: url, options: nil) else {
+                    break
+                }
+                
+                textures[subMesh.name] = texture
+            }
+            
+            // only read first mdl mesh
+            break
+        }
+        
+        if mdlMesh == nil {
+            throw Errors.runtimeError("can not read mdl mesh from \(url)")
+        }
+        
+        mtkMesh = try! MTKMesh(mesh: mdlMesh!, device: device)
+    }
+
+}
 
 @objc
 extension MTKMesh {
@@ -193,6 +250,39 @@ extension MTLRenderCommandEncoder {
                                   indexType: subMesh.indexType,
                                   indexBuffer: subMesh.indexBuffer.buffer,
                                   indexBufferOffset: subMesh.indexBuffer.offset)
+        }
+    }
+    
+    public func setVertexBuffer(_ mesh: MetalMesh, index: Int) {
+        for buffer in mesh.mtkMesh.vertexBuffers {
+            setVertexBuffer(buffer.buffer, offset: buffer.offset, index: index)
+        }
+    }
+    
+    public func drawMesh(_ mesh: MetalMesh, textureHandler: (_ texture: MTLTexture?, _ subMeshName: String) -> Void) {
+        for subMesh in mesh.mtkMesh.submeshes {
+            let texture = mesh.textures[subMesh.name]
+            textureHandler(texture, subMesh.name)
+
+            drawIndexedPrimitives(type: subMesh.primitiveType,
+                                  indexCount: subMesh.indexCount,
+                                  indexType: subMesh.indexType,
+                                  indexBuffer: subMesh.indexBuffer.buffer,
+                                  indexBufferOffset: subMesh.indexBuffer.offset)
+        }
+    }
+    
+    public func drawMesh(_ mesh: MetalMesh, instanceCount: Int, textureHandler: (_ texture: MTLTexture?, _ subMeshName: String) -> Void) {
+        for subMesh in mesh.mtkMesh.submeshes {
+            let texture = mesh.textures[subMesh.name]
+            textureHandler(texture, subMesh.name)
+
+            drawIndexedPrimitives(type: subMesh.primitiveType,
+                                  indexCount: subMesh.indexCount,
+                                  indexType: subMesh.indexType,
+                                  indexBuffer: subMesh.indexBuffer.buffer,
+                                  indexBufferOffset: subMesh.indexBuffer.offset,
+                                  instanceCount: instanceCount)
         }
     }
 }

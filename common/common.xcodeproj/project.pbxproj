@@ -13,6 +13,9 @@
 		372B5422260A0BEE00EAE90C /* skybox in Resources */ = {isa = PBXBuildFile; fileRef = 372B5421260A0BEE00EAE90C /* skybox */; };
 		372B543A260A1F2D00EAE90C /* TextureCubeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372B5439260A1F2D00EAE90C /* TextureCubeLoader.swift */; };
 		3742B5DC25FF93A800DE2669 /* nanosuit in Resources */ = {isa = PBXBuildFile; fileRef = 3742B5DB25FF93A700DE2669 /* nanosuit */; };
+		37951FC52610259200628968 /* planet in Resources */ = {isa = PBXBuildFile; fileRef = 37951FC42610259200628968 /* planet */; };
+		37951FC92610259C00628968 /* rock in Resources */ = {isa = PBXBuildFile; fileRef = 37951FC82610259C00628968 /* rock */; };
+		37951FDB2610313B00628968 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37951FDA2610313B00628968 /* Bundle.swift */; };
 		37DD617325F38714005D7A42 /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DD616925F38714005D7A42 /* common.framework */; };
 		37DD617825F38714005D7A42 /* commonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD617725F38714005D7A42 /* commonTests.m */; };
 		37DD617A25F38714005D7A42 /* common.h in Headers */ = {isa = PBXBuildFile; fileRef = 37DD616C25F38714005D7A42 /* common.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -40,6 +43,9 @@
 		372B5421260A0BEE00EAE90C /* skybox */ = {isa = PBXFileReference; lastKnownFileType = folder; path = skybox; sourceTree = "<group>"; };
 		372B5439260A1F2D00EAE90C /* TextureCubeLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureCubeLoader.swift; sourceTree = "<group>"; };
 		3742B5DB25FF93A700DE2669 /* nanosuit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = nanosuit; sourceTree = "<group>"; };
+		37951FC42610259200628968 /* planet */ = {isa = PBXFileReference; lastKnownFileType = folder; path = planet; sourceTree = "<group>"; };
+		37951FC82610259C00628968 /* rock */ = {isa = PBXFileReference; lastKnownFileType = folder; path = rock; sourceTree = "<group>"; };
+		37951FDA2610313B00628968 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		37DD616925F38714005D7A42 /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DD616C25F38714005D7A42 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		37DD616D25F38714005D7A42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,6 +81,8 @@
 		3742B5DA25FF938900DE2669 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				37951FC82610259C00628968 /* rock */,
+				37951FC42610259200628968 /* planet */,
 				372B5421260A0BEE00EAE90C /* skybox */,
 				3742B5DB25FF93A700DE2669 /* nanosuit */,
 			);
@@ -114,6 +122,7 @@
 				3706D2EA26043EED000568B4 /* MetalMesh.swift */,
 				3706D2EE2604548A000568B4 /* Errors.swift */,
 				372B5439260A1F2D00EAE90C /* TextureCubeLoader.swift */,
+				37951FDA2610313B00628968 /* Bundle.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -222,6 +231,8 @@
 			files = (
 				37DD618D25F38790005D7A42 /* Assets.xcassets in Resources */,
 				372B5422260A0BEE00EAE90C /* skybox in Resources */,
+				37951FC92610259C00628968 /* rock in Resources */,
+				37951FC52610259200628968 /* planet in Resources */,
 				3742B5DC25FF93A800DE2669 /* nanosuit in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37DD624625F5D61B005D7A42 /* Camera.m in Sources */,
+				37951FDB2610313B00628968 /* Bundle.swift in Sources */,
 				3706D2EF2604548A000568B4 /* Errors.swift in Sources */,
 				37DD618725F38769005D7A42 /* AAPLMathUtilities.m in Sources */,
 				372B543A260A1F2D00EAE90C /* TextureCubeLoader.swift in Sources */,

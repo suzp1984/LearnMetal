@@ -116,6 +116,9 @@
       location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/GeometryNormals/4.11.GeometryNormals.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:InstanceQuad/InstanceQuad.xcodeproj">
+      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/InstanceQuad/4.12.InstanceQuad.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/Asteroids/4.13.Asteroids.xcodeproj">
    </FileRef>
 </Workspace>

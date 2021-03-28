@@ -1,0 +1,649 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		37951F8B261021A800628968 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37951F8A261021A800628968 /* AppDelegate.swift */; };
+		37951F8D261021A800628968 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37951F8C261021A800628968 /* ViewController.swift */; };
+		37951F8F261021A900628968 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37951F8E261021A900628968 /* Assets.xcassets */; };
+		37951F92261021A900628968 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37951F90261021A900628968 /* Main.storyboard */; };
+		37951F9E261021A900628968 /* AsteroidsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37951F9D261021A900628968 /* AsteroidsTests.swift */; };
+		37951FA9261021A900628968 /* AsteroidsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37951FA8261021A900628968 /* AsteroidsUITests.swift */; };
+		37951FBB2610220700628968 /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37951FBA2610220700628968 /* common.framework */; };
+		37951FBC2610220700628968 /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37951FBA2610220700628968 /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		37951FC02610220F00628968 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37951FBE2610220F00628968 /* Metal.framework */; };
+		37951FC12610220F00628968 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37951FBF2610220F00628968 /* MetalKit.framework */; };
+		37951FCF2610292200628968 /* ModelShaderType.m in Sources */ = {isa = PBXBuildFile; fileRef = 37951FCE2610292200628968 /* ModelShaderType.m */; };
+		37951FD32610294100628968 /* ModelShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 37951FD22610294100628968 /* ModelShader.metal */; };
+		37951FD726102CC200628968 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37951FD626102CC200628968 /* Renderer.swift */; };
+		37951FDF2610578000628968 /* ModelIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37951FDE2610578000628968 /* ModelIO.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		37951F9A261021A900628968 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37951F7F261021A800628968 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37951F86261021A800628968;
+			remoteInfo = Asteroids;
+		};
+		37951FA5261021A900628968 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37951F7F261021A800628968 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37951F86261021A800628968;
+			remoteInfo = Asteroids;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		37951FBD2610220700628968 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				37951FBC2610220700628968 /* common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		37951F87261021A800628968 /* 4.13.Asteroids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 4.13.Asteroids.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37951F8A261021A800628968 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		37951F8C261021A800628968 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		37951F8E261021A900628968 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37951F91261021A900628968 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		37951F93261021A900628968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37951F94261021A900628968 /* Asteroids.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Asteroids.entitlements; sourceTree = "<group>"; };
+		37951F99261021A900628968 /* AsteroidsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsteroidsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37951F9D261021A900628968 /* AsteroidsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsTests.swift; sourceTree = "<group>"; };
+		37951F9F261021A900628968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37951FA4261021A900628968 /* AsteroidsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsteroidsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37951FA8261021A900628968 /* AsteroidsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsUITests.swift; sourceTree = "<group>"; };
+		37951FAA261021A900628968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37951FBA2610220700628968 /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37951FBE2610220F00628968 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		37951FBF2610220F00628968 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		37951FCC261028F700628968 /* ModelShaderType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelShaderType.h; sourceTree = "<group>"; };
+		37951FCD2610292200628968 /* Asteroids-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Asteroids-Bridging-Header.h"; sourceTree = "<group>"; };
+		37951FCE2610292200628968 /* ModelShaderType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelShaderType.m; sourceTree = "<group>"; };
+		37951FD22610294100628968 /* ModelShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ModelShader.metal; sourceTree = "<group>"; };
+		37951FD626102CC200628968 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		37951FDE2610578000628968 /* ModelIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ModelIO.framework; path = System/Library/Frameworks/ModelIO.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37951F84261021A800628968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37951FC12610220F00628968 /* MetalKit.framework in Frameworks */,
+				37951FC02610220F00628968 /* Metal.framework in Frameworks */,
+				37951FDF2610578000628968 /* ModelIO.framework in Frameworks */,
+				37951FBB2610220700628968 /* common.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37951F96261021A900628968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37951FA1261021A900628968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		37951F7E261021A800628968 = {
+			isa = PBXGroup;
+			children = (
+				37951F89261021A800628968 /* Asteroids */,
+				37951F9C261021A900628968 /* AsteroidsTests */,
+				37951FA7261021A900628968 /* AsteroidsUITests */,
+				37951F88261021A800628968 /* Products */,
+				37951FB92610220700628968 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		37951F88261021A800628968 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37951F87261021A800628968 /* 4.13.Asteroids.app */,
+				37951F99261021A900628968 /* AsteroidsTests.xctest */,
+				37951FA4261021A900628968 /* AsteroidsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37951F89261021A800628968 /* Asteroids */ = {
+			isa = PBXGroup;
+			children = (
+				37951F8A261021A800628968 /* AppDelegate.swift */,
+				37951F8C261021A800628968 /* ViewController.swift */,
+				37951F8E261021A900628968 /* Assets.xcassets */,
+				37951F90261021A900628968 /* Main.storyboard */,
+				37951F93261021A900628968 /* Info.plist */,
+				37951F94261021A900628968 /* Asteroids.entitlements */,
+				37951FCC261028F700628968 /* ModelShaderType.h */,
+				37951FCE2610292200628968 /* ModelShaderType.m */,
+				37951FCD2610292200628968 /* Asteroids-Bridging-Header.h */,
+				37951FD22610294100628968 /* ModelShader.metal */,
+				37951FD626102CC200628968 /* Renderer.swift */,
+			);
+			path = Asteroids;
+			sourceTree = "<group>";
+		};
+		37951F9C261021A900628968 /* AsteroidsTests */ = {
+			isa = PBXGroup;
+			children = (
+				37951F9D261021A900628968 /* AsteroidsTests.swift */,
+				37951F9F261021A900628968 /* Info.plist */,
+			);
+			path = AsteroidsTests;
+			sourceTree = "<group>";
+		};
+		37951FA7261021A900628968 /* AsteroidsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				37951FA8261021A900628968 /* AsteroidsUITests.swift */,
+				37951FAA261021A900628968 /* Info.plist */,
+			);
+			path = AsteroidsUITests;
+			sourceTree = "<group>";
+		};
+		37951FB92610220700628968 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37951FDE2610578000628968 /* ModelIO.framework */,
+				37951FBE2610220F00628968 /* Metal.framework */,
+				37951FBF2610220F00628968 /* MetalKit.framework */,
+				37951FBA2610220700628968 /* common.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37951F86261021A800628968 /* 4.13.Asteroids */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37951FAD261021A900628968 /* Build configuration list for PBXNativeTarget "4.13.Asteroids" */;
+			buildPhases = (
+				37951F83261021A800628968 /* Sources */,
+				37951F84261021A800628968 /* Frameworks */,
+				37951F85261021A800628968 /* Resources */,
+				37951FBD2610220700628968 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 4.13.Asteroids;
+			productName = Asteroids;
+			productReference = 37951F87261021A800628968 /* 4.13.Asteroids.app */;
+			productType = "com.apple.product-type.application";
+		};
+		37951F98261021A900628968 /* AsteroidsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37951FB0261021A900628968 /* Build configuration list for PBXNativeTarget "AsteroidsTests" */;
+			buildPhases = (
+				37951F95261021A900628968 /* Sources */,
+				37951F96261021A900628968 /* Frameworks */,
+				37951F97261021A900628968 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37951F9B261021A900628968 /* PBXTargetDependency */,
+			);
+			name = AsteroidsTests;
+			productName = AsteroidsTests;
+			productReference = 37951F99261021A900628968 /* AsteroidsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		37951FA3261021A900628968 /* AsteroidsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37951FB3261021A900628968 /* Build configuration list for PBXNativeTarget "AsteroidsUITests" */;
+			buildPhases = (
+				37951FA0261021A900628968 /* Sources */,
+				37951FA1261021A900628968 /* Frameworks */,
+				37951FA2261021A900628968 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37951FA6261021A900628968 /* PBXTargetDependency */,
+			);
+			name = AsteroidsUITests;
+			productName = AsteroidsUITests;
+			productReference = 37951FA4261021A900628968 /* AsteroidsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		37951F7F261021A800628968 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					37951F86261021A800628968 = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+					};
+					37951F98261021A900628968 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 37951F86261021A800628968;
+					};
+					37951FA3261021A900628968 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 37951F86261021A800628968;
+					};
+				};
+			};
+			buildConfigurationList = 37951F82261021A800628968 /* Build configuration list for PBXProject "4.13.Asteroids" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 37951F7E261021A800628968;
+			productRefGroup = 37951F88261021A800628968 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37951F86261021A800628968 /* 4.13.Asteroids */,
+				37951F98261021A900628968 /* AsteroidsTests */,
+				37951FA3261021A900628968 /* AsteroidsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		37951F85261021A800628968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37951F8F261021A900628968 /* Assets.xcassets in Resources */,
+				37951F92261021A900628968 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37951F97261021A900628968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37951FA2261021A900628968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		37951F83261021A800628968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37951F8D261021A800628968 /* ViewController.swift in Sources */,
+				37951FCF2610292200628968 /* ModelShaderType.m in Sources */,
+				37951FD32610294100628968 /* ModelShader.metal in Sources */,
+				37951FD726102CC200628968 /* Renderer.swift in Sources */,
+				37951F8B261021A800628968 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37951F95261021A900628968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37951F9E261021A900628968 /* AsteroidsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37951FA0261021A900628968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37951FA9261021A900628968 /* AsteroidsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		37951F9B261021A900628968 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37951F86261021A800628968 /* 4.13.Asteroids */;
+			targetProxy = 37951F9A261021A900628968 /* PBXContainerItemProxy */;
+		};
+		37951FA6261021A900628968 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37951F86261021A800628968 /* 4.13.Asteroids */;
+			targetProxy = 37951FA5261021A900628968 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		37951F90261021A900628968 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37951F91261021A900628968 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		37951FAB261021A900628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		37951FAC261021A900628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		37951FAE261021A900628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Asteroids/Asteroids.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Asteroids/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.Asteroids;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Asteroids/Asteroids-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		37951FAF261021A900628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Asteroids/Asteroids.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Asteroids/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.Asteroids;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Asteroids/Asteroids-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		37951FB1261021A900628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = AsteroidsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.AsteroidsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Asteroids.app/Contents/MacOS/Asteroids";
+			};
+			name = Debug;
+		};
+		37951FB2261021A900628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = AsteroidsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.AsteroidsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Asteroids.app/Contents/MacOS/Asteroids";
+			};
+			name = Release;
+		};
+		37951FB4261021A900628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = AsteroidsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.AsteroidsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Asteroids;
+			};
+			name = Debug;
+		};
+		37951FB5261021A900628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = AsteroidsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.AsteroidsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Asteroids;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		37951F82261021A800628968 /* Build configuration list for PBXProject "4.13.Asteroids" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37951FAB261021A900628968 /* Debug */,
+				37951FAC261021A900628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37951FAD261021A900628968 /* Build configuration list for PBXNativeTarget "4.13.Asteroids" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37951FAE261021A900628968 /* Debug */,
+				37951FAF261021A900628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37951FB0261021A900628968 /* Build configuration list for PBXNativeTarget "AsteroidsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37951FB1261021A900628968 /* Debug */,
+				37951FB2261021A900628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37951FB3261021A900628968 /* Build configuration list for PBXNativeTarget "AsteroidsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37951FB4261021A900628968 /* Debug */,
+				37951FB5261021A900628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 37951F7F261021A800628968 /* Project object */;
+}
