@@ -237,7 +237,7 @@ extension MTKMesh {
 
 extension MTLRenderCommandEncoder {
     // TODO: remove offset
-    public func setVertexMeshBuffer(_ mesh: MTKMesh, index: Int, offset: Int = 0) {
+    public func setVertexMesh(_ mesh: MTKMesh, index: Int, offset: Int = 0) {
         for vertexBuffer in mesh.vertexBuffers {
             setVertexBuffer(vertexBuffer.buffer, offset: offset + vertexBuffer.offset, index: index)
         }
@@ -253,7 +253,7 @@ extension MTLRenderCommandEncoder {
         }
     }
     
-    public func setVertexBuffer(_ mesh: MetalMesh, index: Int) {
+    public func setVertexMesh(_ mesh: MetalMesh, index: Int) {
         for buffer in mesh.mtkMesh.vertexBuffers {
             setVertexBuffer(buffer.buffer, offset: buffer.offset, index: index)
         }

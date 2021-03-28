@@ -207,7 +207,7 @@ extension Renderer : MTKViewDelegate {
         renderEncoder.setRenderPipelineState(renderPipelineState)
         renderEncoder.setDepthStencilState(depthStencilState)
         
-        renderEncoder.setVertexBuffer(planetMesh, index: Int(ModelVertexInputIndexPosition.rawValue))
+        renderEncoder.setVertexMesh(planetMesh, index: Int(ModelVertexInputIndexPosition.rawValue))
         
         renderEncoder.setVertexBytes(&uniforms,
                                      length: MemoryLayout<Uniforms>.stride,
@@ -219,7 +219,7 @@ extension Renderer : MTKViewDelegate {
         // draw rocks
         renderEncoder.setRenderPipelineState(rockPipelineState)
 
-        renderEncoder.setVertexBuffer(rockMesh, index: Int(ModelVertexInputIndexPosition.rawValue))
+        renderEncoder.setVertexMesh(rockMesh, index: Int(ModelVertexInputIndexPosition.rawValue))
         renderEncoder.setVertexBytes(&rockUniform, length: MemoryLayout<RockUniforms>.stride, index: Int(ModelVertexInputIndexUniforms.rawValue))
         renderEncoder.setVertexBuffer(rockModelsBuffer, offset: 0, index: Int(ModelVertexInputIndexModels.rawValue))
 

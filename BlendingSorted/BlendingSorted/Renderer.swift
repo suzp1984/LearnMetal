@@ -231,7 +231,7 @@ extension Renderer : MTKViewDelegate
         renderEncoder.setRenderPipelineState(renderPipelineState)
         renderEncoder.setDepthStencilState(depthState)
         
-        renderEncoder.setVertexMeshBuffer(cubeMesh, index: Int(VertexInputIndexPosition.rawValue))
+        renderEncoder.setVertexMesh(cubeMesh, index: Int(VertexInputIndexPosition.rawValue))
         
         renderEncoder.setVertexBytes(&cubeOneUniforms,
                                      length: MemoryLayout<Uniforms>.stride,
@@ -248,7 +248,7 @@ extension Renderer : MTKViewDelegate
         renderEncoder.drawMesh(cubeMesh)
         
         // draw plane
-        renderEncoder.setVertexMeshBuffer(planeMesh, index: Int(VertexInputIndexPosition.rawValue))
+        renderEncoder.setVertexMesh(planeMesh, index: Int(VertexInputIndexPosition.rawValue))
         
         
         renderEncoder.setVertexBytes(&floorUniforms,
