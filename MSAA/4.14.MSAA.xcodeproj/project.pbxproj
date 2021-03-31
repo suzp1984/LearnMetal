@@ -1,0 +1,645 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3795204626115B6700628968 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795204526115B6700628968 /* AppDelegate.swift */; };
+		3795204826115B6700628968 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795204726115B6700628968 /* ViewController.swift */; };
+		3795204A26115B6900628968 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3795204926115B6900628968 /* Assets.xcassets */; };
+		3795204D26115B6900628968 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3795204B26115B6900628968 /* Main.storyboard */; };
+		3795205926115B6900628968 /* MSAATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795205826115B6900628968 /* MSAATests.swift */; };
+		3795206426115B6900628968 /* MSAAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795206326115B6900628968 /* MSAAUITests.swift */; };
+		3795207626115B8100628968 /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3795207526115B8100628968 /* common.framework */; };
+		3795207726115B8100628968 /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3795207526115B8100628968 /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3795207B26115B8A00628968 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3795207926115B8A00628968 /* Metal.framework */; };
+		3795207C26115B8A00628968 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3795207A26115B8A00628968 /* MetalKit.framework */; };
+		3795208226115BEF00628968 /* ShaderType.m in Sources */ = {isa = PBXBuildFile; fileRef = 3795208126115BEF00628968 /* ShaderType.m */; };
+		3795208626115C1700628968 /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3795208526115C1700628968 /* Shader.metal */; };
+		3795208A26115DBC00628968 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795208926115DBC00628968 /* Renderer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3795205526115B6900628968 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3795203A26115B6600628968 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3795204126115B6600628968;
+			remoteInfo = MSAA;
+		};
+		3795206026115B6900628968 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3795203A26115B6600628968 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3795204126115B6600628968;
+			remoteInfo = MSAA;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3795207826115B8200628968 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3795207726115B8100628968 /* common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3795204226115B6600628968 /* 4.14.MSAA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 4.14.MSAA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3795204526115B6700628968 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3795204726115B6700628968 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3795204926115B6900628968 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3795204C26115B6900628968 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3795204E26115B6900628968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3795204F26115B6900628968 /* MSAA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MSAA.entitlements; sourceTree = "<group>"; };
+		3795205426115B6900628968 /* MSAATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MSAATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3795205826115B6900628968 /* MSAATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSAATests.swift; sourceTree = "<group>"; };
+		3795205A26115B6900628968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3795205F26115B6900628968 /* MSAAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MSAAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3795206326115B6900628968 /* MSAAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSAAUITests.swift; sourceTree = "<group>"; };
+		3795206526115B6900628968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3795207526115B8100628968 /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3795207926115B8A00628968 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		3795207A26115B8A00628968 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		3795207F26115BD700628968 /* ShaderType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderType.h; sourceTree = "<group>"; };
+		3795208026115BEF00628968 /* MSAA-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MSAA-Bridging-Header.h"; sourceTree = "<group>"; };
+		3795208126115BEF00628968 /* ShaderType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShaderType.m; sourceTree = "<group>"; };
+		3795208526115C1700628968 /* Shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader.metal; sourceTree = "<group>"; };
+		3795208926115DBC00628968 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3795203F26115B6600628968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3795207C26115B8A00628968 /* MetalKit.framework in Frameworks */,
+				3795207B26115B8A00628968 /* Metal.framework in Frameworks */,
+				3795207626115B8100628968 /* common.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3795205126115B6900628968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3795205C26115B6900628968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3795203926115B6600628968 = {
+			isa = PBXGroup;
+			children = (
+				3795204426115B6700628968 /* MSAA */,
+				3795205726115B6900628968 /* MSAATests */,
+				3795206226115B6900628968 /* MSAAUITests */,
+				3795204326115B6600628968 /* Products */,
+				3795207426115B8100628968 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3795204326115B6600628968 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3795204226115B6600628968 /* 4.14.MSAA.app */,
+				3795205426115B6900628968 /* MSAATests.xctest */,
+				3795205F26115B6900628968 /* MSAAUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3795204426115B6700628968 /* MSAA */ = {
+			isa = PBXGroup;
+			children = (
+				3795204526115B6700628968 /* AppDelegate.swift */,
+				3795204726115B6700628968 /* ViewController.swift */,
+				3795204926115B6900628968 /* Assets.xcassets */,
+				3795204B26115B6900628968 /* Main.storyboard */,
+				3795204E26115B6900628968 /* Info.plist */,
+				3795204F26115B6900628968 /* MSAA.entitlements */,
+				3795207F26115BD700628968 /* ShaderType.h */,
+				3795208126115BEF00628968 /* ShaderType.m */,
+				3795208026115BEF00628968 /* MSAA-Bridging-Header.h */,
+				3795208526115C1700628968 /* Shader.metal */,
+				3795208926115DBC00628968 /* Renderer.swift */,
+			);
+			path = MSAA;
+			sourceTree = "<group>";
+		};
+		3795205726115B6900628968 /* MSAATests */ = {
+			isa = PBXGroup;
+			children = (
+				3795205826115B6900628968 /* MSAATests.swift */,
+				3795205A26115B6900628968 /* Info.plist */,
+			);
+			path = MSAATests;
+			sourceTree = "<group>";
+		};
+		3795206226115B6900628968 /* MSAAUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3795206326115B6900628968 /* MSAAUITests.swift */,
+				3795206526115B6900628968 /* Info.plist */,
+			);
+			path = MSAAUITests;
+			sourceTree = "<group>";
+		};
+		3795207426115B8100628968 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3795207926115B8A00628968 /* Metal.framework */,
+				3795207A26115B8A00628968 /* MetalKit.framework */,
+				3795207526115B8100628968 /* common.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3795204126115B6600628968 /* 4.14.MSAA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3795206826115B6900628968 /* Build configuration list for PBXNativeTarget "4.14.MSAA" */;
+			buildPhases = (
+				3795203E26115B6600628968 /* Sources */,
+				3795203F26115B6600628968 /* Frameworks */,
+				3795204026115B6600628968 /* Resources */,
+				3795207826115B8200628968 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 4.14.MSAA;
+			productName = MSAA;
+			productReference = 3795204226115B6600628968 /* 4.14.MSAA.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3795205326115B6900628968 /* MSAATests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3795206B26115B6900628968 /* Build configuration list for PBXNativeTarget "MSAATests" */;
+			buildPhases = (
+				3795205026115B6900628968 /* Sources */,
+				3795205126115B6900628968 /* Frameworks */,
+				3795205226115B6900628968 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3795205626115B6900628968 /* PBXTargetDependency */,
+			);
+			name = MSAATests;
+			productName = MSAATests;
+			productReference = 3795205426115B6900628968 /* MSAATests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3795205E26115B6900628968 /* MSAAUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3795206E26115B6900628968 /* Build configuration list for PBXNativeTarget "MSAAUITests" */;
+			buildPhases = (
+				3795205B26115B6900628968 /* Sources */,
+				3795205C26115B6900628968 /* Frameworks */,
+				3795205D26115B6900628968 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3795206126115B6900628968 /* PBXTargetDependency */,
+			);
+			name = MSAAUITests;
+			productName = MSAAUITests;
+			productReference = 3795205F26115B6900628968 /* MSAAUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3795203A26115B6600628968 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					3795204126115B6600628968 = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+					};
+					3795205326115B6900628968 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 3795204126115B6600628968;
+					};
+					3795205E26115B6900628968 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 3795204126115B6600628968;
+					};
+				};
+			};
+			buildConfigurationList = 3795203D26115B6600628968 /* Build configuration list for PBXProject "4.14.MSAA" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3795203926115B6600628968;
+			productRefGroup = 3795204326115B6600628968 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3795204126115B6600628968 /* 4.14.MSAA */,
+				3795205326115B6900628968 /* MSAATests */,
+				3795205E26115B6900628968 /* MSAAUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3795204026115B6600628968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3795204A26115B6900628968 /* Assets.xcassets in Resources */,
+				3795204D26115B6900628968 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3795205226115B6900628968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3795205D26115B6900628968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3795203E26115B6600628968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3795208626115C1700628968 /* Shader.metal in Sources */,
+				3795204826115B6700628968 /* ViewController.swift in Sources */,
+				3795208226115BEF00628968 /* ShaderType.m in Sources */,
+				3795208A26115DBC00628968 /* Renderer.swift in Sources */,
+				3795204626115B6700628968 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3795205026115B6900628968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3795205926115B6900628968 /* MSAATests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3795205B26115B6900628968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3795206426115B6900628968 /* MSAAUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3795205626115B6900628968 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3795204126115B6600628968 /* 4.14.MSAA */;
+			targetProxy = 3795205526115B6900628968 /* PBXContainerItemProxy */;
+		};
+		3795206126115B6900628968 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3795204126115B6600628968 /* 4.14.MSAA */;
+			targetProxy = 3795206026115B6900628968 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3795204B26115B6900628968 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3795204C26115B6900628968 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3795206626115B6900628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3795206726115B6900628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		3795206926115B6900628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MSAA/MSAA.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = MSAA/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.MSAA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MSAA/MSAA-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3795206A26115B6900628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MSAA/MSAA.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = MSAA/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.MSAA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MSAA/MSAA-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		3795206C26115B6900628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = MSAATests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.MSAATests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MSAA.app/Contents/MacOS/MSAA";
+			};
+			name = Debug;
+		};
+		3795206D26115B6900628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = MSAATests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.MSAATests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MSAA.app/Contents/MacOS/MSAA";
+			};
+			name = Release;
+		};
+		3795206F26115B6900628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = MSAAUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.MSAAUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = MSAA;
+			};
+			name = Debug;
+		};
+		3795207026115B6900628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = MSAAUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.MSAAUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = MSAA;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3795203D26115B6600628968 /* Build configuration list for PBXProject "4.14.MSAA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3795206626115B6900628968 /* Debug */,
+				3795206726115B6900628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3795206826115B6900628968 /* Build configuration list for PBXNativeTarget "4.14.MSAA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3795206926115B6900628968 /* Debug */,
+				3795206A26115B6900628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3795206B26115B6900628968 /* Build configuration list for PBXNativeTarget "MSAATests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3795206C26115B6900628968 /* Debug */,
+				3795206D26115B6900628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3795206E26115B6900628968 /* Build configuration list for PBXNativeTarget "MSAAUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3795206F26115B6900628968 /* Debug */,
+				3795207026115B6900628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3795203A26115B6600628968 /* Project object */;
+}

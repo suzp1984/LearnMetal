@@ -121,4 +121,7 @@
    <FileRef
       location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/Asteroids/4.13.Asteroids.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/MSAA/4.14.MSAA.xcodeproj">
+   </FileRef>
 </Workspace>

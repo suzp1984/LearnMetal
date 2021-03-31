@@ -67,12 +67,6 @@ class Renderer: NSObject {
         mtlVertexDescriptor.layouts[Int(ModelVertexInputIndexPosition.rawValue)].stride = 48
         mtlVertexDescriptor.layouts[Int(ModelVertexInputIndexPosition.rawValue)].stepRate = 1
         mtlVertexDescriptor.layouts[Int(ModelVertexInputIndexPosition.rawValue)].stepFunction = .perVertex
-        
-        // model io vertex descriptor
-        let mdlVertexDescriptor = MTKModelIOVertexDescriptorFromMetal(mtlVertexDescriptor)
-        (mdlVertexDescriptor.attributes[Int(ModelVertexAttributePosition.rawValue)] as! MDLVertexAttribute).name = MDLVertexAttributePosition
-        (mdlVertexDescriptor.attributes[Int(ModelVertexAttributeTexcoord.rawValue)] as! MDLVertexAttribute).name = MDLVertexAttributeTextureCoordinate
-        (mdlVertexDescriptor.attributes[Int(ModelVertexAttributeNormal.rawValue)] as! MDLVertexAttribute).name = MDLVertexAttributeNormal
 
         let planetUrl = Bundle.common.url(forResource: "planet.obj", withExtension: nil, subdirectory: "planet")!
 
