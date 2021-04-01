@@ -1,6 +1,6 @@
 //
 //  Renderer.m
-//  BlinnPhong
+//  GammaCorrection
 //
 //  Created by Jacob Su on 4/1/21.
 //
@@ -19,25 +19,25 @@ const float PI = 3.1415926;
     Camera *_camera;
     id<MTLDevice> _device;
     id<MTLDepthStencilState> _depthState;
-    id<MTLRenderPipelineState> _phongRenderPipelineState;
     id<MTLRenderPipelineState> _blinnPhongPipelineState;
+    id<MTLRenderPipelineState> _blinnPhongNoGammaPipelineState;
     MTKMesh *_planeMesh;
     id<MTLTexture> _wood;
+    id<MTLTexture> _woodGammaCorrection;
     MTLViewport _viewPort;
     id<MTLCommandQueue> _commandQueue;
     Uniforms _uniform;
     id<MTLBuffer> _argumentBuffer;
     id<MTLBuffer> _viewPosBuffer;
-    vector_float3 _lightPos;
     vector_float3 _cameraPos;
-    BOOL _isBlinnPhong;
+    BOOL _hasGammaCorrection;
 }
 
 - (nonnull instancetype)initWithMetalKitView:(nonnull MTKView*)mtkView {
     self = [super init];
     
     if (self) {
-        _isBlinnPhong = true;
+        _hasGammaCorrection = true;
         mtkView.delegate = self;
         mtkView.sampleCount = 4;
         _camera = [[Camera alloc] initWithPosition:(vector_float3){0.0, 0.0, 3.0}
@@ -45,7 +45,6 @@ const float PI = 3.1415926;
                                             withUp:(vector_float3) {0.0, 1.0, 0.0}];
         
         _device = mtkView.device;
-        _lightPos = (vector_float3) {0.0, 0.0, 0.0};
         
         mtkView.depthStencilPixelFormat = MTLPixelFormatDepth32Float;
         mtkView.clearDepth = 1.0;
@@ -99,26 +98,34 @@ const float PI = 3.1415926;
                                             error:&error];
         NSAssert(_wood, @"can not load wood texutre: %@", error);
         
+        _woodGammaCorrection = [textureLoader newTextureWithName:@"wood"
+                                      scaleFactor:1.0
+                                           bundle:bundle
+                                          options:@{ MTKTextureLoaderOptionSRGB: [NSNumber numberWithBool:YES] }
+                                            error:&error];
+        NSAssert(_wood, @"can not load wood texutre: %@", error);
+        
+        
         id<MTLLibrary> library = [_device newDefaultLibrary];
         id<MTLFunction> vertexFunc = [library newFunctionWithName:@"vertexShader"];
-        id<MTLFunction> blinnPhongFunc = [library newFunctionWithName:@"blinnPhongFragmentShader"];
-        id<MTLFunction> phongFunc = [library newFunctionWithName:@"phongFragmentShader"];
+        id<MTLFunction> blinnPhongFunc = [library newFunctionWithName:@"blinnPhongWithGammaCorrectionFragmentShader"];
+        id<MTLFunction> noGammaFunc = [library newFunctionWithName:@"blinnPhongWithoutGammaCorrectionFragmentShader"];
         
         MTLRenderPipelineDescriptor *renderDescriptor = [MTLRenderPipelineDescriptor new];
         renderDescriptor.label = @"render descritpor";
         renderDescriptor.vertexFunction = vertexFunc;
-        renderDescriptor.fragmentFunction = phongFunc;
+        renderDescriptor.fragmentFunction = blinnPhongFunc;
         renderDescriptor.vertexDescriptor = mtlVertexDescriptor;
         renderDescriptor.colorAttachments[0].pixelFormat = mtkView.colorPixelFormat;
         renderDescriptor.depthAttachmentPixelFormat = mtkView.depthStencilPixelFormat;
         renderDescriptor.sampleCount = mtkView.sampleCount;
         
-        _phongRenderPipelineState = [_device newRenderPipelineStateWithDescriptor:renderDescriptor error:&error];
-        NSAssert(_phongRenderPipelineState, @"render pipeline State error: %@", error);
-        
-        renderDescriptor.fragmentFunction = blinnPhongFunc;
         _blinnPhongPipelineState = [_device newRenderPipelineStateWithDescriptor:renderDescriptor error:&error];
         NSAssert(_blinnPhongPipelineState, @"render blinn phong state error: %@", error);
+        
+        renderDescriptor.fragmentFunction = noGammaFunc;
+        _blinnPhongNoGammaPipelineState = [_device newRenderPipelineStateWithDescriptor:renderDescriptor error:&error];
+        NSAssert(_blinnPhongNoGammaPipelineState, @"render no gamma correction pipeline error: %@", error);
         
         MTLSamplerDescriptor *samplerDescriptor = [MTLSamplerDescriptor new];
         samplerDescriptor.minFilter = MTLSamplerMinMagFilterLinear;
@@ -136,7 +143,6 @@ const float PI = 3.1415926;
         _argumentBuffer = [_device newBufferWithLength:argumentEncoder.encodedLength options:MTLResourceStorageModeShared];
         _argumentBuffer.label = @"ArgumentBuffer";
         [argumentEncoder setArgumentBuffer:_argumentBuffer offset:0];
-        [argumentEncoder setTexture:_wood atIndex:FragmentArgumentBufferIndexTexture];
         [argumentEncoder setSamplerState:sampler atIndex:FragmentArgumentBufferIndexSampler];
         _cameraPos = [_camera getCameraPosition];
         _viewPosBuffer = [_device newBufferWithBytes:&_cameraPos
@@ -144,8 +150,24 @@ const float PI = 3.1415926;
                                              options:MTLResourceStorageModeShared];
         [argumentEncoder setBuffer:_viewPosBuffer offset:0 atIndex:FragmentArgumentBufferIndexViewPosition];
         
-        void* lightPosPtr = [argumentEncoder constantDataAtIndex:FragmentArgumentBufferIndexLightPosition];
-        memcpy(lightPosPtr, &_lightPos, sizeof(_lightPos));
+        vector_float3 lightPositions[4] = {
+            {-3.0, 0.0, 0.0},
+            {-1.0, 0.0, 0.0},
+            { 1.0, 0.0, 0.0},
+            { 3.0, 0.0, 0.0},
+        };
+        void *lightPosPtr = [argumentEncoder constantDataAtIndex:FragmentArgumentBufferIndexLightPosition];
+        memcpy(lightPosPtr, lightPositions, sizeof(lightPositions));
+        
+        vector_float3 lightColors[4] = {
+            {0.25, 0.25, 0.25},
+            {0.50, 0.50, 0.50},
+            {0.75, 0.75, 0.75},
+            {1.00, 1.00, 1.00},
+        };
+        
+        void *lightColorsPtr = [argumentEncoder constantDataAtIndex:FragmentArgumentBufferIndexLightColors];
+        memcpy(lightColorsPtr, lightColors, sizeof(lightColors));
         
         double width = mtkView.frame.size.width;
         double height = mtkView.frame.size.height;
@@ -175,8 +197,8 @@ const float PI = 3.1415926;
     memcpy(viewPosPtr, &_cameraPos, sizeof(_cameraPos));
 }
 
-- (void) enableBlinnPhong:(BOOL) enabled {
-    _isBlinnPhong = enabled;
+- (void) enableGammaCorrection:(BOOL) enabled {
+    _hasGammaCorrection = enabled;
 }
 
 
@@ -189,11 +211,12 @@ const float PI = 3.1415926;
     
     [renderEncoder setLabel:@"render encoder"];
     [renderEncoder setViewport:_viewPort];
-    if (_isBlinnPhong) {
+    if (_hasGammaCorrection) {
         [renderEncoder setRenderPipelineState:_blinnPhongPipelineState];
     } else {
-        [renderEncoder setRenderPipelineState:_phongRenderPipelineState];
+        [renderEncoder setRenderPipelineState:_blinnPhongNoGammaPipelineState];
     }
+    
     [renderEncoder setDepthStencilState:_depthState];
     [renderEncoder setCullMode:MTLCullModeFront];
     [renderEncoder setFrontFacingWinding:MTLWindingCounterClockwise];
@@ -209,6 +232,11 @@ const float PI = 3.1415926;
     
     [renderEncoder setVertexBytes:&_uniform length:sizeof(_uniform) atIndex:VertexInputIndexUniform];
     [renderEncoder setFragmentBuffer:_argumentBuffer offset:0 atIndex:FragmentInputIndexArgumentBuffer];
+    if (_hasGammaCorrection) {
+        [renderEncoder setFragmentTexture:_woodGammaCorrection atIndex:FragmentInputIndexTexture];
+    } else {
+        [renderEncoder setFragmentTexture:_wood atIndex:FragmentInputIndexTexture];
+    }
     
     for (int i = 0; i < _planeMesh.submeshes.count; i++) {
         MTKSubmesh *subMesh = _planeMesh.submeshes[i];

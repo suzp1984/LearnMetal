@@ -125,6 +125,9 @@
       location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/MSAA/4.14.MSAA.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:BlinnPhong/BlinnPhong.xcodeproj">
+      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/BlinnPhong/5.1.BlinnPhong.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/GammaCorrection/5.2.GammaCorrection.xcodeproj">
    </FileRef>
 </Workspace>

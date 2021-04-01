@@ -1,0 +1,628 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		379521AD2615DE2900628968 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 379521AC2615DE2900628968 /* AppDelegate.m */; };
+		379521B02615DE2900628968 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 379521AF2615DE2900628968 /* ViewController.m */; };
+		379521B22615DE2C00628968 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 379521B12615DE2C00628968 /* Assets.xcassets */; };
+		379521B52615DE2C00628968 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379521B32615DE2C00628968 /* Main.storyboard */; };
+		379521B82615DE2C00628968 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 379521B72615DE2C00628968 /* main.m */; };
+		379521C32615DE2C00628968 /* GammaCorrectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 379521C22615DE2C00628968 /* GammaCorrectionTests.m */; };
+		379521CE2615DE2C00628968 /* GammaCorrectionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 379521CD2615DE2C00628968 /* GammaCorrectionUITests.m */; };
+		379521E02615DE6900628968 /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379521DF2615DE6900628968 /* common.framework */; };
+		379521E12615DE6900628968 /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 379521DF2615DE6900628968 /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		379521E52615DE7100628968 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379521E32615DE7100628968 /* MetalKit.framework */; };
+		379521E62615DE7100628968 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379521E42615DE7100628968 /* Metal.framework */; };
+		379521EC2615DF1C00628968 /* Renderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 379521EB2615DF1C00628968 /* Renderer.m */; };
+		379521F22615DF5B00628968 /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 379521F12615DF5B00628968 /* Shader.metal */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		379521BF2615DE2C00628968 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 379521A02615DE2900628968 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 379521A72615DE2900628968;
+			remoteInfo = GammaCorrection;
+		};
+		379521CA2615DE2C00628968 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 379521A02615DE2900628968 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 379521A72615DE2900628968;
+			remoteInfo = GammaCorrection;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		379521E22615DE6900628968 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				379521E12615DE6900628968 /* common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		379521A82615DE2900628968 /* 5.2.GammaCorrection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 5.2.GammaCorrection.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		379521AB2615DE2900628968 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		379521AC2615DE2900628968 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		379521AE2615DE2900628968 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		379521AF2615DE2900628968 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		379521B12615DE2C00628968 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		379521B42615DE2C00628968 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		379521B62615DE2C00628968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		379521B72615DE2C00628968 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		379521B92615DE2C00628968 /* GammaCorrection.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GammaCorrection.entitlements; sourceTree = "<group>"; };
+		379521BE2615DE2C00628968 /* GammaCorrectionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GammaCorrectionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		379521C22615DE2C00628968 /* GammaCorrectionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GammaCorrectionTests.m; sourceTree = "<group>"; };
+		379521C42615DE2C00628968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		379521C92615DE2C00628968 /* GammaCorrectionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GammaCorrectionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		379521CD2615DE2C00628968 /* GammaCorrectionUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GammaCorrectionUITests.m; sourceTree = "<group>"; };
+		379521CF2615DE2C00628968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		379521DF2615DE6900628968 /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		379521E32615DE7100628968 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		379521E42615DE7100628968 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		379521E92615DEDF00628968 /* ShaderType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderType.h; sourceTree = "<group>"; };
+		379521EA2615DEFA00628968 /* Renderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
+		379521EB2615DF1C00628968 /* Renderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Renderer.m; sourceTree = "<group>"; };
+		379521F12615DF5B00628968 /* Shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader.metal; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		379521A52615DE2900628968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				379521E02615DE6900628968 /* common.framework in Frameworks */,
+				379521E62615DE7100628968 /* Metal.framework in Frameworks */,
+				379521E52615DE7100628968 /* MetalKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		379521BB2615DE2C00628968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		379521C62615DE2C00628968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3795219F2615DE2900628968 = {
+			isa = PBXGroup;
+			children = (
+				379521AA2615DE2900628968 /* GammaCorrection */,
+				379521C12615DE2C00628968 /* GammaCorrectionTests */,
+				379521CC2615DE2C00628968 /* GammaCorrectionUITests */,
+				379521A92615DE2900628968 /* Products */,
+				379521DE2615DE6900628968 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		379521A92615DE2900628968 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				379521A82615DE2900628968 /* 5.2.GammaCorrection.app */,
+				379521BE2615DE2C00628968 /* GammaCorrectionTests.xctest */,
+				379521C92615DE2C00628968 /* GammaCorrectionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		379521AA2615DE2900628968 /* GammaCorrection */ = {
+			isa = PBXGroup;
+			children = (
+				379521AB2615DE2900628968 /* AppDelegate.h */,
+				379521AC2615DE2900628968 /* AppDelegate.m */,
+				379521AE2615DE2900628968 /* ViewController.h */,
+				379521AF2615DE2900628968 /* ViewController.m */,
+				379521B12615DE2C00628968 /* Assets.xcassets */,
+				379521B32615DE2C00628968 /* Main.storyboard */,
+				379521B62615DE2C00628968 /* Info.plist */,
+				379521B72615DE2C00628968 /* main.m */,
+				379521B92615DE2C00628968 /* GammaCorrection.entitlements */,
+				379521E92615DEDF00628968 /* ShaderType.h */,
+				379521EA2615DEFA00628968 /* Renderer.h */,
+				379521EB2615DF1C00628968 /* Renderer.m */,
+				379521F12615DF5B00628968 /* Shader.metal */,
+			);
+			path = GammaCorrection;
+			sourceTree = "<group>";
+		};
+		379521C12615DE2C00628968 /* GammaCorrectionTests */ = {
+			isa = PBXGroup;
+			children = (
+				379521C22615DE2C00628968 /* GammaCorrectionTests.m */,
+				379521C42615DE2C00628968 /* Info.plist */,
+			);
+			path = GammaCorrectionTests;
+			sourceTree = "<group>";
+		};
+		379521CC2615DE2C00628968 /* GammaCorrectionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				379521CD2615DE2C00628968 /* GammaCorrectionUITests.m */,
+				379521CF2615DE2C00628968 /* Info.plist */,
+			);
+			path = GammaCorrectionUITests;
+			sourceTree = "<group>";
+		};
+		379521DE2615DE6900628968 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				379521E42615DE7100628968 /* Metal.framework */,
+				379521E32615DE7100628968 /* MetalKit.framework */,
+				379521DF2615DE6900628968 /* common.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		379521A72615DE2900628968 /* 5.2.GammaCorrection */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 379521D22615DE2C00628968 /* Build configuration list for PBXNativeTarget "5.2.GammaCorrection" */;
+			buildPhases = (
+				379521A42615DE2900628968 /* Sources */,
+				379521A52615DE2900628968 /* Frameworks */,
+				379521A62615DE2900628968 /* Resources */,
+				379521E22615DE6900628968 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 5.2.GammaCorrection;
+			productName = GammaCorrection;
+			productReference = 379521A82615DE2900628968 /* 5.2.GammaCorrection.app */;
+			productType = "com.apple.product-type.application";
+		};
+		379521BD2615DE2C00628968 /* GammaCorrectionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 379521D52615DE2C00628968 /* Build configuration list for PBXNativeTarget "GammaCorrectionTests" */;
+			buildPhases = (
+				379521BA2615DE2C00628968 /* Sources */,
+				379521BB2615DE2C00628968 /* Frameworks */,
+				379521BC2615DE2C00628968 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				379521C02615DE2C00628968 /* PBXTargetDependency */,
+			);
+			name = GammaCorrectionTests;
+			productName = GammaCorrectionTests;
+			productReference = 379521BE2615DE2C00628968 /* GammaCorrectionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		379521C82615DE2C00628968 /* GammaCorrectionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 379521D82615DE2C00628968 /* Build configuration list for PBXNativeTarget "GammaCorrectionUITests" */;
+			buildPhases = (
+				379521C52615DE2C00628968 /* Sources */,
+				379521C62615DE2C00628968 /* Frameworks */,
+				379521C72615DE2C00628968 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				379521CB2615DE2C00628968 /* PBXTargetDependency */,
+			);
+			name = GammaCorrectionUITests;
+			productName = GammaCorrectionUITests;
+			productReference = 379521C92615DE2C00628968 /* GammaCorrectionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		379521A02615DE2900628968 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					379521A72615DE2900628968 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					379521BD2615DE2C00628968 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 379521A72615DE2900628968;
+					};
+					379521C82615DE2C00628968 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 379521A72615DE2900628968;
+					};
+				};
+			};
+			buildConfigurationList = 379521A32615DE2900628968 /* Build configuration list for PBXProject "5.2.GammaCorrection" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3795219F2615DE2900628968;
+			productRefGroup = 379521A92615DE2900628968 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				379521A72615DE2900628968 /* 5.2.GammaCorrection */,
+				379521BD2615DE2C00628968 /* GammaCorrectionTests */,
+				379521C82615DE2C00628968 /* GammaCorrectionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		379521A62615DE2900628968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				379521B22615DE2C00628968 /* Assets.xcassets in Resources */,
+				379521B52615DE2C00628968 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		379521BC2615DE2C00628968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		379521C72615DE2C00628968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		379521A42615DE2900628968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				379521EC2615DF1C00628968 /* Renderer.m in Sources */,
+				379521B02615DE2900628968 /* ViewController.m in Sources */,
+				379521B82615DE2C00628968 /* main.m in Sources */,
+				379521F22615DF5B00628968 /* Shader.metal in Sources */,
+				379521AD2615DE2900628968 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		379521BA2615DE2C00628968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				379521C32615DE2C00628968 /* GammaCorrectionTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		379521C52615DE2C00628968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				379521CE2615DE2C00628968 /* GammaCorrectionUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		379521C02615DE2C00628968 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 379521A72615DE2900628968 /* 5.2.GammaCorrection */;
+			targetProxy = 379521BF2615DE2C00628968 /* PBXContainerItemProxy */;
+		};
+		379521CB2615DE2C00628968 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 379521A72615DE2900628968 /* 5.2.GammaCorrection */;
+			targetProxy = 379521CA2615DE2C00628968 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		379521B32615DE2C00628968 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				379521B42615DE2C00628968 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		379521D02615DE2C00628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		379521D12615DE2C00628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		379521D32615DE2C00628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GammaCorrection/GammaCorrection.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = GammaCorrection/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.GammaCorrection;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		379521D42615DE2C00628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GammaCorrection/GammaCorrection.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = GammaCorrection/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.GammaCorrection;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		379521D62615DE2C00628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = GammaCorrectionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.GammaCorrectionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GammaCorrection.app/Contents/MacOS/GammaCorrection";
+			};
+			name = Debug;
+		};
+		379521D72615DE2C00628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = GammaCorrectionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.GammaCorrectionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GammaCorrection.app/Contents/MacOS/GammaCorrection";
+			};
+			name = Release;
+		};
+		379521D92615DE2C00628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = GammaCorrectionUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.GammaCorrectionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GammaCorrection;
+			};
+			name = Debug;
+		};
+		379521DA2615DE2C00628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = GammaCorrectionUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.GammaCorrectionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GammaCorrection;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		379521A32615DE2900628968 /* Build configuration list for PBXProject "5.2.GammaCorrection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				379521D02615DE2C00628968 /* Debug */,
+				379521D12615DE2C00628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		379521D22615DE2C00628968 /* Build configuration list for PBXNativeTarget "5.2.GammaCorrection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				379521D32615DE2C00628968 /* Debug */,
+				379521D42615DE2C00628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		379521D52615DE2C00628968 /* Build configuration list for PBXNativeTarget "GammaCorrectionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				379521D62615DE2C00628968 /* Debug */,
+				379521D72615DE2C00628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		379521D82615DE2C00628968 /* Build configuration list for PBXNativeTarget "GammaCorrectionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				379521D92615DE2C00628968 /* Debug */,
+				379521DA2615DE2C00628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 379521A02615DE2900628968 /* Project object */;
+}

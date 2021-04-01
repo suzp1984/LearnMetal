@@ -1,8 +1,8 @@
 //
 //  ViewController.m
-//  BlinnPhong
+//  GammaCorrection
 //
-//  Created by Jacob Su on 3/31/21.
+//  Created by Jacob Su on 4/1/21.
 //
 
 #import "ViewController.h"
@@ -43,7 +43,7 @@
     gammaCorrectionSwitch.action = @selector(blinnSwitchChanged);
     
     NSTextField *label = [NSTextField new];
-    [label setStringValue:@"enable blinn phong"];
+    [label setStringValue:@"enable gamma correction"];
     [label setEditable:false];
     [label setBordered:false];
     [label setBackgroundColor:nil];
@@ -80,7 +80,7 @@
 }
 
 - (void)blinnSwitchChanged {
-    [renderer enableBlinnPhong:(gammaCorrectionSwitch.state == NSControlStateValueOn)];
+    [renderer enableGammaCorrection:(gammaCorrectionSwitch.state == NSControlStateValueOn)];
 }
 
 @end

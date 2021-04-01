@@ -54,7 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		379520F12614B4E500628968 /* BlinnPhong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlinnPhong.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		379520F12614B4E500628968 /* 5.1.BlinnPhong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 5.1.BlinnPhong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		379520F42614B4E500628968 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		379520F52614B4E500628968 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		379520F72614B4E500628968 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 		379520F22614B4E500628968 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				379520F12614B4E500628968 /* BlinnPhong.app */,
+				379520F12614B4E500628968 /* 5.1.BlinnPhong.app */,
 				379521072614B4E800628968 /* BlinnPhongTests.xctest */,
 				379521122614B4E800628968 /* BlinnPhongUITests.xctest */,
 			);
@@ -179,9 +179,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		379520F02614B4E500628968 /* BlinnPhong */ = {
+		379520F02614B4E500628968 /* 5.1.BlinnPhong */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3795211B2614B4E800628968 /* Build configuration list for PBXNativeTarget "BlinnPhong" */;
+			buildConfigurationList = 3795211B2614B4E800628968 /* Build configuration list for PBXNativeTarget "5.1.BlinnPhong" */;
 			buildPhases = (
 				379520ED2614B4E500628968 /* Sources */,
 				379520EE2614B4E500628968 /* Frameworks */,
@@ -192,9 +192,9 @@
 			);
 			dependencies = (
 			);
-			name = BlinnPhong;
+			name = 5.1.BlinnPhong;
 			productName = BlinnPhong;
-			productReference = 379520F12614B4E500628968 /* BlinnPhong.app */;
+			productReference = 379520F12614B4E500628968 /* 5.1.BlinnPhong.app */;
 			productType = "com.apple.product-type.application";
 		};
 		379521062614B4E800628968 /* BlinnPhongTests */ = {
@@ -254,7 +254,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 379520EC2614B4E500628968 /* Build configuration list for PBXProject "BlinnPhong" */;
+			buildConfigurationList = 379520EC2614B4E500628968 /* Build configuration list for PBXProject "5.1.BlinnPhong" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -267,7 +267,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				379520F02614B4E500628968 /* BlinnPhong */,
+				379520F02614B4E500628968 /* 5.1.BlinnPhong */,
 				379521062614B4E800628968 /* BlinnPhongTests */,
 				379521112614B4E800628968 /* BlinnPhongUITests */,
 			);
@@ -334,12 +334,12 @@
 /* Begin PBXTargetDependency section */
 		379521092614B4E800628968 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 379520F02614B4E500628968 /* BlinnPhong */;
+			target = 379520F02614B4E500628968 /* 5.1.BlinnPhong */;
 			targetProxy = 379521082614B4E800628968 /* PBXContainerItemProxy */;
 		};
 		379521142614B4E800628968 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 379520F02614B4E500628968 /* BlinnPhong */;
+			target = 379520F02614B4E500628968 /* 5.1.BlinnPhong */;
 			targetProxy = 379521132614B4E800628968 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -586,7 +586,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		379520EC2614B4E500628968 /* Build configuration list for PBXProject "BlinnPhong" */ = {
+		379520EC2614B4E500628968 /* Build configuration list for PBXProject "5.1.BlinnPhong" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				379521192614B4E800628968 /* Debug */,
@@ -595,7 +595,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3795211B2614B4E800628968 /* Build configuration list for PBXNativeTarget "BlinnPhong" */ = {
+		3795211B2614B4E800628968 /* Build configuration list for PBXNativeTarget "5.1.BlinnPhong" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3795211C2614B4E800628968 /* Debug */,
