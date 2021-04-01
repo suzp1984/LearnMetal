@@ -1,0 +1,628 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		379520F62614B4E500628968 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 379520F52614B4E500628968 /* AppDelegate.m */; };
+		379520F92614B4E500628968 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 379520F82614B4E500628968 /* ViewController.m */; };
+		379520FB2614B4E800628968 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 379520FA2614B4E800628968 /* Assets.xcassets */; };
+		379520FE2614B4E800628968 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379520FC2614B4E800628968 /* Main.storyboard */; };
+		379521012614B4E800628968 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 379521002614B4E800628968 /* main.m */; };
+		3795210C2614B4E800628968 /* BlinnPhongTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3795210B2614B4E800628968 /* BlinnPhongTests.m */; };
+		379521172614B4E800628968 /* BlinnPhongUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 379521162614B4E800628968 /* BlinnPhongUITests.m */; };
+		379521292614B53400628968 /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379521282614B53400628968 /* common.framework */; };
+		3795212A2614B53400628968 /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 379521282614B53400628968 /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3795212E2614B53D00628968 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3795212C2614B53D00628968 /* Metal.framework */; };
+		3795212F2614B53D00628968 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3795212D2614B53D00628968 /* MetalKit.framework */; };
+		37952135261554AF00628968 /* BlinnPhongShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 37952134261554AF00628968 /* BlinnPhongShader.metal */; };
+		3795213E26155FC700628968 /* Renderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3795213D26155FC700628968 /* Renderer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		379521082614B4E800628968 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 379520E92614B4E500628968 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 379520F02614B4E500628968;
+			remoteInfo = BlinnPhong;
+		};
+		379521132614B4E800628968 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 379520E92614B4E500628968 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 379520F02614B4E500628968;
+			remoteInfo = BlinnPhong;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3795212B2614B53400628968 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3795212A2614B53400628968 /* common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		379520F12614B4E500628968 /* BlinnPhong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlinnPhong.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		379520F42614B4E500628968 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		379520F52614B4E500628968 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		379520F72614B4E500628968 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		379520F82614B4E500628968 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		379520FA2614B4E800628968 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		379520FD2614B4E800628968 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		379520FF2614B4E800628968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		379521002614B4E800628968 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		379521022614B4E800628968 /* BlinnPhong.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BlinnPhong.entitlements; sourceTree = "<group>"; };
+		379521072614B4E800628968 /* BlinnPhongTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlinnPhongTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3795210B2614B4E800628968 /* BlinnPhongTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlinnPhongTests.m; sourceTree = "<group>"; };
+		3795210D2614B4E800628968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		379521122614B4E800628968 /* BlinnPhongUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlinnPhongUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		379521162614B4E800628968 /* BlinnPhongUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlinnPhongUITests.m; sourceTree = "<group>"; };
+		379521182614B4E800628968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		379521282614B53400628968 /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3795212C2614B53D00628968 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		3795212D2614B53D00628968 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		379521332615541800628968 /* ShaderType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderType.h; sourceTree = "<group>"; };
+		37952134261554AF00628968 /* BlinnPhongShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = BlinnPhongShader.metal; sourceTree = "<group>"; };
+		3795213A26155F6200628968 /* Renderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
+		3795213D26155FC700628968 /* Renderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Renderer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		379520EE2614B4E500628968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3795212F2614B53D00628968 /* MetalKit.framework in Frameworks */,
+				3795212E2614B53D00628968 /* Metal.framework in Frameworks */,
+				379521292614B53400628968 /* common.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		379521042614B4E800628968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3795210F2614B4E800628968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		379520E82614B4E500628968 = {
+			isa = PBXGroup;
+			children = (
+				379520F32614B4E500628968 /* BlinnPhong */,
+				3795210A2614B4E800628968 /* BlinnPhongTests */,
+				379521152614B4E800628968 /* BlinnPhongUITests */,
+				379520F22614B4E500628968 /* Products */,
+				379521272614B53400628968 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		379520F22614B4E500628968 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				379520F12614B4E500628968 /* BlinnPhong.app */,
+				379521072614B4E800628968 /* BlinnPhongTests.xctest */,
+				379521122614B4E800628968 /* BlinnPhongUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		379520F32614B4E500628968 /* BlinnPhong */ = {
+			isa = PBXGroup;
+			children = (
+				379520F42614B4E500628968 /* AppDelegate.h */,
+				379520F52614B4E500628968 /* AppDelegate.m */,
+				379520F72614B4E500628968 /* ViewController.h */,
+				379520F82614B4E500628968 /* ViewController.m */,
+				379520FA2614B4E800628968 /* Assets.xcassets */,
+				379520FC2614B4E800628968 /* Main.storyboard */,
+				379520FF2614B4E800628968 /* Info.plist */,
+				379521002614B4E800628968 /* main.m */,
+				379521022614B4E800628968 /* BlinnPhong.entitlements */,
+				379521332615541800628968 /* ShaderType.h */,
+				37952134261554AF00628968 /* BlinnPhongShader.metal */,
+				3795213A26155F6200628968 /* Renderer.h */,
+				3795213D26155FC700628968 /* Renderer.m */,
+			);
+			path = BlinnPhong;
+			sourceTree = "<group>";
+		};
+		3795210A2614B4E800628968 /* BlinnPhongTests */ = {
+			isa = PBXGroup;
+			children = (
+				3795210B2614B4E800628968 /* BlinnPhongTests.m */,
+				3795210D2614B4E800628968 /* Info.plist */,
+			);
+			path = BlinnPhongTests;
+			sourceTree = "<group>";
+		};
+		379521152614B4E800628968 /* BlinnPhongUITests */ = {
+			isa = PBXGroup;
+			children = (
+				379521162614B4E800628968 /* BlinnPhongUITests.m */,
+				379521182614B4E800628968 /* Info.plist */,
+			);
+			path = BlinnPhongUITests;
+			sourceTree = "<group>";
+		};
+		379521272614B53400628968 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3795212C2614B53D00628968 /* Metal.framework */,
+				3795212D2614B53D00628968 /* MetalKit.framework */,
+				379521282614B53400628968 /* common.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		379520F02614B4E500628968 /* BlinnPhong */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3795211B2614B4E800628968 /* Build configuration list for PBXNativeTarget "BlinnPhong" */;
+			buildPhases = (
+				379520ED2614B4E500628968 /* Sources */,
+				379520EE2614B4E500628968 /* Frameworks */,
+				379520EF2614B4E500628968 /* Resources */,
+				3795212B2614B53400628968 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlinnPhong;
+			productName = BlinnPhong;
+			productReference = 379520F12614B4E500628968 /* BlinnPhong.app */;
+			productType = "com.apple.product-type.application";
+		};
+		379521062614B4E800628968 /* BlinnPhongTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3795211E2614B4E800628968 /* Build configuration list for PBXNativeTarget "BlinnPhongTests" */;
+			buildPhases = (
+				379521032614B4E800628968 /* Sources */,
+				379521042614B4E800628968 /* Frameworks */,
+				379521052614B4E800628968 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				379521092614B4E800628968 /* PBXTargetDependency */,
+			);
+			name = BlinnPhongTests;
+			productName = BlinnPhongTests;
+			productReference = 379521072614B4E800628968 /* BlinnPhongTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		379521112614B4E800628968 /* BlinnPhongUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 379521212614B4E800628968 /* Build configuration list for PBXNativeTarget "BlinnPhongUITests" */;
+			buildPhases = (
+				3795210E2614B4E800628968 /* Sources */,
+				3795210F2614B4E800628968 /* Frameworks */,
+				379521102614B4E800628968 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				379521142614B4E800628968 /* PBXTargetDependency */,
+			);
+			name = BlinnPhongUITests;
+			productName = BlinnPhongUITests;
+			productReference = 379521122614B4E800628968 /* BlinnPhongUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		379520E92614B4E500628968 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					379520F02614B4E500628968 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					379521062614B4E800628968 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 379520F02614B4E500628968;
+					};
+					379521112614B4E800628968 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 379520F02614B4E500628968;
+					};
+				};
+			};
+			buildConfigurationList = 379520EC2614B4E500628968 /* Build configuration list for PBXProject "BlinnPhong" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 379520E82614B4E500628968;
+			productRefGroup = 379520F22614B4E500628968 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				379520F02614B4E500628968 /* BlinnPhong */,
+				379521062614B4E800628968 /* BlinnPhongTests */,
+				379521112614B4E800628968 /* BlinnPhongUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		379520EF2614B4E500628968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				379520FB2614B4E800628968 /* Assets.xcassets in Resources */,
+				379520FE2614B4E800628968 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		379521052614B4E800628968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		379521102614B4E800628968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		379520ED2614B4E500628968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				379520F92614B4E500628968 /* ViewController.m in Sources */,
+				379521012614B4E800628968 /* main.m in Sources */,
+				379520F62614B4E500628968 /* AppDelegate.m in Sources */,
+				3795213E26155FC700628968 /* Renderer.m in Sources */,
+				37952135261554AF00628968 /* BlinnPhongShader.metal in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		379521032614B4E800628968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3795210C2614B4E800628968 /* BlinnPhongTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3795210E2614B4E800628968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				379521172614B4E800628968 /* BlinnPhongUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		379521092614B4E800628968 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 379520F02614B4E500628968 /* BlinnPhong */;
+			targetProxy = 379521082614B4E800628968 /* PBXContainerItemProxy */;
+		};
+		379521142614B4E800628968 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 379520F02614B4E500628968 /* BlinnPhong */;
+			targetProxy = 379521132614B4E800628968 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		379520FC2614B4E800628968 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				379520FD2614B4E800628968 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		379521192614B4E800628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3795211A2614B4E800628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3795211C2614B4E800628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BlinnPhong/BlinnPhong.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = BlinnPhong/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.BlinnPhong;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3795211D2614B4E800628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BlinnPhong/BlinnPhong.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = BlinnPhong/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.BlinnPhong;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3795211F2614B4E800628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = BlinnPhongTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.BlinnPhongTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlinnPhong.app/Contents/MacOS/BlinnPhong";
+			};
+			name = Debug;
+		};
+		379521202614B4E800628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = BlinnPhongTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.BlinnPhongTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlinnPhong.app/Contents/MacOS/BlinnPhong";
+			};
+			name = Release;
+		};
+		379521222614B4E800628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = BlinnPhongUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.BlinnPhongUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BlinnPhong;
+			};
+			name = Debug;
+		};
+		379521232614B4E800628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = BlinnPhongUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.BlinnPhongUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BlinnPhong;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		379520EC2614B4E500628968 /* Build configuration list for PBXProject "BlinnPhong" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				379521192614B4E800628968 /* Debug */,
+				3795211A2614B4E800628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3795211B2614B4E800628968 /* Build configuration list for PBXNativeTarget "BlinnPhong" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3795211C2614B4E800628968 /* Debug */,
+				3795211D2614B4E800628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3795211E2614B4E800628968 /* Build configuration list for PBXNativeTarget "BlinnPhongTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3795211F2614B4E800628968 /* Debug */,
+				379521202614B4E800628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		379521212614B4E800628968 /* Build configuration list for PBXNativeTarget "BlinnPhongUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				379521222614B4E800628968 /* Debug */,
+				379521232614B4E800628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 379520E92614B4E500628968 /* Project object */;
+}
