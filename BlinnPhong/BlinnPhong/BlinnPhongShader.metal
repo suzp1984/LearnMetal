@@ -44,7 +44,7 @@ vertex RasterizerData vertexShader(uint vertexID [[vertex_id]],
     
     out.normal = transpose3x3 * vert.normal;
     
-    out.texCoord = vert.texCoord;
+    out.texCoord = vert.texCoord * 5.0;
     
     return out;
 }
@@ -76,7 +76,7 @@ fragment float4 blinnPhongFragmentShader(RasterizerData in [[stage_in]],
     
     // blinn
     float3 halfwayDir = normalize(lightDir + viewDir);
-    spec = pow(max(dot(normal, halfwayDir), 0.0), 32.0);
+    spec = pow(max(dot(normal, halfwayDir), 0.0), 16.0);
     
     float3 specular = float3(0.3) * spec;
     

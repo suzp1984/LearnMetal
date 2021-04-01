@@ -39,6 +39,7 @@ const float PI = 3.1415926;
     if (self) {
         _isBlinnPhong = true;
         mtkView.delegate = self;
+        mtkView.sampleCount = 4;
         _camera = [[Camera alloc] initWithPosition:(vector_float3){0.0, 0.0, 3.0}
                                         withTarget:(vector_float3) {0.0, 0.0, 0.0}
                                             withUp:(vector_float3) {0.0, 1.0, 0.0}];
@@ -106,6 +107,7 @@ const float PI = 3.1415926;
         renderDescriptor.vertexDescriptor = mtlVertexDescriptor;
         renderDescriptor.colorAttachments[0].pixelFormat = mtkView.colorPixelFormat;
         renderDescriptor.depthAttachmentPixelFormat = mtkView.depthStencilPixelFormat;
+        renderDescriptor.sampleCount = mtkView.sampleCount;
         
         _phongRenderPipelineState = [_device newRenderPipelineStateWithDescriptor:renderDescriptor error:&error];
         NSAssert(_phongRenderPipelineState, @"render pipeline State error: %@", error);
@@ -120,6 +122,8 @@ const float PI = 3.1415926;
         samplerDescriptor.mipFilter = MTLSamplerMipFilterNotMipmapped;
         samplerDescriptor.normalizedCoordinates = TRUE;
         samplerDescriptor.supportArgumentBuffers = TRUE;
+        samplerDescriptor.sAddressMode = MTLSamplerAddressModeRepeat;
+        samplerDescriptor.tAddressMode = MTLSamplerAddressModeRepeat;
         
         id<MTLSamplerState> sampler = [_device newSamplerStateWithDescriptor:samplerDescriptor];
         
