@@ -130,4 +130,7 @@
    <FileRef
       location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/GammaCorrection/5.2.GammaCorrection.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/ShadowMapping/5.3.ShadowMapping.xcodeproj">
+   </FileRef>
 </Workspace>

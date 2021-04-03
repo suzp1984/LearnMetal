@@ -1,0 +1,645 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3795220526170E4B00628968 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795220426170E4B00628968 /* AppDelegate.swift */; };
+		3795220726170E4B00628968 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795220626170E4B00628968 /* ViewController.swift */; };
+		3795220926170E4E00628968 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3795220826170E4E00628968 /* Assets.xcassets */; };
+		3795220C26170E4E00628968 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3795220A26170E4E00628968 /* Main.storyboard */; };
+		3795221826170E4E00628968 /* ShadowMappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795221726170E4E00628968 /* ShadowMappingTests.swift */; };
+		3795222326170E4E00628968 /* ShadowMappingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795222226170E4E00628968 /* ShadowMappingUITests.swift */; };
+		3795223526170E6A00628968 /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3795223426170E6A00628968 /* common.framework */; };
+		3795223626170E6A00628968 /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3795223426170E6A00628968 /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3795223A26170E7200628968 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3795223826170E7200628968 /* Metal.framework */; };
+		3795223B26170E7200628968 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3795223926170E7200628968 /* MetalKit.framework */; };
+		3795224126170F5800628968 /* ShaderType.m in Sources */ = {isa = PBXBuildFile; fileRef = 3795224026170F5800628968 /* ShaderType.m */; };
+		3795224526170F9E00628968 /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3795224426170F9E00628968 /* Shader.metal */; };
+		379522492617101700628968 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379522482617101700628968 /* Renderer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3795221426170E4E00628968 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 379521F926170E4B00628968 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3795220026170E4B00628968;
+			remoteInfo = ShadowMapping;
+		};
+		3795221F26170E4E00628968 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 379521F926170E4B00628968 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3795220026170E4B00628968;
+			remoteInfo = ShadowMapping;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3795223726170E6A00628968 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3795223626170E6A00628968 /* common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3795220126170E4B00628968 /* 5.3.ShadowMapping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 5.3.ShadowMapping.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3795220426170E4B00628968 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3795220626170E4B00628968 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3795220826170E4E00628968 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3795220B26170E4E00628968 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3795220D26170E4E00628968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3795220E26170E4E00628968 /* ShadowMapping.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShadowMapping.entitlements; sourceTree = "<group>"; };
+		3795221326170E4E00628968 /* ShadowMappingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShadowMappingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3795221726170E4E00628968 /* ShadowMappingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowMappingTests.swift; sourceTree = "<group>"; };
+		3795221926170E4E00628968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3795221E26170E4E00628968 /* ShadowMappingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShadowMappingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3795222226170E4E00628968 /* ShadowMappingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowMappingUITests.swift; sourceTree = "<group>"; };
+		3795222426170E4E00628968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3795223426170E6A00628968 /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3795223826170E7200628968 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		3795223926170E7200628968 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		3795223E26170F2E00628968 /* ShaderType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderType.h; sourceTree = "<group>"; };
+		3795223F26170F5700628968 /* ShadowMapping-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShadowMapping-Bridging-Header.h"; sourceTree = "<group>"; };
+		3795224026170F5800628968 /* ShaderType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShaderType.m; sourceTree = "<group>"; };
+		3795224426170F9E00628968 /* Shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader.metal; sourceTree = "<group>"; };
+		379522482617101700628968 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		379521FE26170E4B00628968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3795223B26170E7200628968 /* MetalKit.framework in Frameworks */,
+				3795223A26170E7200628968 /* Metal.framework in Frameworks */,
+				3795223526170E6A00628968 /* common.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3795221026170E4E00628968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3795221B26170E4E00628968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		379521F826170E4B00628968 = {
+			isa = PBXGroup;
+			children = (
+				3795220326170E4B00628968 /* ShadowMapping */,
+				3795221626170E4E00628968 /* ShadowMappingTests */,
+				3795222126170E4E00628968 /* ShadowMappingUITests */,
+				3795220226170E4B00628968 /* Products */,
+				3795223326170E6A00628968 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3795220226170E4B00628968 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3795220126170E4B00628968 /* 5.3.ShadowMapping.app */,
+				3795221326170E4E00628968 /* ShadowMappingTests.xctest */,
+				3795221E26170E4E00628968 /* ShadowMappingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3795220326170E4B00628968 /* ShadowMapping */ = {
+			isa = PBXGroup;
+			children = (
+				3795220426170E4B00628968 /* AppDelegate.swift */,
+				3795220626170E4B00628968 /* ViewController.swift */,
+				3795220826170E4E00628968 /* Assets.xcassets */,
+				3795220A26170E4E00628968 /* Main.storyboard */,
+				3795220D26170E4E00628968 /* Info.plist */,
+				3795220E26170E4E00628968 /* ShadowMapping.entitlements */,
+				3795223E26170F2E00628968 /* ShaderType.h */,
+				3795224026170F5800628968 /* ShaderType.m */,
+				3795223F26170F5700628968 /* ShadowMapping-Bridging-Header.h */,
+				3795224426170F9E00628968 /* Shader.metal */,
+				379522482617101700628968 /* Renderer.swift */,
+			);
+			path = ShadowMapping;
+			sourceTree = "<group>";
+		};
+		3795221626170E4E00628968 /* ShadowMappingTests */ = {
+			isa = PBXGroup;
+			children = (
+				3795221726170E4E00628968 /* ShadowMappingTests.swift */,
+				3795221926170E4E00628968 /* Info.plist */,
+			);
+			path = ShadowMappingTests;
+			sourceTree = "<group>";
+		};
+		3795222126170E4E00628968 /* ShadowMappingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3795222226170E4E00628968 /* ShadowMappingUITests.swift */,
+				3795222426170E4E00628968 /* Info.plist */,
+			);
+			path = ShadowMappingUITests;
+			sourceTree = "<group>";
+		};
+		3795223326170E6A00628968 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3795223826170E7200628968 /* Metal.framework */,
+				3795223926170E7200628968 /* MetalKit.framework */,
+				3795223426170E6A00628968 /* common.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3795220026170E4B00628968 /* 5.3.ShadowMapping */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3795222726170E4E00628968 /* Build configuration list for PBXNativeTarget "5.3.ShadowMapping" */;
+			buildPhases = (
+				379521FD26170E4B00628968 /* Sources */,
+				379521FE26170E4B00628968 /* Frameworks */,
+				379521FF26170E4B00628968 /* Resources */,
+				3795223726170E6A00628968 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 5.3.ShadowMapping;
+			productName = ShadowMapping;
+			productReference = 3795220126170E4B00628968 /* 5.3.ShadowMapping.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3795221226170E4E00628968 /* ShadowMappingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3795222A26170E4E00628968 /* Build configuration list for PBXNativeTarget "ShadowMappingTests" */;
+			buildPhases = (
+				3795220F26170E4E00628968 /* Sources */,
+				3795221026170E4E00628968 /* Frameworks */,
+				3795221126170E4E00628968 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3795221526170E4E00628968 /* PBXTargetDependency */,
+			);
+			name = ShadowMappingTests;
+			productName = ShadowMappingTests;
+			productReference = 3795221326170E4E00628968 /* ShadowMappingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3795221D26170E4E00628968 /* ShadowMappingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3795222D26170E4E00628968 /* Build configuration list for PBXNativeTarget "ShadowMappingUITests" */;
+			buildPhases = (
+				3795221A26170E4E00628968 /* Sources */,
+				3795221B26170E4E00628968 /* Frameworks */,
+				3795221C26170E4E00628968 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3795222026170E4E00628968 /* PBXTargetDependency */,
+			);
+			name = ShadowMappingUITests;
+			productName = ShadowMappingUITests;
+			productReference = 3795221E26170E4E00628968 /* ShadowMappingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		379521F926170E4B00628968 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					3795220026170E4B00628968 = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+					};
+					3795221226170E4E00628968 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 3795220026170E4B00628968;
+					};
+					3795221D26170E4E00628968 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 3795220026170E4B00628968;
+					};
+				};
+			};
+			buildConfigurationList = 379521FC26170E4B00628968 /* Build configuration list for PBXProject "5.3.ShadowMapping" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 379521F826170E4B00628968;
+			productRefGroup = 3795220226170E4B00628968 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3795220026170E4B00628968 /* 5.3.ShadowMapping */,
+				3795221226170E4E00628968 /* ShadowMappingTests */,
+				3795221D26170E4E00628968 /* ShadowMappingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		379521FF26170E4B00628968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3795220926170E4E00628968 /* Assets.xcassets in Resources */,
+				3795220C26170E4E00628968 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3795221126170E4E00628968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3795221C26170E4E00628968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		379521FD26170E4B00628968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3795224526170F9E00628968 /* Shader.metal in Sources */,
+				3795220726170E4B00628968 /* ViewController.swift in Sources */,
+				3795224126170F5800628968 /* ShaderType.m in Sources */,
+				379522492617101700628968 /* Renderer.swift in Sources */,
+				3795220526170E4B00628968 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3795220F26170E4E00628968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3795221826170E4E00628968 /* ShadowMappingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3795221A26170E4E00628968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3795222326170E4E00628968 /* ShadowMappingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3795221526170E4E00628968 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3795220026170E4B00628968 /* 5.3.ShadowMapping */;
+			targetProxy = 3795221426170E4E00628968 /* PBXContainerItemProxy */;
+		};
+		3795222026170E4E00628968 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3795220026170E4B00628968 /* 5.3.ShadowMapping */;
+			targetProxy = 3795221F26170E4E00628968 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3795220A26170E4E00628968 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3795220B26170E4E00628968 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3795222526170E4E00628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3795222626170E4E00628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		3795222826170E4E00628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ShadowMapping/ShadowMapping.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = ShadowMapping/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.ShadowMapping;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ShadowMapping/ShadowMapping-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3795222926170E4E00628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ShadowMapping/ShadowMapping.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = ShadowMapping/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.ShadowMapping;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ShadowMapping/ShadowMapping-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		3795222B26170E4E00628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = ShadowMappingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.ShadowMappingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShadowMapping.app/Contents/MacOS/ShadowMapping";
+			};
+			name = Debug;
+		};
+		3795222C26170E4E00628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = ShadowMappingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.ShadowMappingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShadowMapping.app/Contents/MacOS/ShadowMapping";
+			};
+			name = Release;
+		};
+		3795222E26170E4E00628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = ShadowMappingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.ShadowMappingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = ShadowMapping;
+			};
+			name = Debug;
+		};
+		3795222F26170E4E00628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = ShadowMappingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.ShadowMappingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = ShadowMapping;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		379521FC26170E4B00628968 /* Build configuration list for PBXProject "5.3.ShadowMapping" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3795222526170E4E00628968 /* Debug */,
+				3795222626170E4E00628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3795222726170E4E00628968 /* Build configuration list for PBXNativeTarget "5.3.ShadowMapping" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3795222826170E4E00628968 /* Debug */,
+				3795222926170E4E00628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3795222A26170E4E00628968 /* Build configuration list for PBXNativeTarget "ShadowMappingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3795222B26170E4E00628968 /* Debug */,
+				3795222C26170E4E00628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3795222D26170E4E00628968 /* Build configuration list for PBXNativeTarget "ShadowMappingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3795222E26170E4E00628968 /* Debug */,
+				3795222F26170E4E00628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 379521F926170E4B00628968 /* Project object */;
+}
