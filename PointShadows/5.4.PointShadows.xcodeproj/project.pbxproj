@@ -1,0 +1,645 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		379522BB2619520200628968 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379522BA2619520200628968 /* AppDelegate.swift */; };
+		379522BD2619520200628968 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379522BC2619520200628968 /* ViewController.swift */; };
+		379522BF2619520400628968 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 379522BE2619520400628968 /* Assets.xcassets */; };
+		379522C22619520400628968 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379522C02619520400628968 /* Main.storyboard */; };
+		379522CE2619520400628968 /* PointShadowsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379522CD2619520400628968 /* PointShadowsTests.swift */; };
+		379522D92619520400628968 /* PointShadowsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379522D82619520400628968 /* PointShadowsUITests.swift */; };
+		379522EB2619523300628968 /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379522EA2619523300628968 /* common.framework */; };
+		379522EC2619523300628968 /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 379522EA2619523300628968 /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		379522F02619523F00628968 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379522EE2619523F00628968 /* Metal.framework */; };
+		379522F12619523F00628968 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379522EF2619523F00628968 /* MetalKit.framework */; };
+		379522F52619530E00628968 /* ShaderType.m in Sources */ = {isa = PBXBuildFile; fileRef = 379522F42619530E00628968 /* ShaderType.m */; };
+		379522F92619532800628968 /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 379522F82619532800628968 /* Shader.metal */; };
+		379522FD261968F700628968 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379522FC261968F700628968 /* Renderer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		379522CA2619520400628968 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 379522AF2619520200628968 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 379522B62619520200628968;
+			remoteInfo = PointShadows;
+		};
+		379522D52619520400628968 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 379522AF2619520200628968 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 379522B62619520200628968;
+			remoteInfo = PointShadows;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		379522ED2619523300628968 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				379522EC2619523300628968 /* common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		379522B72619520200628968 /* 5.4.PointShadows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 5.4.PointShadows.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		379522BA2619520200628968 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		379522BC2619520200628968 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		379522BE2619520400628968 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		379522C12619520400628968 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		379522C32619520400628968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		379522C42619520400628968 /* PointShadows.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PointShadows.entitlements; sourceTree = "<group>"; };
+		379522C92619520400628968 /* PointShadowsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PointShadowsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		379522CD2619520400628968 /* PointShadowsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointShadowsTests.swift; sourceTree = "<group>"; };
+		379522CF2619520400628968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		379522D42619520400628968 /* PointShadowsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PointShadowsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		379522D82619520400628968 /* PointShadowsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointShadowsUITests.swift; sourceTree = "<group>"; };
+		379522DA2619520400628968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		379522EA2619523300628968 /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		379522EE2619523F00628968 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		379522EF2619523F00628968 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		379522F22619528000628968 /* ShaderType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderType.h; sourceTree = "<group>"; };
+		379522F32619530E00628968 /* PointShadows-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PointShadows-Bridging-Header.h"; sourceTree = "<group>"; };
+		379522F42619530E00628968 /* ShaderType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShaderType.m; sourceTree = "<group>"; };
+		379522F82619532800628968 /* Shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader.metal; sourceTree = "<group>"; };
+		379522FC261968F700628968 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		379522B42619520200628968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				379522F12619523F00628968 /* MetalKit.framework in Frameworks */,
+				379522F02619523F00628968 /* Metal.framework in Frameworks */,
+				379522EB2619523300628968 /* common.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		379522C62619520400628968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		379522D12619520400628968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		379522AE2619520200628968 = {
+			isa = PBXGroup;
+			children = (
+				379522B92619520200628968 /* PointShadows */,
+				379522CC2619520400628968 /* PointShadowsTests */,
+				379522D72619520400628968 /* PointShadowsUITests */,
+				379522B82619520200628968 /* Products */,
+				379522E92619523300628968 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		379522B82619520200628968 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				379522B72619520200628968 /* 5.4.PointShadows.app */,
+				379522C92619520400628968 /* PointShadowsTests.xctest */,
+				379522D42619520400628968 /* PointShadowsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		379522B92619520200628968 /* PointShadows */ = {
+			isa = PBXGroup;
+			children = (
+				379522BA2619520200628968 /* AppDelegate.swift */,
+				379522BC2619520200628968 /* ViewController.swift */,
+				379522BE2619520400628968 /* Assets.xcassets */,
+				379522C02619520400628968 /* Main.storyboard */,
+				379522C32619520400628968 /* Info.plist */,
+				379522C42619520400628968 /* PointShadows.entitlements */,
+				379522F22619528000628968 /* ShaderType.h */,
+				379522F42619530E00628968 /* ShaderType.m */,
+				379522F32619530E00628968 /* PointShadows-Bridging-Header.h */,
+				379522F82619532800628968 /* Shader.metal */,
+				379522FC261968F700628968 /* Renderer.swift */,
+			);
+			path = PointShadows;
+			sourceTree = "<group>";
+		};
+		379522CC2619520400628968 /* PointShadowsTests */ = {
+			isa = PBXGroup;
+			children = (
+				379522CD2619520400628968 /* PointShadowsTests.swift */,
+				379522CF2619520400628968 /* Info.plist */,
+			);
+			path = PointShadowsTests;
+			sourceTree = "<group>";
+		};
+		379522D72619520400628968 /* PointShadowsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				379522D82619520400628968 /* PointShadowsUITests.swift */,
+				379522DA2619520400628968 /* Info.plist */,
+			);
+			path = PointShadowsUITests;
+			sourceTree = "<group>";
+		};
+		379522E92619523300628968 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				379522EE2619523F00628968 /* Metal.framework */,
+				379522EF2619523F00628968 /* MetalKit.framework */,
+				379522EA2619523300628968 /* common.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		379522B62619520200628968 /* 5.4.PointShadows */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 379522DD2619520400628968 /* Build configuration list for PBXNativeTarget "5.4.PointShadows" */;
+			buildPhases = (
+				379522B32619520200628968 /* Sources */,
+				379522B42619520200628968 /* Frameworks */,
+				379522B52619520200628968 /* Resources */,
+				379522ED2619523300628968 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 5.4.PointShadows;
+			productName = PointShadows;
+			productReference = 379522B72619520200628968 /* 5.4.PointShadows.app */;
+			productType = "com.apple.product-type.application";
+		};
+		379522C82619520400628968 /* PointShadowsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 379522E02619520400628968 /* Build configuration list for PBXNativeTarget "PointShadowsTests" */;
+			buildPhases = (
+				379522C52619520400628968 /* Sources */,
+				379522C62619520400628968 /* Frameworks */,
+				379522C72619520400628968 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				379522CB2619520400628968 /* PBXTargetDependency */,
+			);
+			name = PointShadowsTests;
+			productName = PointShadowsTests;
+			productReference = 379522C92619520400628968 /* PointShadowsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		379522D32619520400628968 /* PointShadowsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 379522E32619520400628968 /* Build configuration list for PBXNativeTarget "PointShadowsUITests" */;
+			buildPhases = (
+				379522D02619520400628968 /* Sources */,
+				379522D12619520400628968 /* Frameworks */,
+				379522D22619520400628968 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				379522D62619520400628968 /* PBXTargetDependency */,
+			);
+			name = PointShadowsUITests;
+			productName = PointShadowsUITests;
+			productReference = 379522D42619520400628968 /* PointShadowsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		379522AF2619520200628968 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					379522B62619520200628968 = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+					};
+					379522C82619520400628968 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 379522B62619520200628968;
+					};
+					379522D32619520400628968 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 379522B62619520200628968;
+					};
+				};
+			};
+			buildConfigurationList = 379522B22619520200628968 /* Build configuration list for PBXProject "5.4.PointShadows" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 379522AE2619520200628968;
+			productRefGroup = 379522B82619520200628968 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				379522B62619520200628968 /* 5.4.PointShadows */,
+				379522C82619520400628968 /* PointShadowsTests */,
+				379522D32619520400628968 /* PointShadowsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		379522B52619520200628968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				379522BF2619520400628968 /* Assets.xcassets in Resources */,
+				379522C22619520400628968 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		379522C72619520400628968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		379522D22619520400628968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		379522B32619520200628968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				379522F92619532800628968 /* Shader.metal in Sources */,
+				379522BD2619520200628968 /* ViewController.swift in Sources */,
+				379522F52619530E00628968 /* ShaderType.m in Sources */,
+				379522FD261968F700628968 /* Renderer.swift in Sources */,
+				379522BB2619520200628968 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		379522C52619520400628968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				379522CE2619520400628968 /* PointShadowsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		379522D02619520400628968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				379522D92619520400628968 /* PointShadowsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		379522CB2619520400628968 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 379522B62619520200628968 /* 5.4.PointShadows */;
+			targetProxy = 379522CA2619520400628968 /* PBXContainerItemProxy */;
+		};
+		379522D62619520400628968 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 379522B62619520200628968 /* 5.4.PointShadows */;
+			targetProxy = 379522D52619520400628968 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		379522C02619520400628968 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				379522C12619520400628968 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		379522DB2619520400628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		379522DC2619520400628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		379522DE2619520400628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = PointShadows/PointShadows.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = PointShadows/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.PointShadows;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PointShadows/PointShadows-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		379522DF2619520400628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = PointShadows/PointShadows.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = PointShadows/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.PointShadows;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PointShadows/PointShadows-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		379522E12619520400628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = PointShadowsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.PointShadowsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PointShadows.app/Contents/MacOS/PointShadows";
+			};
+			name = Debug;
+		};
+		379522E22619520400628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = PointShadowsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.PointShadowsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PointShadows.app/Contents/MacOS/PointShadows";
+			};
+			name = Release;
+		};
+		379522E42619520400628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = PointShadowsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.PointShadowsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = PointShadows;
+			};
+			name = Debug;
+		};
+		379522E52619520400628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = PointShadowsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.PointShadowsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = PointShadows;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		379522B22619520200628968 /* Build configuration list for PBXProject "5.4.PointShadows" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				379522DB2619520400628968 /* Debug */,
+				379522DC2619520400628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		379522DD2619520400628968 /* Build configuration list for PBXNativeTarget "5.4.PointShadows" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				379522DE2619520400628968 /* Debug */,
+				379522DF2619520400628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		379522E02619520400628968 /* Build configuration list for PBXNativeTarget "PointShadowsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				379522E12619520400628968 /* Debug */,
+				379522E22619520400628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		379522E32619520400628968 /* Build configuration list for PBXNativeTarget "PointShadowsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				379522E42619520400628968 /* Debug */,
+				379522E52619520400628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 379522AF2619520200628968 /* Project object */;
+}

@@ -243,13 +243,14 @@ extension MTLRenderCommandEncoder {
         }
     }
     
-    public func drawMesh(_ mesh: MTKMesh) {
+    public func drawMesh(_ mesh: MTKMesh, instanceCount: Int? = nil) {
         for subMesh in mesh.submeshes {
             drawIndexedPrimitives(type: subMesh.primitiveType,
                                   indexCount: subMesh.indexCount,
                                   indexType: subMesh.indexType,
                                   indexBuffer: subMesh.indexBuffer.buffer,
-                                  indexBufferOffset: subMesh.indexBuffer.offset)
+                                  indexBufferOffset: subMesh.indexBuffer.offset,
+                                  instanceCount: instanceCount ?? 1)
         }
     }
     
