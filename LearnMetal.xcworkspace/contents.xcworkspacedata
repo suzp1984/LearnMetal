@@ -136,4 +136,7 @@
    <FileRef
       location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/PointShadows/5.4.PointShadows.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/NormalMapping/5.5.NormalMapping.xcodeproj">
+   </FileRef>
 </Workspace>
