@@ -119,11 +119,9 @@
 - (void)mtkView:(nonnull MTKView *)view drawableSizeWillChange:(CGSize)size {
     _viewportSize.x = size.width;
     _viewportSize.y = size.height;
-    
-    static const float PI = 3.1415926;
-    
+        
     _uniforms.modelMatrix = simd_mul(matrix4x4_translation(size.width / 2.0, size.height / 2.0, 0.0),
-                                     simd_mul(matrix4x4_rotation((float) PI / 4.0, 0.0, 0.0, 1.0), matrix4x4_scale(_size.x, _size.y, 1.0)));
+                                     simd_mul(matrix4x4_rotation(M_PI / 4.0, 0.0, 0.0, 1.0), matrix4x4_scale(_size.x, _size.y, 1.0)));
     _uniforms.projectionMatrix = matrix_ortho_left_hand(0.0, size.width, size.height, 0.0, -100.0, 100.0);
 }
 

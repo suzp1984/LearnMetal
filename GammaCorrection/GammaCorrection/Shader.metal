@@ -68,13 +68,13 @@ float3 BlinnPhong(float3 normal,
     float3 diffuse = diff * lightColor;
     // specular
     float3 viewDir = normalize(viewPos - fragPos);
-    float3 reflectDir = reflect(-lightDir, normal);
+//    float3 reflectDir = reflect(-lightDir, normal);
     float spec = 0.0;
     float3 halfwayDir = normalize(lightDir + viewDir);
     spec = pow(max(dot(normal, halfwayDir), 0.0), 64.0);
     float3 specular = spec * lightColor;
     // simple attenuation
-    float max_distance = 1.5;
+//    float max_distance = 1.5;
     float distance = length(lightPos - fragPos);
     
     float attenuation = 1.0 / (hasGammaCorrection ? distance * distance : distance);

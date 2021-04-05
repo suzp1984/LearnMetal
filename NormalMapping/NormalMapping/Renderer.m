@@ -12,8 +12,6 @@
 #import <common/common.h>
 #import <common/common-Swift.h>
 
-const float PI = 3.1415926;
-
 @implementation Renderer
 {
     id<MTLDevice> _device;
@@ -149,7 +147,7 @@ const float PI = 3.1415926;
         _uniform.viewPos = [_camera getCameraPosition];
         _uniform.viewMatrix = [_camera getViewMatrix];
         _uniform.modelMatrix = matrix4x4_rotation(0, vector_normalize((vector_float3) {1.0, 0.0, 0.0}));
-        _uniform.projectionMatrix = matrix_perspective_left_hand(PI / 4.0, width / height, 0.1, 100.0);
+        _uniform.projectionMatrix = matrix_perspective_left_hand(M_PI / 4.0, width / height, 0.1, 100.0);
         
         [self rebuildNormalMatrix];
         viewport = (MTLViewport) { 0.0, 0.0, width, height, 0.0, 1.0 };
@@ -212,7 +210,7 @@ const float PI = 3.1415926;
     viewport.width = size.width;
     viewport.height = size.height;
     
-    _uniform.projectionMatrix = matrix_perspective_left_hand(PI / 4.0, size.width / size.height, 0.1, 100.0);
+    _uniform.projectionMatrix = matrix_perspective_left_hand(M_PI / 4.0, size.width / size.height, 0.1, 100.0);
 }
 
 @end

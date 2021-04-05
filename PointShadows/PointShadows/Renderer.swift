@@ -21,7 +21,7 @@ class Renderer: NSObject {
     private var lightPos: vector_float3!
     private var commandQueue: MTLCommandQueue!
     private var cubeMapDepthTexture: MTLTexture!
-    private let PI: Float = 3.1415926
+    private let PI: Float = Float.pi
     private var instanceParamsBuffer: MTLBuffer!
     private var containerModelUniform: ModelUniform!
     private var cubesModelUniforms: [ModelUniform]!

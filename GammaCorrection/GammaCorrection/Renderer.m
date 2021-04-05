@@ -12,8 +12,6 @@
 @import Metal;
 #import "ShaderType.h"
 
-const float PI = 3.1415926;
-
 @implementation Renderer
 {
     Camera *_camera;
@@ -178,7 +176,7 @@ const float PI = 3.1415926;
         _uniform.modelMatrix = matrix_multiply(matrix4x4_translation(0.0, -0.5, 0.0),
                                                matrix4x4_scale(10.0, 1.0, 10.0));
         _uniform.viewMatrix = [_camera getViewMatrix];
-        _uniform.projectionMatrix = matrix_perspective_left_hand(PI / 4.0,
+        _uniform.projectionMatrix = matrix_perspective_left_hand(M_PI / 4.0,
                                                                  (float) width / (float) height,
                                                                  0.1,
                                                                  100.0);
@@ -259,7 +257,7 @@ const float PI = 3.1415926;
     _viewPort.width = size.width;
     _viewPort.height = size.height;
     
-    _uniform.projectionMatrix = matrix_perspective_left_hand(PI / 4.0,
+    _uniform.projectionMatrix = matrix_perspective_left_hand(M_PI / 4.0,
                                                              (float) size.width / (float) size.height,
                                                              0.1,
                                                              100.0);

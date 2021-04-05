@@ -8,8 +8,6 @@ import Foundation
 import MetalKit
 import common
 
-let PI : Float = 3.1415926
-
 class Renderer: NSObject {
     
     private var device: MTLDevice!
@@ -122,23 +120,23 @@ class Renderer: NSObject {
         cubeOneUniforms = Uniforms(
             modelMatrix: matrix4x4_translation(-1.0, 0.0, -1.0),
             viewMatrix: camera.getViewMatrix(),
-            projectionMatrix: matrix_perspective_left_hand(PI / 4.0, Float(width)/Float(height), 0.1, 100.0))
+            projectionMatrix: matrix_perspective_left_hand(Float.pi / 4.0, Float(width)/Float(height), 0.1, 100.0))
         
         cubeTwoUniforms = Uniforms(
             modelMatrix: matrix4x4_translation(2.0, 0.0, 0.0),
             viewMatrix: camera.getViewMatrix(),
-            projectionMatrix: matrix_perspective_left_hand(PI / 4.0, Float(width)/Float(height), 0.1, 100.0))
+            projectionMatrix: matrix_perspective_left_hand(Float.pi / 4.0, Float(width)/Float(height), 0.1, 100.0))
         
         
         floorUniforms = Uniforms(
             modelMatrix: simd_mul(matrix4x4_translation(0.0, -0.51, 0.0), matrix4x4_scale(10.0, 10.0, 10.0)),
             viewMatrix: camera.getViewMatrix(),
-            projectionMatrix: matrix_perspective_left_hand(PI / 4.0, Float(width) / Float(height), 0.1, 100.0))
+            projectionMatrix: matrix_perspective_left_hand(Float.pi / 4.0, Float(width) / Float(height), 0.1, 100.0))
         
         grassUnifroms = Uniforms(
             modelMatrix: matrix4x4_identity(),
             viewMatrix: camera.getViewMatrix(),
-            projectionMatrix: matrix_perspective_left_hand(PI / 4.0, Float(width) / Float(height), 0.1, 100.0))
+            projectionMatrix: matrix_perspective_left_hand(Float.pi / 4.0, Float(width) / Float(height), 0.1, 100.0))
         
         grassesPosition = [
             vector_float3(-1.5,  0.0, -0.48),
@@ -183,7 +181,7 @@ extension Renderer : MTKViewDelegate
             depthTexture = buildDepthTexture(Int(size.width), Int(size.height))
         }
         
-        let projectionMatrix = matrix_perspective_left_hand(PI / 4.0, Float(size.width) / Float(size.height), 0.1, 100.0)
+        let projectionMatrix = matrix_perspective_left_hand(Float.pi / 4.0, Float(size.width) / Float(size.height), 0.1, 100.0)
         cubeOneUniforms.projectionMatrix = projectionMatrix
         cubeTwoUniforms.projectionMatrix = projectionMatrix
         floorUniforms.projectionMatrix   = projectionMatrix
@@ -254,7 +252,7 @@ extension Renderer : MTKViewDelegate
             
             grassUnifroms.modelMatrix = simd_mul(
                 matrix4x4_translation(position),
-                matrix4x4_rotation(PI / 2.0, 1.0, 0.0, 0.0))
+                matrix4x4_rotation(Float.pi / 2.0, 1.0, 0.0, 0.0))
             renderEncoder.setVertexBytes(&grassUnifroms, length: MemoryLayout<Uniforms>.stride, index: Int(VertexInputIndexUniforms.rawValue))
             
             renderEncoder.drawMesh(planeMesh)

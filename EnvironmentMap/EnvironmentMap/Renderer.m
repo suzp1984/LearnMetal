@@ -12,8 +12,6 @@
 #import "ShaderType.h"
 #include <simd/simd.h>
 
-static const float PI = 3.1415926;
-
 @implementation Renderer
 {
     Camera *_camera;
@@ -187,7 +185,7 @@ static const float PI = 3.1415926;
         _uniform.cameraPos = [_camera getCameraPosition];
         _uniform.viewMatrix = [_camera getViewMatrix];
         _uniform.modelMatrix = matrix4x4_identity();
-        _uniform.projectionMatrix = matrix_perspective_left_hand(PI / 4.0, (float) width / (float) height, 0.1, 100.0);;
+        _uniform.projectionMatrix = matrix_perspective_left_hand(M_PI / 4.0, (float) width / (float) height, 0.1, 100.0);;
         _uniform.inverseModelMatrix = simd_inverse(_uniform.modelMatrix);
     }
     
@@ -295,7 +293,7 @@ static const float PI = 3.1415926;
         _depthTexture = [self buildDepthTextureWithWidth:size.width height:size.height];
     }
 
-    _uniform.projectionMatrix = matrix_perspective_left_hand(PI / 4.0, (float) size.width / (float) size.height, 0.1, 100.0);
+    _uniform.projectionMatrix = matrix_perspective_left_hand(M_PI / 4.0, (float) size.width / (float) size.height, 0.1, 100.0);
 }
 
 @end

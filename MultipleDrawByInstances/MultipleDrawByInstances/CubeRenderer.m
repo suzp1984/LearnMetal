@@ -10,8 +10,6 @@
 #import "CubeRenderer.h"
 #import "CubeShaderType.h"
 
-static const float PI = 3.1415926;
-
 @implementation CubeRenderer
 {
     id<MTLDevice> _device;
@@ -123,7 +121,7 @@ static const float PI = 3.1415926;
         for (int i = 0; i < cubeNum; i++) {
             ObjectParams param;
             param.modelMatrix = simd_mul(matrix4x4_translation(cubePositions[i] * _size),
-                                        simd_mul(matrix4x4_rotation(PI / (1.0 + arc4random() % 10),
+                                        simd_mul(matrix4x4_rotation(M_PI / (1.0 + arc4random() % 10),
                                                                     arc4random() % 100,
                                                                     arc4random() % 100,
                                                                     arc4random() % 100),
@@ -172,7 +170,7 @@ static const float PI = 3.1415926;
                                                         (vector_float3) {0.0, 0.0, 0.0 },
                                                         (vector_float3) {0.0, 1.0, 0.0});
 
-        _uniforms.projectionMatrix = matrix_perspective_left_hand(PI / 3.0, width / height, 0.1, 9000.0);
+        _uniforms.projectionMatrix = matrix_perspective_left_hand(M_PI / 3.0, width / height, 0.1, 9000.0);
         
         _uniformBuffer = [device newBufferWithBytes:&_uniforms
                                              length:sizeof(_uniforms)
@@ -197,7 +195,7 @@ static const float PI = 3.1415926;
     _viewportSize.x = size.width;
     _viewportSize.y = size.height;
 
-    _uniforms.projectionMatrix = matrix_perspective_left_hand(PI / 3.0, size.width / size.height, 0.1, 1000.0);
+    _uniforms.projectionMatrix = matrix_perspective_left_hand(M_PI / 3.0, size.width / size.height, 0.1, 1000.0);
     
     void *uniformPtr = [_uniformBuffer contents];
     memcpy(uniformPtr, &_uniforms, sizeof(_uniforms));

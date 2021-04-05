@@ -9,8 +9,6 @@ import Foundation
 import MetalKit
 import common
 
-let PI : Float = 3.1415926
-
 class Renderer: NSObject {
     
     private var camera: Camera!
@@ -167,7 +165,7 @@ class Renderer: NSObject {
         commandQueue = device.makeCommandQueue()!
         let modelMatrix = matrix_multiply(matrix4x4_translation(0.0, -0.5, 0.0),
                                           matrix4x4_scale(50.0, 1.0, 50.0))
-        let projectionMatrix = matrix_perspective_left_hand(PI / 4.0,
+        let projectionMatrix = matrix_perspective_left_hand(Float.pi / 4.0,
                                                             Float(width) / Float(height),
                                                             0.1,
                                                             100.0)
@@ -194,7 +192,7 @@ class Renderer: NSObject {
         let cube2ModelMatrix = matrix_multiply(matrix4x4_translation(1.0, 0.0, 0.5),
                                                matrix4x4_scale(0.5, 0.5, 0.5))
         let cube3ModelMatrix = matrix_multiply(matrix4x4_translation(-0.2, 0.0, 0.2),
-                                               matrix_multiply(matrix4x4_rotation(PI * 60.0 / 180.0, vector_float3(1.0, 0.0, 1.0)),
+                                               matrix_multiply(matrix4x4_rotation(Float.pi * 60.0 / 180.0, vector_float3(1.0, 0.0, 1.0)),
                                                                matrix4x4_scale(0.25, 0.25, 0.25)))
         
         cubeUniforms = [
@@ -265,7 +263,7 @@ extension Renderer: MTKViewDelegate {
         viewPort.width = Double(size.width)
         viewPort.height = Double(size.height)
         
-        uniform.projectionMatrix = matrix_perspective_left_hand(PI / 4.0,
+        uniform.projectionMatrix = matrix_perspective_left_hand(Float.pi / 4.0,
                                                                 Float(size.width) / Float(size.height),
                                                                 0.1,
                                                                 100.0)

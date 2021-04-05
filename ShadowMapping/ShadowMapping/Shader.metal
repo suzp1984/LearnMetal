@@ -93,7 +93,7 @@ fragment float4 blinnPhongWithGammaCorrectionFragmentShader(RasterizerData in [[
     float3 diffuse = diff * lightColor;
     // specular
     float3 viewDir = normalize(fragmentShaderArgs.viewPos - in.fragPos);
-    float3 reflectDir = reflect(-lightDir, normal);
+//    float3 reflectDir = reflect(-lightDir, normal);
     float spec = 0.0;
     float3 halfwayDir = normalize(lightDir + viewDir);
     spec = pow(max(dot(normal, halfwayDir), 0.0), 64.0);
@@ -103,7 +103,7 @@ fragment float4 blinnPhongWithGammaCorrectionFragmentShader(RasterizerData in [[
     float3 projCoords = in.fragPosInLightSpace.xyz / in.fragPosInLightSpace.w;
     projCoords = projCoords * 0.5 + 0.5;
     // get closest depth value from light's perspective
-    float closestDepth = depthMapTexture.sample(fragmentShaderArgs.sampler, projCoords.xy).r;
+//    float closestDepth = depthMapTexture.sample(fragmentShaderArgs.sampler, projCoords.xy).r;
     // get depth of current fragment from light's perspective
     float currentDepth = projCoords.z;
     // calculate bias (based on depth map resolution and slope)

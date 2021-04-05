@@ -10,8 +10,6 @@ import MetalKit
 import common
 import ModelIO
 
-let PI : Float = 3.1415926
-
 class Renderer: NSObject {
     
     private var device: MTLDevice!
@@ -126,9 +124,9 @@ class Renderer: NSObject {
         uniforms = Uniforms(modelMatrix: matrix_multiply(matrix4x4_translation(0.0, -3.0, 0.0),
                                                          matrix4x4_scale(4.0, 4.0, 4.0)),
                             viewMatrix: camera.getViewMatrix(),
-                            projectionMatrix: matrix_perspective_left_hand(PI / 4.0, width / height, 0.1, 1000.0))
+                            projectionMatrix: matrix_perspective_left_hand(Float.pi / 4.0, width / height, 0.1, 1000.0))
         rockUniform = RockUniforms(viewMatrix: camera.getViewMatrix(),
-                                   projectionMatrix: matrix_perspective_left_hand(PI / 4.0, width / height, 0.1, 1000.0))
+                                   projectionMatrix: matrix_perspective_left_hand(Float.pi / 4.0, width / height, 0.1, 1000.0))
         fillModelsBuffer()
     }
     
@@ -153,7 +151,7 @@ class Renderer: NSObject {
             let z = cos(angle) * radius + displacement
             
             let scale = Float(Int.random(in: 0..<40)) / 100.0 + 0.05
-            let rotAngle = Float(Int.random(in: 0..<360)) / 360.0 * 2.0 * PI
+            let rotAngle = Float(Int.random(in: 0..<360)) / 360.0 * 2.0 * Float.pi
             
             let model = matrix_multiply(matrix4x4_translation(x, y, z),
                                         matrix_multiply(matrix4x4_scale(scale, scale, scale),
@@ -183,7 +181,7 @@ extension Renderer : MTKViewDelegate {
         viewPort.height = Double(size.height)
         
         uniforms.projectionMatrix =
-            matrix_perspective_left_hand(PI / 4.0,
+            matrix_perspective_left_hand(Float.pi / 4.0,
                                          Float(size.width) / Float(size.height),
                                          0.1,
                                          1000.0)

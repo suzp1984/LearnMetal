@@ -9,8 +9,6 @@ import Foundation
 import MetalKit
 import common
 
-let PI : Float = 3.1415926
-
 class Renderer: NSObject {
     
     private var device: MTLDevice!
@@ -175,27 +173,27 @@ class Renderer: NSObject {
         cubeOneUniforms = Uniforms(
             modelMatrix: matrix4x4_translation(-1.0, 0.0, -1.0),
             viewMatrix: camera.getViewMatrix(),
-            projectionMatrix: matrix_perspective_left_hand(PI / 4.0, Float(width)/Float(height), 0.1, 100.0))
+            projectionMatrix: matrix_perspective_left_hand(Float.pi / 4.0, Float(width)/Float(height), 0.1, 100.0))
         
         cubeTwoUniforms = Uniforms(
             modelMatrix: matrix4x4_translation(2.0, 0.0, 0.0),
             viewMatrix: camera.getViewMatrix(),
-            projectionMatrix: matrix_perspective_left_hand(PI / 4.0, Float(width)/Float(height), 0.1, 100.0))
+            projectionMatrix: matrix_perspective_left_hand(Float.pi / 4.0, Float(width)/Float(height), 0.1, 100.0))
         
         borderOneUniforms = Uniforms(
             modelMatrix: simd_mul(matrix4x4_translation(-1.0, 0.0, -1.0), matrix4x4_scale(1.1, 1.1, 1.1)),
             viewMatrix: camera.getViewMatrix(),
-            projectionMatrix: matrix_perspective_left_hand(PI / 4.0, Float(width)/Float(height), 0.1, 100.0))
+            projectionMatrix: matrix_perspective_left_hand(Float.pi / 4.0, Float(width)/Float(height), 0.1, 100.0))
         
         borderTwoUniforms = Uniforms(
             modelMatrix: simd_mul(matrix4x4_translation(2.0, 0.0, 0.0), matrix4x4_scale(1.1, 1.1, 1.1)),
             viewMatrix: camera.getViewMatrix(),
-            projectionMatrix: matrix_perspective_left_hand(PI / 4.0, Float(width)/Float(height), 0.1, 100.0))
+            projectionMatrix: matrix_perspective_left_hand(Float.pi / 4.0, Float(width)/Float(height), 0.1, 100.0))
         
         floorUniforms = Uniforms(
             modelMatrix: simd_mul(matrix4x4_translation(0.0, -0.51, 0.0), matrix4x4_scale(10.0, 10.0, 10.0)),
             viewMatrix: camera.getViewMatrix(),
-            projectionMatrix: matrix_perspective_left_hand(PI / 4.0, Float(width) / Float(height), 0.1, 100.0))
+            projectionMatrix: matrix_perspective_left_hand(Float.pi / 4.0, Float(width) / Float(height), 0.1, 100.0))
     }
     
     func handleCameraEvent(deltaX: Float, deltaY: Float) -> Void {
@@ -233,7 +231,7 @@ extension Renderer : MTKViewDelegate
             depthTexture = buildDepthTexture(Int(size.width), Int(size.height))
         }
         
-        let projectionMatrix = matrix_perspective_left_hand(PI / 4.0, Float(size.width) / Float(size.height), 0.1, 100.0)
+        let projectionMatrix = matrix_perspective_left_hand(Float.pi / 4.0, Float(size.width) / Float(size.height), 0.1, 100.0)
         cubeOneUniforms.projectionMatrix = projectionMatrix
         cubeTwoUniforms.projectionMatrix = projectionMatrix
         borderOneUniforms.projectionMatrix = projectionMatrix

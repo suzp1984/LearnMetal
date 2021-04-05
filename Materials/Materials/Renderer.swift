@@ -9,8 +9,6 @@ import Foundation
 import MetalKit
 import common
 
-let PI = 3.1415926
-
 class Renderer: NSObject {
     
     private let date = Date()
@@ -152,17 +150,17 @@ class Renderer: NSObject {
         let height = metalView.frame.height
         
         
-        objectUniforms.modelMatrix = matrix_multiply(matrix4x4_translation(objectPosition), matrix_multiply(matrix4x4_rotation(Float(PI * 0.35), vector_float3(0.2, 0.1, 0.8)),
+        objectUniforms.modelMatrix = matrix_multiply(matrix4x4_translation(objectPosition), matrix_multiply(matrix4x4_rotation(Float.pi * 0.35, vector_float3(0.2, 0.1, 0.8)),
                     matrix4x4_scale(400.0, 400.0, 400.0)))
         objectUniforms.inverseModelMatrix = simd_inverse(objectUniforms.modelMatrix)
         objectUniforms.viewMatrix = camera.getViewMatrix()
-        objectUniforms.projectionMatrix = matrix_perspective_left_hand(Float(PI / 4.0), Float(width / height), 0.1, 8000)
+        objectUniforms.projectionMatrix = matrix_perspective_left_hand(Float.pi / 4.0, Float(width / height), 0.1, 8000)
         
-        lampUniforms.modelMatrix = matrix_multiply(matrix4x4_translation(lampPosition), matrix_multiply(matrix4x4_rotation(Float(PI * 0.35), vector_float3(0.2, 0.1, 0.8)),
+        lampUniforms.modelMatrix = matrix_multiply(matrix4x4_translation(lampPosition), matrix_multiply(matrix4x4_rotation(Float.pi * 0.35, vector_float3(0.2, 0.1, 0.8)),
                             matrix4x4_scale(200.0, 200.0, 200.0)))
         lampUniforms.inverseModelMatrix = simd_inverse(lampUniforms.modelMatrix)
         lampUniforms.viewMatrix = camera.getViewMatrix()
-        lampUniforms.projectionMatrix = matrix_perspective_left_hand(Float(PI / 4.0), Float(width / height), 0.1, 8000)
+        lampUniforms.projectionMatrix = matrix_perspective_left_hand(Float.pi / 4.0, Float(width / height), 0.1, 8000)
         
         commandQueue = device.makeCommandQueue()
     }
@@ -180,8 +178,8 @@ extension Renderer : MTKViewDelegate
         viewportSize.x = Float(size.width)
         viewportSize.y = Float(size.height)
         
-        objectUniforms.projectionMatrix = matrix_perspective_left_hand(Float(PI / 4.0), Float(size.width / size.height), 0.1, 8000)
-        lampUniforms.projectionMatrix = matrix_perspective_left_hand(Float(PI / 4.0), Float(size.width / size.height), 0.1, 8000)
+        objectUniforms.projectionMatrix = matrix_perspective_left_hand(Float.pi / 4.0, Float(size.width / size.height), 0.1, 8000)
+        lampUniforms.projectionMatrix = matrix_perspective_left_hand(Float.pi / 4.0, Float(size.width / size.height), 0.1, 8000)
     }
     
     func draw(in view: MTKView) {

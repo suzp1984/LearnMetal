@@ -9,8 +9,6 @@
 #import "CubeRenderer.h"
 #import "CubeShaderType.h"
 
-static const float PI = 3.1415926;
-
 @implementation CubeRenderer
 {
     id<MTLDevice> _device;
@@ -131,7 +129,7 @@ static const float PI = 3.1415926;
                                                         (vector_float3) {0.0, 0.0, 0.0 },
                                                         (vector_float3) {0.0, 1.0, 0.0});
 
-        _uniforms.projectionMatrix = matrix_perspective_left_hand(PI / 3.0, width / height, 0.1, 1000.0);
+        _uniforms.projectionMatrix = matrix_perspective_left_hand(M_PI / 3.0, width / height, 0.1, 1000.0);
     }
     
     return self;
@@ -142,7 +140,7 @@ static const float PI = 3.1415926;
     _viewportSize.x = size.width;
     _viewportSize.y = size.height;
 
-    _uniforms.projectionMatrix = matrix_perspective_left_hand(PI / 3.0, size.width / size.height, 0.1, 1000.0);
+    _uniforms.projectionMatrix = matrix_perspective_left_hand(M_PI / 3.0, size.width / size.height, 0.1, 1000.0);
 }
 
 - (void)drawInMTKView:(nonnull MTKView *)view

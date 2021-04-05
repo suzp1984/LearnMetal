@@ -12,8 +12,6 @@
 #import "ModelShaderType.h"
 #import <common/common.h>
 
-static const float PI = 3.1415926;
-
 @implementation Renderer
 {
     id<MTLDevice> _device;
@@ -195,7 +193,7 @@ static const float PI = 3.1415926;
         
         _uniforms.modelMatrix = simd_mul(matrix4x4_translation(0.0, -1.75, 0.0), matrix4x4_scale(0.2, 0.2, 0.2));
         _uniforms.viewMatrix = [_camera getViewMatrix];
-        _uniforms.projectionMatrix = matrix_perspective_left_hand(PI / 4.0, width / height, 0.1, 100.0);
+        _uniforms.projectionMatrix = matrix_perspective_left_hand(M_PI / 4.0, width / height, 0.1, 100.0);
     }
     
     return self;
@@ -263,7 +261,7 @@ static const float PI = 3.1415926;
     _viewportSize.x = size.width;
     _viewportSize.y = size.height;
  
-    _uniforms.projectionMatrix = matrix_perspective_left_hand(PI / 4.0, size.width / size.height, 0.1, 100.0);
+    _uniforms.projectionMatrix = matrix_perspective_left_hand(M_PI / 4.0, size.width / size.height, 0.1, 100.0);
 }
 
 - (void) showNormalLine:(BOOL)show {

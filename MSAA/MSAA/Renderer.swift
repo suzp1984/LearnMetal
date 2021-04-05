@@ -9,8 +9,6 @@ import Foundation
 import MetalKit
 import common
 
-let PI: Float = 3.1415926
-
 class Renderer: NSObject {
     
     private var device: MTLDevice!
@@ -103,7 +101,7 @@ class Renderer: NSObject {
         
         uniform = Uniforms(modelMatrix: matrix4x4_identity(),
                            viewMatrix: camera.getViewMatrix(),
-                           projectionMatrix: matrix_perspective_left_hand(PI / 4.0,
+                           projectionMatrix: matrix_perspective_left_hand(Float.pi / 4.0,
                                                                           Float(width) / Float(height),
                                                                           0.1,
                                                                           1000.0))
@@ -147,7 +145,7 @@ extension Renderer : MTKViewDelegate {
         viewPort.width = Double(size.width)
         viewPort.height = Double(size.height)
         
-        uniform.projectionMatrix = matrix_perspective_left_hand(PI / 4.0, Float(size.width) / Float(size.height), 0.1, 1000.0)
+        uniform.projectionMatrix = matrix_perspective_left_hand(Float.pi / 4.0, Float(size.width) / Float(size.height), 0.1, 1000.0)
         
         buildMSAATexture(width: Int(size.width), height: Int(size.height), sampleCount: sampleCount)
     }

@@ -8,8 +8,6 @@ import Foundation
 import MetalKit
 import common
 
-let PI = 3.1415926
-
 class Renderer: NSObject {
     
     private let date = Date()
@@ -188,11 +186,11 @@ class Renderer: NSObject {
             let angle = 20.0 * Float(i)
             let modelMatrix = matrix_multiply(
                 matrix4x4_translation(Renderer.cubePositions[i]), matrix_multiply(
-                    matrix4x4_rotation(Float(Double(angle) / 180.0 * PI), vector_float3(1.0, 0.3, 0.5)),
+                    matrix4x4_rotation(angle / 180.0 * Float.pi, vector_float3(1.0, 0.3, 0.5)),
                     matrix4x4_scale(1.0, 1.0, 1.0)))
             let inverseModelMatrix = simd_inverse(modelMatrix)
             let viewMatrix = camera.getViewMatrix()
-            let projectionMatrix = matrix_perspective_left_hand(Float(PI / 4.0), Float(width / height), 0.1, 100)
+            let projectionMatrix = matrix_perspective_left_hand(Float.pi / 4.0, Float(width / height), 0.1, 100)
             let uniform = Uniforms(modelMatrix: modelMatrix,
                                    viewMatrix: viewMatrix,
                                    projectionMatrix: projectionMatrix,
@@ -223,7 +221,7 @@ extension Renderer : MTKViewDelegate
         
         for i in 0..<instanceNumber {
             var uniform = uniformBuffer[i]
-            uniform.projectionMatrix = matrix_perspective_left_hand(Float(PI / 4.0), Float(size.width / size.height), 0.1, 100)
+            uniform.projectionMatrix = matrix_perspective_left_hand(Float.pi / 4.0, Float(size.width / size.height), 0.1, 100)
             
             uniformBuffer.assign(uniform, at: i)
         }

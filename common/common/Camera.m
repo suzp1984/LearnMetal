@@ -9,8 +9,6 @@
 #import "Camera.h"
 #import "AAPLMathUtilities.h"
 
-const float PI = 3.1415926;
-
 @implementation Camera
 {
     vector_float3 _position;
@@ -47,12 +45,12 @@ const float PI = 3.1415926;
 - (void) handleMouseScrollDeltaX:(float) deltaX deltaY:(float) deltaY
 {
     _a += deltaY * 0.01;
-    if (_a < - PI / 2.0) {
-        _a = - PI / 2.0;
+    if (_a < - M_PI / 2.0) {
+        _a = - M_PI / 2.0;
     }
     
-    if (_a > PI / 2.0) {
-        _a = PI / 2.0;
+    if (_a > M_PI / 2.0) {
+        _a = M_PI / 2.0;
     }
     
     _theta = _theta + deltaX * 0.01;
