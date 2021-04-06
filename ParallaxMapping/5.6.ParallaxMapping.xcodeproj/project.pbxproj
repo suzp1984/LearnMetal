@@ -54,7 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		379523CB261B22F600628968 /* ParallaxMapping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParallaxMapping.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		379523CB261B22F600628968 /* 5.6.ParallaxMapping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 5.6.ParallaxMapping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		379523CE261B22F600628968 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		379523CF261B22F600628968 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		379523D1261B22F600628968 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 		379523CC261B22F600628968 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				379523CB261B22F600628968 /* ParallaxMapping.app */,
+				379523CB261B22F600628968 /* 5.6.ParallaxMapping.app */,
 				379523E1261B22FA00628968 /* ParallaxMappingTests.xctest */,
 				379523EC261B22FA00628968 /* ParallaxMappingUITests.xctest */,
 			);
@@ -179,9 +179,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		379523CA261B22F600628968 /* ParallaxMapping */ = {
+		379523CA261B22F600628968 /* 5.6.ParallaxMapping */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 379523F5261B22FA00628968 /* Build configuration list for PBXNativeTarget "ParallaxMapping" */;
+			buildConfigurationList = 379523F5261B22FA00628968 /* Build configuration list for PBXNativeTarget "5.6.ParallaxMapping" */;
 			buildPhases = (
 				379523C7261B22F600628968 /* Sources */,
 				379523C8261B22F600628968 /* Frameworks */,
@@ -192,9 +192,9 @@
 			);
 			dependencies = (
 			);
-			name = ParallaxMapping;
+			name = 5.6.ParallaxMapping;
 			productName = ParallaxMapping;
-			productReference = 379523CB261B22F600628968 /* ParallaxMapping.app */;
+			productReference = 379523CB261B22F600628968 /* 5.6.ParallaxMapping.app */;
 			productType = "com.apple.product-type.application";
 		};
 		379523E0261B22FA00628968 /* ParallaxMappingTests */ = {
@@ -254,7 +254,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 379523C6261B22F600628968 /* Build configuration list for PBXProject "ParallaxMapping" */;
+			buildConfigurationList = 379523C6261B22F600628968 /* Build configuration list for PBXProject "5.6.ParallaxMapping" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -267,7 +267,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				379523CA261B22F600628968 /* ParallaxMapping */,
+				379523CA261B22F600628968 /* 5.6.ParallaxMapping */,
 				379523E0261B22FA00628968 /* ParallaxMappingTests */,
 				379523EB261B22FA00628968 /* ParallaxMappingUITests */,
 			);
@@ -334,12 +334,12 @@
 /* Begin PBXTargetDependency section */
 		379523E3261B22FA00628968 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 379523CA261B22F600628968 /* ParallaxMapping */;
+			target = 379523CA261B22F600628968 /* 5.6.ParallaxMapping */;
 			targetProxy = 379523E2261B22FA00628968 /* PBXContainerItemProxy */;
 		};
 		379523EE261B22FA00628968 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 379523CA261B22F600628968 /* ParallaxMapping */;
+			target = 379523CA261B22F600628968 /* 5.6.ParallaxMapping */;
 			targetProxy = 379523ED261B22FA00628968 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -586,7 +586,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		379523C6261B22F600628968 /* Build configuration list for PBXProject "ParallaxMapping" */ = {
+		379523C6261B22F600628968 /* Build configuration list for PBXProject "5.6.ParallaxMapping" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				379523F3261B22FA00628968 /* Debug */,
@@ -595,7 +595,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		379523F5261B22FA00628968 /* Build configuration list for PBXNativeTarget "ParallaxMapping" */ = {
+		379523F5261B22FA00628968 /* Build configuration list for PBXNativeTarget "5.6.ParallaxMapping" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				379523F6261B22FA00628968 /* Debug */,

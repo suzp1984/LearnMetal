@@ -140,6 +140,6 @@
       location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/NormalMapping/5.5.NormalMapping.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:ParallaxMapping/ParallaxMapping.xcodeproj">
+      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/ParallaxMapping/5.6.ParallaxMapping.xcodeproj">
    </FileRef>
 </Workspace>
