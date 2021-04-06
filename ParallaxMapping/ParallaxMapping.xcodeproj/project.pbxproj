@@ -14,6 +14,12 @@
 		379523DB261B22FA00628968 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 379523DA261B22FA00628968 /* main.m */; };
 		379523E6261B22FA00628968 /* ParallaxMappingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 379523E5261B22FA00628968 /* ParallaxMappingTests.m */; };
 		379523F1261B22FA00628968 /* ParallaxMappingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 379523F0261B22FA00628968 /* ParallaxMappingUITests.m */; };
+		37952405261BEF4800628968 /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37952404261BEF4800628968 /* common.framework */; };
+		37952406261BEF4800628968 /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37952404261BEF4800628968 /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3795240C261BEF5300628968 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3795240A261BEF5300628968 /* MetalKit.framework */; };
+		3795240D261BEF5300628968 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3795240B261BEF5300628968 /* Metal.framework */; };
+		37952413261BF59C00628968 /* Renderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 37952412261BF59C00628968 /* Renderer.m */; };
+		37952419261BF5CB00628968 /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 37952418261BF5CB00628968 /* Shader.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +39,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		37952407261BEF4800628968 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				37952406261BEF4800628968 /* common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		379523CB261B22F600628968 /* ParallaxMapping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParallaxMapping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		379523CE261B22F600628968 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -50,6 +70,13 @@
 		379523EC261B22FA00628968 /* ParallaxMappingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParallaxMappingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		379523F0261B22FA00628968 /* ParallaxMappingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParallaxMappingUITests.m; sourceTree = "<group>"; };
 		379523F2261B22FA00628968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37952404261BEF4800628968 /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3795240A261BEF5300628968 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		3795240B261BEF5300628968 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		3795240E261BF55A00628968 /* ShaderType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderType.h; sourceTree = "<group>"; };
+		37952411261BF57C00628968 /* Renderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
+		37952412261BF59C00628968 /* Renderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Renderer.m; sourceTree = "<group>"; };
+		37952418261BF5CB00628968 /* Shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +84,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37952405261BEF4800628968 /* common.framework in Frameworks */,
+				3795240D261BEF5300628968 /* Metal.framework in Frameworks */,
+				3795240C261BEF5300628968 /* MetalKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +114,7 @@
 				379523E4261B22FA00628968 /* ParallaxMappingTests */,
 				379523EF261B22FA00628968 /* ParallaxMappingUITests */,
 				379523CC261B22F600628968 /* Products */,
+				37952403261BEF4800628968 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +140,10 @@
 				379523D9261B22FA00628968 /* Info.plist */,
 				379523DA261B22FA00628968 /* main.m */,
 				379523DC261B22FA00628968 /* ParallaxMapping.entitlements */,
+				3795240E261BF55A00628968 /* ShaderType.h */,
+				37952411261BF57C00628968 /* Renderer.h */,
+				37952412261BF59C00628968 /* Renderer.m */,
+				37952418261BF5CB00628968 /* Shader.metal */,
 			);
 			path = ParallaxMapping;
 			sourceTree = "<group>";
@@ -131,6 +166,16 @@
 			path = ParallaxMappingUITests;
 			sourceTree = "<group>";
 		};
+		37952403261BEF4800628968 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3795240B261BEF5300628968 /* Metal.framework */,
+				3795240A261BEF5300628968 /* MetalKit.framework */,
+				37952404261BEF4800628968 /* common.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,6 +186,7 @@
 				379523C7261B22F600628968 /* Sources */,
 				379523C8261B22F600628968 /* Frameworks */,
 				379523C9261B22F600628968 /* Resources */,
+				37952407261BEF4800628968 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -259,8 +305,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37952413261BF59C00628968 /* Renderer.m in Sources */,
 				379523D3261B22F600628968 /* ViewController.m in Sources */,
 				379523DB261B22FA00628968 /* main.m in Sources */,
+				37952419261BF5CB00628968 /* Shader.metal in Sources */,
 				379523D0261B22F600628968 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

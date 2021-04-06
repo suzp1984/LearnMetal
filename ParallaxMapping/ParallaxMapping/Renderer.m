@@ -1,8 +1,8 @@
 //
 //  Renderer.m
-//  NormalMapping
+//  ParallaxMapping
 //
-//  Created by Jacob Su on 4/5/21.
+//  Created by Jacob Su on 4/6/21.
 //
 
 #import <Foundation/Foundation.h>
@@ -21,16 +21,21 @@
     id<MTLRenderPipelineState> _renderPipelineState;
     id<MTLTexture> _bricks;
     id<MTLTexture> _bricksNormal;
+    id<MTLTexture> _bricksDepth;
     id<MTLCommandQueue> _commandQueue;
     Uniform _uniform;
     NSDate *_date;
     MTLViewport viewport;
+    float _heightScale;
+    uint _parallaxMethod;
 }
 
 - (nonnull instancetype)initWithMetalKitView:(nonnull MTKView*)mtkView {
     self = [super init];
     
     if (self) {
+        _parallaxMethod = 2;
+        _heightScale = 0.1;
         _date = [[NSDate alloc] init];
         _device = mtkView.device;
         mtkView.delegate = self;
@@ -124,19 +129,26 @@
         
         MTKTextureLoader *textureLoader = [[MTKTextureLoader alloc] initWithDevice:_device];
         NSBundle *bundle = [NSBundle bundleForClass:[TextureCubeLoader class]];
-        _bricks = [textureLoader newTextureWithName:@"brickwall"
+        _bricks = [textureLoader newTextureWithName:@"bricks2"
                                       scaleFactor:1.0
                                            bundle:bundle
                                           options:@{ MTKTextureLoaderOptionSRGB: [NSNumber numberWithBool:NO] }
                                             error:&error];
         NSAssert(_bricks, @"can not load brickwall texutre: %@", error);
         
-        _bricksNormal = [textureLoader newTextureWithName:@"brickwall_normal"
+        _bricksNormal = [textureLoader newTextureWithName:@"bricks2_normal"
                                                  scaleFactor:1.0
                                                       bundle:bundle
                                                      options:nil
                                                        error:&error];
         NSAssert(_bricksNormal, @"can not load brickwall normal texture: %@", error);
+        
+        _bricksDepth = [textureLoader newTextureWithName:@"bricks2_disp"
+                                             scaleFactor:1.0
+                                                  bundle:bundle
+                                                 options:nil
+                                                   error:&error];
+        NSAssert(_bricksDepth, @"can not load depth map texture: %@", error);
         
         _commandQueue = [_device newCommandQueue];
         
@@ -178,6 +190,14 @@
     [self rebuildNormalMatrix];
 }
 
+- (void) setHeightScale:(float) scale {
+    _heightScale = scale;
+}
+
+- (void) setParallaxMethod:(uint) methodType {
+    _parallaxMethod = methodType;
+}
+
 - (void)drawInMTKView:(nonnull MTKView *)view {
     [self animate];
     
@@ -196,6 +216,13 @@
     
     [renderEncoder setFragmentTexture:_bricks atIndex:FragmentInputIndexDiffuseMap];
     [renderEncoder setFragmentTexture:_bricksNormal atIndex:FragmentInputIndexNormalMap];
+    [renderEncoder setFragmentTexture:_bricksDepth atIndex:FragmentInputIndexDepthMap];
+    [renderEncoder setFragmentBytes:&_heightScale
+                             length:sizeof(_heightScale)
+                            atIndex:FragmentInputIndexHeightScale];
+    [renderEncoder setFragmentBytes:&_parallaxMethod
+                             length:sizeof(_parallaxMethod)
+                            atIndex:FragmentInputIndexParallaxMethod];
     
     [renderEncoder drawPrimitives:MTLPrimitiveTypeTriangle vertexStart:0 vertexCount:6];
     
