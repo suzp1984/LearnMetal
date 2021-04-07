@@ -29,14 +29,16 @@
         _target = target;
         _up = up;
         
-        _r = vector_length(_position);
+        vector_float3 direction = _position - _target;
+        _r = vector_length(direction);
+        
 //        // z axis around
 //        _a = asin(_position.z / _r);
 //        _theta = atan2(_position.y, _position.x);
         
         // y axis around
-        _a = asin(_position.y / _r);
-        _theta = atan2(_position.z, _position.x);
+        _a = asin(direction.y / _r);
+        _theta = atan2(direction.z, direction.x);
     }
     
     return self;
@@ -67,9 +69,9 @@
 //    _position.y = _r * cos(_a) * sin(_theta);
     
     // y aixs around
-    _position.y = _r * sin(_a);
-    _position.x = _r * cos(_a) * cos(_theta);
-    _position.z = _r * cos(_a) * sin(_theta);
+    _position.y = _target.y + _r * sin(_a);
+    _position.x = _target.x + _r * cos(_a) * cos(_theta);
+    _position.z = _target.z + _r * cos(_a) * sin(_theta);
 }
 
 - (matrix_float4x4) getViewMatrix
