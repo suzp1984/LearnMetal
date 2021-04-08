@@ -15,7 +15,7 @@
 @implementation Renderer
 {
     id<MTLDevice> _device;
-    Camera *_camera;
+    id<Camera> _camera;
     id<MTLBuffer> _planeBuffer;
     id<MTLDepthStencilState> _depthState;
     id<MTLRenderPipelineState> _renderPipelineState;
@@ -40,9 +40,10 @@
         _device = mtkView.device;
         mtkView.delegate = self;
         
-        _camera = [[Camera alloc] initWithPosition:(vector_float3) {0.0, 0.0, 3.0}
-                                        withTarget:(vector_float3) {0.0, 0.0, 0.0}
-                                            withUp:(vector_float3) {0.0, 1.0, 0.0}];
+        _camera = [CameraFactory generateRoundOrbitCameraWithPosition:(vector_float3) {0.0, 0.0, 3.0}
+                                                               target:(vector_float3){0.0, 0.0, 0.0}
+                                                                   up:(vector_float3) {0.0, 1.0, 0.0}];
+        
         mtkView.depthStencilPixelFormat = MTLPixelFormatDepth32Float;
         mtkView.clearDepth = 1.0;
         
@@ -178,7 +179,7 @@
 }
 
 - (void) handleMouseScrollDeltaX:(float) deltaX deltaY:(float) deltaY {
-    [_camera handleMouseScrollDeltaX:deltaX deltaY:deltaY];
+    [_camera rotateCameraAroundTargetWithDeltaPhi:deltaX deltaTheta:deltaY];
     
     _uniform.viewMatrix = [_camera getViewMatrix];
     _uniform.viewPos = [_camera getCameraPosition];

@@ -29,9 +29,9 @@ class Renderer: NSObject {
     init(metalView: MTKView) {
         super.init()
         
-        camera = Camera(position: vector_float3(0.0, 0.0, 155.0),
-                        withTarget: vector_float3(0.0, 0.0, 0.0),
-                        withUp: vector_float3(0.0, 1.0, 0.0))
+        camera = CameraFactory.generateRoundOrbitCamera(withPosition: vector_float3(0.0, 0.0, 155.0),
+                                                        target: vector_float3(0.0, 0.0, 0.0),
+                                                        up: vector_float3(0.0, 1.0, 0.0))
         
         device = metalView.device!
 
@@ -131,7 +131,7 @@ class Renderer: NSObject {
     }
     
     func handleCameraEvent(deltaX: Float, deltaY: Float) -> Void {
-        camera.handleMouseScrollDeltaX(deltaX, deltaY: deltaY)
+        camera.rotateCameraAroundTarget(withDeltaPhi: deltaX * 0.2, deltaTheta: deltaY * 0.2)
         
         uniforms.viewMatrix = camera.getViewMatrix()
         rockUniform.viewMatrix = camera.getViewMatrix()

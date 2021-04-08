@@ -14,7 +14,7 @@
 
 @implementation Renderer
 {
-    Camera *_camera;
+    id<Camera> _camera;
     id<MTLDevice> _device;
     id<MTLDepthStencilState> _depthState;
     id<MTLRenderPipelineState> _blinnPhongPipelineState;
@@ -38,9 +38,10 @@
         _hasGammaCorrection = true;
         mtkView.delegate = self;
         mtkView.sampleCount = 4;
-        _camera = [[Camera alloc] initWithPosition:(vector_float3){0.0, 0.0, 3.0}
-                                        withTarget:(vector_float3) {0.0, 0.0, 0.0}
-                                            withUp:(vector_float3) {0.0, 1.0, 0.0}];
+        
+        _camera = [CameraFactory generateRoundOrbitCameraWithPosition:(vector_float3) {0.0, 0.0, 3.0}
+                                                               target:(vector_float3){0.0, 0.0, 0.0}
+                                                                   up:(vector_float3) {0.0, 1.0, 0.0}];
         
         _device = mtkView.device;
         
@@ -142,9 +143,9 @@
         _argumentBuffer.label = @"ArgumentBuffer";
         [argumentEncoder setArgumentBuffer:_argumentBuffer offset:0];
         [argumentEncoder setSamplerState:sampler atIndex:FragmentArgumentBufferIndexSampler];
-        _cameraPos = [_camera getCameraPosition];
+        _cameraPos = _camera.cameraPosition;
         _viewPosBuffer = [_device newBufferWithBytes:&_cameraPos
-                                              length:sizeof([_camera getCameraPosition])
+                                              length:sizeof(_cameraPos)
                                              options:MTLResourceStorageModeShared];
         [argumentEncoder setBuffer:_viewPosBuffer offset:0 atIndex:FragmentArgumentBufferIndexViewPosition];
         
@@ -187,10 +188,10 @@
 }
 
 - (void) handleMouseScrollDeltaX:(float) deltaX deltaY:(float) deltaY {
-    [_camera handleMouseScrollDeltaX:deltaX deltaY:deltaY];
+    [_camera rotateCameraAroundTargetWithDeltaPhi:deltaX*0.2 deltaTheta:deltaY*0.2];
     
     _uniform.viewMatrix = [_camera getViewMatrix];
-    _cameraPos = [_camera getCameraPosition];
+    _cameraPos = _camera.cameraPosition;
     void *viewPosPtr = [_viewPosBuffer contents];
     memcpy(viewPosPtr, &_cameraPos, sizeof(_cameraPos));
 }

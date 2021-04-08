@@ -37,10 +37,10 @@ class Renderer: NSObject {
         isHDREnable = 1
         exposure = 1.0
         
-        camera = Camera(position: vector_float3(0.0, 0.0, 5.0),
-                        withTarget: vector_float3(0.0, 0.0, 5.1),
-                        withUp: vector_float3(0.0, 1.0, 0.0));
-    
+        camera = CameraFactory.generateRoundOrbitCamera(withPosition: vector_float3(0.0, 0.0, 5.0),
+                                                        target: vector_float3(0.0, 0.0, 5.1),
+                                                        up: vector_float3(0.0, 1.0, 0.0))
+            
         device = metalView.device!
         metalView.delegate = self
         
@@ -166,7 +166,14 @@ class Renderer: NSObject {
     }
     
     func handleCameraEvent(deltaX: Float, deltaY: Float) -> Void {
-        camera.handleMouseScrollDeltaX(deltaX, deltaY: deltaY)
+//        camera.handleMouseScrollDeltaX(deltaX, deltaY: deltaY)
+        camera.rotateCameraAroundTarget(withDeltaPhi: deltaX * 0.2, deltaTheta: deltaY * 0.2)
+        
+        uniforms.viewMatrix = camera.getViewMatrix()
+    }
+    
+    func moveCamera(delta: Float) {
+        camera.move(alongCameraDirection: delta)
         
         uniforms.viewMatrix = camera.getViewMatrix()
     }
@@ -253,7 +260,7 @@ extension Renderer : MTKViewDelegate {
                                      index: Int(VertexInputIndexUniforms.rawValue))
         
         try! renderEncoder.setFragmentTexture(wood, index: Int(LightFragmentIndexDiffuseTexture.rawValue))
-        withUnsafePointer(to: camera.getPosition()) {
+        withUnsafePointer(to: camera.cameraPosition) {
             renderEncoder.setFragmentBytes($0,
                                            length: MemoryLayout<vector_float3>.stride,
                                            index: Int(LightFragmentIndexViewPos.rawValue))
@@ -301,6 +308,5 @@ extension Renderer : MTKViewDelegate {
         commandBuffer.commit()
         commandBuffer.waitUntilCompleted()
     }
-    
     
 }

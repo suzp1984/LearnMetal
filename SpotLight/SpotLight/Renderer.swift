@@ -91,13 +91,13 @@ class Renderer: NSObject {
     init(withMetalView metalView : MTKView) {
         super.init()
         
-        camera = Camera(position: vector_float3(0.0, 0.0, 2.5),
-                        withTarget: vector_float3(0.0, 0.0, 0.0),
-                        withUp: vector_float3(0.0, 1.0, 0.0))
+        camera = CameraFactory.generateRoundOrbitCamera(withPosition: vector_float3(0.0, 0.0, 2.5),
+                                                        target: vector_float3(0.0, 0.0, 0.0),
+                                                        up: vector_float3(0.0, 1.0, 0.0))
         
         instanceNumber = Renderer.cubePositions.count
         
-        light.position = camera.getPosition()
+        light.position = camera.cameraPosition
         light.direction = camera.getFrontDirection()
         light.ambient = vector_float3(0.8, 0.8, 0.8)
         light.diffuse = vector_float3(1.0, 1.0, 1.0)
@@ -210,7 +210,7 @@ class Renderer: NSObject {
     }
     
     func handleCameraEvent(deltaX: Float, deltaY: Float) -> Void {
-        camera.handleMouseScrollDeltaX(deltaX, deltaY: deltaY)
+        camera.rotateCameraAroundTarget(withDeltaPhi: deltaX, deltaTheta: deltaY)
         for i in 0..<instanceNumber {
             var uniform = uniformBuffer[i]
             uniform.viewMatrix = camera.getViewMatrix()
@@ -218,7 +218,7 @@ class Renderer: NSObject {
             uniformBuffer.assign(uniform, at: i)
         }
         
-        light.position = camera.getPosition()
+        light.position = camera.cameraPosition
         light.direction = camera.getFrontDirection()
         lightBuffer.contents().assumingMemoryBound(to: Light.self).initialize(to: light)
     }

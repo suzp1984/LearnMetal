@@ -26,7 +26,7 @@
     Uniforms _uniforms;
     vector_float3 _size;
     int _cubeNum;
-    Camera *camera;
+    id<Camera> _camera;
 }
 
 - (nonnull instancetype)initWithMetalKitView:(nonnull MTKView*)mtkView
@@ -34,10 +34,9 @@
     self = [super init];
     
     if (self) {
-        camera = [[Camera alloc] initWithPosition:
-                    (vector_float3) {0.0, 0.0, -800.0}
-                    withTarget:(vector_float3) {0.0, 0.0, 0.0}
-                    withUp:(vector_float3) {0.0, 1.0, 0.0}];
+        _camera = [CameraFactory generateRoundOrbitCameraWithPosition:(vector_float3) {0.0, 0.0, -800.0}
+                                                               target:(vector_float3){0.0, 0.0, 0.0}
+                                                                   up:(vector_float3) {0.0, 1.0, 0.0}];
         
         mtkView.delegate = self;
         mtkView.depthStencilPixelFormat = MTLPixelFormatDepth32Float;
@@ -176,7 +175,7 @@
 //                                                        (vector_float3) {0.0, 0.0, 0.0 },
 //                                                        (vector_float3) {0.0, 1.0, 0.0});
         
-        _uniforms.viewMatrix = [camera getViewMatrix];
+        _uniforms.viewMatrix = [_camera getViewMatrix];
 
         _uniforms.projectionMatrix = matrix_perspective_left_hand(M_PI / 3.0, width / height, 0.1, 9000.0);
         
@@ -257,9 +256,9 @@
 }
 
 - (void) handleMouseScrollDeltaX:(float) deltaX deltaY:(float) deltaY {
-    [camera handleMouseScrollDeltaX:deltaX deltaY:deltaY];
+    [_camera rotateCameraAroundTargetWithDeltaPhi:deltaX * 0.2 deltaTheta:deltaY * 0.2];
     
-    _uniforms.viewMatrix = [camera getViewMatrix];
+    _uniforms.viewMatrix = [_camera getViewMatrix];
     
     void *uniformPtr = [_uniformBuffer contents];
     memcpy(uniformPtr, &_uniforms, sizeof(_uniforms));

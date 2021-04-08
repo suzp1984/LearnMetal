@@ -94,9 +94,9 @@ class Renderer: NSObject {
         device = metalView.device
         colorTextureFormat = metalView.colorPixelFormat
         
-        camera = Camera(position: vector_float3(0.0, 0.0, 6.0),
-                        withTarget: vector_float3(0.0, 0.0, 0.0),
-                        withUp: vector_float3(0.0, 1.0, 0.0))
+        camera = CameraFactory.generateRoundOrbitCamera(withPosition: vector_float3(0.0, 0.0, 6.0),
+                                                        target: vector_float3(0.0, 0.0, 0.0),
+                                                        up: vector_float3(0.0, 1.0, 0.0))
         
         let mtlVertexDescriptor = MTLVertexDescriptor()
         // positions
@@ -226,7 +226,7 @@ class Renderer: NSObject {
     }
     
     func handleCameraEvent(deltaX: Float, deltaY: Float) -> Void {
-        camera.handleMouseScrollDeltaX(deltaX, deltaY: deltaY)
+        camera.rotateCameraAroundTarget(withDeltaPhi: deltaX, deltaTheta: deltaY)
         
         cubeOneUniforms.viewMatrix = camera.getViewMatrix()
         cubeTwoUniforms.viewMatrix = camera.getViewMatrix()

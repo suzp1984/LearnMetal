@@ -10,16 +10,27 @@
 
 #import <simd/simd.h>
 
-@interface Camera : NSObject
+@protocol Camera <NSObject>
 
-- (nonnull instancetype) initWithPosition:(vector_float3) position
-                                withTarget:(vector_float3) target
-                                withUp:(vector_float3) up;
+@property vector_float3 cameraPosition;
+@property vector_float3 target;
+@property vector_float3 cameraUp;
 
-- (void) handleMouseScrollDeltaX:(float) deltaX deltaY:(float) deltaY;
 - (matrix_float4x4) getViewMatrix;
-- (vector_float3) getCameraPosition;
 - (vector_float3) getFrontDirection;
+
+- (void) moveCameraWithTranslation:(vector_float3)translation;
+
+- (void) moveAlongCameraDirection:(float)translation;
+
+- (void) rotateCameraAroundTargetWithDeltaPhi:(float) deltaPhi deltaTheta:(float) deltaTheta;
+
+@end
+
+// CameraFactory
+@interface CameraFactory : NSObject
+
++ (id<Camera>_Nonnull) generateRoundOrbitCameraWithPosition:(vector_float3) position target:(vector_float3)target up:(vector_float3)up;
 
 @end
 

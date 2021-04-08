@@ -104,9 +104,9 @@ class Renderer: NSObject {
     init(withMetalView metalView : MTKView) {
         super.init()
         
-        camera = Camera(position: vector_float3(0.0, 0.0, 3.0),
-                        withTarget: vector_float3(0.0, 0.0, 0.0),
-                        withUp: vector_float3(0.0, 1.0, 0.0))
+        camera = CameraFactory.generateRoundOrbitCamera(withPosition: vector_float3(0.0, 0.0, 3.0),
+                                                        target: vector_float3(0.0, 0.0, 0.0),
+                                                        up: vector_float3(0.0, 1.0, 0.0))
         
         instanceNumber = Renderer.cubePositions.count
         pointLightNumber = Renderer.pointLightPositions.count
@@ -224,7 +224,7 @@ class Renderer: NSObject {
                                               options: MTLResourceOptions.storageModeShared)
         lightArgumentEncoder.setBuffer(pointLightsBuffer, offset: 0, index: Int(FragmentArgumentLightBufferIDPointLight.rawValue))
         
-        spotLight = SpotLight(position: camera.getPosition(),
+        spotLight = SpotLight(position: camera.cameraPosition,
                               direction: camera.getFrontDirection(),
                               ambient: vector_float3(0.0, 0.0, 0.0),
                               diffuse: vector_float3(1.0, 1.0, 1.0),
@@ -289,7 +289,7 @@ class Renderer: NSObject {
     }
     
     func handleCameraEvent(deltaX: Float, deltaY: Float) -> Void {
-        camera.handleMouseScrollDeltaX(deltaX, deltaY: deltaY)
+        camera.rotateCameraAroundTarget(withDeltaPhi: deltaX, deltaTheta: deltaY)
         for i in 0..<instanceNumber {
             var uniform = uniformBuffer[i]
             uniform.viewMatrix = camera.getViewMatrix()
@@ -304,7 +304,7 @@ class Renderer: NSObject {
             lampUniformBuffer.assign(uniform, at: i)
         }
         
-        spotLight.position = camera.getPosition()
+        spotLight.position = camera.cameraPosition
         spotLight.direction = camera.getFrontDirection()
         spotLightBuffer.contents().assumingMemoryBound(to: SpotLight.self).initialize(to: spotLight)
     }

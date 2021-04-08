@@ -38,9 +38,10 @@ class Renderer: NSObject {
         date = Date()
         device = metalView.device!
         metalView.delegate = self
-        camera = Camera(position: vector_float3(0.0, 0.0, 3.0),
-                        withTarget: vector_float3(0.0, 0.0, 0.0),
-                        withUp: vector_float3(0.0, 1.0, 0.0))
+        
+        camera = CameraFactory.generateRoundOrbitCamera(withPosition: vector_float3(0.0, 0.0, 3.0),
+                                                        target: vector_float3(0.0, 0.0, 0.0),
+                                                        up: vector_float3(0.0, 1.0, 0.0))
         
         metalView.depthStencilPixelFormat = .depth32Float
         metalView.clearDepth = 1.0
@@ -226,7 +227,7 @@ class Renderer: NSObject {
     }
     
     func handleCameraEvent(deltaX: Float, deltaY: Float) -> Void {
-        camera.handleMouseScrollDeltaX(deltaX, deltaY: deltaY)
+        camera.rotateCameraAroundTarget(withDeltaPhi: deltaX, deltaTheta: deltaY)
         
         for i in 0..<cubesUniforms.count {
             cubesUniforms[i].viewMatrix = camera.getViewMatrix()
@@ -354,7 +355,7 @@ extension Renderer : MTKViewDelegate
         colorRenderEncoder.setFragmentBytes(&lightPos,
                                             length: MemoryLayout<vector_float3>.stride,
                                             index: Int(FragmentInputIndexLightPos.rawValue))
-        withUnsafePointer(to: camera.getPosition()) {
+        withUnsafePointer(to: camera.cameraPosition) {
             colorRenderEncoder.setFragmentBytes($0,
                                                 length: MemoryLayout<vector_float3>.stride,
                                                 index: Int(FragmentInputIndexViewPos.rawValue))

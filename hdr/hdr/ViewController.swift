@@ -91,6 +91,10 @@ class ViewController: NSViewController {
             exposureLabel.heightAnchor.constraint(equalTo: exposureSlider.heightAnchor),
         ])
         
+        NSEvent.addLocalMonitorForEvents(matching: .keyDown) {
+                    self.keyDown(with: $0)
+                    return $0
+                }
     }
     
     override func mouseDragged(with event: NSEvent) {
@@ -107,6 +111,23 @@ class ViewController: NSViewController {
                                        deltaY: Float(event.scrollingDeltaY))
         }
     }
+    
+    override func keyDown(with event: NSEvent) {
+        NSLog("key down \(event.keyCode)")
+        super.keyDown(with: event)
+                
+        switch event.characters {
+        case "q":
+            renderer.moveCamera(delta: 0.5)
+        case "w":
+            renderer.moveCamera(delta: -0.5)
+        default:
+            break
+        }
+    }
+    
+    override var acceptsFirstResponder: Bool { get { return true }}
+    
     
     @objc
     func hdrSwitchChanged() {

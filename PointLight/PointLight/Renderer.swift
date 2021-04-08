@@ -105,9 +105,9 @@ class Renderer: NSObject {
         viewportSize = vector_float2(Float(metalView.frame.width),
                                      Float(metalView.frame.height))
         
-        camera = Camera(position: vector_float3(0.0, 0.0, 10.0),
-                        withTarget: vector_float3(0.0, 0.0, 0.0),
-                        withUp: vector_float3(0.0, 1.0, 0.0))
+        camera = CameraFactory.generateRoundOrbitCamera(withPosition: vector_float3(0.0, 0.0, 10.0),
+                                                        target: vector_float3(0.0, 0.0, 0.0),
+                                                        up: vector_float3(0.0, 1.0, 0.0))
         
         metalView.delegate = self
         
@@ -191,7 +191,7 @@ class Renderer: NSObject {
         let lightPtr = lightArgumentEncoder.constantData(at: Int(FragmentArgumentLightBufferIDLight.rawValue))
         lightPtr.assumingMemoryBound(to: Light.self).initialize(to: light)
         let viewPosPtr = lightArgumentEncoder.constantData(at: Int(FragmentArgumentLightBufferIDViewPosition.rawValue))
-        viewPosPtr.assumingMemoryBound(to: vector_float3.self).initialize(to: camera.getPosition())
+        viewPosPtr.assumingMemoryBound(to: vector_float3.self).initialize(to: camera.cameraPosition)
         
         let width = metalView.frame.width
         let height = metalView.frame.height
@@ -230,7 +230,7 @@ class Renderer: NSObject {
     }
     
     func handleCameraEvent(deltaX: Float, deltaY: Float) -> Void {
-        camera.handleMouseScrollDeltaX(deltaX, deltaY: deltaY)
+        camera.rotateCameraAroundTarget(withDeltaPhi: deltaX, deltaTheta: deltaY)
         for i in 0..<instanceNumber {
             var uniform = uniformBuffer[i]
             uniform.viewMatrix = camera.getViewMatrix()

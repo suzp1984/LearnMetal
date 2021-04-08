@@ -87,9 +87,9 @@ class Renderer: NSObject {
         viewportSize = vector_float2(Float(metalView.frame.width),
                                      Float(metalView.frame.height))
         
-        camera = Camera(position: vector_float3(0.0, 0.0, -1800.0),
-                        withTarget: vector_float3(0.0, 0.0, 0.0),
-                        withUp: vector_float3(0.0, 1.0, 0.0))
+        camera = CameraFactory.generateRoundOrbitCamera(withPosition: vector_float3(0.0, 0.0, -1800.0),
+                                                        target: vector_float3(0.0, 0.0, 0.0),
+                                                        up: vector_float3(0.0, 1.0, 0.0))
         
         metalView.delegate = self
         
@@ -188,7 +188,7 @@ class Renderer: NSObject {
     }
     
     func handleCameraEvent(deltaX: Float, deltaY: Float) -> Void {
-        camera.handleMouseScrollDeltaX(deltaX, deltaY: deltaY)
+        camera.rotateCameraAroundTarget(withDeltaPhi: deltaX * 0.2, deltaTheta: deltaY * 0.2)
         objectUniforms.viewMatrix = camera.getViewMatrix()
         lampUniforms.viewMatrix = camera.getViewMatrix()
     }
@@ -238,7 +238,7 @@ extension Renderer : MTKViewDelegate
         
         objectRenderEncoder.setFragmentBytes(&light, length: MemoryLayout<Light>.stride, index: Int(FragmentInputIndexLight.rawValue))
         
-        withUnsafePointer(to: camera.getPosition()) {
+        withUnsafePointer(to: camera.cameraPosition) {
             objectRenderEncoder.setFragmentBytes($0, length: MemoryLayout<vector_float3>.size, index: Int(FragmentInputIndexViewPos.rawValue))
         }
         

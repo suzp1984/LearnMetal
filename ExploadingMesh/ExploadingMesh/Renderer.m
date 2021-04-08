@@ -24,7 +24,7 @@
     id<MTLBuffer> _exploadingBuffer;
     Uniforms _uniforms;
     vector_uint2 _viewportSize;
-    Camera *_camera;
+    id<Camera> _camera;
     NSDate *_date;
 }
 
@@ -37,9 +37,10 @@
         id<MTLDevice> device = mtkView.device;
         _device = mtkView.device;
         _date = [NSDate new];
-        _camera = [[Camera alloc] initWithPosition:(vector_float3) {0.0, 0.0, 3.0}
-                                        withTarget:(vector_float3) {0.0, 0.0, 0.0}
-                                        withUp:(vector_float3) {0.0, 1.0, 0.0}];
+        
+        _camera = [CameraFactory generateRoundOrbitCameraWithPosition:(vector_float3) {0.0, 0.0, 3.0}
+                                                               target:(vector_float3){0.0, 0.0, 0.0}
+                                                                   up:(vector_float3) {0.0, 1.0, 0.0}];
         
         mtkView.depthStencilPixelFormat = MTLPixelFormatDepth32Float;
         mtkView.clearDepth = 1.0;
@@ -166,7 +167,7 @@
 }
 
 - (void) handleMouseScrollDeltaX:(float) deltaX deltaY:(float) deltaY {
-    [_camera handleMouseScrollDeltaX:deltaX deltaY:deltaY];
+    [_camera rotateCameraAroundTargetWithDeltaPhi:deltaX * 0.2 deltaTheta:deltaY * 0.2];
     
     _uniforms.viewMatrix = [_camera getViewMatrix];
 }

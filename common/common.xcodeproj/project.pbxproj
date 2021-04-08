@@ -16,6 +16,8 @@
 		37951FC52610259200628968 /* planet in Resources */ = {isa = PBXBuildFile; fileRef = 37951FC42610259200628968 /* planet */; };
 		37951FC92610259C00628968 /* rock in Resources */ = {isa = PBXBuildFile; fileRef = 37951FC82610259C00628968 /* rock */; };
 		37951FDB2610313B00628968 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37951FDA2610313B00628968 /* Bundle.swift */; };
+		37952509261EA7B800628968 /* OrbitCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 37952508261EA7B800628968 /* OrbitCamera.h */; };
+		3795250D261EA7D400628968 /* OrbitCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 3795250C261EA7D400628968 /* OrbitCamera.m */; };
 		37DD617325F38714005D7A42 /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DD616925F38714005D7A42 /* common.framework */; };
 		37DD617825F38714005D7A42 /* commonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD617725F38714005D7A42 /* commonTests.m */; };
 		37DD617A25F38714005D7A42 /* common.h in Headers */ = {isa = PBXBuildFile; fileRef = 37DD616C25F38714005D7A42 /* common.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -46,6 +48,8 @@
 		37951FC42610259200628968 /* planet */ = {isa = PBXFileReference; lastKnownFileType = folder; path = planet; sourceTree = "<group>"; };
 		37951FC82610259C00628968 /* rock */ = {isa = PBXFileReference; lastKnownFileType = folder; path = rock; sourceTree = "<group>"; };
 		37951FDA2610313B00628968 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		37952508261EA7B800628968 /* OrbitCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrbitCamera.h; sourceTree = "<group>"; };
+		3795250C261EA7D400628968 /* OrbitCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrbitCamera.m; sourceTree = "<group>"; };
 		37DD616925F38714005D7A42 /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DD616C25F38714005D7A42 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		37DD616D25F38714005D7A42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 				3706D2EE2604548A000568B4 /* Errors.swift */,
 				372B5439260A1F2D00EAE90C /* TextureCubeLoader.swift */,
 				37951FDA2610313B00628968 /* Bundle.swift */,
+				37952508261EA7B800628968 /* OrbitCamera.h */,
+				3795250C261EA7D400628968 /* OrbitCamera.m */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -143,6 +149,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37952509261EA7B800628968 /* OrbitCamera.h in Headers */,
 				37DD624B25F5D646005D7A42 /* Camera.h in Headers */,
 				37DD617A25F38714005D7A42 /* common.h in Headers */,
 				37DD61AC25F38812005D7A42 /* AAPLMathUtilities.h in Headers */,
@@ -252,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37DD624625F5D61B005D7A42 /* Camera.m in Sources */,
+				3795250D261EA7D400628968 /* OrbitCamera.m in Sources */,
 				37951FDB2610313B00628968 /* Bundle.swift in Sources */,
 				3706D2EF2604548A000568B4 /* Errors.swift in Sources */,
 				37DD618725F38769005D7A42 /* AAPLMathUtilities.m in Sources */,
