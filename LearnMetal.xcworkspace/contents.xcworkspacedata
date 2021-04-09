@@ -145,4 +145,7 @@
    <FileRef
       location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/hdr/5.7.hdr.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/Bloom/5.8.Bloom.xcodeproj">
+   </FileRef>
 </Workspace>

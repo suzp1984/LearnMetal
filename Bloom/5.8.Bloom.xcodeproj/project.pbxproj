@@ -1,0 +1,628 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3795264A261EFF8200628968 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37952649261EFF8200628968 /* AppDelegate.m */; };
+		3795264D261EFF8200628968 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3795264C261EFF8200628968 /* ViewController.m */; };
+		3795264F261EFF8500628968 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3795264E261EFF8500628968 /* Assets.xcassets */; };
+		37952652261EFF8500628968 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37952650261EFF8500628968 /* Main.storyboard */; };
+		37952655261EFF8500628968 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37952654261EFF8500628968 /* main.m */; };
+		37952660261EFF8500628968 /* BloomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3795265F261EFF8500628968 /* BloomTests.m */; };
+		3795266B261EFF8600628968 /* BloomUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3795266A261EFF8600628968 /* BloomUITests.m */; };
+		3795267D261EFFC100628968 /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3795267C261EFFC100628968 /* common.framework */; };
+		3795267E261EFFC100628968 /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3795267C261EFFC100628968 /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		37952682261EFFC800628968 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37952680261EFFC800628968 /* Metal.framework */; };
+		37952683261EFFC800628968 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37952681261EFFC800628968 /* MetalKit.framework */; };
+		37952686261F008000628968 /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 37952685261F008000628968 /* Shader.metal */; };
+		3795268B261F0D7C00628968 /* Renderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3795268A261F0D7C00628968 /* Renderer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3795265C261EFF8500628968 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3795263D261EFF8200628968 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37952644261EFF8200628968;
+			remoteInfo = Bloom;
+		};
+		37952667261EFF8600628968 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3795263D261EFF8200628968 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37952644261EFF8200628968;
+			remoteInfo = Bloom;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3795267F261EFFC100628968 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3795267E261EFFC100628968 /* common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		37952645261EFF8200628968 /* 5.8.Bloom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 5.8.Bloom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37952648261EFF8200628968 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		37952649261EFF8200628968 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3795264B261EFF8200628968 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3795264C261EFF8200628968 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3795264E261EFF8500628968 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37952651261EFF8500628968 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		37952653261EFF8500628968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37952654261EFF8500628968 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		37952656261EFF8500628968 /* Bloom.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bloom.entitlements; sourceTree = "<group>"; };
+		3795265B261EFF8500628968 /* BloomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BloomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3795265F261EFF8500628968 /* BloomTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BloomTests.m; sourceTree = "<group>"; };
+		37952661261EFF8500628968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37952666261EFF8600628968 /* BloomUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BloomUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3795266A261EFF8600628968 /* BloomUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BloomUITests.m; sourceTree = "<group>"; };
+		3795266C261EFF8600628968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3795267C261EFFC100628968 /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37952680261EFFC800628968 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		37952681261EFFC800628968 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		37952684261F005200628968 /* ShaderType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderType.h; sourceTree = "<group>"; };
+		37952685261F008000628968 /* Shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader.metal; sourceTree = "<group>"; };
+		37952689261F0CC200628968 /* Renderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
+		3795268A261F0D7C00628968 /* Renderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Renderer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37952642261EFF8200628968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37952683261EFFC800628968 /* MetalKit.framework in Frameworks */,
+				37952682261EFFC800628968 /* Metal.framework in Frameworks */,
+				3795267D261EFFC100628968 /* common.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37952658261EFF8500628968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37952663261EFF8600628968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3795263C261EFF8200628968 = {
+			isa = PBXGroup;
+			children = (
+				37952647261EFF8200628968 /* Bloom */,
+				3795265E261EFF8500628968 /* BloomTests */,
+				37952669261EFF8600628968 /* BloomUITests */,
+				37952646261EFF8200628968 /* Products */,
+				3795267B261EFFC100628968 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		37952646261EFF8200628968 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37952645261EFF8200628968 /* 5.8.Bloom.app */,
+				3795265B261EFF8500628968 /* BloomTests.xctest */,
+				37952666261EFF8600628968 /* BloomUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37952647261EFF8200628968 /* Bloom */ = {
+			isa = PBXGroup;
+			children = (
+				37952648261EFF8200628968 /* AppDelegate.h */,
+				37952649261EFF8200628968 /* AppDelegate.m */,
+				3795264B261EFF8200628968 /* ViewController.h */,
+				3795264C261EFF8200628968 /* ViewController.m */,
+				3795264E261EFF8500628968 /* Assets.xcassets */,
+				37952650261EFF8500628968 /* Main.storyboard */,
+				37952653261EFF8500628968 /* Info.plist */,
+				37952654261EFF8500628968 /* main.m */,
+				37952656261EFF8500628968 /* Bloom.entitlements */,
+				37952684261F005200628968 /* ShaderType.h */,
+				37952685261F008000628968 /* Shader.metal */,
+				37952689261F0CC200628968 /* Renderer.h */,
+				3795268A261F0D7C00628968 /* Renderer.m */,
+			);
+			path = Bloom;
+			sourceTree = "<group>";
+		};
+		3795265E261EFF8500628968 /* BloomTests */ = {
+			isa = PBXGroup;
+			children = (
+				3795265F261EFF8500628968 /* BloomTests.m */,
+				37952661261EFF8500628968 /* Info.plist */,
+			);
+			path = BloomTests;
+			sourceTree = "<group>";
+		};
+		37952669261EFF8600628968 /* BloomUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3795266A261EFF8600628968 /* BloomUITests.m */,
+				3795266C261EFF8600628968 /* Info.plist */,
+			);
+			path = BloomUITests;
+			sourceTree = "<group>";
+		};
+		3795267B261EFFC100628968 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37952680261EFFC800628968 /* Metal.framework */,
+				37952681261EFFC800628968 /* MetalKit.framework */,
+				3795267C261EFFC100628968 /* common.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37952644261EFF8200628968 /* 5.8.Bloom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3795266F261EFF8600628968 /* Build configuration list for PBXNativeTarget "5.8.Bloom" */;
+			buildPhases = (
+				37952641261EFF8200628968 /* Sources */,
+				37952642261EFF8200628968 /* Frameworks */,
+				37952643261EFF8200628968 /* Resources */,
+				3795267F261EFFC100628968 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 5.8.Bloom;
+			productName = Bloom;
+			productReference = 37952645261EFF8200628968 /* 5.8.Bloom.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3795265A261EFF8500628968 /* BloomTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37952672261EFF8600628968 /* Build configuration list for PBXNativeTarget "BloomTests" */;
+			buildPhases = (
+				37952657261EFF8500628968 /* Sources */,
+				37952658261EFF8500628968 /* Frameworks */,
+				37952659261EFF8500628968 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3795265D261EFF8500628968 /* PBXTargetDependency */,
+			);
+			name = BloomTests;
+			productName = BloomTests;
+			productReference = 3795265B261EFF8500628968 /* BloomTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		37952665261EFF8600628968 /* BloomUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37952675261EFF8600628968 /* Build configuration list for PBXNativeTarget "BloomUITests" */;
+			buildPhases = (
+				37952662261EFF8600628968 /* Sources */,
+				37952663261EFF8600628968 /* Frameworks */,
+				37952664261EFF8600628968 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37952668261EFF8600628968 /* PBXTargetDependency */,
+			);
+			name = BloomUITests;
+			productName = BloomUITests;
+			productReference = 37952666261EFF8600628968 /* BloomUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3795263D261EFF8200628968 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					37952644261EFF8200628968 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					3795265A261EFF8500628968 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 37952644261EFF8200628968;
+					};
+					37952665261EFF8600628968 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 37952644261EFF8200628968;
+					};
+				};
+			};
+			buildConfigurationList = 37952640261EFF8200628968 /* Build configuration list for PBXProject "5.8.Bloom" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3795263C261EFF8200628968;
+			productRefGroup = 37952646261EFF8200628968 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37952644261EFF8200628968 /* 5.8.Bloom */,
+				3795265A261EFF8500628968 /* BloomTests */,
+				37952665261EFF8600628968 /* BloomUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		37952643261EFF8200628968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3795264F261EFF8500628968 /* Assets.xcassets in Resources */,
+				37952652261EFF8500628968 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37952659261EFF8500628968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37952664261EFF8600628968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		37952641261EFF8200628968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37952686261F008000628968 /* Shader.metal in Sources */,
+				3795264D261EFF8200628968 /* ViewController.m in Sources */,
+				37952655261EFF8500628968 /* main.m in Sources */,
+				3795268B261F0D7C00628968 /* Renderer.m in Sources */,
+				3795264A261EFF8200628968 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37952657261EFF8500628968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37952660261EFF8500628968 /* BloomTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37952662261EFF8600628968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3795266B261EFF8600628968 /* BloomUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3795265D261EFF8500628968 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37952644261EFF8200628968 /* 5.8.Bloom */;
+			targetProxy = 3795265C261EFF8500628968 /* PBXContainerItemProxy */;
+		};
+		37952668261EFF8600628968 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37952644261EFF8200628968 /* 5.8.Bloom */;
+			targetProxy = 37952667261EFF8600628968 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		37952650261EFF8500628968 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37952651261EFF8500628968 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3795266D261EFF8600628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3795266E261EFF8600628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		37952670261EFF8600628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Bloom/Bloom.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Bloom/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.Bloom;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		37952671261EFF8600628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Bloom/Bloom.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Bloom/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.Bloom;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		37952673261EFF8600628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = BloomTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.BloomTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bloom.app/Contents/MacOS/Bloom";
+			};
+			name = Debug;
+		};
+		37952674261EFF8600628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = BloomTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.BloomTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bloom.app/Contents/MacOS/Bloom";
+			};
+			name = Release;
+		};
+		37952676261EFF8600628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = BloomUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.BloomUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Bloom;
+			};
+			name = Debug;
+		};
+		37952677261EFF8600628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = BloomUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.BloomUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Bloom;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		37952640261EFF8200628968 /* Build configuration list for PBXProject "5.8.Bloom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3795266D261EFF8600628968 /* Debug */,
+				3795266E261EFF8600628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3795266F261EFF8600628968 /* Build configuration list for PBXNativeTarget "5.8.Bloom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37952670261EFF8600628968 /* Debug */,
+				37952671261EFF8600628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37952672261EFF8600628968 /* Build configuration list for PBXNativeTarget "BloomTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37952673261EFF8600628968 /* Debug */,
+				37952674261EFF8600628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37952675261EFF8600628968 /* Build configuration list for PBXNativeTarget "BloomUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37952676261EFF8600628968 /* Debug */,
+				37952677261EFF8600628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3795263D261EFF8200628968 /* Project object */;
+}

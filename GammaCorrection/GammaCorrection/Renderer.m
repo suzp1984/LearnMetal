@@ -81,7 +81,8 @@
                                            [NSNumber numberWithInt:ModelVertexAttributeNormal] : MDLVertexAttributeNormal,
                                            [NSNumber numberWithInt:ModelVertexAttributeTexCoord] : MDLVertexAttributeTextureCoordinate
                                        }
-                                              withDevice:_device withDimensions:(vector_float2) {1.0, 1.0}
+                                            withDevice:_device
+                                            withDimensions:(vector_float2) {1.0, 1.0}
                                                 segments:(vector_uint2) {1, 1}
                                             geometryType:MDLGeometryTypeTriangles
                                            inwardNormals:FALSE
