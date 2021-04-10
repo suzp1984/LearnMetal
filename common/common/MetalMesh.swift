@@ -9,6 +9,7 @@ import Foundation
 import Metal
 import MetalKit
 
+@objc
 public class MetalMesh : NSObject {
 
     fileprivate var mtkMesh: MTKMesh!
@@ -16,6 +17,7 @@ public class MetalMesh : NSObject {
     fileprivate var specularTextures: [String : MTLTexture] = [:]
     fileprivate var texturesCache : [URL: MTLTexture] = [:]
 
+    @objc
     public init(withUrl url: URL,
                 device: MTLDevice,
                 mtlVertexDescriptor: MTLVertexDescriptor,
@@ -86,14 +88,25 @@ public class MetalMesh : NSObject {
         mtkMesh = try! MTKMesh(mesh: mdlMesh!, device: device)
     }
     
-    func getDiffuseTextures() -> [String : MTLTexture] {
+    @objc
+    public func getDiffuseTextures() -> [String : MTLTexture] {
         return baseColorTextures
     }
     
-    func getSpecularTextures() -> [String : MTLTexture] {
+    @objc
+    public func getSpecularTextures() -> [String : MTLTexture] {
         return specularTextures
     }
-
+    
+    @objc
+    public func setVertexMeshTo(renderEncoder: MTLRenderCommandEncoder, index: Int) {
+        renderEncoder.setVertexMesh(self, index: index)
+    }
+    
+    @objc
+    public func drawMeshTo(renderEncoder: MTLRenderCommandEncoder, textureHandler: (_ type: MDLMaterialSemantic, _ texture: MTLTexture, _ subMeshName: String) -> Void) {
+        renderEncoder.drawMesh(self, textureHandler: textureHandler)
+    }
 }
 
 @objc
