@@ -166,7 +166,6 @@ class Renderer: NSObject {
     }
     
     func handleCameraEvent(deltaX: Float, deltaY: Float) -> Void {
-//        camera.handleMouseScrollDeltaX(deltaX, deltaY: deltaY)
         camera.rotateCameraAroundTarget(withDeltaPhi: deltaX * 0.2, deltaTheta: deltaY * 0.2)
         
         uniforms.viewMatrix = camera.getViewMatrix()

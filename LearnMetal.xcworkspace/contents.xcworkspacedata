@@ -148,4 +148,7 @@
    <FileRef
       location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/Bloom/5.8.Bloom.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/DeferredShading/5.9.DeferredShading.xcodeproj">
+   </FileRef>
 </Workspace>

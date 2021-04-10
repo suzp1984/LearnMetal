@@ -1,0 +1,649 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3795270D26214A2E00628968 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795270C26214A2E00628968 /* AppDelegate.swift */; };
+		3795270F26214A2E00628968 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795270E26214A2E00628968 /* ViewController.swift */; };
+		3795271126214A3000628968 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3795271026214A3000628968 /* Assets.xcassets */; };
+		3795271426214A3000628968 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3795271226214A3000628968 /* Main.storyboard */; };
+		3795272026214A3000628968 /* DeferredShadingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795271F26214A3000628968 /* DeferredShadingTests.swift */; };
+		3795272B26214A3000628968 /* DeferredShadingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795272A26214A3000628968 /* DeferredShadingUITests.swift */; };
+		3795273D26214A7700628968 /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3795273C26214A7700628968 /* common.framework */; };
+		3795273E26214A7700628968 /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3795273C26214A7700628968 /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3795274226214A7F00628968 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3795274026214A7F00628968 /* Metal.framework */; };
+		3795274326214A7F00628968 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3795274126214A7F00628968 /* MetalKit.framework */; };
+		3795274526214A8800628968 /* ModelIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3795274426214A8800628968 /* ModelIO.framework */; };
+		379527492621505F00628968 /* ShaderType.m in Sources */ = {isa = PBXBuildFile; fileRef = 379527482621505F00628968 /* ShaderType.m */; };
+		3795274D2621508F00628968 /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3795274C2621508F00628968 /* Shader.metal */; };
+		37952752262151FE00628968 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37952751262151FE00628968 /* Renderer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3795271C26214A3000628968 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3795270126214A2D00628968 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3795270826214A2E00628968;
+			remoteInfo = DeferredShading;
+		};
+		3795272726214A3000628968 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3795270126214A2D00628968 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3795270826214A2E00628968;
+			remoteInfo = DeferredShading;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3795273F26214A7700628968 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3795273E26214A7700628968 /* common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3795270926214A2E00628968 /* 5.9.DeferredShading.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 5.9.DeferredShading.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3795270C26214A2E00628968 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3795270E26214A2E00628968 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3795271026214A3000628968 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3795271326214A3000628968 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3795271526214A3000628968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3795271626214A3000628968 /* DeferredShading.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeferredShading.entitlements; sourceTree = "<group>"; };
+		3795271B26214A3000628968 /* DeferredShadingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeferredShadingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3795271F26214A3000628968 /* DeferredShadingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeferredShadingTests.swift; sourceTree = "<group>"; };
+		3795272126214A3000628968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3795272626214A3000628968 /* DeferredShadingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeferredShadingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3795272A26214A3000628968 /* DeferredShadingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeferredShadingUITests.swift; sourceTree = "<group>"; };
+		3795272C26214A3000628968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3795273C26214A7700628968 /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3795274026214A7F00628968 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		3795274126214A7F00628968 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		3795274426214A8800628968 /* ModelIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ModelIO.framework; path = System/Library/Frameworks/ModelIO.framework; sourceTree = SDKROOT; };
+		379527462621501800628968 /* ShaderType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderType.h; sourceTree = "<group>"; };
+		379527472621505E00628968 /* DeferredShading-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DeferredShading-Bridging-Header.h"; sourceTree = "<group>"; };
+		379527482621505F00628968 /* ShaderType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShaderType.m; sourceTree = "<group>"; };
+		3795274C2621508F00628968 /* Shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader.metal; sourceTree = "<group>"; };
+		37952751262151FE00628968 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3795270626214A2E00628968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3795274326214A7F00628968 /* MetalKit.framework in Frameworks */,
+				3795274226214A7F00628968 /* Metal.framework in Frameworks */,
+				3795274526214A8800628968 /* ModelIO.framework in Frameworks */,
+				3795273D26214A7700628968 /* common.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3795271826214A3000628968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3795272326214A3000628968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3795270026214A2D00628968 = {
+			isa = PBXGroup;
+			children = (
+				3795270B26214A2E00628968 /* DeferredShading */,
+				3795271E26214A3000628968 /* DeferredShadingTests */,
+				3795272926214A3000628968 /* DeferredShadingUITests */,
+				3795270A26214A2E00628968 /* Products */,
+				3795273B26214A7700628968 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3795270A26214A2E00628968 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3795270926214A2E00628968 /* 5.9.DeferredShading.app */,
+				3795271B26214A3000628968 /* DeferredShadingTests.xctest */,
+				3795272626214A3000628968 /* DeferredShadingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3795270B26214A2E00628968 /* DeferredShading */ = {
+			isa = PBXGroup;
+			children = (
+				3795270C26214A2E00628968 /* AppDelegate.swift */,
+				3795270E26214A2E00628968 /* ViewController.swift */,
+				3795271026214A3000628968 /* Assets.xcassets */,
+				3795271226214A3000628968 /* Main.storyboard */,
+				3795271526214A3000628968 /* Info.plist */,
+				3795271626214A3000628968 /* DeferredShading.entitlements */,
+				379527462621501800628968 /* ShaderType.h */,
+				379527482621505F00628968 /* ShaderType.m */,
+				379527472621505E00628968 /* DeferredShading-Bridging-Header.h */,
+				3795274C2621508F00628968 /* Shader.metal */,
+				37952751262151FE00628968 /* Renderer.swift */,
+			);
+			path = DeferredShading;
+			sourceTree = "<group>";
+		};
+		3795271E26214A3000628968 /* DeferredShadingTests */ = {
+			isa = PBXGroup;
+			children = (
+				3795271F26214A3000628968 /* DeferredShadingTests.swift */,
+				3795272126214A3000628968 /* Info.plist */,
+			);
+			path = DeferredShadingTests;
+			sourceTree = "<group>";
+		};
+		3795272926214A3000628968 /* DeferredShadingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3795272A26214A3000628968 /* DeferredShadingUITests.swift */,
+				3795272C26214A3000628968 /* Info.plist */,
+			);
+			path = DeferredShadingUITests;
+			sourceTree = "<group>";
+		};
+		3795273B26214A7700628968 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3795274426214A8800628968 /* ModelIO.framework */,
+				3795274026214A7F00628968 /* Metal.framework */,
+				3795274126214A7F00628968 /* MetalKit.framework */,
+				3795273C26214A7700628968 /* common.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3795270826214A2E00628968 /* 5.9.DeferredShading */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3795272F26214A3000628968 /* Build configuration list for PBXNativeTarget "5.9.DeferredShading" */;
+			buildPhases = (
+				3795270526214A2E00628968 /* Sources */,
+				3795270626214A2E00628968 /* Frameworks */,
+				3795270726214A2E00628968 /* Resources */,
+				3795273F26214A7700628968 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 5.9.DeferredShading;
+			productName = DeferredShading;
+			productReference = 3795270926214A2E00628968 /* 5.9.DeferredShading.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3795271A26214A3000628968 /* DeferredShadingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3795273226214A3000628968 /* Build configuration list for PBXNativeTarget "DeferredShadingTests" */;
+			buildPhases = (
+				3795271726214A3000628968 /* Sources */,
+				3795271826214A3000628968 /* Frameworks */,
+				3795271926214A3000628968 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3795271D26214A3000628968 /* PBXTargetDependency */,
+			);
+			name = DeferredShadingTests;
+			productName = DeferredShadingTests;
+			productReference = 3795271B26214A3000628968 /* DeferredShadingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3795272526214A3000628968 /* DeferredShadingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3795273526214A3000628968 /* Build configuration list for PBXNativeTarget "DeferredShadingUITests" */;
+			buildPhases = (
+				3795272226214A3000628968 /* Sources */,
+				3795272326214A3000628968 /* Frameworks */,
+				3795272426214A3000628968 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3795272826214A3000628968 /* PBXTargetDependency */,
+			);
+			name = DeferredShadingUITests;
+			productName = DeferredShadingUITests;
+			productReference = 3795272626214A3000628968 /* DeferredShadingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3795270126214A2D00628968 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					3795270826214A2E00628968 = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+					};
+					3795271A26214A3000628968 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 3795270826214A2E00628968;
+					};
+					3795272526214A3000628968 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 3795270826214A2E00628968;
+					};
+				};
+			};
+			buildConfigurationList = 3795270426214A2D00628968 /* Build configuration list for PBXProject "5.9.DeferredShading" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3795270026214A2D00628968;
+			productRefGroup = 3795270A26214A2E00628968 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3795270826214A2E00628968 /* 5.9.DeferredShading */,
+				3795271A26214A3000628968 /* DeferredShadingTests */,
+				3795272526214A3000628968 /* DeferredShadingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3795270726214A2E00628968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3795271126214A3000628968 /* Assets.xcassets in Resources */,
+				3795271426214A3000628968 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3795271926214A3000628968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3795272426214A3000628968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3795270526214A2E00628968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3795274D2621508F00628968 /* Shader.metal in Sources */,
+				3795270F26214A2E00628968 /* ViewController.swift in Sources */,
+				379527492621505F00628968 /* ShaderType.m in Sources */,
+				37952752262151FE00628968 /* Renderer.swift in Sources */,
+				3795270D26214A2E00628968 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3795271726214A3000628968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3795272026214A3000628968 /* DeferredShadingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3795272226214A3000628968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3795272B26214A3000628968 /* DeferredShadingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3795271D26214A3000628968 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3795270826214A2E00628968 /* 5.9.DeferredShading */;
+			targetProxy = 3795271C26214A3000628968 /* PBXContainerItemProxy */;
+		};
+		3795272826214A3000628968 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3795270826214A2E00628968 /* 5.9.DeferredShading */;
+			targetProxy = 3795272726214A3000628968 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3795271226214A3000628968 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3795271326214A3000628968 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3795272D26214A3000628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3795272E26214A3000628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		3795273026214A3000628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = DeferredShading/DeferredShading.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = DeferredShading/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.DeferredShading;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DeferredShading/DeferredShading-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3795273126214A3000628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = DeferredShading/DeferredShading.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = DeferredShading/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.DeferredShading;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DeferredShading/DeferredShading-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		3795273326214A3000628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = DeferredShadingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.DeferredShadingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeferredShading.app/Contents/MacOS/DeferredShading";
+			};
+			name = Debug;
+		};
+		3795273426214A3000628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = DeferredShadingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.DeferredShadingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeferredShading.app/Contents/MacOS/DeferredShading";
+			};
+			name = Release;
+		};
+		3795273626214A3000628968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = DeferredShadingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.DeferredShadingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = DeferredShading;
+			};
+			name = Debug;
+		};
+		3795273726214A3000628968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = DeferredShadingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.DeferredShadingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = DeferredShading;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3795270426214A2D00628968 /* Build configuration list for PBXProject "5.9.DeferredShading" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3795272D26214A3000628968 /* Debug */,
+				3795272E26214A3000628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3795272F26214A3000628968 /* Build configuration list for PBXNativeTarget "5.9.DeferredShading" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3795273026214A3000628968 /* Debug */,
+				3795273126214A3000628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3795273226214A3000628968 /* Build configuration list for PBXNativeTarget "DeferredShadingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3795273326214A3000628968 /* Debug */,
+				3795273426214A3000628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3795273526214A3000628968 /* Build configuration list for PBXNativeTarget "DeferredShadingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3795273626214A3000628968 /* Debug */,
+				3795273726214A3000628968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3795270126214A2D00628968 /* Project object */;
+}

@@ -204,8 +204,10 @@ extension Renderer : MTKViewDelegate {
         renderEncoder.setVertexBytes(&uniforms,
                                      length: MemoryLayout<Uniforms>.stride,
                                      index: Int(ModelVertexInputIndexUniforms.rawValue))
-        renderEncoder.drawMesh(planetMesh, textureHandler: { (texture, name) -> Void in
-            renderEncoder.setFragmentTexture(texture, index: Int(FragmentInputIndexDiffuseTexture.rawValue))
+        renderEncoder.drawMesh(planetMesh, textureHandler: { (type, texture, _) -> Void in
+            if type == .baseColor {
+                renderEncoder.setFragmentTexture(texture, index: Int(FragmentInputIndexDiffuseTexture.rawValue))
+            }
         })
         
         // draw rocks
@@ -215,9 +217,11 @@ extension Renderer : MTKViewDelegate {
         renderEncoder.setVertexBytes(&rockUniform, length: MemoryLayout<RockUniforms>.stride, index: Int(ModelVertexInputIndexUniforms.rawValue))
         renderEncoder.setVertexBuffer(rockModelsBuffer, offset: 0, index: Int(ModelVertexInputIndexModels.rawValue))
 
-        renderEncoder.drawMesh(rockMesh, instanceCount: rocksAmount, textureHandler: { (texture, _) ->
+        renderEncoder.drawMesh(rockMesh, instanceCount: rocksAmount, textureHandler: { (type, texture, _) ->
             Void in
-            renderEncoder.setFragmentTexture(texture, index: Int(FragmentInputIndexDiffuseTexture.rawValue))
+            if type == .baseColor {
+                renderEncoder.setFragmentTexture(texture, index: Int(FragmentInputIndexDiffuseTexture.rawValue))
+            }
         })
 
         renderEncoder.endEncoding()

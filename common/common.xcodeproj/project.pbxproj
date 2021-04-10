@@ -18,6 +18,7 @@
 		37951FDB2610313B00628968 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37951FDA2610313B00628968 /* Bundle.swift */; };
 		37952509261EA7B800628968 /* OrbitCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 37952508261EA7B800628968 /* OrbitCamera.h */; };
 		3795250D261EA7D400628968 /* OrbitCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 3795250C261EA7D400628968 /* OrbitCamera.m */; };
+		379526FD262149B400628968 /* backpack in Resources */ = {isa = PBXBuildFile; fileRef = 379526FC262149B400628968 /* backpack */; };
 		37DD617325F38714005D7A42 /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DD616925F38714005D7A42 /* common.framework */; };
 		37DD617825F38714005D7A42 /* commonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD617725F38714005D7A42 /* commonTests.m */; };
 		37DD617A25F38714005D7A42 /* common.h in Headers */ = {isa = PBXBuildFile; fileRef = 37DD616C25F38714005D7A42 /* common.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -50,6 +51,7 @@
 		37951FDA2610313B00628968 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		37952508261EA7B800628968 /* OrbitCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrbitCamera.h; sourceTree = "<group>"; };
 		3795250C261EA7D400628968 /* OrbitCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrbitCamera.m; sourceTree = "<group>"; };
+		379526FC262149B400628968 /* backpack */ = {isa = PBXFileReference; lastKnownFileType = folder; path = backpack; sourceTree = "<group>"; };
 		37DD616925F38714005D7A42 /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DD616C25F38714005D7A42 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		37DD616D25F38714005D7A42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		3742B5DA25FF938900DE2669 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				379526FC262149B400628968 /* backpack */,
 				37951FC82610259C00628968 /* rock */,
 				37951FC42610259200628968 /* planet */,
 				372B5421260A0BEE00EAE90C /* skybox */,
@@ -238,6 +241,7 @@
 			files = (
 				37DD618D25F38790005D7A42 /* Assets.xcassets in Resources */,
 				372B5422260A0BEE00EAE90C /* skybox in Resources */,
+				379526FD262149B400628968 /* backpack in Resources */,
 				37951FC92610259C00628968 /* rock in Resources */,
 				37951FC52610259200628968 /* planet in Resources */,
 				3742B5DC25FF93A800DE2669 /* nanosuit in Resources */,

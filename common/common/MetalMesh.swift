@@ -12,7 +12,9 @@ import MetalKit
 public class MetalMesh : NSObject {
 
     fileprivate var mtkMesh: MTKMesh!
-    fileprivate var textures: [String : MTLTexture] = [:]
+    fileprivate var baseColorTextures: [String : MTLTexture] = [:]
+    fileprivate var specularTextures: [String : MTLTexture] = [:]
+    fileprivate var texturesCache : [URL: MTLTexture] = [:]
 
     public init(withUrl url: URL,
                 device: MTLDevice,
@@ -49,20 +51,28 @@ public class MetalMesh : NSObject {
                 guard let material = subMesh.material else {
                     break
                 }
-                                
-                guard let baseColorProperty = material.property(with: .baseColor) else {
-                    break
+                
+                if let baseColorProperty = material.property(with: .baseColor),
+                   let baseColorUrl = baseColorProperty.urlValue {
+                    if !texturesCache.keys.contains(baseColorUrl),
+                       let baseColorTexture = try? textureLoader.newTexture(URL: baseColorUrl, options: nil) {
+                        texturesCache[baseColorUrl] = baseColorTexture
+                        
+                    }
+                    
+                    baseColorTextures[subMesh.name] = texturesCache[baseColorUrl]!
                 }
                 
-                guard let url = baseColorProperty.urlValue else {
-                    break
+                if let specularProperty = material.property(with: .specular),
+                   let specularUrl = specularProperty.urlValue {
+                    if !texturesCache.keys.contains(specularUrl),
+                       let specularTexture = try? textureLoader.newTexture(URL: specularUrl, options: nil) {
+                        texturesCache[specularUrl] = specularTexture
+                    }
+                    
+                    specularTextures[subMesh.name] = texturesCache[specularUrl]!
                 }
                 
-                guard let texture = try? textureLoader.newTexture(URL: url, options: nil) else {
-                    break
-                }
-                
-                textures[subMesh.name] = texture
             }
             
             // only read first mdl mesh
@@ -74,6 +84,14 @@ public class MetalMesh : NSObject {
         }
         
         mtkMesh = try! MTKMesh(mesh: mdlMesh!, device: device)
+    }
+    
+    func getDiffuseTextures() -> [String : MTLTexture] {
+        return baseColorTextures
+    }
+    
+    func getSpecularTextures() -> [String : MTLTexture] {
+        return specularTextures
     }
 
 }
@@ -260,10 +278,15 @@ extension MTLRenderCommandEncoder {
         }
     }
     
-    public func drawMesh(_ mesh: MetalMesh, textureHandler: (_ texture: MTLTexture?, _ subMeshName: String) -> Void) {
+    public func drawMesh(_ mesh: MetalMesh, textureHandler: (_ type: MDLMaterialSemantic, _ texture: MTLTexture, _ subMeshName: String) -> Void) {
         for subMesh in mesh.mtkMesh.submeshes {
-            let texture = mesh.textures[subMesh.name]
-            textureHandler(texture, subMesh.name)
+            if let diffuseTexture = mesh.baseColorTextures[subMesh.name] {
+                textureHandler(.baseColor, diffuseTexture, subMesh.name)
+            }
+            
+            if let specularTexture = mesh.specularTextures[subMesh.name] {
+                textureHandler(.specular, specularTexture, subMesh.name)
+            }
 
             drawIndexedPrimitives(type: subMesh.primitiveType,
                                   indexCount: subMesh.indexCount,
@@ -273,10 +296,15 @@ extension MTLRenderCommandEncoder {
         }
     }
     
-    public func drawMesh(_ mesh: MetalMesh, instanceCount: Int, textureHandler: (_ texture: MTLTexture?, _ subMeshName: String) -> Void) {
+    public func drawMesh(_ mesh: MetalMesh, instanceCount: Int, textureHandler: (_ type: MDLMaterialSemantic, _ texture: MTLTexture, _ subMeshName: String) -> Void) {
         for subMesh in mesh.mtkMesh.submeshes {
-            let texture = mesh.textures[subMesh.name]
-            textureHandler(texture, subMesh.name)
+            if let diffuseTexture = mesh.baseColorTextures[subMesh.name] {
+                textureHandler(.baseColor, diffuseTexture, subMesh.name)
+            }
+            
+            if let specularTexture = mesh.specularTextures[subMesh.name] {
+                textureHandler(.specular, specularTexture, subMesh.name)
+            }
 
             drawIndexedPrimitives(type: subMesh.primitiveType,
                                   indexCount: subMesh.indexCount,
