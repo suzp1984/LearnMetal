@@ -226,7 +226,7 @@ class Renderer: NSObject {
         textureDescriptor.width = width
         textureDescriptor.height = height
         textureDescriptor.pixelFormat = .rgba16Float
-        textureDescriptor.usage = MTLTextureUsage(rawValue: MTLTextureUsage.renderTarget.rawValue | MTLTextureUsage.shaderRead.rawValue)
+        textureDescriptor.usage = [.renderTarget, .shaderRead]
         textureDescriptor.textureType = .type2D
         textureDescriptor.storageMode = .private
         
@@ -243,7 +243,7 @@ class Renderer: NSObject {
         textureDescriptor.width = width
         textureDescriptor.height = height
         textureDescriptor.pixelFormat = .depth32Float
-        textureDescriptor.usage = MTLTextureUsage(rawValue: MTLTextureUsage.renderTarget.rawValue | MTLTextureUsage.shaderRead.rawValue)
+        textureDescriptor.usage = [.renderTarget, .shaderRead]
         textureDescriptor.textureType = .type2D
         textureDescriptor.storageMode = .private
         

@@ -249,7 +249,7 @@ class Renderer: NSObject {
         descriptor.width = width
         descriptor.height = height
         descriptor.mipmapLevelCount = 1
-        descriptor.usage = MTLTextureUsage(rawValue: MTLTextureUsage.shaderRead.rawValue | MTLTextureUsage.renderTarget.rawValue)
+        descriptor.usage = [.shaderRead, .renderTarget]
         descriptor.storageMode = .private
         
         let depthTexture = device.makeTexture(descriptor: descriptor)!

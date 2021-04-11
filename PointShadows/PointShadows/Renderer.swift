@@ -206,7 +206,7 @@ class Renderer: NSObject {
         let textureDescritpor = MTLTextureDescriptor.textureCubeDescriptor(pixelFormat: .depth32Float,
                                                                            size: Int(cubeMapSize),
                                                                            mipmapped: true)
-        textureDescritpor.usage = MTLTextureUsage(rawValue: MTLTextureUsage.shaderRead.rawValue | MTLTextureUsage.renderTarget.rawValue)
+        textureDescritpor.usage = [.renderTarget, .shaderRead]
         textureDescritpor.resourceOptions = .storageModePrivate
         
         cubeMapDepthTexture = device.makeTexture(descriptor: textureDescritpor)!
