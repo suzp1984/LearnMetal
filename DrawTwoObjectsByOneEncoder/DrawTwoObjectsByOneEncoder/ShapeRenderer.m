@@ -67,7 +67,7 @@
         _squareBuffer = [device newBufferWithBytes:squareVertices length:sizeof(squareVertices) options:MTLResourceStorageModeShared];
         _triangleBuffer = [device newBufferWithBytes:triangleVertices length:sizeof(triangleVertices) options:MTLResourceStorageModeShared];
         
-        NSBundle *bundle = [NSBundle bundleWithIdentifier:@"io.github.suzp1984.common"];
+        NSBundle *bundle = [NSBundle common];
         
         NSError *error;
         MTKTextureLoader *textureLoader = [[MTKTextureLoader alloc] initWithDevice:_device];

@@ -189,7 +189,7 @@ class Renderer: NSObject {
         
         quadBuffer = MetalBuffer(device: device, array: quadVerties, index: UInt32(Int(VertexInputIndexPosition.rawValue)), options: MTLResourceOptions.storageModeShared)
         
-        let bundle = Bundle(identifier: "io.github.suzp1984.common")
+        let bundle = Bundle.common
         let textureLoader = MTKTextureLoader(device: device)
         
         cubeTexture = try! textureLoader.newTexture(name: "container", scaleFactor: 1.0, bundle: bundle, options: nil)

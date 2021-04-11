@@ -147,7 +147,7 @@ class Renderer: NSObject {
         assert(lampRenderPipelineState != nil, "Lamp Render Pipeline is nil")
         
         let textureLoader = MTKTextureLoader(device: device)
-        diffuseTexture = try? textureLoader.newTexture(name: "container2", scaleFactor: 1.0, bundle: Bundle(identifier: "io.github.suzp1984.common"), options: nil)
+        diffuseTexture = try? textureLoader.newTexture(name: "container2", scaleFactor: 1.0, bundle: Bundle.common, options: nil)
         
         let materialArgumentEncoder = fragmentObjectFunc.makeArgumentEncoder(bufferIndex: Int(FragmentInputIndexMaterial.rawValue))
         

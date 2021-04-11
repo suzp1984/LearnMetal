@@ -9,6 +9,7 @@
 @import Metal;
 @import simd;
 #import <Foundation/Foundation.h>
+#import <common/common.h>
 #import "SquareRenderer.h"
 #import "SquareShaderType.h"
 
@@ -45,7 +46,7 @@
                                     length:sizeof(squareVertices)
                                     options:MTLResourceStorageModeShared];
 
-        NSBundle *bundle = [NSBundle bundleWithIdentifier:@"io.github.suzp1984.common"];
+        NSBundle *bundle = [NSBundle common];
         
         NSError *error;
         MTKTextureLoader *textureLoader = [[MTKTextureLoader alloc] initWithDevice:_device];

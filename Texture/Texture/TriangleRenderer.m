@@ -11,6 +11,7 @@
 #import <Foundation/Foundation.h>
 #import "TextureShaderType.h"
 #import "TriangleRenderer.h"
+#import <common/common.h>
 
 @implementation TriangleRenderer
 {
@@ -44,7 +45,7 @@
         MTKTextureLoader *textureLoader = [[MTKTextureLoader alloc] initWithDevice:_device];
         _texture = [textureLoader newTextureWithName:@"container"
                                 scaleFactor:1.0
-                                bundle:[NSBundle bundleWithIdentifier:@"io.github.suzp1984.common"]
+                                bundle:[NSBundle common]
                                 options:nil error:&error];
         NSAssert(_texture, @"Failed to create texture container: %@", error);
         

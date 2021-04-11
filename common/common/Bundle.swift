@@ -7,7 +7,9 @@
 
 import Foundation
 
+@objc
 public extension Bundle {
+    @objc
     static var common: Bundle {
         get {
             return Bundle(for: TextureCubeLoader.self)

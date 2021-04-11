@@ -165,7 +165,7 @@ class Renderer: NSObject {
         lampRenderPipelineState = try? device.makeRenderPipelineState(descriptor: lampRenderPipelineDescriptor)
         assert(lampRenderPipelineState != nil, "Lamp Render Pipeline is nil")
         
-        let bundle = Bundle(identifier: "io.github.suzp1984.common")
+        let bundle = Bundle.common
         let textureLoader = MTKTextureLoader(device: device)
         
         specularTexture = try! textureLoader.newTexture(name: "container2_specular", scaleFactor: 1.0, bundle: bundle, options: nil)

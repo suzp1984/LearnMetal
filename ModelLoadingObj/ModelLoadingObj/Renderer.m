@@ -45,8 +45,7 @@
         depthStencilDesc.depthWriteEnabled = YES;
         _depthState = [device newDepthStencilStateWithDescriptor:depthStencilDesc];
         
-        NSBundle *bundle = [NSBundle bundleWithIdentifier:@"io.github.suzp1984.common"];
-        NSURL *url = [bundle URLForResource:@"nanosuit" withExtension:@"obj" subdirectory:@"nanosuit"];
+        NSURL *url = [[NSBundle common] URLForResource:@"nanosuit" withExtension:@"obj" subdirectory:@"nanosuit"];
         
         NSAssert([MDLAsset canImportFileExtension:@"obj"], @"MDL Asset can not import obj file");
         

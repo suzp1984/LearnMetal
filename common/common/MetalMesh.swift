@@ -104,6 +104,11 @@ public class MetalMesh : NSObject {
     }
     
     @objc
+    public func getMTKMesh() -> MTKMesh {
+        return mtkMesh
+    }
+    
+    @objc
     public func drawMeshTo(renderEncoder: MTLRenderCommandEncoder, textureHandler: (_ type: MDLMaterialSemantic, _ texture: MTLTexture, _ subMeshName: String) -> Void) {
         renderEncoder.drawMesh(self, textureHandler: textureHandler)
     }

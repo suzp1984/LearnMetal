@@ -108,7 +108,7 @@ class Renderer: NSObject {
         planeMDLMesh.vertexDescriptor = modelIOVertexDescriptor
         planeMesh = try! MTKMesh(mesh: planeMDLMesh, device: device)
         
-        let bundle = Bundle(identifier: "io.github.suzp1984.common")
+        let bundle = Bundle.common
         let textureLoader = MTKTextureLoader(device: device)
         
         cubeTexture = try! textureLoader.newTexture(name: "marble", scaleFactor: 1.0, bundle: bundle, options: nil)

@@ -65,7 +65,7 @@
         mtlVertexDescriptor.layouts[VertexInputIndexPosition].stepRate = 1;
         mtlVertexDescriptor.layouts[VertexInputIndexPosition].stepFunction = MTLVertexStepFunctionPerVertex;
 
-        NSBundle *bundle = [NSBundle bundleWithIdentifier:@"io.github.suzp1984.common"];
+        NSBundle *bundle = [NSBundle common];
         
         NSError *error;
         MTKTextureLoader *textureLoader = [[MTKTextureLoader alloc] initWithDevice:_device];
