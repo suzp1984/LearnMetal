@@ -85,7 +85,8 @@ fragment float4 deferredFragmentShader(DeferredRasterizerData in [[stage_in]],
                                        texture2d<half> gAlbedo [[texture(DeferredFragmentIndexGAlbedoTexture)]],
                                        constant Light *lights [[buffer(DeferredFragmentIndexLights)]],
                                        constant int &lightsCount [[buffer(DeferredFragmentIndexLightsCount)]],
-                                       constant float3 &viewPos [[buffer(DeferredFragmentIndexViewPosition)]]) {
+                                       constant float3 &viewPos [[buffer(DeferredFragmentIndexViewPosition)]],
+                                       constant bool &isLightVolumnEnabled [[buffer(DeferredFragmentIndexEnableLightVolumn)]]) {
     constexpr sampler textureSampler (mag_filter::linear, min_filter::linear);
 
     // retrieve data from gbuffer
@@ -98,20 +99,26 @@ fragment float4 deferredFragmentShader(DeferredRasterizerData in [[stage_in]],
     float3 lighting = diffuse * 0.2;
     float3 viewDir = normalize(viewPos - fragPos);
     for (int i = 0; i < lightsCount; i++) {
-        // diffuse
-        float3 lightDir = normalize(lights[i].position - fragPos);
-        float3 diffuseColor = max(dot(normal, lightDir), 0.0) * diffuse * lights[i].color;
-        // specular
-        float3 halfwayDir = normalize(lightDir + viewDir);
-        float spec = pow(max(dot(normal, halfwayDir), 0.0), 16.0);
-        float3 specularColor = lights[i].color * spec * specular;
-        
-        // attenuation
+        // calculate distance between light source and current fragment
         float distance = length(lights[i].position - fragPos);
-        float attenuation = 1.0 / (1.0 + lights[i].linear * distance + lights[i].quadratic * distance * distance);
-        diffuseColor *= attenuation;
-        specularColor *= attenuation;
-        lighting += diffuseColor + specularColor;
+        
+        if (!isLightVolumnEnabled ||
+            distance < lights[i].radius) {
+            
+            // diffuse
+            float3 lightDir = normalize(lights[i].position - fragPos);
+            float3 diffuseColor = max(dot(normal, lightDir), 0.0) * diffuse * lights[i].color;
+            // specular
+            float3 halfwayDir = normalize(lightDir + viewDir);
+            float spec = pow(max(dot(normal, halfwayDir), 0.0), 16.0);
+            float3 specularColor = lights[i].color * spec * specular;
+            
+            // attenuation
+            float attenuation = 1.0 / (1.0 + lights[i].linear * distance + lights[i].quadratic * distance * distance);
+            diffuseColor *= attenuation;
+            specularColor *= attenuation;
+            lighting += diffuseColor + specularColor;
+        }
     }
     
     return float4(lighting, 1.0);

@@ -28,6 +28,7 @@ class Renderer: NSObject {
     private var modelsMatrixes: [matrix_float4x4] = []
     private var normalsMatrixes: [matrix_float3x3] = []
     private var lights: [Light] = []
+    private var isLightVolumnEnabled = true
     private var quadVertexBuffer: MTLBuffer!
     private var lightsBuffer: MTLBuffer!
     private var cubeMesh: MTKMesh!
@@ -41,6 +42,7 @@ class Renderer: NSObject {
         metalView.delegate = self
         metalView.depthStencilPixelFormat = .depth32Float
         metalView.clearDepth = 1.0
+        metalView.sampleCount = 4
         
         camera = CameraFactory.generateRoundOrbitCamera(withPosition: vector_float3(0.0, 0.0, 8.0),
                                                         target: vector_float3(0.0, 0.0, 0.0),
@@ -186,11 +188,18 @@ class Renderer: NSObject {
             let rColor = Float.random(in: 0.5..<1.0)
             let gColor = Float.random(in: 0.5..<1.0)
             let bColor = Float.random(in: 0.5..<1.0)
+            
+            let constant: Float = 1.0
+            let linear: Float = 0.7
+            let quadratic: Float = 1.8
+            let maxBrightness: Float = max(max(rColor, gColor), bColor)
+            let radius = (-linear + sqrt(linear * linear - 4.0 * quadratic * (constant - (256.0 / 5.0) * maxBrightness))) / (2.0 * quadratic)
 
             let light = Light(position: vector_float3(xPos, yPos, zPos),
                               color: vector_float3(rColor, gColor, bColor),
                               linear: 0.7,
-                              quadratic: 1.8)
+                              quadratic: 1.8,
+                              radius: radius)
             
             lights.append(light)
         }
@@ -219,6 +228,10 @@ class Renderer: NSObject {
         
         uniforms.viewMatrix = camera.getViewMatrix()
         lightCubeUniforms.viewMatrix = camera.getViewMatrix()
+    }
+    
+    func enableLightVolumns(enable: Bool) {
+        isLightVolumnEnabled = enable
     }
     
     private func createColorTexture(width: Int, height: Int, label: String? = nil) -> MTLTexture {
@@ -347,6 +360,9 @@ extension Renderer : MTKViewDelegate {
             deferredRenderEncoder.setFragmentBytes($0,
                                                    length: MemoryLayout<vector_float3>.stride,
                                                    index: Int(DeferredFragmentIndexViewPosition.rawValue))
+        }
+        withUnsafePointer(to: isLightVolumnEnabled) {
+            deferredRenderEncoder.setFragmentBytes($0, length: MemoryLayout<Bool>.stride, index: Int(DeferredFragmentIndexEnableLightVolumn.rawValue))
         }
         deferredRenderEncoder.drawPrimitives(type: .triangleStrip, vertexStart: 0, vertexCount: 4)
         deferredRenderEncoder.endEncoding()

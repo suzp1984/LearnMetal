@@ -11,6 +11,7 @@ import MetalKit
 class ViewController: NSViewController {
 
     private var renderer: Renderer!
+    private var lightVolumnSwitch: NSSwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,32 @@ class ViewController: NSViewController {
         metalView.clearColor = MTLClearColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1.0)
         
         renderer = Renderer(metalView: metalView)
+        
+        lightVolumnSwitch = NSSwitch()
+        lightVolumnSwitch.target = self
+        lightVolumnSwitch.action = #selector(lightVolumnStateChanged)
+        lightVolumnSwitch.state = .on
+        
+        self.view.addSubview(lightVolumnSwitch)
+        lightVolumnSwitch.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            lightVolumnSwitch.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 20.0),
+            lightVolumnSwitch.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20.0)
+        ])
+        
+        let label = NSTextField(labelWithString: "Enable Light Volumns")
+        label.isEditable = false
+        label.isBordered = false
+        label.backgroundColor = nil
+        
+        self.view.addSubview(label)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            label.leadingAnchor.constraint(equalTo: lightVolumnSwitch.trailingAnchor, constant: 10.0),
+            label.centerYAnchor.constraint(equalTo: lightVolumnSwitch.centerYAnchor)
+        ])
     }
 
     override func mouseDragged(with event: NSEvent) {
@@ -47,5 +74,10 @@ class ViewController: NSViewController {
             renderer.handleCameraEvent(deltaX: Float(event.scrollingDeltaX),
                                        deltaY: Float(event.scrollingDeltaY))
         }
+    }
+    
+    @objc
+    func lightVolumnStateChanged() {
+        renderer.enableLightVolumns(enable: lightVolumnSwitch.state == .on)
     }
 }

@@ -45,6 +45,7 @@ typedef struct Light {
     
     float linear;
     float quadratic;
+    float radius;
 } Light;
 
 typedef enum DeferredFragmentIndex {
@@ -53,7 +54,8 @@ typedef enum DeferredFragmentIndex {
     DeferredFragmentIndexGAlbedoTexture   = 2,
     DeferredFragmentIndexLights           = 3,
     DeferredFragmentIndexLightsCount      = 4,
-    DeferredFragmentIndexViewPosition     = 5
+    DeferredFragmentIndexViewPosition     = 5,
+    DeferredFragmentIndexEnableLightVolumn = 6,
 } DeferredFragmentIndex;
 
 typedef struct LightCubeUniforms
