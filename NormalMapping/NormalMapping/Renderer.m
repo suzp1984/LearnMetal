@@ -145,7 +145,7 @@
         float height = mtkView.frame.size.height;
         
         _uniform.lightPos = (vector_float3) { 0.5, 1.0, 0.3 };
-        _uniform.viewPos = [_camera getCameraPosition];
+        _uniform.viewPos = _camera.cameraPosition;
         _uniform.viewMatrix = [_camera getViewMatrix];
         _uniform.modelMatrix = matrix4x4_rotation(0, vector_normalize((vector_float3) {1.0, 0.0, 0.0}));
         _uniform.projectionMatrix = matrix_perspective_left_hand(M_PI / 4.0, width / height, 0.1, 100.0);
@@ -170,7 +170,7 @@
     [_camera rotateCameraAroundTargetWithDeltaPhi:deltaX deltaTheta:deltaY];
     
     _uniform.viewMatrix = [_camera getViewMatrix];
-    _uniform.viewPos = [_camera getCameraPosition];
+    _uniform.viewPos = _camera.cameraPosition;
 }
 
 - (void) animate {
