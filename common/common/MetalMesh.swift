@@ -295,14 +295,36 @@ extension MTKMesh {
     public class func newCapsule(withVertexDescriptor vertexDescriptor: MTLVertexDescriptor,
                                  withAttributesMap attributesMap: [Int: String],
                                  withDevice device: MTLDevice,
-                                 height: Float,
-                                 radii: vector_float2,
-                                 radialSegments: Int,
-                                 verticalSegments: Int,
-                                 hemisphereSegments: Int,
-                                 geometryType: MDLGeometryType,
-                                 inwardNormals: Bool) throws -> MTKMesh {
-        throw Errors.runtimeError("not implemented yet.")
+                                 height: Float = 1.0,
+                                 radii: vector_float2 = vector_float2(0.5, 0.5),
+                                 radialSegments: Int = 60,
+                                 verticalSegments: Int = 60,
+                                 hemisphereSegments: Int = 60,
+                                 geometryType: MDLGeometryType = .triangles,
+                                 inwardNormals: Bool = false) throws -> MTKMesh {
+
+        if !checkVertexDescriptor(vertexAttributesMap: attributesMap) {
+            throw Errors.runtimeError("vertex Descriptor invalid. \(attributesMap)")
+        }
+        
+        let modelIOVertexDescriptor = MTKModelIOVertexDescriptorFromMetal(vertexDescriptor)
+        for attr in attributesMap {
+            (modelIOVertexDescriptor.attributes[attr.key] as! MDLVertexAttribute).name = attr.value
+        }
+        
+        let metalAllocator = MTKMeshBufferAllocator(device: device)
+    
+        let capsule = MDLMesh.newCapsule(withHeight: height,
+                                         radii: radii,
+                                         radialSegments: radialSegments,
+                                         verticalSegments: verticalSegments,
+                                         hemisphereSegments: hemisphereSegments,
+                                         geometryType: geometryType,
+                                         inwardNormals: inwardNormals,
+                                         allocator: metalAllocator)
+        capsule.vertexDescriptor = modelIOVertexDescriptor
+        
+        return try MTKMesh(mesh: capsule, device: device)
     }
     
     private class func checkVertexDescriptor(vertexAttributesMap: Dictionary<Int, String>) -> Bool {
