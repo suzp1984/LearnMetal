@@ -13,6 +13,7 @@ class Renderer: NSObject {
     
     private var device: MTLDevice!
     private var sphereMesh: MTKMesh!
+    private var icosaHedronMesh: MTKMesh!
     private var camera: Camera!
     private var viewPort: MTLViewport!
     private var renderPipelineState: MTLRenderPipelineState!
@@ -21,6 +22,10 @@ class Renderer: NSObject {
     private var material: Material!
     private var light: Light!
     private var commandQueue: MTLCommandQueue!
+    private var sphereModelMatrix: matrix_float4x4!
+    private var sphereNormalMatrix: matrix_float3x3!
+    private var icosahedronModelMatrix: matrix_float4x4!
+    private var icosahedronNormalMatrix: matrix_float3x3!
     
     init(mtkView: MTKView) {
         super.init()
@@ -28,6 +33,7 @@ class Renderer: NSObject {
         device = mtkView.device!
         mtkView.delegate = self
         mtkView.depthStencilPixelFormat = .depth32Float
+        mtkView.sampleCount = 4
         
         let depthDescriptor = MTLDepthStencilDescriptor()
         depthDescriptor.depthCompareFunction = .lessEqual
@@ -71,6 +77,13 @@ class Renderer: NSObject {
                                                inwardNormals: false,
                                                hemisphere: false)
         
+        icosaHedronMesh = try! MTKMesh.newIcosahedron(withVertexDescriptor: mtlVertexDescriptor,
+                                                      withAttributesMap: attributesMap,
+                                                      withDevice: device,
+                                                      radius: 1.0,
+                                                      geometryType: .triangles,
+                                                      inwardNormals: false)
+        
         camera = CameraFactory.generateRoundOrbitCamera(withPosition: vector_float3(0.0, 0.0, 8.0),
                                                         target: vector_float3(0.0, 0.0, 0.0),
                                                         up: vector_float3(0.0, 1.0, 0.0))
@@ -89,6 +102,7 @@ class Renderer: NSObject {
         renderPipelineDescriptor.fragmentFunction = fragmentFunc
         renderPipelineDescriptor.colorAttachments[0].pixelFormat = mtkView.colorPixelFormat
         renderPipelineDescriptor.depthAttachmentPixelFormat = mtkView.depthStencilPixelFormat
+        renderPipelineDescriptor.sampleCount = mtkView.sampleCount
         
         renderPipelineState = try! device.makeRenderPipelineState(descriptor: renderPipelineDescriptor)
         
@@ -109,6 +123,12 @@ class Renderer: NSObject {
                       diffuse: vector_float3(0.9, 0.2, 0.7),
                       specular: vector_float3(0.9, 0.9, 0.9))
         commandQueue = device.makeCommandQueue()!
+        
+        sphereModelMatrix = matrix4x4_translation(1.0, 1.0, 0.0)
+        sphereNormalMatrix = matrix3x3_upper_left(sphereModelMatrix).inverse.transpose
+        
+        icosahedronModelMatrix = matrix4x4_translation(-1.0, 1.0, 0.0)
+        icosahedronNormalMatrix = matrix3x3_upper_left(icosahedronModelMatrix).inverse.transpose
     }
     
     func handleCameraEvent(deltaX: Float, deltaY: Float) {
@@ -137,7 +157,13 @@ extension Renderer: MTKViewDelegate {
         renderEncoder.setRenderPipelineState(renderPipelineState)
         renderEncoder.setDepthStencilState(depthState)
         
+        light.position.x = Float(sin(CFAbsoluteTimeGetCurrent())) * 5.0
+        light.position.y = Float(cos(CFAbsoluteTimeGetCurrent())) * 5.0
+        // sphere
         renderEncoder.setVertexMesh(sphereMesh, index: Int(VertexInputIndexPosition.rawValue))
+        uniform.modelMatrix = sphereModelMatrix
+        uniform.normalMatrix = sphereNormalMatrix
+        
         withUnsafePointer(to: uniform) {
             renderEncoder.setVertexBytes($0,
                                          length: MemoryLayout<Uniforms>.stride,
@@ -159,6 +185,18 @@ extension Renderer: MTKViewDelegate {
                                            index: Int(FragmentInputIndexViewPos.rawValue))
         }
         renderEncoder.drawMesh(sphereMesh)
+        
+        // icosahedron
+        renderEncoder.setVertexMesh(icosaHedronMesh, index: Int(VertexInputIndexPosition.rawValue))
+        uniform.modelMatrix = icosahedronModelMatrix
+        uniform.normalMatrix = icosahedronNormalMatrix
+        withUnsafePointer(to: uniform) {
+            renderEncoder.setVertexBytes($0,
+                                         length: MemoryLayout<Uniforms>.stride,
+                                         index: Int(VertexInputIndexUniforms.rawValue))
+        }
+        
+        renderEncoder.drawMesh(icosaHedronMesh)
         
         renderEncoder.endEncoding()
         

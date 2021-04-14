@@ -174,9 +174,26 @@ extension MTKMesh {
     public class func newIcosahedron(withVertexDescriptor vertexDescriptor: MTLVertexDescriptor,
                                      withAttributesMap attributesMap: [Int: String],
                                      withDevice device: MTLDevice,
-                                     radius: Float,
-                                     inwardNormals: Bool) throws -> MTKMesh {
-        throw Errors.runtimeError("not implemented yet.")
+                                     radius: Float = 1.0,
+                                     geometryType: MDLGeometryType = .triangles,
+                                     inwardNormals: Bool = false) throws -> MTKMesh {
+        if !checkVertexDescriptor(vertexAttributesMap: attributesMap) {
+            throw Errors.runtimeError("vertex Descriptor invalid. \(attributesMap)")
+        }
+        
+        let modelIOVertexDescriptor = MTKModelIOVertexDescriptorFromMetal(vertexDescriptor)
+        for attr in attributesMap {
+            (modelIOVertexDescriptor.attributes[attr.key] as! MDLVertexAttribute).name = attr.value
+        }
+        
+        let metalAllocator = MTKMeshBufferAllocator(device: device)
+        let icosaHedronMesh = MDLMesh.newIcosahedron(withRadius: radius,
+                                                     inwardNormals: inwardNormals,
+                                                     geometryType: geometryType,
+                                                     allocator: metalAllocator)
+        icosaHedronMesh.vertexDescriptor = modelIOVertexDescriptor
+        
+        return try MTKMesh(mesh: icosaHedronMesh, device: device)
     }
     
     public class func newCylinder(withVertexDescriptor vertexDescriptor: MTLVertexDescriptor,

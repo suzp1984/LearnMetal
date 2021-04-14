@@ -17,8 +17,8 @@ class ViewController: NSViewController {
 
         view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            view.widthAnchor.constraint(greaterThanOrEqualToConstant: 460),
-            view.heightAnchor.constraint(greaterThanOrEqualToConstant: 460),
+            view.widthAnchor.constraint(greaterThanOrEqualToConstant: 760),
+            view.heightAnchor.constraint(greaterThanOrEqualToConstant: 760),
         ])
         
         guard let metalView = view as? MTKView else {
