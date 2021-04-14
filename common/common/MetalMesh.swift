@@ -263,13 +263,33 @@ extension MTKMesh {
                           withVertexDescriptor vertexDescriptor: MTLVertexDescriptor,
                           withAttributesMap attributesMap: [Int: String],
                           withDevice device: MTLDevice,
-                          height: Float,
-                          radii: vector_float2,
-                          radialSegments: Int,
-                          verticalSegments: Int,
-                          geometryType: MDLGeometryType,
-                          inwardNormals: Bool) throws -> MTKMesh {
-        throw Errors.runtimeError("not implemented yet.")
+                          height: Float = 1.0,
+                          radii: vector_float2 = vector_float2(1.0, 1.0),
+                          radialSegments: Int = 60,
+                          verticalSegments: Int = 60,
+                          geometryType: MDLGeometryType = .triangles,
+                          inwardNormals: Bool = false) throws -> MTKMesh {
+        if !checkVertexDescriptor(vertexAttributesMap: attributesMap) {
+            throw Errors.runtimeError("vertex Descriptor invalid. \(attributesMap)")
+        }
+        
+        let modelIOVertexDescriptor = MTKModelIOVertexDescriptorFromMetal(vertexDescriptor)
+        for attr in attributesMap {
+            (modelIOVertexDescriptor.attributes[attr.key] as! MDLVertexAttribute).name = attr.value
+        }
+        
+        let metalAllocator = MTKMeshBufferAllocator(device: device)
+    
+        let ellipticalCone = MDLMesh.newEllipticalCone(withHeight: height,
+                                  radii: radii,
+                                  radialSegments: radialSegments,
+                                  verticalSegments: verticalSegments,
+                                  geometryType: geometryType,
+                                  inwardNormals: inwardNormals,
+                                  allocator: metalAllocator)
+        ellipticalCone.vertexDescriptor = modelIOVertexDescriptor
+        
+        return try MTKMesh(mesh: ellipticalCone, device: device)
     }
     
     public class func newCapsule(withVertexDescriptor vertexDescriptor: MTLVertexDescriptor,

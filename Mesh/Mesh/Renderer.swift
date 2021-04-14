@@ -15,6 +15,7 @@ class Renderer: NSObject {
     private var sphereMesh: MTKMesh!
     private var icosaHedronMesh: MTKMesh!
     private var cylinderMesh: MTKMesh!
+    private var ellipticalConeMesh: MTKMesh!
     private var camera: Camera!
     private var viewPort: MTLViewport!
     private var renderPipelineState: MTLRenderPipelineState!
@@ -29,6 +30,9 @@ class Renderer: NSObject {
     private var icosahedronNormalMatrix: matrix_float3x3!
     private var cylinderModelMatrix: matrix_float4x4!
     private var cylinderNormalMatrix: matrix_float3x3!
+    private var ellipticalConeModelMatrix: matrix_float4x4!
+    private var ellipticalConeNormalMatrix: matrix_float3x3!
+
     
     init(mtkView: MTKView) {
         super.init()
@@ -97,6 +101,16 @@ class Renderer: NSObject {
                                             geometryType: .triangles,
                                             inwardNormals: false)
         
+        ellipticalConeMesh = try! MTKMesh.newEllipticalCone(withVertexDescriptor: mtlVertexDescriptor,
+                                                            withAttributesMap: attributesMap,
+                                                            withDevice: device,
+                                                            height: 1.0,
+                                                            radii: vector_float2(1.0, 1.0),
+                                                            radialSegments: 60,
+                                                            verticalSegments: 60,
+                                                            geometryType: .triangles,
+                                                            inwardNormals: false)
+        
         camera = CameraFactory.generateRoundOrbitCamera(withPosition: vector_float3(0.0, 0.0, 8.0),
                                                         target: vector_float3(0.0, 0.0, 0.0),
                                                         up: vector_float3(0.0, 1.0, 0.0))
@@ -145,6 +159,9 @@ class Renderer: NSObject {
         
         cylinderModelMatrix = matrix4x4_translation(1.0, -1.0, 0.0)
         cylinderNormalMatrix = matrix3x3_upper_left(cylinderModelMatrix).inverse.transpose
+        
+        ellipticalConeModelMatrix = matrix4x4_translation(-1.0, -1.0, 0.0);
+        ellipticalConeNormalMatrix = matrix3x3_upper_left(ellipticalConeModelMatrix).inverse.transpose
     }
     
     func handleCameraEvent(deltaX: Float, deltaY: Float) {
@@ -224,6 +241,17 @@ extension Renderer: MTKViewDelegate {
                                          index: Int(VertexInputIndexUniforms.rawValue))
         }
         renderEncoder.drawMesh(cylinderMesh)
+        
+        // ellipticalCone
+        renderEncoder.setVertexMesh(ellipticalConeMesh, index: Int(VertexInputIndexPosition.rawValue))
+        uniform.modelMatrix = ellipticalConeModelMatrix
+        uniform.normalMatrix = ellipticalConeNormalMatrix
+        withUnsafePointer(to: uniform) {
+            renderEncoder.setVertexBytes($0,
+                                         length: MemoryLayout<Uniforms>.stride,
+                                         index: Int(VertexInputIndexUniforms.rawValue))
+        }
+        renderEncoder.drawMesh(ellipticalConeMesh)
         
         renderEncoder.endEncoding()
         
