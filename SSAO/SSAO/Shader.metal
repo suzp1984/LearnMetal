@@ -97,10 +97,7 @@ fragment float ssaoFragmentShader(QuadRasterizerData in [[stage_in]],
                                    constant float2 &noiseScale [[buffer(SSAOFragmentIndexNoiseScale)]],
                                    constant float4x4 &projection [[buffer(SSAOFragmentIndexProjectionMatrix)]]) {
     constexpr sampler textureSampler (mag_filter::linear,
-                                      min_filter::linear,
-                                      mip_filter::linear,
-                                      s_address::repeat,
-                                      t_address::repeat);
+                                      min_filter::linear);
     float radius = 0.5;
     float bias = 0.025;
     // get input for SSAO algorithm
@@ -131,6 +128,8 @@ fragment float ssaoFragmentShader(QuadRasterizerData in [[stage_in]],
         offset = projection * offset; // from view to clip-space
         offset = offset / offset.w; // perspective divide
         offset = offset * 0.5 + float4(0.5); // transform to range 0.0 - 1.0
+        // flip y coordinate for metal texture coordinates
+        offset.y = 1.0 - offset.y;
         
         // get sample depth
         float sampleDepth = gPosition.sample(textureSampler, offset.xy).z; // get depth value of kernel sample

@@ -370,9 +370,9 @@
     [geometryRenderEncoder setVertexBytes:&_uniforms
                                    length:sizeof(_uniforms)
                                   atIndex:VertexInputIndexUniforms];
-    
+
     [_backpackMesh drawMeshToRenderEncoder:geometryRenderEncoder textureHandler:^(MDLMaterialSemantic type, id<MTLTexture> texture, NSString* _) {}];
-    
+
     [geometryRenderEncoder endEncoding];
     
     // generate SSAO texture
