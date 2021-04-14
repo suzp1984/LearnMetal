@@ -200,7 +200,26 @@ extension MTKMesh {
                                    geometryType: MDLGeometryType,
                                    inwardNormals: Bool,
                                    hemisphere: Bool) throws -> MTKMesh {
-        throw Errors.runtimeError("not implemented yet.")
+        if !checkVertexDescriptor(vertexAttributesMap: attributesMap) {
+            throw Errors.runtimeError("vertex Descriptor invalid. \(attributesMap)")
+        }
+        
+        let modelIOVertexDescriptor = MTKModelIOVertexDescriptorFromMetal(vertexDescriptor)
+        for attr in attributesMap {
+            (modelIOVertexDescriptor.attributes[attr.key] as! MDLVertexAttribute).name = attr.value
+        }
+        
+        let metalAllocator = MTKMeshBufferAllocator(device: device)
+        let ellipsoidMesh = MDLMesh.newEllipsoid(withRadii: radii,
+                                                 radialSegments: radialSegments,
+                                                 verticalSegments: verticalSegments,
+                                                 geometryType: geometryType,
+                                                 inwardNormals: inwardNormals,
+                                                 hemisphere: hemisphere,
+                                                 allocator: metalAllocator)
+        ellipsoidMesh.vertexDescriptor = modelIOVertexDescriptor
+        
+        return try MTKMesh(mesh: ellipsoidMesh, device: device)
     }
     
     public class func newEllipticalCone(
