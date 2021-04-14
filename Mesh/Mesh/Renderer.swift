@@ -14,6 +14,7 @@ class Renderer: NSObject {
     private var device: MTLDevice!
     private var sphereMesh: MTKMesh!
     private var icosaHedronMesh: MTKMesh!
+    private var cylinderMesh: MTKMesh!
     private var camera: Camera!
     private var viewPort: MTLViewport!
     private var renderPipelineState: MTLRenderPipelineState!
@@ -26,6 +27,8 @@ class Renderer: NSObject {
     private var sphereNormalMatrix: matrix_float3x3!
     private var icosahedronModelMatrix: matrix_float4x4!
     private var icosahedronNormalMatrix: matrix_float3x3!
+    private var cylinderModelMatrix: matrix_float4x4!
+    private var cylinderNormalMatrix: matrix_float3x3!
     
     init(mtkView: MTKView) {
         super.init()
@@ -84,6 +87,16 @@ class Renderer: NSObject {
                                                       geometryType: .triangles,
                                                       inwardNormals: false)
         
+        cylinderMesh = try! MTKMesh.newCylinder(withVertexDescriptor: mtlVertexDescriptor,
+                                            withAttributesMap: attributesMap,
+                                            withDevice: device,
+                                            height: 1.0,
+                                            radii: vector_float2(0.5, 0.5),
+                                            radialSegments: 60,
+                                            verticalSegments: 60,
+                                            geometryType: .triangles,
+                                            inwardNormals: false)
+        
         camera = CameraFactory.generateRoundOrbitCamera(withPosition: vector_float3(0.0, 0.0, 8.0),
                                                         target: vector_float3(0.0, 0.0, 0.0),
                                                         up: vector_float3(0.0, 1.0, 0.0))
@@ -129,6 +142,9 @@ class Renderer: NSObject {
         
         icosahedronModelMatrix = matrix4x4_translation(-1.0, 1.0, 0.0)
         icosahedronNormalMatrix = matrix3x3_upper_left(icosahedronModelMatrix).inverse.transpose
+        
+        cylinderModelMatrix = matrix4x4_translation(1.0, -1.0, 0.0)
+        cylinderNormalMatrix = matrix3x3_upper_left(cylinderModelMatrix).inverse.transpose
     }
     
     func handleCameraEvent(deltaX: Float, deltaY: Float) {
@@ -197,6 +213,17 @@ extension Renderer: MTKViewDelegate {
         }
         
         renderEncoder.drawMesh(icosaHedronMesh)
+        
+        // cylinder
+        renderEncoder.setVertexMesh(cylinderMesh, index: Int(VertexInputIndexPosition.rawValue))
+        uniform.modelMatrix = cylinderModelMatrix
+        uniform.normalMatrix = cylinderNormalMatrix
+        withUnsafePointer(to: uniform) {
+            renderEncoder.setVertexBytes($0,
+                                         length: MemoryLayout<Uniforms>.stride,
+                                         index: Int(VertexInputIndexUniforms.rawValue))
+        }
+        renderEncoder.drawMesh(cylinderMesh)
         
         renderEncoder.endEncoding()
         

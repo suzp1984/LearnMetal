@@ -199,13 +199,33 @@ extension MTKMesh {
     public class func newCylinder(withVertexDescriptor vertexDescriptor: MTLVertexDescriptor,
                                   withAttributesMap attributesMap: [Int: String],
                                   withDevice device: MTLDevice,
-                                  height: Float,
-                                  radii: vector_float2,
-                                  radialSegments: Int,
-                                  verticalSegments: Int,
-                                  geometryType: MDLGeometryType,
-                                  inwardNormals: Bool) throws -> MTKMesh {
-        throw Errors.runtimeError("not implemented yet.")
+                                  height: Float = 1.0,
+                                  radii: vector_float2 = vector_float2(0.5, 0.5),
+                                  radialSegments: Int = 60,
+                                  verticalSegments: Int = 60,
+                                  geometryType: MDLGeometryType = .triangles,
+                                  inwardNormals: Bool = false) throws -> MTKMesh {
+        if !checkVertexDescriptor(vertexAttributesMap: attributesMap) {
+            throw Errors.runtimeError("vertex Descriptor invalid. \(attributesMap)")
+        }
+        
+        let modelIOVertexDescriptor = MTKModelIOVertexDescriptorFromMetal(vertexDescriptor)
+        for attr in attributesMap {
+            (modelIOVertexDescriptor.attributes[attr.key] as! MDLVertexAttribute).name = attr.value
+        }
+        
+        let metalAllocator = MTKMeshBufferAllocator(device: device)
+    
+        let cylinder = MDLMesh.newCylinder(withHeight: height,
+                                           radii: radii,
+                                           radialSegments: radialSegments,
+                                           verticalSegments: verticalSegments,
+                                           geometryType: geometryType,
+                                           inwardNormals: inwardNormals,
+                                           allocator: metalAllocator)
+        cylinder.vertexDescriptor = modelIOVertexDescriptor
+        
+        return try MTKMesh(mesh: cylinder, device: device)
     }
     
     public class func newEllipsoid(withVertexDescriptor vertexDescriptor: MTLVertexDescriptor,
