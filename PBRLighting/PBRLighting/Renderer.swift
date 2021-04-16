@@ -143,8 +143,6 @@ extension Renderer: MTKViewDelegate {
         renderEncoder.setFragmentBytes(lights,
                                        length: MemoryLayout<Light>.stride * lights.count,
                                        index: Int(FragmentInputIndexLights.rawValue))
-//        withUnsafePointer(to: lights) {
-//        }
         
         withUnsafePointer(to: lights.count) {
             renderEncoder.setFragmentBytes($0,
