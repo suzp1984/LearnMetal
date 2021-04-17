@@ -231,12 +231,12 @@ extension MTKMesh {
     public class func newEllipsoid(withVertexDescriptor vertexDescriptor: MTLVertexDescriptor,
                                    withAttributesMap attributesMap: [Int: String],
                                    withDevice device: MTLDevice,
-                                   radii: vector_float3,
-                                   radialSegments: Int,
-                                   verticalSegments: Int,
-                                   geometryType: MDLGeometryType,
-                                   inwardNormals: Bool,
-                                   hemisphere: Bool) throws -> MTKMesh {
+                                   radii: vector_float3 = vector_float3(1.0, 1.0, 1.0),
+                                   radialSegments: Int = 60,
+                                   verticalSegments: Int = 60,
+                                   geometryType: MDLGeometryType = .triangles,
+                                   inwardNormals: Bool = false,
+                                   hemisphere: Bool = false) throws -> MTKMesh {
         if !checkVertexDescriptor(vertexAttributesMap: attributesMap) {
             throw Errors.runtimeError("vertex Descriptor invalid. \(attributesMap)")
         }
@@ -257,6 +257,26 @@ extension MTKMesh {
         ellipsoidMesh.vertexDescriptor = modelIOVertexDescriptor
         
         return try MTKMesh(mesh: ellipsoidMesh, device: device)
+    }
+    
+    public class func newSphere(withVertexDescriptor vertexDescriptor: MTLVertexDescriptor,
+                                withAttributesMap attributesMap: [Int: String],
+                                withDevice device: MTLDevice,
+                                radii: Float = 1.0,
+                                radialSegments: Int = 60,
+                                verticalSegments: Int = 60,
+                                geometryType: MDLGeometryType = .triangles,
+                                inwardNormals: Bool = false,
+                                hemisphere: Bool = false) throws -> MTKMesh {
+        return try newEllipsoid(withVertexDescriptor: vertexDescriptor,
+                            withAttributesMap: attributesMap,
+                            withDevice: device,
+                            radii: vector_float3(repeating: radii),
+                            radialSegments: radialSegments,
+                            verticalSegments: verticalSegments,
+                            geometryType: geometryType,
+                            inwardNormals: inwardNormals,
+                            hemisphere: hemisphere)
     }
     
     public class func newEllipticalCone(

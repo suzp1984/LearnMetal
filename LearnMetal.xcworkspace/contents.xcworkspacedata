@@ -163,4 +163,7 @@
    <FileRef
       location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/PBRTextured/6.2.PBRTextured.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/RadianceToCubemap/6.3.RadianceToCubemap.xcodeproj">
+   </FileRef>
 </Workspace>

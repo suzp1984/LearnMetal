@@ -13,6 +13,7 @@
 		372B5422260A0BEE00EAE90C /* skybox in Resources */ = {isa = PBXBuildFile; fileRef = 372B5421260A0BEE00EAE90C /* skybox */; };
 		372B543A260A1F2D00EAE90C /* TextureCubeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372B5439260A1F2D00EAE90C /* TextureCubeLoader.swift */; };
 		3742B5DC25FF93A800DE2669 /* nanosuit in Resources */ = {isa = PBXBuildFile; fileRef = 3742B5DB25FF93A700DE2669 /* nanosuit */; };
+		3789FA4B262A855500D9F85B /* hdr in Resources */ = {isa = PBXBuildFile; fileRef = 3789FA4A262A855500D9F85B /* hdr */; };
 		37951FC52610259200628968 /* planet in Resources */ = {isa = PBXBuildFile; fileRef = 37951FC42610259200628968 /* planet */; };
 		37951FC92610259C00628968 /* rock in Resources */ = {isa = PBXBuildFile; fileRef = 37951FC82610259C00628968 /* rock */; };
 		37951FDB2610313B00628968 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37951FDA2610313B00628968 /* Bundle.swift */; };
@@ -47,6 +48,7 @@
 		372B5421260A0BEE00EAE90C /* skybox */ = {isa = PBXFileReference; lastKnownFileType = folder; path = skybox; sourceTree = "<group>"; };
 		372B5439260A1F2D00EAE90C /* TextureCubeLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureCubeLoader.swift; sourceTree = "<group>"; };
 		3742B5DB25FF93A700DE2669 /* nanosuit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = nanosuit; sourceTree = "<group>"; };
+		3789FA4A262A855500D9F85B /* hdr */ = {isa = PBXFileReference; lastKnownFileType = folder; path = hdr; sourceTree = "<group>"; };
 		37951FC42610259200628968 /* planet */ = {isa = PBXFileReference; lastKnownFileType = folder; path = planet; sourceTree = "<group>"; };
 		37951FC82610259C00628968 /* rock */ = {isa = PBXFileReference; lastKnownFileType = folder; path = rock; sourceTree = "<group>"; };
 		37951FDA2610313B00628968 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		3742B5DA25FF938900DE2669 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				3789FA4A262A855500D9F85B /* hdr */,
 				37C36D1826293ACD008586E7 /* rusted_iron */,
 				379526FC262149B400628968 /* backpack */,
 				37951FC82610259C00628968 /* rock */,
@@ -243,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37DD618D25F38790005D7A42 /* Assets.xcassets in Resources */,
+				3789FA4B262A855500D9F85B /* hdr in Resources */,
 				372B5422260A0BEE00EAE90C /* skybox in Resources */,
 				379526FD262149B400628968 /* backpack in Resources */,
 				37951FC92610259C00628968 /* rock in Resources */,
