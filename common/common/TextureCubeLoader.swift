@@ -12,28 +12,7 @@ import AppKit
 @objc
 public class TextureCubeLoader: NSObject {
     
-    class func fill(rawData: UnsafeMutableRawPointer,
-                    fromImage image: CGImage) -> Void {
-        let width = image.width
-        let height = image.height
-        let bytesPerPixel = 4
-        let bytesPerRow = bytesPerPixel * width
-        let bitsPerComponent = 8
-        
-        let colorSpace = CGColorSpaceCreateDeviceRGB()
-        let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedLast.rawValue | CGImageByteOrderInfo.order32Big.rawValue)
-        
-        let context = CGContext(data: rawData,
-                                width: width,
-                                height: height,
-                                bitsPerComponent: bitsPerComponent,
-                                bytesPerRow: bytesPerRow,
-                                space: colorSpace,
-                                bitmapInfo: bitmapInfo.rawValue)!
-        
-        context.draw(image, in: CGRect(x: 0, y: 0, width: width, height: height))
-        
-        return
+    private override init() {
     }
     
     @objc
@@ -74,7 +53,7 @@ public class TextureCubeLoader: NSObject {
             
             let rawData = UnsafeMutableRawPointer.allocate(byteCount: cubeSize * cubeSize * bytesPerPixel, alignment: 1)
 
-            fill(rawData: rawData, fromImage: cgImage)
+            ImageUtils.drawRGBA8Bitmap(to: rawData, fromImage: cgImage)
             
             texture.replace(region: region,
                             mipmapLevel: 0,

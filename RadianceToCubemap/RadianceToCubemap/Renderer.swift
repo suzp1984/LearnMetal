@@ -38,7 +38,8 @@ class Renderer: NSObject {
                                                         target: vector_float3(0.0, 0.0, 0.0),
                                                         up: vector_float3(0.0, 1.0, 0.0))
        
-        loadHdrTexture()
+        commandQueue = device.makeCommandQueue()!
+        loadHdrTexture(commandQueue: commandQueue)
         
         let textureDescritpor = MTLTextureDescriptor.textureCubeDescriptor(pixelFormat: .rgba16Float,
                                                                            size: 512,
@@ -145,7 +146,6 @@ class Renderer: NSObject {
             Light(position: vector_float3( 10.0,-10.0, 10.0), color: vector_float3(300.0, 300.0, 300.0))
         ]
         
-        commandQueue = device.makeCommandQueue()!
         // render to cubemap texture
         let cubemapParams = [
             CubeMapParams(viewMatrix: matrix_look_at_right_hand(vector_float3(0.0, 0.0, 0.0),
@@ -233,61 +233,9 @@ class Renderer: NSObject {
         uniform.viewMatrix = camera.getViewMatrix()
     }
     
-    private func fill(rawData: UnsafeMutableRawPointer,
-                    fromImage image: CGImage) -> Void {
-        let width = image.width
-        let height = image.height
-        let bytesPerPixel = 4
-        let bytesPerRow = bytesPerPixel * width
-        let bitsPerComponent = 8
-        
-        let colorSpace = CGColorSpaceCreateDeviceRGB()
-        let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedLast.rawValue | CGImageByteOrderInfo.order32Big.rawValue)
-    
-        
-        let context = CGContext(data: rawData,
-                                width: width,
-                                height: height,
-                                bitsPerComponent: bitsPerComponent,
-                                bytesPerRow: bytesPerRow,
-                                space: colorSpace,
-                                bitmapInfo: bitmapInfo.rawValue)!
-        
-        context.draw(image, in: CGRect(x: 0, y: 0, width: width, height: height))
-        
-        return
-    }
-    
-    private func loadHdrTexture() {
+    private func loadHdrTexture(commandQueue: MTLCommandQueue? = nil) {
         let hdrUrl = Bundle.common.url(forResource: "newport_loft.hdr", withExtension: nil, subdirectory: "hdr")!
-        let hdrImage = NSImage(contentsOf: hdrUrl)!
-        let hdrCGImage = hdrImage.cgImage(forProposedRect: nil, context: nil, hints: nil)!
-        let hdrImageWidth = hdrCGImage.width
-        let hdrImageHeight = hdrCGImage.height
-        let bytesPerPixel = 4
-        let bytesPerRow = bytesPerPixel * hdrImageWidth
-        let bytesPerImage = bytesPerRow * hdrImageHeight
-        
-        let region = MTLRegionMake2D(0, 0, Int(hdrImageWidth), Int(hdrImageHeight))
-        
-        let hdrTextureDescritpor = MTLTextureDescriptor.texture2DDescriptor(pixelFormat: .rgba8Unorm,
-                                                                         width: hdrImageWidth,
-                                                                         height: hdrImageHeight,
-                                                                         mipmapped: true)
-        hdrTextureDescritpor.usage = [.shaderRead]
-        
-        hdrTexture = device.makeTexture(descriptor: hdrTextureDescritpor)
-        
-        let rawData = UnsafeMutableRawPointer.allocate(byteCount: bytesPerImage, alignment: 1)
-
-        fill(rawData: rawData, fromImage: hdrCGImage)
-        
-        hdrTexture.replace(region: region,
-                           mipmapLevel: 0,
-                           withBytes: UnsafeRawPointer(rawData),
-                           bytesPerRow: bytesPerRow)
-        
-        rawData.deallocate()
+        hdrTexture = try! HDRTextureLoader.load(textureFrom: hdrUrl, device: device, commandQueue: commandQueue)
     }
 }
 
