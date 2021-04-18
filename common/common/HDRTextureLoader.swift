@@ -15,6 +15,7 @@ public class HDRTextureLoader: NSObject {
     private override init() {
     }
     
+    @objc
     public class func load(textureFrom url: URL,
                            device: MTLDevice,
                            commandQueue: MTLCommandQueue? = nil) throws -> MTLTexture {

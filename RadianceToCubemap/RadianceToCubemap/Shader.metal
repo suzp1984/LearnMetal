@@ -32,7 +32,6 @@ vertex CubeMapRasterizerData cubeMapVertexShader(Vertex in [[stage_in]],
     
     CubeMapParams param = params[instanceId];
     out.layer = param.layerId;
-//    out.layer = instanceId;
     out.worldPos = in.position;
     out.position = projectionMatrix * param.viewMatrix * float4(in.position, 1.0);
     

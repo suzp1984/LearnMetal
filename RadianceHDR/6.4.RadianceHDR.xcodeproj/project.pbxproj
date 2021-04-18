@@ -1,0 +1,628 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3789FB3B262BCD9C00D9F85B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3789FB3A262BCD9C00D9F85B /* AppDelegate.m */; };
+		3789FB3E262BCD9C00D9F85B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3789FB3D262BCD9C00D9F85B /* ViewController.m */; };
+		3789FB40262BCD9D00D9F85B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3789FB3F262BCD9D00D9F85B /* Assets.xcassets */; };
+		3789FB43262BCD9D00D9F85B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3789FB41262BCD9D00D9F85B /* Main.storyboard */; };
+		3789FB46262BCD9D00D9F85B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3789FB45262BCD9D00D9F85B /* main.m */; };
+		3789FB51262BCD9E00D9F85B /* RadianceHDRTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3789FB50262BCD9E00D9F85B /* RadianceHDRTests.m */; };
+		3789FB5C262BCD9E00D9F85B /* RadianceHDRUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3789FB5B262BCD9E00D9F85B /* RadianceHDRUITests.m */; };
+		3789FB6E262BCE7100D9F85B /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3789FB6D262BCE7100D9F85B /* common.framework */; };
+		3789FB6F262BCE7100D9F85B /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3789FB6D262BCE7100D9F85B /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3789FB73262BCE7A00D9F85B /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3789FB71262BCE7A00D9F85B /* Metal.framework */; };
+		3789FB74262BCE7A00D9F85B /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3789FB72262BCE7A00D9F85B /* MetalKit.framework */; };
+		3789FB7B262BD46300D9F85B /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3789FB7A262BD46300D9F85B /* Shader.metal */; };
+		3789FB82262BD94800D9F85B /* Renderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3789FB81262BD94700D9F85B /* Renderer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3789FB4D262BCD9E00D9F85B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3789FB2E262BCD9C00D9F85B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3789FB35262BCD9C00D9F85B;
+			remoteInfo = RadianceHDR;
+		};
+		3789FB58262BCD9E00D9F85B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3789FB2E262BCD9C00D9F85B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3789FB35262BCD9C00D9F85B;
+			remoteInfo = RadianceHDR;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3789FB70262BCE7100D9F85B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3789FB6F262BCE7100D9F85B /* common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3789FB36262BCD9C00D9F85B /* 6.4.RadianceHDR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 6.4.RadianceHDR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3789FB39262BCD9C00D9F85B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3789FB3A262BCD9C00D9F85B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3789FB3C262BCD9C00D9F85B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3789FB3D262BCD9C00D9F85B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3789FB3F262BCD9D00D9F85B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3789FB42262BCD9D00D9F85B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3789FB44262BCD9D00D9F85B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3789FB45262BCD9D00D9F85B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3789FB47262BCD9D00D9F85B /* RadianceHDR.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RadianceHDR.entitlements; sourceTree = "<group>"; };
+		3789FB4C262BCD9E00D9F85B /* RadianceHDRTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RadianceHDRTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3789FB50262BCD9E00D9F85B /* RadianceHDRTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadianceHDRTests.m; sourceTree = "<group>"; };
+		3789FB52262BCD9E00D9F85B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3789FB57262BCD9E00D9F85B /* RadianceHDRUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RadianceHDRUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3789FB5B262BCD9E00D9F85B /* RadianceHDRUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadianceHDRUITests.m; sourceTree = "<group>"; };
+		3789FB5D262BCD9E00D9F85B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3789FB6D262BCE7100D9F85B /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3789FB71262BCE7A00D9F85B /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		3789FB72262BCE7A00D9F85B /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		3789FB77262BD0F800D9F85B /* ShaderType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderType.h; sourceTree = "<group>"; };
+		3789FB7A262BD46300D9F85B /* Shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader.metal; sourceTree = "<group>"; };
+		3789FB7E262BD92300D9F85B /* Renderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
+		3789FB81262BD94700D9F85B /* Renderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Renderer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3789FB33262BCD9C00D9F85B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3789FB74262BCE7A00D9F85B /* MetalKit.framework in Frameworks */,
+				3789FB73262BCE7A00D9F85B /* Metal.framework in Frameworks */,
+				3789FB6E262BCE7100D9F85B /* common.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3789FB49262BCD9E00D9F85B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3789FB54262BCD9E00D9F85B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3789FB2D262BCD9C00D9F85B = {
+			isa = PBXGroup;
+			children = (
+				3789FB38262BCD9C00D9F85B /* RadianceHDR */,
+				3789FB4F262BCD9E00D9F85B /* RadianceHDRTests */,
+				3789FB5A262BCD9E00D9F85B /* RadianceHDRUITests */,
+				3789FB37262BCD9C00D9F85B /* Products */,
+				3789FB6C262BCE7100D9F85B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3789FB37262BCD9C00D9F85B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3789FB36262BCD9C00D9F85B /* 6.4.RadianceHDR.app */,
+				3789FB4C262BCD9E00D9F85B /* RadianceHDRTests.xctest */,
+				3789FB57262BCD9E00D9F85B /* RadianceHDRUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3789FB38262BCD9C00D9F85B /* RadianceHDR */ = {
+			isa = PBXGroup;
+			children = (
+				3789FB39262BCD9C00D9F85B /* AppDelegate.h */,
+				3789FB3A262BCD9C00D9F85B /* AppDelegate.m */,
+				3789FB3C262BCD9C00D9F85B /* ViewController.h */,
+				3789FB3D262BCD9C00D9F85B /* ViewController.m */,
+				3789FB3F262BCD9D00D9F85B /* Assets.xcassets */,
+				3789FB41262BCD9D00D9F85B /* Main.storyboard */,
+				3789FB44262BCD9D00D9F85B /* Info.plist */,
+				3789FB45262BCD9D00D9F85B /* main.m */,
+				3789FB47262BCD9D00D9F85B /* RadianceHDR.entitlements */,
+				3789FB77262BD0F800D9F85B /* ShaderType.h */,
+				3789FB7A262BD46300D9F85B /* Shader.metal */,
+				3789FB7E262BD92300D9F85B /* Renderer.h */,
+				3789FB81262BD94700D9F85B /* Renderer.m */,
+			);
+			path = RadianceHDR;
+			sourceTree = "<group>";
+		};
+		3789FB4F262BCD9E00D9F85B /* RadianceHDRTests */ = {
+			isa = PBXGroup;
+			children = (
+				3789FB50262BCD9E00D9F85B /* RadianceHDRTests.m */,
+				3789FB52262BCD9E00D9F85B /* Info.plist */,
+			);
+			path = RadianceHDRTests;
+			sourceTree = "<group>";
+		};
+		3789FB5A262BCD9E00D9F85B /* RadianceHDRUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3789FB5B262BCD9E00D9F85B /* RadianceHDRUITests.m */,
+				3789FB5D262BCD9E00D9F85B /* Info.plist */,
+			);
+			path = RadianceHDRUITests;
+			sourceTree = "<group>";
+		};
+		3789FB6C262BCE7100D9F85B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3789FB71262BCE7A00D9F85B /* Metal.framework */,
+				3789FB72262BCE7A00D9F85B /* MetalKit.framework */,
+				3789FB6D262BCE7100D9F85B /* common.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3789FB35262BCD9C00D9F85B /* 6.4.RadianceHDR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3789FB60262BCD9E00D9F85B /* Build configuration list for PBXNativeTarget "6.4.RadianceHDR" */;
+			buildPhases = (
+				3789FB32262BCD9C00D9F85B /* Sources */,
+				3789FB33262BCD9C00D9F85B /* Frameworks */,
+				3789FB34262BCD9C00D9F85B /* Resources */,
+				3789FB70262BCE7100D9F85B /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 6.4.RadianceHDR;
+			productName = RadianceHDR;
+			productReference = 3789FB36262BCD9C00D9F85B /* 6.4.RadianceHDR.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3789FB4B262BCD9E00D9F85B /* RadianceHDRTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3789FB63262BCD9E00D9F85B /* Build configuration list for PBXNativeTarget "RadianceHDRTests" */;
+			buildPhases = (
+				3789FB48262BCD9E00D9F85B /* Sources */,
+				3789FB49262BCD9E00D9F85B /* Frameworks */,
+				3789FB4A262BCD9E00D9F85B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3789FB4E262BCD9E00D9F85B /* PBXTargetDependency */,
+			);
+			name = RadianceHDRTests;
+			productName = RadianceHDRTests;
+			productReference = 3789FB4C262BCD9E00D9F85B /* RadianceHDRTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3789FB56262BCD9E00D9F85B /* RadianceHDRUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3789FB66262BCD9E00D9F85B /* Build configuration list for PBXNativeTarget "RadianceHDRUITests" */;
+			buildPhases = (
+				3789FB53262BCD9E00D9F85B /* Sources */,
+				3789FB54262BCD9E00D9F85B /* Frameworks */,
+				3789FB55262BCD9E00D9F85B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3789FB59262BCD9E00D9F85B /* PBXTargetDependency */,
+			);
+			name = RadianceHDRUITests;
+			productName = RadianceHDRUITests;
+			productReference = 3789FB57262BCD9E00D9F85B /* RadianceHDRUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3789FB2E262BCD9C00D9F85B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					3789FB35262BCD9C00D9F85B = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					3789FB4B262BCD9E00D9F85B = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 3789FB35262BCD9C00D9F85B;
+					};
+					3789FB56262BCD9E00D9F85B = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 3789FB35262BCD9C00D9F85B;
+					};
+				};
+			};
+			buildConfigurationList = 3789FB31262BCD9C00D9F85B /* Build configuration list for PBXProject "6.4.RadianceHDR" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3789FB2D262BCD9C00D9F85B;
+			productRefGroup = 3789FB37262BCD9C00D9F85B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3789FB35262BCD9C00D9F85B /* 6.4.RadianceHDR */,
+				3789FB4B262BCD9E00D9F85B /* RadianceHDRTests */,
+				3789FB56262BCD9E00D9F85B /* RadianceHDRUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3789FB34262BCD9C00D9F85B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3789FB40262BCD9D00D9F85B /* Assets.xcassets in Resources */,
+				3789FB43262BCD9D00D9F85B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3789FB4A262BCD9E00D9F85B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3789FB55262BCD9E00D9F85B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3789FB32262BCD9C00D9F85B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3789FB7B262BD46300D9F85B /* Shader.metal in Sources */,
+				3789FB3E262BCD9C00D9F85B /* ViewController.m in Sources */,
+				3789FB46262BCD9D00D9F85B /* main.m in Sources */,
+				3789FB82262BD94800D9F85B /* Renderer.m in Sources */,
+				3789FB3B262BCD9C00D9F85B /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3789FB48262BCD9E00D9F85B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3789FB51262BCD9E00D9F85B /* RadianceHDRTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3789FB53262BCD9E00D9F85B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3789FB5C262BCD9E00D9F85B /* RadianceHDRUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3789FB4E262BCD9E00D9F85B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3789FB35262BCD9C00D9F85B /* 6.4.RadianceHDR */;
+			targetProxy = 3789FB4D262BCD9E00D9F85B /* PBXContainerItemProxy */;
+		};
+		3789FB59262BCD9E00D9F85B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3789FB35262BCD9C00D9F85B /* 6.4.RadianceHDR */;
+			targetProxy = 3789FB58262BCD9E00D9F85B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3789FB41262BCD9D00D9F85B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3789FB42262BCD9D00D9F85B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3789FB5E262BCD9E00D9F85B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3789FB5F262BCD9E00D9F85B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3789FB61262BCD9E00D9F85B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RadianceHDR/RadianceHDR.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = RadianceHDR/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.RadianceHDR;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3789FB62262BCD9E00D9F85B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RadianceHDR/RadianceHDR.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = RadianceHDR/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.RadianceHDR;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3789FB64262BCD9E00D9F85B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = RadianceHDRTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.RadianceHDRTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RadianceHDR.app/Contents/MacOS/RadianceHDR";
+			};
+			name = Debug;
+		};
+		3789FB65262BCD9E00D9F85B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = RadianceHDRTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.RadianceHDRTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RadianceHDR.app/Contents/MacOS/RadianceHDR";
+			};
+			name = Release;
+		};
+		3789FB67262BCD9E00D9F85B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = RadianceHDRUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.RadianceHDRUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RadianceHDR;
+			};
+			name = Debug;
+		};
+		3789FB68262BCD9E00D9F85B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = RadianceHDRUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.RadianceHDRUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RadianceHDR;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3789FB31262BCD9C00D9F85B /* Build configuration list for PBXProject "6.4.RadianceHDR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3789FB5E262BCD9E00D9F85B /* Debug */,
+				3789FB5F262BCD9E00D9F85B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3789FB60262BCD9E00D9F85B /* Build configuration list for PBXNativeTarget "6.4.RadianceHDR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3789FB61262BCD9E00D9F85B /* Debug */,
+				3789FB62262BCD9E00D9F85B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3789FB63262BCD9E00D9F85B /* Build configuration list for PBXNativeTarget "RadianceHDRTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3789FB64262BCD9E00D9F85B /* Debug */,
+				3789FB65262BCD9E00D9F85B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3789FB66262BCD9E00D9F85B /* Build configuration list for PBXNativeTarget "RadianceHDRUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3789FB67262BCD9E00D9F85B /* Debug */,
+				3789FB68262BCD9E00D9F85B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3789FB2E262BCD9C00D9F85B /* Project object */;
+}
