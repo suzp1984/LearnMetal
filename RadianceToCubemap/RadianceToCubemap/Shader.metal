@@ -10,6 +10,10 @@ using namespace metal;
 
 #include "ShaderType.h"
 
+namespace Const {
+    constexpr sampler linearSampler (mag_filter::linear, min_filter::linear);
+}
+
 typedef struct Vertex
 {
     float3 position [[attribute(ModelVertexAttributePosition)]];
@@ -49,10 +53,9 @@ float2 SampleSphericalMap(float3 v) {
 
 fragment float4 cubeMapFragmentShader(CubeMapRasterizerData in [[stage_in]],
                                       texture2d<half> equirectangularMap [[texture(0)]]) {
-    constexpr sampler textureSampler (mag_filter::linear, min_filter::linear);
 
     float2 uv = SampleSphericalMap(normalize(in.worldPos));
-    float3 color = float3(equirectangularMap.sample(textureSampler, uv).rgb);
+    float3 color = float3(equirectangularMap.sample(Const::linearSampler, uv).rgb);
     
     return float4(color, 1.0);
 }
@@ -97,9 +100,8 @@ vertex BackgroundRasterizerData backgroundVertexShader(Vertex in [[stage_in]],
 
 fragment float4 backgroundFragmentShader(BackgroundRasterizerData in [[stage_in]],
                                          texturecube<half> environmentMap [[texture(0)]]) {
-    constexpr sampler textureSampler (mag_filter::linear, min_filter::linear);
 
-    float3 envColor = float3(environmentMap.sample(textureSampler, in.worldPos).rgb);
+    float3 envColor = float3(environmentMap.sample(Const::linearSampler, in.worldPos).rgb);
     
     // HDR tonemap and gamma correct
     envColor = envColor / (envColor + float3(1.0));

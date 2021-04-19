@@ -9,6 +9,10 @@
 using namespace metal;
 #include "ShaderType.h"
 
+namespace Const {
+    constexpr sampler linearSampler (mag_filter::linear, min_filter::linear);
+}
+
 typedef struct Vertex
 {
     float3 position [[attribute(ModelVertexAttributePosition)]];
@@ -49,8 +53,8 @@ vertex RasterizerData pbrVertexShader(Vertex in [[stage_in]],
 // Easy trick to get tangent-normals to world-space to keep PBR code simplified.
 // Don't worry if you don't get what's going on; you generally want to do normal
 // mapping the usual way for performance anyways;
-float3 getNormalFromMap(RasterizerData in, texture2d<half> normalMap, const sampler textureSampler) {
-    float3 tangentNormal = float3(normalMap.sample(textureSampler, in.texCoords).xyz) * 2.0 - 1.0;
+float3 getNormalFromMap(RasterizerData in, texture2d<half> normalMap) {
+    float3 tangentNormal = float3(normalMap.sample(Const::linearSampler, in.texCoords).xyz) * 2.0 - 1.0;
     
     float3 Q1 = dfdx(in.worldPos);
     float3 Q2 = dfdy(in.worldPos);
@@ -117,14 +121,12 @@ fragment float4 pbrFragmentShader(RasterizerData in [[stage_in]],
                                   constant Light &light [[buffer(FragmentInputIndexLight)]],
                                   constant float3 &cameraPos [[buffer(FragmentInputIndexCameraPostion)]])
 {
-    constexpr sampler textureSampler (mag_filter::linear, min_filter::linear);
+    float3 albedo = pow(float3(material.albedoTexture.sample(Const::linearSampler, in.texCoords).rgb), float3(2.2));
+    float metallic = material.metallicTexture.sample(Const::linearSampler, in.texCoords).r;
+    float roughness = material.roughnessTexture.sample(Const::linearSampler, in.texCoords).r;
+    float ao = material.aoTexture.sample(Const::linearSampler, in.texCoords).r;
     
-    float3 albedo = pow(float3(material.albedoTexture.sample(textureSampler, in.texCoords).rgb), float3(2.2));
-    float metallic = material.metallicTexture.sample(textureSampler, in.texCoords).r;
-    float roughness = material.roughnessTexture.sample(textureSampler, in.texCoords).r;
-    float ao = material.aoTexture.sample(textureSampler, in.texCoords).r;
-    
-    float3 N = getNormalFromMap(in, material.normalTexture, textureSampler);
+    float3 N = getNormalFromMap(in, material.normalTexture);
     float3 V = normalize(cameraPos - in.worldPos);
     
     // calculate reflectance at normal incidence; if dia-electric (like plastic) use F0

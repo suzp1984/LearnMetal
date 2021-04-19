@@ -9,6 +9,10 @@
 using namespace metal;
 #include "ShaderType.h"
 
+namespace Const {
+    constexpr sampler linearSampler (mag_filter::linear, min_filter::linear);
+}
+
 struct SkyDomeRasterizerData
 {
     float4 position [[position]];
@@ -36,12 +40,11 @@ vertex SkyDomeRasterizerData SkyDomeVertexShader(const uint vertexID [[vertex_id
 
 fragment half4 SkyDomeFragmentShader(SkyDomeRasterizerData in [[stage_in]],
                                      texture2d<half> skyTexture [[texture(0)]]) {
-    constexpr sampler textureSampler (mag_filter::linear, min_filter::linear);
 
     float3 d = normalize(in.sampleDirection);
     float2 t = float2((atan2(d.z, d.x) + M_PI_F) / (2.0 * M_PI_F), acos(d.y) / M_PI_F);
     
-    half3 color = skyTexture.sample(textureSampler, t).rgb;
+    half3 color = skyTexture.sample(Const::linearSampler, t).rgb;
     
     // HDR tonemap and gamma correct
     color = color / (color + half3(1.0));

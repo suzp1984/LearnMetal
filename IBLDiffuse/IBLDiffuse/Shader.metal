@@ -10,6 +10,10 @@ using namespace metal;
 
 #include "ShaderType.h"
 
+namespace Const {
+    constexpr sampler linearSampler (mag_filter::linear, min_filter::linear);
+}
+
 typedef struct Vertex
 {
     float3 position [[attribute(ModelVertexAttributePosition)]];
@@ -49,17 +53,15 @@ float2 SampleSphericalMap(float3 v) {
 
 fragment float4 cubeMapFragmentShader(CubeMapRasterizerData in [[stage_in]],
                                       texture2d<half> equirectangularMap [[texture(0)]]) {
-    constexpr sampler textureSampler (mag_filter::linear, min_filter::linear);
 
     float2 uv = SampleSphericalMap(normalize(in.worldPos));
-    float3 color = float3(equirectangularMap.sample(textureSampler, uv).rgb);
+    float3 color = float3(equirectangularMap.sample(Const::linearSampler, uv).rgb);
     
     return float4(color, 1.0);
 }
 
 fragment float4 irradianceFragmentShader(CubeMapRasterizerData in [[stage_in]],
                                          texturecube<half> environmentMap [[texture(0)]]) {
-    constexpr sampler textureSampler (mag_filter::linear, min_filter::linear);
 
     // The world vector acts as the normal of a tangent surface
     // from the origin, aligned to WorldPos. Given this normal, calculate all
@@ -83,7 +85,7 @@ fragment float4 irradianceFragmentShader(CubeMapRasterizerData in [[stage_in]],
             // tangent space to world
             float3 sampleVec = tangentSample.x * right + tangentSample.y * up + tangentSample.z * N;
 
-            irradiance += float3(environmentMap.sample(textureSampler, sampleVec).rgb) * cos(theta) * sin(theta);
+            irradiance += float3(environmentMap.sample(Const::linearSampler, sampleVec).rgb) * cos(theta) * sin(theta);
             nrSamples ++;
         }
     }
@@ -133,9 +135,8 @@ vertex BackgroundRasterizerData backgroundVertexShader(Vertex in [[stage_in]],
 
 fragment float4 backgroundFragmentShader(BackgroundRasterizerData in [[stage_in]],
                                          texturecube<half> environmentMap [[texture(0)]]) {
-    constexpr sampler textureSampler (mag_filter::linear, min_filter::linear);
 
-    float3 envColor = float3(environmentMap.sample(textureSampler, in.worldPos).rgb);
+    float3 envColor = float3(environmentMap.sample(Const::linearSampler, in.worldPos).rgb);
     
     // HDR tonemap and gamma correct
     envColor = envColor / (envColor + float3(1.0));
@@ -209,8 +210,6 @@ fragment float4 pbrFragmentShader(RasterizerData in [[stage_in]],
                                   constant float3 &cameraPos [[buffer(FragmentInputIndexCameraPostion)]],
                                   texturecube<half> irradianceMap [[texture(FragmentInputIndexIrradianceMap)]])
 {
-    constexpr sampler textureSampler (mag_filter::linear, min_filter::linear);
-
     float3 N = normalize(in.normal);
     float3 V = normalize(cameraPos - in.worldPos);
     
@@ -262,7 +261,7 @@ fragment float4 pbrFragmentShader(RasterizerData in [[stage_in]],
     float3 kS = fresnelSchlick(max(dot(N, V), 0.0), F0);
     float3 kD = 1.0 - kS;
     kD *= 1.0 - material.metallic;
-    float3 irradiance = float3(irradianceMap.sample(textureSampler, N).rgb);
+    float3 irradiance = float3(irradianceMap.sample(Const::linearSampler, N).rgb);
     float3 diffuse = irradiance * material.albedo;
     float3 ambient = (kD * diffuse) * material.ao;
 
