@@ -1,0 +1,628 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3789FCDC262D1A8400D9F85B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3789FCDB262D1A8400D9F85B /* AppDelegate.m */; };
+		3789FCDF262D1A8400D9F85B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3789FCDE262D1A8400D9F85B /* ViewController.m */; };
+		3789FCE1262D1A8600D9F85B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3789FCE0262D1A8600D9F85B /* Assets.xcassets */; };
+		3789FCE4262D1A8600D9F85B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3789FCE2262D1A8600D9F85B /* Main.storyboard */; };
+		3789FCE7262D1A8600D9F85B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3789FCE6262D1A8600D9F85B /* main.m */; };
+		3789FCF2262D1A8600D9F85B /* IBLSpecularTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3789FCF1262D1A8600D9F85B /* IBLSpecularTests.m */; };
+		3789FCFD262D1A8600D9F85B /* IBLSpecularUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3789FCFC262D1A8600D9F85B /* IBLSpecularUITests.m */; };
+		3789FD0F262D1AC000D9F85B /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3789FD0E262D1AC000D9F85B /* common.framework */; };
+		3789FD10262D1AC000D9F85B /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3789FD0E262D1AC000D9F85B /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3789FD16262D1ACC00D9F85B /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3789FD14262D1ACC00D9F85B /* Metal.framework */; };
+		3789FD17262D1ACC00D9F85B /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3789FD15262D1ACC00D9F85B /* MetalKit.framework */; };
+		3789FD1C262D1B4600D9F85B /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3789FD1B262D1B4600D9F85B /* Shader.metal */; };
+		3789FD21262D1BF000D9F85B /* Renderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3789FD20262D1BF000D9F85B /* Renderer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3789FCEE262D1A8600D9F85B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3789FCCF262D1A8400D9F85B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3789FCD6262D1A8400D9F85B;
+			remoteInfo = IBLSpecular;
+		};
+		3789FCF9262D1A8600D9F85B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3789FCCF262D1A8400D9F85B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3789FCD6262D1A8400D9F85B;
+			remoteInfo = IBLSpecular;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3789FD11262D1AC000D9F85B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3789FD10262D1AC000D9F85B /* common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3789FCD7262D1A8400D9F85B /* 6.6.IBLSpecular.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 6.6.IBLSpecular.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3789FCDA262D1A8400D9F85B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3789FCDB262D1A8400D9F85B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3789FCDD262D1A8400D9F85B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3789FCDE262D1A8400D9F85B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3789FCE0262D1A8600D9F85B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3789FCE3262D1A8600D9F85B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3789FCE5262D1A8600D9F85B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3789FCE6262D1A8600D9F85B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3789FCE8262D1A8600D9F85B /* IBLSpecular.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IBLSpecular.entitlements; sourceTree = "<group>"; };
+		3789FCED262D1A8600D9F85B /* IBLSpecularTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IBLSpecularTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3789FCF1262D1A8600D9F85B /* IBLSpecularTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IBLSpecularTests.m; sourceTree = "<group>"; };
+		3789FCF3262D1A8600D9F85B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3789FCF8262D1A8600D9F85B /* IBLSpecularUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IBLSpecularUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3789FCFC262D1A8600D9F85B /* IBLSpecularUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IBLSpecularUITests.m; sourceTree = "<group>"; };
+		3789FCFE262D1A8600D9F85B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3789FD0E262D1AC000D9F85B /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3789FD14262D1ACC00D9F85B /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		3789FD15262D1ACC00D9F85B /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		3789FD1A262D1B0700D9F85B /* ShaderType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderType.h; sourceTree = "<group>"; };
+		3789FD1B262D1B4600D9F85B /* Shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader.metal; sourceTree = "<group>"; };
+		3789FD1F262D1BB800D9F85B /* Renderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
+		3789FD20262D1BF000D9F85B /* Renderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Renderer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3789FCD4262D1A8400D9F85B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3789FD17262D1ACC00D9F85B /* MetalKit.framework in Frameworks */,
+				3789FD16262D1ACC00D9F85B /* Metal.framework in Frameworks */,
+				3789FD0F262D1AC000D9F85B /* common.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3789FCEA262D1A8600D9F85B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3789FCF5262D1A8600D9F85B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3789FCCE262D1A8400D9F85B = {
+			isa = PBXGroup;
+			children = (
+				3789FCD9262D1A8400D9F85B /* IBLSpecular */,
+				3789FCF0262D1A8600D9F85B /* IBLSpecularTests */,
+				3789FCFB262D1A8600D9F85B /* IBLSpecularUITests */,
+				3789FCD8262D1A8400D9F85B /* Products */,
+				3789FD0D262D1AC000D9F85B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3789FCD8262D1A8400D9F85B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3789FCD7262D1A8400D9F85B /* 6.6.IBLSpecular.app */,
+				3789FCED262D1A8600D9F85B /* IBLSpecularTests.xctest */,
+				3789FCF8262D1A8600D9F85B /* IBLSpecularUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3789FCD9262D1A8400D9F85B /* IBLSpecular */ = {
+			isa = PBXGroup;
+			children = (
+				3789FCDA262D1A8400D9F85B /* AppDelegate.h */,
+				3789FCDB262D1A8400D9F85B /* AppDelegate.m */,
+				3789FCDD262D1A8400D9F85B /* ViewController.h */,
+				3789FCDE262D1A8400D9F85B /* ViewController.m */,
+				3789FCE0262D1A8600D9F85B /* Assets.xcassets */,
+				3789FCE2262D1A8600D9F85B /* Main.storyboard */,
+				3789FCE5262D1A8600D9F85B /* Info.plist */,
+				3789FCE6262D1A8600D9F85B /* main.m */,
+				3789FCE8262D1A8600D9F85B /* IBLSpecular.entitlements */,
+				3789FD1A262D1B0700D9F85B /* ShaderType.h */,
+				3789FD1B262D1B4600D9F85B /* Shader.metal */,
+				3789FD1F262D1BB800D9F85B /* Renderer.h */,
+				3789FD20262D1BF000D9F85B /* Renderer.m */,
+			);
+			path = IBLSpecular;
+			sourceTree = "<group>";
+		};
+		3789FCF0262D1A8600D9F85B /* IBLSpecularTests */ = {
+			isa = PBXGroup;
+			children = (
+				3789FCF1262D1A8600D9F85B /* IBLSpecularTests.m */,
+				3789FCF3262D1A8600D9F85B /* Info.plist */,
+			);
+			path = IBLSpecularTests;
+			sourceTree = "<group>";
+		};
+		3789FCFB262D1A8600D9F85B /* IBLSpecularUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3789FCFC262D1A8600D9F85B /* IBLSpecularUITests.m */,
+				3789FCFE262D1A8600D9F85B /* Info.plist */,
+			);
+			path = IBLSpecularUITests;
+			sourceTree = "<group>";
+		};
+		3789FD0D262D1AC000D9F85B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3789FD14262D1ACC00D9F85B /* Metal.framework */,
+				3789FD15262D1ACC00D9F85B /* MetalKit.framework */,
+				3789FD0E262D1AC000D9F85B /* common.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3789FCD6262D1A8400D9F85B /* 6.6.IBLSpecular */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3789FD01262D1A8600D9F85B /* Build configuration list for PBXNativeTarget "6.6.IBLSpecular" */;
+			buildPhases = (
+				3789FCD3262D1A8400D9F85B /* Sources */,
+				3789FCD4262D1A8400D9F85B /* Frameworks */,
+				3789FCD5262D1A8400D9F85B /* Resources */,
+				3789FD11262D1AC000D9F85B /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 6.6.IBLSpecular;
+			productName = IBLSpecular;
+			productReference = 3789FCD7262D1A8400D9F85B /* 6.6.IBLSpecular.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3789FCEC262D1A8600D9F85B /* IBLSpecularTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3789FD04262D1A8600D9F85B /* Build configuration list for PBXNativeTarget "IBLSpecularTests" */;
+			buildPhases = (
+				3789FCE9262D1A8600D9F85B /* Sources */,
+				3789FCEA262D1A8600D9F85B /* Frameworks */,
+				3789FCEB262D1A8600D9F85B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3789FCEF262D1A8600D9F85B /* PBXTargetDependency */,
+			);
+			name = IBLSpecularTests;
+			productName = IBLSpecularTests;
+			productReference = 3789FCED262D1A8600D9F85B /* IBLSpecularTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3789FCF7262D1A8600D9F85B /* IBLSpecularUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3789FD07262D1A8600D9F85B /* Build configuration list for PBXNativeTarget "IBLSpecularUITests" */;
+			buildPhases = (
+				3789FCF4262D1A8600D9F85B /* Sources */,
+				3789FCF5262D1A8600D9F85B /* Frameworks */,
+				3789FCF6262D1A8600D9F85B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3789FCFA262D1A8600D9F85B /* PBXTargetDependency */,
+			);
+			name = IBLSpecularUITests;
+			productName = IBLSpecularUITests;
+			productReference = 3789FCF8262D1A8600D9F85B /* IBLSpecularUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3789FCCF262D1A8400D9F85B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					3789FCD6262D1A8400D9F85B = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					3789FCEC262D1A8600D9F85B = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 3789FCD6262D1A8400D9F85B;
+					};
+					3789FCF7262D1A8600D9F85B = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 3789FCD6262D1A8400D9F85B;
+					};
+				};
+			};
+			buildConfigurationList = 3789FCD2262D1A8400D9F85B /* Build configuration list for PBXProject "6.6.IBLSpecular" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3789FCCE262D1A8400D9F85B;
+			productRefGroup = 3789FCD8262D1A8400D9F85B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3789FCD6262D1A8400D9F85B /* 6.6.IBLSpecular */,
+				3789FCEC262D1A8600D9F85B /* IBLSpecularTests */,
+				3789FCF7262D1A8600D9F85B /* IBLSpecularUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3789FCD5262D1A8400D9F85B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3789FCE1262D1A8600D9F85B /* Assets.xcassets in Resources */,
+				3789FCE4262D1A8600D9F85B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3789FCEB262D1A8600D9F85B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3789FCF6262D1A8600D9F85B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3789FCD3262D1A8400D9F85B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3789FD1C262D1B4600D9F85B /* Shader.metal in Sources */,
+				3789FCDF262D1A8400D9F85B /* ViewController.m in Sources */,
+				3789FCE7262D1A8600D9F85B /* main.m in Sources */,
+				3789FD21262D1BF000D9F85B /* Renderer.m in Sources */,
+				3789FCDC262D1A8400D9F85B /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3789FCE9262D1A8600D9F85B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3789FCF2262D1A8600D9F85B /* IBLSpecularTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3789FCF4262D1A8600D9F85B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3789FCFD262D1A8600D9F85B /* IBLSpecularUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3789FCEF262D1A8600D9F85B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3789FCD6262D1A8400D9F85B /* 6.6.IBLSpecular */;
+			targetProxy = 3789FCEE262D1A8600D9F85B /* PBXContainerItemProxy */;
+		};
+		3789FCFA262D1A8600D9F85B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3789FCD6262D1A8400D9F85B /* 6.6.IBLSpecular */;
+			targetProxy = 3789FCF9262D1A8600D9F85B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3789FCE2262D1A8600D9F85B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3789FCE3262D1A8600D9F85B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3789FCFF262D1A8600D9F85B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3789FD00262D1A8600D9F85B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3789FD02262D1A8600D9F85B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = IBLSpecular/IBLSpecular.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = IBLSpecular/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.IBLSpecular;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3789FD03262D1A8600D9F85B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = IBLSpecular/IBLSpecular.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = IBLSpecular/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.IBLSpecular;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3789FD05262D1A8600D9F85B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = IBLSpecularTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.IBLSpecularTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IBLSpecular.app/Contents/MacOS/IBLSpecular";
+			};
+			name = Debug;
+		};
+		3789FD06262D1A8600D9F85B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = IBLSpecularTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.IBLSpecularTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IBLSpecular.app/Contents/MacOS/IBLSpecular";
+			};
+			name = Release;
+		};
+		3789FD08262D1A8600D9F85B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = IBLSpecularUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.IBLSpecularUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = IBLSpecular;
+			};
+			name = Debug;
+		};
+		3789FD09262D1A8600D9F85B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = IBLSpecularUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.IBLSpecularUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = IBLSpecular;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3789FCD2262D1A8400D9F85B /* Build configuration list for PBXProject "6.6.IBLSpecular" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3789FCFF262D1A8600D9F85B /* Debug */,
+				3789FD00262D1A8600D9F85B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3789FD01262D1A8600D9F85B /* Build configuration list for PBXNativeTarget "6.6.IBLSpecular" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3789FD02262D1A8600D9F85B /* Debug */,
+				3789FD03262D1A8600D9F85B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3789FD04262D1A8600D9F85B /* Build configuration list for PBXNativeTarget "IBLSpecularTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3789FD05262D1A8600D9F85B /* Debug */,
+				3789FD06262D1A8600D9F85B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3789FD07262D1A8600D9F85B /* Build configuration list for PBXNativeTarget "IBLSpecularUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3789FD08262D1A8600D9F85B /* Debug */,
+				3789FD09262D1A8600D9F85B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3789FCCF262D1A8400D9F85B /* Project object */;
+}

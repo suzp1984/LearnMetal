@@ -172,4 +172,7 @@
    <FileRef
       location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/IBLDiffuse/6.5.IBLDiffuse.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/IBLSpecular/6.6.IBLSpecular.xcodeproj">
+   </FileRef>
 </Workspace>

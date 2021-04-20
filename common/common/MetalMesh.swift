@@ -387,6 +387,17 @@ extension MTKMesh {
                                           indexBufferOffset: subMesh.indexBuffer.offset)
         }
     }
+    
+    public func draw(inRenderCommandEncoder encoder: MTLRenderCommandEncoder, instanceCount: Int) {
+        for subMesh in submeshes {
+            encoder.drawIndexedPrimitives(type: subMesh.primitiveType,
+                                          indexCount: subMesh.indexCount,
+                                          indexType: subMesh.indexType,
+                                          indexBuffer: subMesh.indexBuffer.buffer,
+                                          indexBufferOffset: subMesh.indexBuffer.offset,
+                                          instanceCount: instanceCount)
+        }
+    }
 }
 
 extension MTLRenderCommandEncoder {
