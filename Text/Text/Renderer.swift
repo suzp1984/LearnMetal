@@ -98,6 +98,39 @@ class Renderer: NSObject {
         let path = withUnsafePointer(to: affineTransform) {
             return CTFontCreatePathForGlyph(ctFont, aGlyph, $0)
         }
+        // TODO: wait the beizer curve impl
+//        path?.apply(info: nil, function: { rawPointer, element in
+//
+//            switch element.pointee.type {
+//            case .moveToPoint:
+//                NSLog("Move to Point")
+//                NSLog("\t \(element.pointee.points.pointee)")
+//
+//
+//            case .addLineToPoint:
+//                NSLog("add line to point")
+//                NSLog("\t \(element.pointee.points.pointee)")
+//
+//
+//            case .addCurveToPoint:
+//                NSLog("add curve to point")
+//                NSLog("\t \(element.pointee.points.pointee)")
+//                NSLog("\t \(element.pointee.points.advanced(by: 1).pointee)")
+//                NSLog("\t \(element.pointee.points.advanced(by: 2).pointee)")
+//
+//
+//            case .addQuadCurveToPoint:
+//                NSLog("add Quad curve to point")
+//                NSLog("\t \(element.pointee.points.pointee)")
+//                NSLog("\t \(element.pointee.points.advanced(by: 1).pointee)")
+//
+//            case .closeSubpath:
+//                NSLog("close subpath")
+//
+//            @unknown default:
+//                fatalError()
+//            }
+//        })
         
         let width = Int(rect.width + 1)
         let height = Int(rect.height + 1)
