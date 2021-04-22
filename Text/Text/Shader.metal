@@ -34,11 +34,18 @@ vertex RasterizationData vertexShader(uint vertexID [[vertex_id]],
 fragment float4 fragmentShader(RasterizationData in [[stage_in]],
                                texture2d<half> glyphTexture [[texture(0)]]) {
     half4 sampleColor = glyphTexture.sample(Const::linearSampler, in.texCoords);
+    float3 fontColor = float3(1.0, 1.0, 1.0);
+    
     float c = sampleColor.r;
+//    float edgeDistance = 0.5;
+//    float sampleDistance = c;
+//    float edgeWidth = 0.75 * length(float2(dfdx(sampleDistance), dfdy(sampleDistance)));
+//    float insideness = smoothstep(edgeDistance - edgeWidth, edgeDistance + edgeWidth, sampleDistance);
+    
     if (c < 0.01) {
         discard_fragment();
     }
     
-    return float4(c, c, c, 1.0);
+    return float4(fontColor * c, c);
     
 }
