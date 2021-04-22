@@ -15,14 +15,20 @@ struct Glyph {
     var bearing: vector_float2 // offset from baseline to left/top of glyph
     var advance: Float
     var glyphCode: CGGlyph
+    var fontSize: Float
 }
 
-private let FONT_SIZE = 100
+struct CharacterKey : Hashable {
+    var char: Character
+    var isStroked: Bool
+}
+
+private let FONT_SIZE: Float = 100
 
 class Renderer: NSObject {
     
     private var device: MTLDevice!
-    private var glyphs: [Character: Glyph]!
+    private var glyphs: [CharacterKey: Glyph]!
     private var projectionMatrix: matrix_float4x4!
     private var renderPipelineState: MTLRenderPipelineState!
     private var commandQueue: MTLCommandQueue!
@@ -57,9 +63,12 @@ class Renderer: NSObject {
         
     }
     
-    private func loadGlyphs(_ char: Character) -> Glyph {
-        if glyphs.keys.contains(char) {
-            return glyphs[char]!
+    private func loadGlyphs(_ char: Character, isStroke: Bool, fontSize: Float = FONT_SIZE) -> Glyph {
+        let charKey = CharacterKey(char: char, isStroked: isStroke)
+        
+        if glyphs.keys.contains(charKey) &&
+            glyphs[charKey]!.fontSize >= fontSize {
+            return glyphs[charKey]!
         }
         
 //        let font = NSFont(name: "PingFangSC-Semibold", size: CGFloat(FONT_SIZE))!
@@ -83,7 +92,7 @@ class Renderer: NSObject {
             return CTFontGetAdvancesForGlyphs(ctFont, .horizontal, $0, nil, 1)
         }
         
-        let affineTransform = CGAffineTransform(a: 1.0, b: 0.0, c: 0.0, d: 1.0, tx: -rect.origin.x, ty: -rect.origin.y)
+        let affineTransform = CGAffineTransform(a: 1.0, b: 0.0, c: 0.0, d: 1.0, tx: -rect.origin.x, ty: -rect.origin.y )
         
         
         let path = withUnsafePointer(to: affineTransform) {
@@ -110,10 +119,16 @@ class Renderer: NSObject {
         context.clear(CGRect(x: 0, y: 0, width: width, height: height))
 
         context.setFillColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-
+        context.setStrokeColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        context.setLineWidth(1.0)
+        
         if path != nil {
             context.addPath(path!)
-            context.fillPath()
+            if isStroke {
+                context.strokePath()
+            } else {
+                context.fillPath()
+            }
         }
         
         // handle rawData here
@@ -141,9 +156,10 @@ class Renderer: NSObject {
                              size: vector_float2(Float(rect.width), Float(rect.height)),
                              bearing: vector_float2(Float(rect.minX), Float(rect.maxY)),
                              advance: Float(advance),
-                             glyphCode: aGlyph)
+                             glyphCode: aGlyph,
+                             fontSize: fontSize)
         
-        glyphs[char] = character
+        glyphs[charKey] = character
         
         return character
     }
@@ -171,8 +187,12 @@ extension Renderer: MTKViewDelegate {
                                      length: MemoryLayout<matrix_float4x4>.stride,
                                      index: 1)
     
-        renderText("This is sample text", renderEncoder: renderEncoder, origin: vector_float2(50.0, 250.0))
-        renderText("(C) LearnOpenGL.com", renderEncoder: renderEncoder, origin: vector_float2(400.0, 600.0))
+        var origin = vector_float2(50.0, 250.0)
+        renderText("This is sample text", renderEncoder: renderEncoder, origin: &origin, isStrok: false)
+        origin = vector_float2(400.0, 600.0)
+        renderText("(C) ", renderEncoder: renderEncoder, origin: &origin, isStrok: true)
+        renderText("LearnOpenGL", renderEncoder: renderEncoder, origin: &origin, isStrok: false)
+        renderText(".com", renderEncoder: renderEncoder, origin: &origin, isStrok: true)
         
         renderEncoder.endEncoding()
         
@@ -181,11 +201,10 @@ extension Renderer: MTKViewDelegate {
         commandBuffer.waitUntilCompleted()
     }
     
-    private func renderText(_ text: String, renderEncoder: MTLRenderCommandEncoder, origin: vector_float2) {
-        var origin = origin
+    private func renderText(_ text: String, renderEncoder: MTLRenderCommandEncoder, origin: inout vector_float2, isStrok: Bool) {
         
         for a in text {
-            let glyph = loadGlyphs(a)
+            let glyph = loadGlyphs(a, isStroke: isStrok)
             
             if glyph.glyphCode == 0 {
                 origin.x += glyph.advance
