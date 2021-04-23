@@ -16,6 +16,8 @@ class Renderer: NSObject {
     private var uniform: Uniforms!
     private var camera: Camera!
     private var linesMesh: MTKMesh!
+    private var quadCurveMesh: MTKMesh!
+    private var cubicBeizerMesh: MTKMesh!
     private var renderPipelineState: MTLRenderPipelineState!
     private var commandQueue: MTLCommandQueue!
     
@@ -53,18 +55,36 @@ class Renderer: NSObject {
         mtlVertexDescriptor.layouts[Int(VertexInputIndexPosition.rawValue)].stepRate = 1
         mtlVertexDescriptor.layouts[Int(VertexInputIndexPosition.rawValue)].stepFunction = .perVertex
         
+        let attributesMap = [
+            Int(ModelVertexAttributePosition.rawValue): MDLVertexAttributePosition
+        ]
+        
         let points = [
-            vector_float3(1.0, 1.0, 0.0),
-            vector_float3(-1.0, -1.0, 0.0),
             vector_float3(1.0, 0.0, 0.0),
-            vector_float3(0.0, 1.0, 0.0)
+            vector_float3(1.0, 1.4, 0.0),
+            vector_float3(-1.0, 1.4, 0.0),
+            vector_float3(-1.0, 0.0, 0.0)
         ]
         
         linesMesh = try! MTKMesh.newLines(withVertexDescriptor: mtlVertexDescriptor,
-                                          withAttributesMap: [ Int(ModelVertexAttributePosition.rawValue): MDLVertexAttributePosition],
+                                          withAttributesMap: attributesMap,
                                           rawPtr: points,
                                           count: points.count,
                                           device: device)
+        
+        quadCurveMesh = try! MTKMesh.newQuadraticBezierCurve(withVertexDescriptor: mtlVertexDescriptor,
+                                                             withAttributesMap: attributesMap,
+                                                             rawPtr: points,
+                                                             count: points.count,
+                                                             segments: 60,
+                                                             device: device)
+        
+        cubicBeizerMesh = try! MTKMesh.newCubicBezierCurve(withVertexDescriptor: mtlVertexDescriptor,
+                                                           withAttributesMap: attributesMap,
+                                                           rawPtr: points,
+                                                           count: points.count,
+                                                           segments: 60,
+                                                           device: device)
 
         let library = device.makeDefaultLibrary()!
         let vertexFunc = library.makeFunction(name: "vertexShader")!
@@ -110,6 +130,14 @@ extension Renderer: MTKViewDelegate {
         }
         
         renderEncoder.drawMesh(linesMesh)
+        
+        // draw quad bezier
+        renderEncoder.setVertexMesh(quadCurveMesh, index: Int(VertexInputIndexPosition.rawValue))
+        renderEncoder.drawMesh(quadCurveMesh)
+    
+        // draw cubic beizer
+        renderEncoder.setVertexMesh(cubicBeizerMesh, index: Int(VertexInputIndexPosition.rawValue))
+        renderEncoder.drawMesh(cubicBeizerMesh)
         
         renderEncoder.endEncoding()
         
