@@ -20,6 +20,7 @@
 		3789FD85262E788200D9F85B /* grass in Resources */ = {isa = PBXBuildFile; fileRef = 3789FD84262E788200D9F85B /* grass */; };
 		3789FD89262E789700D9F85B /* plastic in Resources */ = {isa = PBXBuildFile; fileRef = 3789FD88262E789700D9F85B /* plastic */; };
 		3789FD8D262E78A900D9F85B /* wall in Resources */ = {isa = PBXBuildFile; fileRef = 3789FD8C262E78A900D9F85B /* wall */; };
+		3789FF8526325D0200D9F85B /* GeometryMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3789FF8426325D0200D9F85B /* GeometryMesh.swift */; };
 		37951FC52610259200628968 /* planet in Resources */ = {isa = PBXBuildFile; fileRef = 37951FC42610259200628968 /* planet */; };
 		37951FC92610259C00628968 /* rock in Resources */ = {isa = PBXBuildFile; fileRef = 37951FC82610259C00628968 /* rock */; };
 		37951FDB2610313B00628968 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37951FDA2610313B00628968 /* Bundle.swift */; };
@@ -61,6 +62,7 @@
 		3789FD84262E788200D9F85B /* grass */ = {isa = PBXFileReference; lastKnownFileType = folder; path = grass; sourceTree = "<group>"; };
 		3789FD88262E789700D9F85B /* plastic */ = {isa = PBXFileReference; lastKnownFileType = folder; path = plastic; sourceTree = "<group>"; };
 		3789FD8C262E78A900D9F85B /* wall */ = {isa = PBXFileReference; lastKnownFileType = folder; path = wall; sourceTree = "<group>"; };
+		3789FF8426325D0200D9F85B /* GeometryMesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryMesh.swift; sourceTree = "<group>"; };
 		37951FC42610259200628968 /* planet */ = {isa = PBXFileReference; lastKnownFileType = folder; path = planet; sourceTree = "<group>"; };
 		37951FC82610259C00628968 /* rock */ = {isa = PBXFileReference; lastKnownFileType = folder; path = rock; sourceTree = "<group>"; };
 		37951FDA2610313B00628968 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				3795250C261EA7D400628968 /* OrbitCamera.m */,
 				3789FB25262BB97C00D9F85B /* HDRTextureLoader.swift */,
 				3789FB29262BC68E00D9F85B /* ImageUtils.swift */,
+				3789FF8426325D0200D9F85B /* GeometryMesh.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37DD624625F5D61B005D7A42 /* Camera.m in Sources */,
+				3789FF8526325D0200D9F85B /* GeometryMesh.swift in Sources */,
 				3795250D261EA7D400628968 /* OrbitCamera.m in Sources */,
 				37951FDB2610313B00628968 /* Bundle.swift in Sources */,
 				3789FB2A262BC68E00D9F85B /* ImageUtils.swift in Sources */,

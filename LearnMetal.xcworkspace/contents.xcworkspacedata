@@ -86,6 +86,9 @@
       location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/Mesh/3.2.Mesh.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/Mesh2D/3.3.Mesh2D.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/DepthTesting/4.1.DepthTesting.xcodeproj">
    </FileRef>
    <FileRef
