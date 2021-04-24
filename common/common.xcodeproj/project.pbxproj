@@ -28,6 +28,7 @@
 		3795250D261EA7D400628968 /* OrbitCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 3795250C261EA7D400628968 /* OrbitCamera.m */; };
 		379526FD262149B400628968 /* backpack in Resources */ = {isa = PBXBuildFile; fileRef = 379526FC262149B400628968 /* backpack */; };
 		37C36D1926293ACD008586E7 /* rusted_iron in Resources */ = {isa = PBXBuildFile; fileRef = 37C36D1826293ACD008586E7 /* rusted_iron */; };
+		37C65A7C2633FFA2008F4C08 /* GeometryMesh+Torus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C65A7B2633FFA2008F4C08 /* GeometryMesh+Torus.swift */; };
 		37DD617325F38714005D7A42 /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DD616925F38714005D7A42 /* common.framework */; };
 		37DD617825F38714005D7A42 /* commonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD617725F38714005D7A42 /* commonTests.m */; };
 		37DD617A25F38714005D7A42 /* common.h in Headers */ = {isa = PBXBuildFile; fileRef = 37DD616C25F38714005D7A42 /* common.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -70,6 +71,7 @@
 		3795250C261EA7D400628968 /* OrbitCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrbitCamera.m; sourceTree = "<group>"; };
 		379526FC262149B400628968 /* backpack */ = {isa = PBXFileReference; lastKnownFileType = folder; path = backpack; sourceTree = "<group>"; };
 		37C36D1826293ACD008586E7 /* rusted_iron */ = {isa = PBXFileReference; lastKnownFileType = folder; path = rusted_iron; sourceTree = "<group>"; };
+		37C65A7B2633FFA2008F4C08 /* GeometryMesh+Torus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GeometryMesh+Torus.swift"; sourceTree = "<group>"; };
 		37DD616925F38714005D7A42 /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DD616C25F38714005D7A42 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		37DD616D25F38714005D7A42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				3789FB25262BB97C00D9F85B /* HDRTextureLoader.swift */,
 				3789FB29262BC68E00D9F85B /* ImageUtils.swift */,
 				3789FF8426325D0200D9F85B /* GeometryMesh.swift */,
+				37C65A7B2633FFA2008F4C08 /* GeometryMesh+Torus.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37C65A7C2633FFA2008F4C08 /* GeometryMesh+Torus.swift in Sources */,
 				37DD624625F5D61B005D7A42 /* Camera.m in Sources */,
 				3789FF8526325D0200D9F85B /* GeometryMesh.swift in Sources */,
 				3795250D261EA7D400628968 /* OrbitCamera.m in Sources */,
