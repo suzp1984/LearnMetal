@@ -60,10 +60,10 @@ class Renderer: NSObject {
         ]
         
         let points = [
-            vector_float3(1.0, 0.0, 0.0),
-            vector_float3(1.0, 1.4, 0.0),
-            vector_float3(-1.0, 1.4, 0.0),
-            vector_float3(-1.0, 0.0, 0.0)
+            vector_float3(0.0, 0.5, 0.0),
+            vector_float3(0.0, 1.0, 1.0),
+            vector_float3(0.0, -1.0, 1.0),
+            vector_float3(0.0, -0.5, 0.0)
         ]
         
         linesMesh = try! MTKMesh.newLines(withVertexDescriptor: mtlVertexDescriptor,
@@ -124,20 +124,46 @@ extension Renderer: MTKViewDelegate {
         renderEncoder.setViewport(viewport)
         renderEncoder.setRenderPipelineState(renderPipelineState)
         
-        renderEncoder.setVertexMesh(linesMesh, index: Int(VertexInputIndexPosition.rawValue))
-        withUnsafePointer(to: uniform) {
-            renderEncoder.setVertexBytes($0, length: MemoryLayout<Uniforms>.stride, index: Int(VertexInputIndexUniforms.rawValue))
+        for i in 0..<20 {
+            
+            // draw lines
+            renderEncoder.setVertexMesh(linesMesh, index: Int(VertexInputIndexPosition.rawValue))
+            uniform.modelMatrix = matrix4x4_rotation(Float.pi * Float(i * 3) / 60.0, vector_float3(0.0, 1.0, 0.0))
+            withUnsafePointer(to: uniform) {
+                renderEncoder.setVertexBytes($0, length: MemoryLayout<Uniforms>.stride, index: Int(VertexInputIndexUniforms.rawValue))
+            }
+            var color = vector_float3(0.0, 0.0, 1.0)
+            withUnsafePointer(to: color) {
+                renderEncoder.setFragmentBytes($0, length: MemoryLayout<vector_float3>.stride, index: 0)
+            }
+            
+            renderEncoder.drawMesh(linesMesh)
+            
+            // draw quad bezier
+            renderEncoder.setVertexMesh(quadCurveMesh, index: Int(VertexInputIndexPosition.rawValue))
+            uniform.modelMatrix = matrix4x4_rotation(Float.pi * Float(i * 3 + 1) / 60.0, vector_float3(0.0, 1.0, 0.0))
+            withUnsafePointer(to: uniform) {
+                renderEncoder.setVertexBytes($0, length: MemoryLayout<Uniforms>.stride, index: Int(VertexInputIndexUniforms.rawValue))
+            }
+            color = vector_float3(0.0, 1.0, 0.0)
+            withUnsafePointer(to: color) {
+                renderEncoder.setFragmentBytes($0, length: MemoryLayout<vector_float3>.stride, index: 0)
+            }
+            renderEncoder.drawMesh(quadCurveMesh)
+            
+            // draw cubic beizer
+            renderEncoder.setVertexMesh(cubicBeizerMesh, index: Int(VertexInputIndexPosition.rawValue))
+            uniform.modelMatrix = matrix4x4_rotation(Float.pi * Float(i * 3 + 2) / 60.0, vector_float3(0.0, 1.0, 0.0))
+            withUnsafePointer(to: uniform) {
+                renderEncoder.setVertexBytes($0, length: MemoryLayout<Uniforms>.stride, index: Int(VertexInputIndexUniforms.rawValue))
+            }
+            color = vector_float3(1.0, 0.0, 0.0)
+            withUnsafePointer(to: color) {
+                renderEncoder.setFragmentBytes($0, length: MemoryLayout<vector_float3>.stride, index: 0)
+            }
+            renderEncoder.drawMesh(cubicBeizerMesh)
         }
         
-        renderEncoder.drawMesh(linesMesh)
-        
-        // draw quad bezier
-        renderEncoder.setVertexMesh(quadCurveMesh, index: Int(VertexInputIndexPosition.rawValue))
-        renderEncoder.drawMesh(quadCurveMesh)
-    
-        // draw cubic beizer
-        renderEncoder.setVertexMesh(cubicBeizerMesh, index: Int(VertexInputIndexPosition.rawValue))
-        renderEncoder.drawMesh(cubicBeizerMesh)
         
         renderEncoder.endEncoding()
         

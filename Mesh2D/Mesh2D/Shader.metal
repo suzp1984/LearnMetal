@@ -29,6 +29,7 @@ vertex RasterizerData vertexShader(Vertex in [[stage_in]],
     return out;
 }
 
-fragment float4 fragmentShader(RasterizerData in [[stage_in]]) {
-    return float4(1.0, 0.0, 0.0, 1.0);
+fragment float4 fragmentShader(RasterizerData in [[stage_in]],
+                               constant float3 &color [[buffer(0)]]) {
+    return float4(color, 1.0);
 }
