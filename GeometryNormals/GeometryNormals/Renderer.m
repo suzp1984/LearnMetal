@@ -21,7 +21,7 @@
     id<MTLCommandQueue> _commandQueue;
     id<MTLDepthStencilState> _depthState;
     MTKMesh *_mtkMesh;
-    MetalMesh *_nanoSuitMesh;
+    id<MetalMesh> _nanoSuitMesh;
     id<MTLBuffer> _normalLineBuffer;
     Uniforms _uniforms;
     vector_uint2 _viewportSize;
@@ -78,7 +78,7 @@
         mtlVertexDescriptor.layouts[ModelVertexInputIndexPosition].stepFunction = MTLVertexStepFunctionPerVertex;
         
         NSError *error;
-        _nanoSuitMesh = [[MetalMesh alloc] initWithUrl:url
+        _nanoSuitMesh = [[ModelIOMesh alloc] initWithUrl:url
                                                 device:device
                                    mtlVertexDescriptor:mtlVertexDescriptor
                                           attributeMap:@{
@@ -86,7 +86,7 @@
                                               [NSNumber numberWithInt:ModelVertexAttributeTexcoord]: MDLVertexAttributeTextureCoordinate,
                                               [NSNumber numberWithInt:ModelVertexAttributeNormal]: MDLVertexAttributeNormal }
                                                  error:&error];
-        _mtkMesh = [_nanoSuitMesh getMTKMesh];
+        _mtkMesh = [_nanoSuitMesh mtkMesh];
         
         _normalLineBuffer = [_device newBufferWithLength:_mtkMesh.vertexCount * sizeof(NormalVertex) * 2
                                                  options:MTLResourceStorageModePrivate];

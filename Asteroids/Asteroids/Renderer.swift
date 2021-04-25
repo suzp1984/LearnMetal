@@ -68,7 +68,7 @@ class Renderer: NSObject {
 
         let planetUrl = Bundle.common.url(forResource: "planet.obj", withExtension: nil, subdirectory: "planet")!
 
-        planetMesh = try! MetalMesh(withUrl: planetUrl,
+        planetMesh = try! ModelIOMesh(withUrl: planetUrl,
                                device: device,
                                mtlVertexDescriptor: mtlVertexDescriptor,
                                attributeMap: [
@@ -78,7 +78,7 @@ class Renderer: NSObject {
                                ])
         
         let rockUrl = Bundle.common.url(forResource: "rock.obj", withExtension: nil, subdirectory: "rock")!
-        rockMesh = try! MetalMesh(withUrl: rockUrl,
+        rockMesh = try! ModelIOMesh(withUrl: rockUrl,
                                   device: device,
                                   mtlVertexDescriptor: mtlVertexDescriptor,
                                   attributeMap: [

@@ -10,108 +10,16 @@ import Metal
 import MetalKit
 
 @objc
-public class MetalMesh : NSObject {
-
-    fileprivate var mtkMesh: MTKMesh!
-    fileprivate var baseColorTextures: [String : MTLTexture] = [:]
-    fileprivate var specularTextures: [String : MTLTexture] = [:]
-    fileprivate var texturesCache : [URL: MTLTexture] = [:]
-
-    @objc
-    public init(withUrl url: URL,
-                device: MTLDevice,
-                mtlVertexDescriptor: MTLVertexDescriptor,
-                attributeMap: [Int : String]) throws {
-        // model io vertex descriptor
-        let mdlVertexDescriptor = MTKModelIOVertexDescriptorFromMetal(mtlVertexDescriptor)
-        for attr in attributeMap {
-            (mdlVertexDescriptor.attributes[attr.key] as! MDLVertexAttribute).name = attr.value
-        }
-        
-        // mesh allocator
-        let metalAllocator = MTKMeshBufferAllocator(device: device)
-        
-        let mdlAsset = MDLAsset(url: url,
-                                  vertexDescriptor: mdlVertexDescriptor,
-                                  bufferAllocator: metalAllocator)
-        
-        var mdlMesh : MDLMesh? = nil
-        
-        for i in 0..<mdlAsset.count {
-            guard let mdlObject = mdlAsset.object(at: i) as? MDLMesh else {
-                continue
-            }
-            
-            mdlMesh = mdlObject
-            let textureLoader = MTKTextureLoader(device: device)
-            
-            for subMesh in mdlObject.submeshes! {
-                guard let subMesh = subMesh as? MDLSubmesh else {
-                    break
-                }
-                
-                guard let material = subMesh.material else {
-                    break
-                }
-                
-                if let baseColorProperty = material.property(with: .baseColor),
-                   let baseColorUrl = baseColorProperty.urlValue {
-                    if !texturesCache.keys.contains(baseColorUrl),
-                       let baseColorTexture = try? textureLoader.newTexture(URL: baseColorUrl, options: nil) {
-                        texturesCache[baseColorUrl] = baseColorTexture
-                        
-                    }
-                    
-                    baseColorTextures[subMesh.name] = texturesCache[baseColorUrl]!
-                }
-                
-                if let specularProperty = material.property(with: .specular),
-                   let specularUrl = specularProperty.urlValue {
-                    if !texturesCache.keys.contains(specularUrl),
-                       let specularTexture = try? textureLoader.newTexture(URL: specularUrl, options: nil) {
-                        texturesCache[specularUrl] = specularTexture
-                    }
-                    
-                    specularTextures[subMesh.name] = texturesCache[specularUrl]!
-                }
-                
-            }
-            
-            // only read first mdl mesh
-            break
-        }
-        
-        if mdlMesh == nil {
-            throw Errors.runtimeError("can not read mdl mesh from \(url)")
-        }
-        
-        mtkMesh = try! MTKMesh(mesh: mdlMesh!, device: device)
-    }
+public protocol MetalMesh {
+    var mtkMesh: MTKMesh! { get }
+    var baseColorTextures: [ String : MTLTexture]! { get }
+    var specularTextures: [String : MTLTexture]! { get }
     
-    @objc
-    public func getDiffuseTextures() -> [String : MTLTexture] {
-        return baseColorTextures
-    }
+    func setVertexMeshTo(renderEncoder: MTLRenderCommandEncoder, index: Int)
     
-    @objc
-    public func getSpecularTextures() -> [String : MTLTexture] {
-        return specularTextures
-    }
-    
-    @objc
-    public func setVertexMeshTo(renderEncoder: MTLRenderCommandEncoder, index: Int) {
-        renderEncoder.setVertexMesh(self, index: index)
-    }
-    
-    @objc
-    public func getMTKMesh() -> MTKMesh {
-        return mtkMesh
-    }
-    
-    @objc
-    public func drawMeshTo(renderEncoder: MTLRenderCommandEncoder, textureHandler: (_ type: MDLMaterialSemantic, _ texture: MTLTexture, _ subMeshName: String) -> Void) {
-        renderEncoder.drawMesh(self, textureHandler: textureHandler)
-    }
+    func drawMeshTo(renderEncoder: MTLRenderCommandEncoder, textureHandler: (_ type: MDLMaterialSemantic,
+                                                                             _ texture: MTLTexture,
+                                                                             _ subMeshName: String) -> Void)
 }
 
 extension MTLRenderCommandEncoder {

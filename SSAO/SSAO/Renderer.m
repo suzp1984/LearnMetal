@@ -15,7 +15,7 @@
     id<MTLDevice> _device;
     id<Camera> _camera;
     id<MTLDepthStencilState> _depthState;
-    MetalMesh *_backpackMesh;
+    id<MetalMesh> _backpackMesh;
     MTKMesh *_cubeMesh;
     id<MTLTexture> _gPosition;
     id<MTLTexture> _gNormal;
@@ -96,7 +96,7 @@
             [NSNumber numberWithInt:ModelVertexAttributeNormal]:MDLVertexAttributeNormal,
         };
         
-        _backpackMesh = [[MetalMesh alloc]
+        _backpackMesh = [[ModelIOMesh alloc]
                                    initWithUrl:backpackUrl
                                         device:_device
                                    mtlVertexDescriptor:mtlVertexDescriptor

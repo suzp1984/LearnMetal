@@ -19,7 +19,7 @@
     id<MTLRenderPipelineState> _pipelineState;
     id<MTLCommandQueue> _commandQueue;
     id<MTLDepthStencilState> _depthState;
-    MetalMesh *_nanoSuitMesh;
+    id<MetalMesh> _nanoSuitMesh;
     Uniforms _uniforms;
     vector_uint2 _viewportSize;
     id<Camera> _camera;
@@ -72,7 +72,7 @@
         
         NSError *error;
         
-        _nanoSuitMesh = [[MetalMesh alloc] initWithUrl:url
+        _nanoSuitMesh = [[ModelIOMesh alloc] initWithUrl:url
                                                 device:device
                                    mtlVertexDescriptor:mtlVertexDescriptor
                                           attributeMap:@{

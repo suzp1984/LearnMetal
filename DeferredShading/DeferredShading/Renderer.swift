@@ -77,7 +77,7 @@ class Renderer: NSObject {
 
         let backPackUrl = Bundle.common.url(forResource: "backpack.obj", withExtension: nil, subdirectory: "backpack")!
 
-        backPackMesh = try! MetalMesh(withUrl: backPackUrl,
+        backPackMesh = try! ModelIOMesh(withUrl: backPackUrl,
                                device: device,
                                mtlVertexDescriptor: mtlVertexDescriptor,
                                attributeMap: [
