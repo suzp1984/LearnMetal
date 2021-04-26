@@ -23,6 +23,7 @@
     Uniforms _uniforms;
     vector_uint2 _viewportSize;
     id<Camera> _camera;
+    SatelliteCameraController *_satelliteController;
 }
 
 - (nonnull instancetype)initWithMetalKitView:(nonnull MTKView*)mtkView
@@ -33,10 +34,10 @@
         mtkView.delegate = self;
         id<MTLDevice> device = mtkView.device;
         _device = mtkView.device;
-        
-        _camera = [CameraFactory generateRoundOrbitCameraWithPosition:(vector_float3) {0.0, 0.0, 3.0}
-                                                               target:(vector_float3){0.0, 0.0, 0.0}
-                                                                   up:(vector_float3) {0.0, 1.0, 0.0}];
+        _camera = [[SimpleCamera alloc] initWithPosition:(vector_float3) {0.0, 0.0, 3.0}
+                                              withTarget:(vector_float3){0.0, 0.0, 0.0}
+                                                      up:YES];
+        _satelliteController = [[SatelliteCameraController alloc] initWithCamera:_camera];
         
         mtkView.depthStencilPixelFormat = MTLPixelFormatDepth32Float;
         mtkView.clearDepth = 1.0;
@@ -111,7 +112,12 @@
 }
 
 - (void) handleMouseScrollDeltaX:(float) deltaX deltaY:(float) deltaY {
-    [_camera rotateCameraAroundTargetWithDeltaPhi:deltaX * 0.2 deltaTheta:deltaY * 0.2];
+    
+    if (fabsf(deltaX) >= fabsf(deltaY)) {
+        [_satelliteController rotateCameraAroundTargetWithDeltaPhi:deltaX deltaTheta:0.0];
+    } else {
+        [_satelliteController rotateCameraAroundTargetWithDeltaPhi:0.0 deltaTheta:deltaY * 0.2];
+    }
     
     _uniforms.viewMatrix = [_camera getViewMatrix];
 }

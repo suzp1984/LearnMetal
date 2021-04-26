@@ -17,3 +17,7 @@ FOUNDATION_EXPORT const unsigned char commonVersionString[];
 
 #import <common/AAPLMathUtilities.h>
 #import <common/Camera.h>
+#import <common/SatelliteCameraController.h>
+#import <common/ForwardCameraController.h>
+#import <common/LinearMoveCameraController.h>
+#import <common/SimpleCamera.h>

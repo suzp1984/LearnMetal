@@ -15,6 +15,7 @@
 {
     id<MTLDevice> _device;
     id<Camera> _camera;
+    SatelliteCameraController *_cameraController;
     id<MTLBuffer> _skyDomeVertexBuffer;
     id<MTLCommandQueue> _commandQueue;
     Uniform _uniform;
@@ -31,9 +32,11 @@
         _device = mtkView.device;
         mtkView.delegate = self;
         
-        _camera = [CameraFactory generateRoundOrbitCameraWithPosition:(vector_float3){0.0, 0.0, 5.0}
-                                                               target:(vector_float3){0.0, 0.0, 0.0}
-                                                                   up:(vector_float3){0.0, 1.0, 0.0}];
+        _camera = [[SimpleCamera alloc] initWithPosition:(vector_float3){0.0, 0.0, 5.0}
+                                              withTarget:(vector_float3){0.0, 0.0, 0.0}
+                                                      up:YES];
+        _cameraController = [[SatelliteCameraController alloc] initWithCamera:_camera];
+        
         _commandQueue = [_device newCommandQueue];
         
         SkyDomeVertex skyDomeVerties[] = {
@@ -84,7 +87,7 @@
 }
 
 - (void) handleMouseScrollDeltaX:(float) deltaX deltaY:(float) deltaY {
-    [_camera rotateCameraAroundTargetWithDeltaPhi:deltaX * 0.2 deltaTheta:deltaY * 0.2];
+    [_cameraController rotateCameraAroundTargetWithDeltaPhi:deltaX * 0.2 deltaTheta:deltaY * 0.2];
     
     _uniform.viewMatrix = [_camera getViewMatrix];
     _uniform.inverseViewMatrix = simd_inverse(_uniform.viewMatrix);

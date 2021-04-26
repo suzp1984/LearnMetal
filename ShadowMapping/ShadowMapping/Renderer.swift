@@ -12,6 +12,7 @@ import common
 class Renderer: NSObject {
     
     private var camera: Camera!
+    private var cameraController: SatelliteCameraController!
     private var device: MTLDevice!
     private var depthState: MTLDepthStencilState!
     private var renderPipelineState: MTLRenderPipelineState!
@@ -38,9 +39,11 @@ class Renderer: NSObject {
         metalView.sampleCount = 4
         metalView.delegate = self
     
-        camera = CameraFactory.generateRoundOrbitCamera(withPosition: vector_float3(0.0, 0.0, 3.0),
-                                                        target: vector_float3(0.0, 0.0, 0.0),
-                                                        up: vector_float3(0.0, 1.0, 0.0))
+        camera = SimpleCamera(position: vector_float3(0.0, 0.0, 3.0),
+                              withTarget: vector_float3(0.0, 0.0, 0.0),
+                              up: true)
+        cameraController = SatelliteCameraController(camera: camera)
+        
         metalView.depthStencilPixelFormat = .depth32Float
         metalView.clearDepth = 1.0
         
@@ -228,7 +231,7 @@ class Renderer: NSObject {
     }
     
     func handleCameraEvent(deltaX: Float, deltaY: Float) -> Void {
-        camera.rotateCameraAroundTarget(withDeltaPhi: deltaX, deltaTheta: deltaY)
+        cameraController.rotateCameraAroundTarget(withDeltaPhi: deltaX, deltaTheta: deltaY)
         
         uniform.viewMatrix = camera.getViewMatrix()
         cameraPos = camera.cameraPosition

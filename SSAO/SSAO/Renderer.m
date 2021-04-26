@@ -14,6 +14,7 @@
 {
     id<MTLDevice> _device;
     id<Camera> _camera;
+    SatelliteCameraController *_cameraController;
     id<MTLDepthStencilState> _depthState;
     id<MetalMesh> _backpackMesh;
     MTKMesh *_cubeMesh;
@@ -56,9 +57,11 @@
         _device = mtkView.device;
         mtkView.delegate = self;
         
-        _camera = [CameraFactory generateRoundOrbitCameraWithPosition:(vector_float3) {0.0, 0.0, 6.0}
-                                                               target:(vector_float3) {0.0, 0.0, 0.0}
-                                                                   up:(vector_float3) {0.0, 1.0, 0.0}];
+        _camera = [[SimpleCamera alloc] initWithPosition:(vector_float3) {0.0, 0.0, 6.0}
+                                              withTarget:(vector_float3) {0.0, 0.0, 0.0}
+                                                      up:YES];
+        _cameraController = [[SatelliteCameraController alloc] initWithCamera:_camera];
+        
         MTLDepthStencilDescriptor *depthDescriptor = [MTLDepthStencilDescriptor new];
         depthDescriptor.depthCompareFunction = MTLCompareFunctionLessEqual;
         depthDescriptor.depthWriteEnabled = TRUE;
@@ -319,7 +322,7 @@
 }
 
 - (void) handleMouseScrollDeltaX:(float) deltaX deltaY:(float) deltaY {
-    [_camera rotateCameraAroundTargetWithDeltaPhi:deltaX deltaTheta:deltaY];
+    [_cameraController rotateCameraAroundTargetWithDeltaPhi:deltaX deltaTheta:deltaY];
     
     _uniforms.viewMatrix = [_camera getViewMatrix];
     _light.position = simd_mul([_camera getViewMatrix],

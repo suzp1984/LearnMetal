@@ -14,6 +14,7 @@ class Renderer: NSObject {
     
     private var device: MTLDevice!
     private var camera: Camera!
+    private var cameraController: SatelliteCameraController!
     private var depthStencilState: MTLDepthStencilState!
     private var renderPipelineState: MTLRenderPipelineState!
     private var rockPipelineState: MTLRenderPipelineState!
@@ -29,9 +30,10 @@ class Renderer: NSObject {
     init(metalView: MTKView) {
         super.init()
         
-        camera = CameraFactory.generateRoundOrbitCamera(withPosition: vector_float3(0.0, 0.0, 155.0),
-                                                        target: vector_float3(0.0, 0.0, 0.0),
-                                                        up: vector_float3(0.0, 1.0, 0.0))
+        camera = SimpleCamera(position: vector_float3(0.0, 0.0, 155.0),
+                              withTarget: vector_float3(0.0, 0.0, 0.0),
+                              up: true)
+        cameraController = SatelliteCameraController(camera: camera)
         
         device = metalView.device!
 
@@ -131,7 +133,7 @@ class Renderer: NSObject {
     }
     
     func handleCameraEvent(deltaX: Float, deltaY: Float) -> Void {
-        camera.rotateCameraAroundTarget(withDeltaPhi: deltaX * 0.2, deltaTheta: deltaY * 0.2)
+        cameraController.rotateCameraAroundTarget(withDeltaPhi: deltaX * 0.2, deltaTheta: deltaY * 0.2)
         
         uniforms.viewMatrix = camera.getViewMatrix()
         rockUniform.viewMatrix = camera.getViewMatrix()

@@ -21,6 +21,7 @@
     id<MTLCommandQueue> _commandQueue;
     MTKMesh *_cubeMesh;
     id<Camera> _camera;
+    SatelliteCameraController *_cameraController;
     
     id<MTLTexture> _textureContainer;
     vector_uint2 _viewportSize;
@@ -32,9 +33,10 @@
     self = [super init];
     
     if (self) {
-        _camera = [CameraFactory generateRoundOrbitCameraWithPosition:(vector_float3) {0.0, 0.0, 3.0}
-                                                               target:(vector_float3){0.0, 0.0, 0.0}
-                                                                   up:(vector_float3) {0.0, 1.0, 0.0}];
+        _camera = [[SimpleCamera alloc] initWithPosition:(vector_float3) {0.0, 0.0, 3.0}
+                                              withTarget:(vector_float3) {0.0, 0.0, 0.0}
+                                                      up:YES];
+        _cameraController = [[SatelliteCameraController alloc] initWithCamera:_camera];
         
         mtkView.delegate = self;
         mtkView.depthStencilPixelFormat = MTLPixelFormatDepth32Float;
@@ -111,7 +113,7 @@
 }
 
 - (void) handleMouseScrollDeltaX:(float) deltaX deltaY:(float) deltaY {
-    [_camera rotateCameraAroundTargetWithDeltaPhi:deltaX deltaTheta:deltaY];
+    [_cameraController rotateCameraAroundTargetWithDeltaPhi:deltaX deltaTheta:deltaY];
     
     _uniforms.viewMatrix = [_camera getViewMatrix];
 }

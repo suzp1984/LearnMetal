@@ -12,6 +12,7 @@ import common
 class Renderer: NSObject {
     private var device: MTLDevice!
     private var camera: Camera!
+    private var cameraController: SatelliteCameraController!
     private var hdrTexture: MTLTexture!
     private var cubeTexture: MTLTexture!
     private var irradianceTexture: MTLTexture!
@@ -36,9 +37,10 @@ class Renderer: NSObject {
         mtkView.delegate = self
         mtkView.depthStencilPixelFormat = .depth32Float
         
-        camera = CameraFactory.generateRoundOrbitCamera(withPosition: vector_float3(0.0, 0.0, 8.0),
-                                                        target: vector_float3(0.0, 0.0, 0.0),
-                                                        up: vector_float3(0.0, 1.0, 0.0))
+        camera = SimpleCamera(position: vector_float3(0.0, 0.0, 8.0),
+                              withTarget: vector_float3(0.0, 0.0, 0.0),
+                              up: true)
+        cameraController = SatelliteCameraController(camera: camera)
        
         commandQueue = device.makeCommandQueue()!
         loadHdrTexture(commandQueue: commandQueue)
@@ -269,7 +271,7 @@ class Renderer: NSObject {
     }
     
     func handleCameraEvent(deltaX: Float, deltaY: Float) {
-        camera.rotateCameraAroundTarget(withDeltaPhi: deltaX * 0.2, deltaTheta: deltaY * 0.2)
+        cameraController.rotateCameraAroundTarget(withDeltaPhi: deltaX * 0.2, deltaTheta: deltaY * 0.2)
         
         uniform.viewMatrix = camera.getViewMatrix()
     }

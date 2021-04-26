@@ -15,6 +15,7 @@
 @implementation Renderer
 {
     id<Camera> _camera;
+    SatelliteCameraController *_cameraController;
     id<MTLDevice> _device;
     Uniforms _uniform;
     id<MTLTexture> _skyBoxTexture;
@@ -39,9 +40,10 @@
         mtkView.depthStencilPixelFormat = MTLPixelFormatDepth32Float;
         _fragmentType = kFragmentReflect;
         
-        _camera = [CameraFactory generateRoundOrbitCameraWithPosition:(vector_float3) {0.0, 0.0, 5.0}
-                                                               target:(vector_float3){0.0, 0.0, 0.0}
-                                                                   up:(vector_float3) {0.0, 1.0, 0.0}];
+        _camera = [[SimpleCamera alloc] initWithPosition:(vector_float3) {0.0, 0.0, 5.0}
+                                              withTarget:(vector_float3) {0.0, 0.0, 0.0}
+                                                      up:YES];
+        _cameraController = [[SatelliteCameraController alloc] initWithCamera:_camera];
         
         MTLVertexDescriptor *mtlVertexDescriptor = [MTLVertexDescriptor new];
         mtlVertexDescriptor.attributes[VertexAttributeIndexPosition].format = MTLVertexFormatFloat3;
@@ -209,7 +211,7 @@
 }
 
 - (void) handleMouseScrollDeltaX:(float) deltaX deltaY:(float) deltaY {
-    [_camera rotateCameraAroundTargetWithDeltaPhi:deltaX deltaTheta:deltaY];
+    [_cameraController rotateCameraAroundTargetWithDeltaPhi:deltaX deltaTheta:deltaY];
     
     _uniform.cameraPos = _camera.cameraPosition;
     _uniform.viewMatrix = [_camera getViewMatrix];

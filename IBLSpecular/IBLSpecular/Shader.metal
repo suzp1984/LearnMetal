@@ -13,7 +13,7 @@ using namespace metal;
 namespace Const {
     constexpr sampler linearSampler (mag_filter::linear, min_filter::linear);
     constant uint SAMPLE_COUNT = 1024u;
-    constant uint CUBEMAP_SIZE = 512u;
+//    constant uint CUBEMAP_SIZE = 512u;
 }
 
 typedef struct Vertex

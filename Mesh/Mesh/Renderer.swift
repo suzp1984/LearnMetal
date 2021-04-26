@@ -19,6 +19,7 @@ class Renderer: NSObject {
     private var capsuleMesh: MTKMesh!
     private var torusMesh: MTKMesh!
     private var camera: Camera!
+    private var cameraController: SatelliteCameraController!
     private var viewPort: MTLViewport!
     private var renderPipelineState: MTLRenderPipelineState!
     private var depthState: MTLDepthStencilState!
@@ -136,9 +137,12 @@ class Renderer: NSObject {
                                           tubularSegments: 60,
                                           geometryType: .triangles)
         
-        camera = CameraFactory.generateRoundOrbitCamera(withPosition: vector_float3(0.0, 0.0, 8.0),
-                                                        target: vector_float3(0.0, 0.0, 0.0),
-                                                        up: vector_float3(0.0, 1.0, 0.0))
+        camera = Camera(position: vector_float3(0.0, 0.0, 8.0),
+                        withTarget: vector_float3(0.0, 0.0, 0.0),
+                        withUp: vector_float3(0.0, 1.0, 0.0))
+        
+        cameraController = SatelliteCameraController(camera: camera)
+
         let width = mtkView.frame.width
         let height = mtkView.frame.height
         
@@ -196,7 +200,7 @@ class Renderer: NSObject {
     }
     
     func handleCameraEvent(deltaX: Float, deltaY: Float) {
-        camera.rotateCameraAroundTarget(withDeltaPhi: deltaX, deltaTheta: deltaY)
+        cameraController.rotateCameraAroundTarget(withDeltaPhi: deltaX, deltaTheta: deltaY)
         
         uniform.viewMatrix = camera.getViewMatrix()
     }

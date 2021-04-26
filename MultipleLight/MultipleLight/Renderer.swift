@@ -22,6 +22,7 @@ class Renderer: NSObject {
     private var lampRenderPipelineState: MTLRenderPipelineState!
     private var commandQueue: MTLCommandQueue!
     private var camera: Camera!
+    private var cameraController: SatelliteCameraController!
     private var viewportSize: vector_float2!
     private var objectColor = vector_float3(1.0, 0.5, 0.31)
     private var lightColor = vector_float3(1.0, 1.0, 1.0)
@@ -104,9 +105,10 @@ class Renderer: NSObject {
     init(withMetalView metalView : MTKView) {
         super.init()
         
-        camera = CameraFactory.generateRoundOrbitCamera(withPosition: vector_float3(0.0, 0.0, 3.0),
-                                                        target: vector_float3(0.0, 0.0, 0.0),
-                                                        up: vector_float3(0.0, 1.0, 0.0))
+        camera = SimpleCamera(position: vector_float3(0.0, 0.0, 3.0),
+                              withTarget: vector_float3(0.0, 0.0, 0.0),
+                              up: true)
+        cameraController = SatelliteCameraController(camera: camera)
         
         instanceNumber = Renderer.cubePositions.count
         pointLightNumber = Renderer.pointLightPositions.count
@@ -289,7 +291,7 @@ class Renderer: NSObject {
     }
     
     func handleCameraEvent(deltaX: Float, deltaY: Float) -> Void {
-        camera.rotateCameraAroundTarget(withDeltaPhi: deltaX, deltaTheta: deltaY)
+        cameraController.rotateCameraAroundTarget(withDeltaPhi: deltaX, deltaTheta: deltaY)
         for i in 0..<instanceNumber {
             var uniform = uniformBuffer[i]
             uniform.viewMatrix = camera.getViewMatrix()

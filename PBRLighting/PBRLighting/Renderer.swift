@@ -13,6 +13,7 @@ class Renderer: NSObject {
     
     private var device: MTLDevice!
     private var camera: Camera!
+    private var cameraController: SatelliteCameraController!
     private var sphere: MTKMesh!
     private var depthState: MTLDepthStencilState!
     private var renderPipelineState: MTLRenderPipelineState!
@@ -31,9 +32,11 @@ class Renderer: NSObject {
         mtkView.clearColor = MTLClearColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1.0)
         mtkView.clearDepth = 1.0
         
-        camera = CameraFactory.generateRoundOrbitCamera(withPosition: vector_float3(0.0, 0.0, 20.0),
-                                                        target: vector_float3(0.0, 0.0, 0.0),
-                                                        up: vector_float3(0.0, 1.0, 0.0))
+        camera = SimpleCamera(position: vector_float3(0.0, 0.0, 20.0),
+                              withTarget: vector_float3(0.0, 0.0, 0.0),
+                              up: true)
+        cameraController = SatelliteCameraController(camera: camera)
+        
         let depthStencilDescriptor = MTLDepthStencilDescriptor()
         depthStencilDescriptor.depthCompareFunction = .lessEqual
         depthStencilDescriptor.isDepthWriteEnabled = true
@@ -112,7 +115,7 @@ class Renderer: NSObject {
     }
     
     func handleCameraEvent(deltaX: Float, deltaY: Float) {
-        camera.rotateCameraAroundTarget(withDeltaPhi: deltaX * 0.2, deltaTheta: deltaY * 0.2)
+        cameraController.rotateCameraAroundTarget(withDeltaPhi: deltaX * 0.2, deltaTheta: deltaY * 0.2)
         
         uniform.viewMatrix = camera.getViewMatrix()
     }

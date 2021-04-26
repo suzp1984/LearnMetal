@@ -16,6 +16,7 @@
 {
     id<MTLDevice> _device;
     id<Camera> _camera;
+    SatelliteCameraController *_cameraController;
     id<MTLBuffer> _planeBuffer;
     id<MTLDepthStencilState> _depthState;
     id<MTLRenderPipelineState> _renderPipelineState;
@@ -40,9 +41,10 @@
         _device = mtkView.device;
         mtkView.delegate = self;
         
-        _camera = [CameraFactory generateRoundOrbitCameraWithPosition:(vector_float3) {0.0, 0.0, 3.0}
-                                                               target:(vector_float3){0.0, 0.0, 0.0}
-                                                                   up:(vector_float3) {0.0, 1.0, 0.0}];
+        _camera = [[SimpleCamera alloc] initWithPosition:(vector_float3) {0.0, 0.0, 3.0}
+                                              withTarget:(vector_float3) {0.0, 0.0, 0.0}
+                                                      up:true];
+        _cameraController = [[SatelliteCameraController alloc] initWithCamera:_camera];
         
         mtkView.depthStencilPixelFormat = MTLPixelFormatDepth32Float;
         mtkView.clearDepth = 1.0;
@@ -179,7 +181,7 @@
 }
 
 - (void) handleMouseScrollDeltaX:(float) deltaX deltaY:(float) deltaY {
-    [_camera rotateCameraAroundTargetWithDeltaPhi:deltaX deltaTheta:deltaY];
+    [_cameraController rotateCameraAroundTargetWithDeltaPhi:deltaX deltaTheta:deltaY];
     
     _uniform.viewMatrix = [_camera getViewMatrix];
     _uniform.viewPos = _camera.cameraPosition;

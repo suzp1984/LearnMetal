@@ -19,18 +19,18 @@
 - (matrix_float4x4) getViewMatrix;
 - (vector_float3) getFrontDirection;
 
-- (void) moveCameraWithTranslation:(vector_float3)translation;
-
-- (void) moveAlongCameraDirection:(float)translation;
-
-- (void) rotateCameraAroundTargetWithDeltaPhi:(float) deltaPhi deltaTheta:(float) deltaTheta;
-
 @end
 
-// CameraFactory
-@interface CameraFactory : NSObject
+@interface Camera : NSObject<Camera>
 
-+ (id<Camera>_Nonnull) generateRoundOrbitCameraWithPosition:(vector_float3) position target:(vector_float3)target up:(vector_float3)up;
+- (nonnull instancetype) initWithPosition:(vector_float3) position
+                                withTarget:(vector_float3) target
+                                withUp:(vector_float3) up;
+@end
+
+@protocol CameraController <NSObject>
+
+@property (readonly) id<Camera> _Nonnull camera;
 
 @end
 

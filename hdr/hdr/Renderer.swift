@@ -21,6 +21,8 @@ class Renderer: NSObject {
     private var lightsBuffer: MetalBuffer<Light>!
     private var lightPos: vector_float3!
     private var camera: Camera!
+    private var forwardCameraController: ForwardCameraController!
+    private var satelliteCameraController: SatelliteCameraController!
     private var viewPort: MTLViewport!
     private var uniforms: Uniforms!
     private var commandQueue: MTLCommandQueue!
@@ -37,10 +39,12 @@ class Renderer: NSObject {
         isHDREnable = 1
         exposure = 1.0
         
-        camera = CameraFactory.generateRoundOrbitCamera(withPosition: vector_float3(0.0, 0.0, 5.0),
-                                                        target: vector_float3(0.0, 0.0, 5.1),
-                                                        up: vector_float3(0.0, 1.0, 0.0))
-            
+        camera = Camera(position: vector_float3(0.0, 0.0, 5.0),
+                        withTarget: vector_float3(0.0, 0.0, 5.1),
+                        withUp: vector_float3(0.0, 1.0, 0.0))
+        forwardCameraController = ForwardCameraController(camera: camera)
+        satelliteCameraController = SatelliteCameraController(camera: camera)
+        
         device = metalView.device!
         metalView.delegate = self
         
@@ -166,13 +170,14 @@ class Renderer: NSObject {
     }
     
     func handleCameraEvent(deltaX: Float, deltaY: Float) -> Void {
-        camera.rotateCameraAroundTarget(withDeltaPhi: deltaX * 0.2, deltaTheta: deltaY * 0.2)
+        satelliteCameraController.rotateCameraAroundTarget(withDeltaPhi: deltaX * 0.2,
+                                                           deltaTheta: deltaY * 0.2)
         
         uniforms.viewMatrix = camera.getViewMatrix()
     }
     
     func moveCamera(delta: Float) {
-        camera.move(alongCameraDirection: delta)
+        forwardCameraController.move(alongCameraDirection: delta)
         
         uniforms.viewMatrix = camera.getViewMatrix()
     }

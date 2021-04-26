@@ -14,6 +14,14 @@
 		372B543A260A1F2D00EAE90C /* TextureCubeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372B5439260A1F2D00EAE90C /* TextureCubeLoader.swift */; };
 		3742B5DC25FF93A800DE2669 /* nanosuit in Resources */ = {isa = PBXBuildFile; fileRef = 3742B5DB25FF93A700DE2669 /* nanosuit */; };
 		37473F7826357291005E5A8D /* ModelIOMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37473F7726357291005E5A8D /* ModelIOMesh.swift */; };
+		37473F7F2635A2D0005E5A8D /* SatelliteCameraController.h in Headers */ = {isa = PBXBuildFile; fileRef = 37473F7E2635A2D0005E5A8D /* SatelliteCameraController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37473F832635A33E005E5A8D /* SatelliteCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37473F822635A33E005E5A8D /* SatelliteCameraController.m */; };
+		37473F892635AABC005E5A8D /* ForwardCameraController.h in Headers */ = {isa = PBXBuildFile; fileRef = 37473F882635AABC005E5A8D /* ForwardCameraController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37473F8D2635AB16005E5A8D /* ForwardCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37473F8C2635AB16005E5A8D /* ForwardCameraController.m */; };
+		37473F972635AF65005E5A8D /* LinearMoveCameraController.h in Headers */ = {isa = PBXBuildFile; fileRef = 37473F962635AF65005E5A8D /* LinearMoveCameraController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37473F9D2635AFFC005E5A8D /* LinearMoveCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37473F9C2635AFFC005E5A8D /* LinearMoveCameraController.m */; };
+		37473FA52636523A005E5A8D /* SimpleCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 37473FA426365237005E5A8D /* SimpleCamera.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37473FAB26365284005E5A8D /* SimpleCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 37473FAA26365284005E5A8D /* SimpleCamera.m */; };
 		3789FA4B262A855500D9F85B /* hdr in Resources */ = {isa = PBXBuildFile; fileRef = 3789FA4A262A855500D9F85B /* hdr */; };
 		3789FB26262BB97C00D9F85B /* HDRTextureLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3789FB25262BB97C00D9F85B /* HDRTextureLoader.swift */; };
 		3789FB2A262BC68E00D9F85B /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3789FB29262BC68E00D9F85B /* ImageUtils.swift */; };
@@ -25,8 +33,6 @@
 		37951FC52610259200628968 /* planet in Resources */ = {isa = PBXBuildFile; fileRef = 37951FC42610259200628968 /* planet */; };
 		37951FC92610259C00628968 /* rock in Resources */ = {isa = PBXBuildFile; fileRef = 37951FC82610259C00628968 /* rock */; };
 		37951FDB2610313B00628968 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37951FDA2610313B00628968 /* Bundle.swift */; };
-		37952509261EA7B800628968 /* OrbitCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 37952508261EA7B800628968 /* OrbitCamera.h */; };
-		3795250D261EA7D400628968 /* OrbitCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 3795250C261EA7D400628968 /* OrbitCamera.m */; };
 		379526FD262149B400628968 /* backpack in Resources */ = {isa = PBXBuildFile; fileRef = 379526FC262149B400628968 /* backpack */; };
 		37C36D1926293ACD008586E7 /* rusted_iron in Resources */ = {isa = PBXBuildFile; fileRef = 37C36D1826293ACD008586E7 /* rusted_iron */; };
 		37C65A7C2633FFA2008F4C08 /* GeometryMesh+Torus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C65A7B2633FFA2008F4C08 /* GeometryMesh+Torus.swift */; };
@@ -58,6 +64,14 @@
 		372B5439260A1F2D00EAE90C /* TextureCubeLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureCubeLoader.swift; sourceTree = "<group>"; };
 		3742B5DB25FF93A700DE2669 /* nanosuit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = nanosuit; sourceTree = "<group>"; };
 		37473F7726357291005E5A8D /* ModelIOMesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelIOMesh.swift; sourceTree = "<group>"; };
+		37473F7E2635A2D0005E5A8D /* SatelliteCameraController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SatelliteCameraController.h; sourceTree = "<group>"; };
+		37473F822635A33E005E5A8D /* SatelliteCameraController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SatelliteCameraController.m; sourceTree = "<group>"; };
+		37473F882635AABC005E5A8D /* ForwardCameraController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForwardCameraController.h; sourceTree = "<group>"; };
+		37473F8C2635AB16005E5A8D /* ForwardCameraController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForwardCameraController.m; sourceTree = "<group>"; };
+		37473F962635AF65005E5A8D /* LinearMoveCameraController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinearMoveCameraController.h; sourceTree = "<group>"; };
+		37473F9C2635AFFC005E5A8D /* LinearMoveCameraController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinearMoveCameraController.m; sourceTree = "<group>"; };
+		37473FA426365237005E5A8D /* SimpleCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleCamera.h; sourceTree = "<group>"; };
+		37473FAA26365284005E5A8D /* SimpleCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleCamera.m; sourceTree = "<group>"; };
 		3789FA4A262A855500D9F85B /* hdr */ = {isa = PBXFileReference; lastKnownFileType = folder; path = hdr; sourceTree = "<group>"; };
 		3789FB25262BB97C00D9F85B /* HDRTextureLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDRTextureLoader.swift; sourceTree = "<group>"; };
 		3789FB29262BC68E00D9F85B /* ImageUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
@@ -69,8 +83,6 @@
 		37951FC42610259200628968 /* planet */ = {isa = PBXFileReference; lastKnownFileType = folder; path = planet; sourceTree = "<group>"; };
 		37951FC82610259C00628968 /* rock */ = {isa = PBXFileReference; lastKnownFileType = folder; path = rock; sourceTree = "<group>"; };
 		37951FDA2610313B00628968 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
-		37952508261EA7B800628968 /* OrbitCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrbitCamera.h; sourceTree = "<group>"; };
-		3795250C261EA7D400628968 /* OrbitCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrbitCamera.m; sourceTree = "<group>"; };
 		379526FC262149B400628968 /* backpack */ = {isa = PBXFileReference; lastKnownFileType = folder; path = backpack; sourceTree = "<group>"; };
 		37C36D1826293ACD008586E7 /* rusted_iron */ = {isa = PBXFileReference; lastKnownFileType = folder; path = rusted_iron; sourceTree = "<group>"; };
 		37C65A7B2633FFA2008F4C08 /* GeometryMesh+Torus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GeometryMesh+Torus.swift"; sourceTree = "<group>"; };
@@ -158,13 +170,19 @@
 				3706D2EE2604548A000568B4 /* Errors.swift */,
 				372B5439260A1F2D00EAE90C /* TextureCubeLoader.swift */,
 				37951FDA2610313B00628968 /* Bundle.swift */,
-				37952508261EA7B800628968 /* OrbitCamera.h */,
-				3795250C261EA7D400628968 /* OrbitCamera.m */,
 				3789FB25262BB97C00D9F85B /* HDRTextureLoader.swift */,
 				3789FB29262BC68E00D9F85B /* ImageUtils.swift */,
 				3789FF8426325D0200D9F85B /* GeometryMesh.swift */,
 				37C65A7B2633FFA2008F4C08 /* GeometryMesh+Torus.swift */,
 				37473F7726357291005E5A8D /* ModelIOMesh.swift */,
+				37473F7E2635A2D0005E5A8D /* SatelliteCameraController.h */,
+				37473F822635A33E005E5A8D /* SatelliteCameraController.m */,
+				37473F882635AABC005E5A8D /* ForwardCameraController.h */,
+				37473F8C2635AB16005E5A8D /* ForwardCameraController.m */,
+				37473F962635AF65005E5A8D /* LinearMoveCameraController.h */,
+				37473F9C2635AFFC005E5A8D /* LinearMoveCameraController.m */,
+				37473FA426365237005E5A8D /* SimpleCamera.h */,
+				37473FAA26365284005E5A8D /* SimpleCamera.m */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -185,8 +203,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37952509261EA7B800628968 /* OrbitCamera.h in Headers */,
+				37473F7F2635A2D0005E5A8D /* SatelliteCameraController.h in Headers */,
 				37DD624B25F5D646005D7A42 /* Camera.h in Headers */,
+				37473F892635AABC005E5A8D /* ForwardCameraController.h in Headers */,
+				37473FA52636523A005E5A8D /* SimpleCamera.h in Headers */,
+				37473F972635AF65005E5A8D /* LinearMoveCameraController.h in Headers */,
 				37DD617A25F38714005D7A42 /* common.h in Headers */,
 				37DD61AC25F38812005D7A42 /* AAPLMathUtilities.h in Headers */,
 			);
@@ -301,13 +322,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37473F8D2635AB16005E5A8D /* ForwardCameraController.m in Sources */,
 				37473F7826357291005E5A8D /* ModelIOMesh.swift in Sources */,
 				37C65A7C2633FFA2008F4C08 /* GeometryMesh+Torus.swift in Sources */,
 				37DD624625F5D61B005D7A42 /* Camera.m in Sources */,
 				3789FF8526325D0200D9F85B /* GeometryMesh.swift in Sources */,
-				3795250D261EA7D400628968 /* OrbitCamera.m in Sources */,
+				37473F9D2635AFFC005E5A8D /* LinearMoveCameraController.m in Sources */,
 				37951FDB2610313B00628968 /* Bundle.swift in Sources */,
 				3789FB2A262BC68E00D9F85B /* ImageUtils.swift in Sources */,
+				37473FAB26365284005E5A8D /* SimpleCamera.m in Sources */,
+				37473F832635A33E005E5A8D /* SatelliteCameraController.m in Sources */,
 				3706D2EF2604548A000568B4 /* Errors.swift in Sources */,
 				3789FB26262BB97C00D9F85B /* HDRTextureLoader.swift in Sources */,
 				37DD618725F38769005D7A42 /* AAPLMathUtilities.m in Sources */,

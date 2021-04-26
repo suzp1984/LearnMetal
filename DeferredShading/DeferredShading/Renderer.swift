@@ -14,6 +14,7 @@ class Renderer: NSObject {
     private var device: MTLDevice!
     private var backPackMesh: MetalMesh!
     private var camera: Camera!
+    private var cameraController: SatelliteCameraController!
     private var uniforms: Uniforms!
     private var depthState: MTLDepthStencilState!
     private var gBufferPipelineState: MTLRenderPipelineState!
@@ -44,9 +45,10 @@ class Renderer: NSObject {
         metalView.clearDepth = 1.0
         metalView.sampleCount = 4
         
-        camera = CameraFactory.generateRoundOrbitCamera(withPosition: vector_float3(0.0, 0.0, 8.0),
-                                                        target: vector_float3(0.0, 0.0, 0.0),
-                                                        up: vector_float3(0.0, 1.0, 0.0))
+        camera = SimpleCamera(position: vector_float3(0.0, 0.0, 8.0),
+                              withTarget: vector_float3(0.0, 0.0, 0.0),
+                              up: true)
+        cameraController = SatelliteCameraController(camera: camera)
         
         let depthStencilDescriptor = MTLDepthStencilDescriptor()
         depthStencilDescriptor.depthCompareFunction = .lessEqual
@@ -224,7 +226,7 @@ class Renderer: NSObject {
     }
     
     func handleCameraEvent(deltaX: Float, deltaY: Float) -> Void {
-        camera.rotateCameraAroundTarget(withDeltaPhi: deltaX * 0.2, deltaTheta: deltaY * 0.2)
+        cameraController.rotateCameraAroundTarget(withDeltaPhi: deltaX * 0.2, deltaTheta: deltaY * 0.2)
         
         uniforms.viewMatrix = camera.getViewMatrix()
         lightCubeUniforms.viewMatrix = camera.getViewMatrix()

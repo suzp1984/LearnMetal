@@ -7,16 +7,38 @@
 
 #import <Foundation/Foundation.h>
 #import "Camera.h"
-#import "OrbitCamera.h"
+#import "AAPLMathUtilities.h"
 
-// Camera Factory
+@implementation Camera
 
-@implementation CameraFactory
+@synthesize cameraPosition;
 
-+ (id<Camera>_Nonnull) generateRoundOrbitCameraWithPosition:(vector_float3) position
-                                                     target:(vector_float3)target
-                                                         up:(vector_float3)up {
-    return [[OrbitCamera alloc] initWithPosition:position withTarget:target withUp:up];
+@synthesize cameraUp;
+
+@synthesize target;
+
+- (nonnull instancetype) initWithPosition:(vector_float3) position
+                                withTarget:(vector_float3) target
+                                   withUp:(vector_float3) up {
+    self = [super init];
+    
+    if (self) {
+        [self setCameraPosition:position];
+        [self setTarget:target];
+        [self setCameraUp:up];
+    }
+    
+    return self;
+}
+
+- (matrix_float4x4) getViewMatrix
+{
+    return matrix_look_at_left_hand(cameraPosition, target, cameraUp);
+}
+
+- (vector_float3) getFrontDirection
+{
+    return target - cameraPosition;
 }
 
 @end

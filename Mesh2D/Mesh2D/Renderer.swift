@@ -15,6 +15,7 @@ class Renderer: NSObject {
     private var viewport: MTLViewport!
     private var uniform: Uniforms!
     private var camera: Camera!
+    private var cameraController: SatelliteCameraController!
     private var linesMesh: MTKMesh!
     private var quadCurveMesh: MTKMesh!
     private var cubicBeizerMesh: MTKMesh!
@@ -27,9 +28,11 @@ class Renderer: NSObject {
         device = mtkView.device!
         mtkView.delegate = self
         
-        camera = CameraFactory.generateRoundOrbitCamera(withPosition: vector_float3(0.0, 0.0, 5.0),
-                                                        target: vector_float3(0.0, 0.0, 0.0),
-                                                        up: vector_float3(0.0, 1.0, 0.0))
+        camera = SimpleCamera(position: vector_float3(0.0, 0.0, 5.0),
+                              withTarget: vector_float3(0.0, 0.0, 0.0),
+                              up: true)
+        cameraController = SatelliteCameraController(camera: camera)
+        
         let width = mtkView.frame.width
         let height = mtkView.frame.height
         
@@ -100,7 +103,7 @@ class Renderer: NSObject {
     }
     
     func handleCameraEvent(deltaX: Float, deltaY: Float) {
-        camera.rotateCameraAroundTarget(withDeltaPhi: deltaX, deltaTheta: deltaY)
+        cameraController.rotateCameraAroundTarget(withDeltaPhi: deltaX, deltaTheta: deltaY)
         
         uniform.viewMatrix = camera.getViewMatrix()
     }

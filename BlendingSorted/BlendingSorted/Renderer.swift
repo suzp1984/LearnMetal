@@ -16,6 +16,7 @@ class Renderer: NSObject {
     private var commandQueue: MTLCommandQueue!
     private var viewportSize: vector_uint2!
     private var camera: Camera!
+    private var cameraController: SatelliteCameraController!
     private var cubeMesh: MTKMesh!
     private var planeMesh: MTKMesh!
     private var cubeTexture: Texture!
@@ -34,9 +35,10 @@ class Renderer: NSObject {
         metalView.delegate = self
         device = metalView.device
         
-        camera = CameraFactory.generateRoundOrbitCamera(withPosition: vector_float3(0.0, 0.0, 5.0),
-                                                        target: vector_float3(0.0, 0.0, 0.0),
-                                                        up: vector_float3(0.0, 1.0, 0.0))
+        camera = SimpleCamera(position: vector_float3(0.0, 0.0, 5.0),
+                              withTarget: vector_float3(0.0, 0.0, 0.0),
+                              up: true)
+        cameraController = SatelliteCameraController(camera: camera)
         
         let mtlVertexDescriptor = MTLVertexDescriptor()
         // positions
@@ -154,7 +156,7 @@ class Renderer: NSObject {
     }
     
     func handleCameraEvent(deltaX: Float, deltaY: Float) -> Void {
-        camera.rotateCameraAroundTarget(withDeltaPhi: deltaX * 0.2, deltaTheta: deltaY * 0.2)
+        cameraController.rotateCameraAroundTarget(withDeltaPhi: deltaX * 0.2, deltaTheta: deltaY * 0.2)
         
         cubeOneUniforms.viewMatrix = camera.getViewMatrix()
         cubeTwoUniforms.viewMatrix = camera.getViewMatrix()
