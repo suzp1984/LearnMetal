@@ -1,14 +1,14 @@
 //
-//  ModelShader.metal
-//  ModelLoadingObj
+//  Shader.metal
+//  ModelJson
 //
-//  Created by Jacob Su on 3/16/21.
+//  Created by Jacob Su on 4/26/21.
 //
 
 #include <metal_stdlib>
 using namespace metal;
 
-#include "ModelShaderType.h"
+#include "ShaderType.h"
 
 typedef struct Vertex
 {
@@ -41,7 +41,10 @@ fragment float4 fragmentShader(RasterizerData in [[stage_in]],
                                texture2d<half> diffuseTexture[[texture(FragmentInputIndexDiffuseTexture)]])
 {
     constexpr sampler textureSampler (mag_filter::linear, min_filter::linear);
-    const half4 colorSample = diffuseTexture.sample(textureSampler, in.texCoords);
+    float3 colorSample = float3(diffuseTexture.sample(textureSampler, in.texCoords).rgb);
     
-    return float4(colorSample);
+    // gamma correct
+    colorSample = pow(colorSample, float3(1.0/2.2));
+    
+    return float4(colorSample, 1.0);
 }

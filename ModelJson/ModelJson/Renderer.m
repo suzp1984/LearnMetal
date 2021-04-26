@@ -1,8 +1,8 @@
 //
 //  Renderer.m
-//  ModelLoadingObj
+//  ModelJson
 //
-//  Created by Jacob Su on 3/16/21.
+//  Created by Jacob Su on 4/26/21.
 //
 
 @import ModelIO;
@@ -10,7 +10,7 @@
 @import Metal;
 #import <Foundation/Foundation.h>
 #import "Renderer.h"
-#import "ModelShaderType.h"
+#import "ShaderType.h"
 #import <common/common.h>
 
 @implementation Renderer
@@ -19,7 +19,7 @@
     id<MTLRenderPipelineState> _pipelineState;
     id<MTLCommandQueue> _commandQueue;
     id<MTLDepthStencilState> _depthState;
-    id<MetalMesh> _nanoSuitMesh;
+    id<MetalMesh> _foxMesh;
     Uniforms _uniforms;
     vector_uint2 _viewportSize;
     id<Camera> _camera;
@@ -32,9 +32,10 @@
     
     if (self) {
         mtkView.delegate = self;
+        mtkView.sampleCount = 4;
         id<MTLDevice> device = mtkView.device;
         _device = mtkView.device;
-        _camera = [[SimpleCamera alloc] initWithPosition:(vector_float3) {0.0, 0.0, -3.0}
+        _camera = [[SimpleCamera alloc] initWithPosition:(vector_float3) {5.0, 0.0, 8.0}
                                               withTarget:(vector_float3){0.0, 0.0, 0.0}
                                                       up:YES];
         _satelliteController = [[SatelliteCameraController alloc] initWithCamera:_camera];
@@ -45,9 +46,7 @@
         depthStencilDesc.depthCompareFunction = MTLCompareFunctionLess;
         depthStencilDesc.depthWriteEnabled = YES;
         _depthState = [device newDepthStencilStateWithDescriptor:depthStencilDesc];
-        
-        NSURL *url = [[NSBundle common] URLForResource:@"nanosuit" withExtension:@"obj" subdirectory:@"nanosuit"];
-        
+                
         NSAssert([MDLAsset canImportFileExtension:@"obj"], @"MDL Asset can not import obj file");
         
         MTLVertexDescriptor *mtlVertexDescriptor = [[MTLVertexDescriptor alloc] init];
@@ -79,13 +78,19 @@
         
         NSError *error;
         
-        _nanoSuitMesh = [[ModelIOMesh alloc] initWithUrl:url
-                                                device:device
-                                   mtlVertexDescriptor:mtlVertexDescriptor
-                                          attributeMap:attributeMap
-                                                 error:&error];
-        
-        NSAssert(_nanoSuitMesh, @"nanoSuit mesh loading error: %@", error);
+        NSURL *foxJsonUrl = [[NSBundle common] URLForResource:@"fox.json"
+                                                withExtension:nil
+                                                 subdirectory:@"fox"];
+        NSURL *foxTextureUrl = [[NSBundle common] URLForResource:@"fox.jpg"
+                                                   withExtension:nil
+                                                    subdirectory:@"fox"];
+        _foxMesh = [[JsonMesh alloc] initWithJson:foxJsonUrl
+                                      withTexture:foxTextureUrl
+                                           device:_device
+                              mtlVertexDescriptor:mtlVertexDescriptor
+                                     attributesMap:attributeMap
+                                            error:&error];
+        NSAssert(_foxMesh, @"fox mesh error: %@", error);
         
         id<MTLLibrary> library = [device newDefaultLibrary];
         id<MTLFunction> vertexFunc = [library newFunctionWithName:@"vertexShader"];
@@ -95,6 +100,7 @@
         pipelineStateDescriptor.vertexDescriptor = mtlVertexDescriptor;
         pipelineStateDescriptor.vertexFunction = vertexFunc;
         pipelineStateDescriptor.fragmentFunction = fragmentFunc;
+        pipelineStateDescriptor.sampleCount = mtkView.sampleCount;
         pipelineStateDescriptor.colorAttachments[0].pixelFormat = mtkView.colorPixelFormat;
         pipelineStateDescriptor.depthAttachmentPixelFormat = mtkView.depthStencilPixelFormat;
         
@@ -108,7 +114,7 @@
         float width = mtkView.frame.size.width;
         float height = mtkView.frame.size.height;
         
-        _uniforms.modelMatrix = simd_mul(matrix4x4_translation(0.0, -1.75, 0.0), matrix4x4_scale(0.2, 0.2, 0.2));
+        _uniforms.modelMatrix = matrix4x4_translation(0.0, -1.5, 0.0);
         _uniforms.viewMatrix = [_camera getViewMatrix];
         _uniforms.projectionMatrix = matrix_perspective_left_hand(M_PI / 4.0, width / height, 0.1, 100.0);
     }
@@ -140,11 +146,11 @@
     [renderEncoder setRenderPipelineState:_pipelineState];
     [renderEncoder setDepthStencilState:_depthState];
     
-    [_nanoSuitMesh setVertexMeshToRenderEncoder:renderEncoder index:ModelVertexInputIndexPosition];
+    [_foxMesh setVertexMeshToRenderEncoder:renderEncoder index:ModelVertexInputIndexPosition];
     
     [renderEncoder setVertexBytes:&_uniforms length:sizeof(_uniforms) atIndex:ModelVertexInputIndexUniforms];
     
-    [_nanoSuitMesh drawMeshToRenderEncoder:renderEncoder textureHandler:^(MDLMaterialSemantic type, id<MTLTexture> texture, NSString* _) {
+    [_foxMesh drawMeshToRenderEncoder:renderEncoder textureHandler:^(MDLMaterialSemantic type, id<MTLTexture> texture, NSString* _) {
         if (type == MDLMaterialSemanticBaseColor) {
             [renderEncoder setFragmentTexture:texture atIndex:FragmentInputIndexDiffuseTexture];
         }

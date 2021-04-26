@@ -22,6 +22,8 @@
 		37473F9D2635AFFC005E5A8D /* LinearMoveCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37473F9C2635AFFC005E5A8D /* LinearMoveCameraController.m */; };
 		37473FA52636523A005E5A8D /* SimpleCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 37473FA426365237005E5A8D /* SimpleCamera.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		37473FAB26365284005E5A8D /* SimpleCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 37473FAA26365284005E5A8D /* SimpleCamera.m */; };
+		37473FB126368779005E5A8D /* JsonMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37473FB026368779005E5A8D /* JsonMesh.swift */; };
+		37473FB626368E62005E5A8D /* fox in Resources */ = {isa = PBXBuildFile; fileRef = 37473FB526368E62005E5A8D /* fox */; };
 		3789FA4B262A855500D9F85B /* hdr in Resources */ = {isa = PBXBuildFile; fileRef = 3789FA4A262A855500D9F85B /* hdr */; };
 		3789FB26262BB97C00D9F85B /* HDRTextureLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3789FB25262BB97C00D9F85B /* HDRTextureLoader.swift */; };
 		3789FB2A262BC68E00D9F85B /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3789FB29262BC68E00D9F85B /* ImageUtils.swift */; };
@@ -72,6 +74,8 @@
 		37473F9C2635AFFC005E5A8D /* LinearMoveCameraController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinearMoveCameraController.m; sourceTree = "<group>"; };
 		37473FA426365237005E5A8D /* SimpleCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleCamera.h; sourceTree = "<group>"; };
 		37473FAA26365284005E5A8D /* SimpleCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleCamera.m; sourceTree = "<group>"; };
+		37473FB026368779005E5A8D /* JsonMesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonMesh.swift; sourceTree = "<group>"; };
+		37473FB526368E62005E5A8D /* fox */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fox; sourceTree = "<group>"; };
 		3789FA4A262A855500D9F85B /* hdr */ = {isa = PBXFileReference; lastKnownFileType = folder; path = hdr; sourceTree = "<group>"; };
 		3789FB25262BB97C00D9F85B /* HDRTextureLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDRTextureLoader.swift; sourceTree = "<group>"; };
 		3789FB29262BC68E00D9F85B /* ImageUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 		3742B5DA25FF938900DE2669 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				37473FB526368E62005E5A8D /* fox */,
 				3789FD8C262E78A900D9F85B /* wall */,
 				3789FD88262E789700D9F85B /* plastic */,
 				3789FD84262E788200D9F85B /* grass */,
@@ -183,6 +188,7 @@
 				37473F9C2635AFFC005E5A8D /* LinearMoveCameraController.m */,
 				37473FA426365237005E5A8D /* SimpleCamera.h */,
 				37473FAA26365284005E5A8D /* SimpleCamera.m */,
+				37473FB026368779005E5A8D /* JsonMesh.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -293,6 +299,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37473FB626368E62005E5A8D /* fox in Resources */,
 				3789FD81262E787000D9F85B /* gold in Resources */,
 				37DD618D25F38790005D7A42 /* Assets.xcassets in Resources */,
 				3789FD89262E789700D9F85B /* plastic in Resources */,
@@ -327,6 +334,7 @@
 				37C65A7C2633FFA2008F4C08 /* GeometryMesh+Torus.swift in Sources */,
 				37DD624625F5D61B005D7A42 /* Camera.m in Sources */,
 				3789FF8526325D0200D9F85B /* GeometryMesh.swift in Sources */,
+				37473FB126368779005E5A8D /* JsonMesh.swift in Sources */,
 				37473F9D2635AFFC005E5A8D /* LinearMoveCameraController.m in Sources */,
 				37951FDB2610313B00628968 /* Bundle.swift in Sources */,
 				3789FB2A262BC68E00D9F85B /* ImageUtils.swift in Sources */,
