@@ -24,6 +24,7 @@
 		37473FAB26365284005E5A8D /* SimpleCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 37473FAA26365284005E5A8D /* SimpleCamera.m */; };
 		37473FB126368779005E5A8D /* JsonMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37473FB026368779005E5A8D /* JsonMesh.swift */; };
 		37473FB626368E62005E5A8D /* fox in Resources */ = {isa = PBXBuildFile; fileRef = 37473FB526368E62005E5A8D /* fox */; };
+		3747401D2637AE41005E5A8D /* RenderPipelineBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3747401C2637AE41005E5A8D /* RenderPipelineBuilder.swift */; };
 		3789FA4B262A855500D9F85B /* hdr in Resources */ = {isa = PBXBuildFile; fileRef = 3789FA4A262A855500D9F85B /* hdr */; };
 		3789FB26262BB97C00D9F85B /* HDRTextureLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3789FB25262BB97C00D9F85B /* HDRTextureLoader.swift */; };
 		3789FB2A262BC68E00D9F85B /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3789FB29262BC68E00D9F85B /* ImageUtils.swift */; };
@@ -76,6 +77,7 @@
 		37473FAA26365284005E5A8D /* SimpleCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleCamera.m; sourceTree = "<group>"; };
 		37473FB026368779005E5A8D /* JsonMesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonMesh.swift; sourceTree = "<group>"; };
 		37473FB526368E62005E5A8D /* fox */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fox; sourceTree = "<group>"; };
+		3747401C2637AE41005E5A8D /* RenderPipelineBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderPipelineBuilder.swift; sourceTree = "<group>"; };
 		3789FA4A262A855500D9F85B /* hdr */ = {isa = PBXFileReference; lastKnownFileType = folder; path = hdr; sourceTree = "<group>"; };
 		3789FB25262BB97C00D9F85B /* HDRTextureLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDRTextureLoader.swift; sourceTree = "<group>"; };
 		3789FB29262BC68E00D9F85B /* ImageUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				37473FA426365237005E5A8D /* SimpleCamera.h */,
 				37473FAA26365284005E5A8D /* SimpleCamera.m */,
 				37473FB026368779005E5A8D /* JsonMesh.swift */,
+				3747401C2637AE41005E5A8D /* RenderPipelineBuilder.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				3789FB26262BB97C00D9F85B /* HDRTextureLoader.swift in Sources */,
 				37DD618725F38769005D7A42 /* AAPLMathUtilities.m in Sources */,
 				372B543A260A1F2D00EAE90C /* TextureCubeLoader.swift in Sources */,
+				3747401D2637AE41005E5A8D /* RenderPipelineBuilder.swift in Sources */,
 				3706D2EB26043EED000568B4 /* MetalMesh.swift in Sources */,
 				3721927725F9CB9600558BBB /* MetalBuffer.swift in Sources */,
 			);
