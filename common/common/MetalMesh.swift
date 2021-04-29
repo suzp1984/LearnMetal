@@ -17,9 +17,9 @@ public protocol MetalMesh {
     
     func setVertexMeshTo(renderEncoder: MTLRenderCommandEncoder, index: Int)
     
-    func drawMeshTo(renderEncoder: MTLRenderCommandEncoder, textureHandler: (_ type: MDLMaterialSemantic,
+    func drawMeshTo(renderEncoder: MTLRenderCommandEncoder, textureHandler: ((_ type: MDLMaterialSemantic,
                                                                              _ texture: MTLTexture,
-                                                                             _ subMeshName: String) -> Void)
+                                                                             _ subMeshName: String) -> Void)?)
 }
 
 extension MTLRenderCommandEncoder {
@@ -47,14 +47,14 @@ extension MTLRenderCommandEncoder {
         }
     }
     
-    public func drawMesh(_ mesh: MetalMesh, textureHandler: (_ type: MDLMaterialSemantic, _ texture: MTLTexture, _ subMeshName: String) -> Void) {
+    public func drawMesh(_ mesh: MetalMesh, textureHandler: ((_ type: MDLMaterialSemantic, _ texture: MTLTexture, _ subMeshName: String) -> Void)?) {
         for subMesh in mesh.mtkMesh.submeshes {
             if let diffuseTexture = mesh.baseColorTextures[subMesh.name] {
-                textureHandler(.baseColor, diffuseTexture, subMesh.name)
+                textureHandler?(.baseColor, diffuseTexture, subMesh.name)
             }
             
             if let specularTexture = mesh.specularTextures[subMesh.name] {
-                textureHandler(.specular, specularTexture, subMesh.name)
+                textureHandler?(.specular, specularTexture, subMesh.name)
             }
 
             drawIndexedPrimitives(type: subMesh.primitiveType,
@@ -65,14 +65,14 @@ extension MTLRenderCommandEncoder {
         }
     }
     
-    public func drawMesh(_ mesh: MetalMesh, instanceCount: Int, textureHandler: (_ type: MDLMaterialSemantic, _ texture: MTLTexture, _ subMeshName: String) -> Void) {
+    public func drawMesh(_ mesh: MetalMesh, instanceCount: Int, textureHandler: ((_ type: MDLMaterialSemantic, _ texture: MTLTexture, _ subMeshName: String) -> Void)?) {
         for subMesh in mesh.mtkMesh.submeshes {
             if let diffuseTexture = mesh.baseColorTextures[subMesh.name] {
-                textureHandler(.baseColor, diffuseTexture, subMesh.name)
+                textureHandler?(.baseColor, diffuseTexture, subMesh.name)
             }
             
             if let specularTexture = mesh.specularTextures[subMesh.name] {
-                textureHandler(.specular, specularTexture, subMesh.name)
+                textureHandler?(.specular, specularTexture, subMesh.name)
             }
 
             drawIndexedPrimitives(type: subMesh.primitiveType,
@@ -82,5 +82,16 @@ extension MTLRenderCommandEncoder {
                                   indexBufferOffset: subMesh.indexBuffer.offset,
                                   instanceCount: instanceCount)
         }
+    }
+    
+    public func drawMesh(_ mesh: MTKSubmesh, instanceCount: Int? = nil) {
+        
+        drawIndexedPrimitives(type: mesh.primitiveType,
+                              indexCount: mesh.indexCount,
+                              indexType: mesh.indexType,
+                              indexBuffer: mesh.indexBuffer.buffer,
+                              indexBufferOffset: mesh.indexBuffer.offset,
+                              instanceCount: instanceCount ?? 1)
+        
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37674AA0263A87B000296FAC /* BackpackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37674A9F263A87B000296FAC /* BackpackModel.swift */; };
 		3795270D26214A2E00628968 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795270C26214A2E00628968 /* AppDelegate.swift */; };
 		3795270F26214A2E00628968 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3795270E26214A2E00628968 /* ViewController.swift */; };
 		3795271126214A3000628968 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3795271026214A3000628968 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		37674A9F263A87B000296FAC /* BackpackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackpackModel.swift; sourceTree = "<group>"; };
 		3795270926214A2E00628968 /* 5.9.DeferredShading.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 5.9.DeferredShading.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3795270C26214A2E00628968 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3795270E26214A2E00628968 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				379527472621505E00628968 /* DeferredShading-Bridging-Header.h */,
 				3795274C2621508F00628968 /* Shader.metal */,
 				37952751262151FE00628968 /* Renderer.swift */,
+				37674A9F263A87B000296FAC /* BackpackModel.swift */,
 			);
 			path = DeferredShading;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				3795274D2621508F00628968 /* Shader.metal in Sources */,
 				3795270F26214A2E00628968 /* ViewController.swift in Sources */,
 				379527492621505F00628968 /* ShaderType.m in Sources */,
+				37674AA0263A87B000296FAC /* BackpackModel.swift in Sources */,
 				37952752262151FE00628968 /* Renderer.swift in Sources */,
 				3795270D26214A2E00628968 /* AppDelegate.swift in Sources */,
 			);

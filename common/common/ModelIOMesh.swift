@@ -100,7 +100,7 @@ public class ModelIOMesh: NSObject {
 extension ModelIOMesh: MetalMesh {
     
     @objc
-    public func drawMeshTo(renderEncoder: MTLRenderCommandEncoder, textureHandler: (MDLMaterialSemantic, MTLTexture, String) -> Void) {
+    public func drawMeshTo(renderEncoder: MTLRenderCommandEncoder, textureHandler: ((MDLMaterialSemantic, MTLTexture, String) -> Void)?) {
         renderEncoder.drawMesh(self, textureHandler: textureHandler)
     }
     

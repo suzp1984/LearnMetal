@@ -12,7 +12,9 @@ import common
 class Renderer: NSObject {
     
     private var device: MTLDevice!
-    private var backPackMesh: MetalMesh!
+//    private var backPackMesh: MetalMesh!
+    private var backPackModel: BackpackModel!
+    
     private var camera: Camera!
     private var cameraController: SatelliteCameraController!
     private var uniforms: Uniforms!
@@ -77,16 +79,17 @@ class Renderer: NSObject {
         mtlVertexDescriptor.layouts[Int(VertexInputIndexPosition.rawValue)].stepRate = 1
         mtlVertexDescriptor.layouts[Int(VertexInputIndexPosition.rawValue)].stepFunction = .perVertex
 
-        let backPackUrl = Bundle.common.url(forResource: "backpack.obj", withExtension: nil, subdirectory: "backpack")!
-
-        backPackMesh = try! ModelIOMesh(withUrl: backPackUrl,
-                               device: device,
-                               mtlVertexDescriptor: mtlVertexDescriptor,
-                               attributeMap: [
-                                Int(ModelVertexAttributePosition.rawValue) : MDLVertexAttributePosition,
-                                Int(ModelVertexAttributeTexcoord.rawValue) : MDLVertexAttributeTextureCoordinate,
-                                Int(ModelVertexAttributeNormal.rawValue)   : MDLVertexAttributeNormal
-                               ])
+//        let backPackUrl = Bundle.common.url(forResource: "backpack.obj", withExtension: nil, subdirectory: "backpack")!
+//
+//        backPackMesh = try! ModelIOMesh(withUrl: backPackUrl,
+//                               device: device,
+//                               mtlVertexDescriptor: mtlVertexDescriptor,
+//                               attributeMap: [
+//                                Int(ModelVertexAttributePosition.rawValue) : MDLVertexAttributePosition,
+//                                Int(ModelVertexAttributeTexcoord.rawValue) : MDLVertexAttributeTextureCoordinate,
+//                                Int(ModelVertexAttributeNormal.rawValue)   : MDLVertexAttributeNormal
+//                               ])
+        backPackModel = BackpackModel(device: device)
         
         cubeMesh = try! MTKMesh.newBox(withVertexDescriptor: mtlVertexDescriptor,
                                   withAttributesMap: [
@@ -316,25 +319,30 @@ extension Renderer : MTKViewDelegate {
         gBufferRenderEncoder.setRenderPipelineState(gBufferPipelineState)
         gBufferRenderEncoder.setDepthStencilState(depthState)
         
-        gBufferRenderEncoder.setVertexMesh(backPackMesh, index: Int(VertexInputIndexPosition.rawValue))
+//        gBufferRenderEncoder.setVertexMesh(backPackMesh, index: Int(VertexInputIndexPosition.rawValue))
         
         for i in 0..<modelsMatrixes.count {
             uniforms.modelMatrix = modelsMatrixes[i]
             uniforms.normalMatrix = normalsMatrixes[i]
             
-            gBufferRenderEncoder.setVertexBytes(&uniforms,
-                                                length: MemoryLayout<Uniforms>.stride,
-                                                index: Int(VertexInputIndexUniforms.rawValue))
+            backPackModel.resetUniforms(uniforms)
             
-            gBufferRenderEncoder.drawMesh(backPackMesh) { type, texture, _ in
-                if type == .baseColor {
-                    gBufferRenderEncoder.setFragmentTexture(texture, index: Int(FragmentInputIndexDiffuse.rawValue))
-                }
-                
-                if type == .specular {
-                    gBufferRenderEncoder.setFragmentTexture(texture, index: Int(FragmentInputIndexSpecular.rawValue))
-                }
-            }
+            try! gBufferRenderEncoder.drawModel(backPackModel)
+//            withUnsafePointer(to: uniforms) {
+//                gBufferRenderEncoder.setVertexBytes($0,
+//                                                    length: MemoryLayout<Uniforms>.stride,
+//                                                    index: Int(VertexInputIndexUniforms.rawValue))
+//            }
+            
+//            gBufferRenderEncoder.drawMesh(backPackMesh) { type, texture, _ in
+//                if type == .baseColor {
+//                    gBufferRenderEncoder.setFragmentTexture(texture, index: Int(FragmentInputIndexDiffuse.rawValue))
+//                }
+//
+//                if type == .specular {
+//                    gBufferRenderEncoder.setFragmentTexture(texture, index: Int(FragmentInputIndexSpecular.rawValue))
+//                }
+//            }
         }
         
         gBufferRenderEncoder.endEncoding()

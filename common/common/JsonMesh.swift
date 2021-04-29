@@ -116,7 +116,7 @@ extension JsonMesh: MetalMesh {
         renderEncoder.setVertexMesh(self, index: index)
     }
     
-    public func drawMeshTo(renderEncoder: MTLRenderCommandEncoder, textureHandler: (MDLMaterialSemantic, MTLTexture, String) -> Void) {
+    public func drawMeshTo(renderEncoder: MTLRenderCommandEncoder, textureHandler: ((MDLMaterialSemantic, MTLTexture, String) -> Void)?) {
         renderEncoder.drawMesh(self, textureHandler: textureHandler)
 
     }
