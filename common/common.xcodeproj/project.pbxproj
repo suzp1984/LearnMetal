@@ -26,6 +26,7 @@
 		37473FB626368E62005E5A8D /* fox in Resources */ = {isa = PBXBuildFile; fileRef = 37473FB526368E62005E5A8D /* fox */; };
 		3747401D2637AE41005E5A8D /* RenderPipelineBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3747401C2637AE41005E5A8D /* RenderPipelineBuilder.swift */; };
 		37674A9E263A321000296FAC /* RenderPipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37674A9D263A321000296FAC /* RenderPipeline.swift */; };
+		37674AA2263BD69000296FAC /* GeometryMesh+Lines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37674AA1263BD69000296FAC /* GeometryMesh+Lines.swift */; };
 		3789FA4B262A855500D9F85B /* hdr in Resources */ = {isa = PBXBuildFile; fileRef = 3789FA4A262A855500D9F85B /* hdr */; };
 		3789FB26262BB97C00D9F85B /* HDRTextureLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3789FB25262BB97C00D9F85B /* HDRTextureLoader.swift */; };
 		3789FB2A262BC68E00D9F85B /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3789FB29262BC68E00D9F85B /* ImageUtils.swift */; };
@@ -80,6 +81,7 @@
 		37473FB526368E62005E5A8D /* fox */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fox; sourceTree = "<group>"; };
 		3747401C2637AE41005E5A8D /* RenderPipelineBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderPipelineBuilder.swift; sourceTree = "<group>"; };
 		37674A9D263A321000296FAC /* RenderPipeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderPipeline.swift; sourceTree = "<group>"; };
+		37674AA1263BD69000296FAC /* GeometryMesh+Lines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GeometryMesh+Lines.swift"; sourceTree = "<group>"; };
 		3789FA4A262A855500D9F85B /* hdr */ = {isa = PBXFileReference; lastKnownFileType = folder; path = hdr; sourceTree = "<group>"; };
 		3789FB25262BB97C00D9F85B /* HDRTextureLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDRTextureLoader.swift; sourceTree = "<group>"; };
 		3789FB29262BC68E00D9F85B /* ImageUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				3789FB29262BC68E00D9F85B /* ImageUtils.swift */,
 				3789FF8426325D0200D9F85B /* GeometryMesh.swift */,
 				37C65A7B2633FFA2008F4C08 /* GeometryMesh+Torus.swift */,
+				37674AA1263BD69000296FAC /* GeometryMesh+Lines.swift */,
 				37473F7726357291005E5A8D /* ModelIOMesh.swift */,
 				37473F7E2635A2D0005E5A8D /* SatelliteCameraController.h */,
 				37473F822635A33E005E5A8D /* SatelliteCameraController.m */,
@@ -341,6 +344,7 @@
 				37674A9E263A321000296FAC /* RenderPipeline.swift in Sources */,
 				37DD624625F5D61B005D7A42 /* Camera.m in Sources */,
 				3789FF8526325D0200D9F85B /* GeometryMesh.swift in Sources */,
+				37674AA2263BD69000296FAC /* GeometryMesh+Lines.swift in Sources */,
 				37473FB126368779005E5A8D /* JsonMesh.swift in Sources */,
 				37473F9D2635AFFC005E5A8D /* LinearMoveCameraController.m in Sources */,
 				37951FDB2610313B00628968 /* Bundle.swift in Sources */,

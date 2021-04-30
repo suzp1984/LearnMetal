@@ -74,6 +74,26 @@ class Renderer: NSObject {
                                           rawPtr: points,
                                           count: points.count,
                                           device: device)
+//        linesMesh = try! MTKMesh.newCubicBezier3DCurve(withVertexDescriptor: mtlVertexDescriptor,
+//                                      withAttributesMap: attributesMap,
+//                                      device: device,
+//                                      rawPtr: points,
+//                                      count: points.count,
+//                                      lineSegments: 40,
+//                                      radii: 0.08,
+//                                      radialSegments: 60,
+//                                      geometryType: .triangles,
+//                                      inwardNormals: false)
+        
+//        linesMesh = try! MTKMesh.new3DLines(withVertexDescriptor: mtlVertexDescriptor,
+//                                       withAttributesMap: attributesMap,
+//                                       device: device,
+//                                       rawPtr: points,
+//                                       count: points.count,
+//                                       radii: 0.4,
+//                                       radialSegments: 4,
+//                                       geometryType: .triangles,
+//                                       inwardNormals: false)
         
         quadCurveMesh = try! MTKMesh.newQuadraticBezierCurve(withVertexDescriptor: mtlVertexDescriptor,
                                                              withAttributesMap: attributesMap,
