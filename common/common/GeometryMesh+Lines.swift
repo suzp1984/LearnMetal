@@ -12,6 +12,225 @@ import simd
 @objc
 extension MTKMesh {
     
+    public class func new2DLines(withVertexDescriptor vertexDescriptor: MTLVertexDescriptor,
+                                 withAttributesMap attributesMap: [Int: String],
+                                 device: MTLDevice,
+                                 rawPtr: UnsafeRawPointer,
+                                 count: Int,
+                                 startWidth: Float = 0.1,
+                                 endWidth: Float = 0.1,
+                                 geometryType: MDLGeometryType = .triangles) throws -> MTKMesh {
+        let isAttributesInvalide = attributesMap.values.contains(where: { name in
+            name != MDLVertexAttributePosition
+        })
+        
+        if isAttributesInvalide {
+            throw Errors.runtimeError("Attribute only support Position")
+        }
+        
+        if vertexDescriptor.attributes[0].format != .float2 {
+            throw Errors.runtimeError("Position vertex attribute format has to be float2.")
+        }
+        
+        var vertices: [vector_float2] = []
+        var indices: [UInt32] = []
+        
+        var float2Point = rawPtr.assumingMemoryBound(to: vector_float2.self)
+        let a = float2Point.pointee
+        let b = float2Point.advanced(by: 1).pointee
+        float2Point = float2Point.advanced(by: 1)
+        
+        let ab = a - b
+        let verticalVec = normalize(vector_float2(ab.y, -ab.x))
+        let v1 = a + verticalVec * startWidth
+        let v2 = a - verticalVec * startWidth
+        
+        vertices.append(v1)
+        vertices.append(v2)
+        
+        for i in 1..<count {
+            let a = float2Point.pointee
+            let b = float2Point.advanced(by: -1).pointee
+            float2Point = float2Point.advanced(by: 1)
+            
+            let ab = b - a
+            if length(ab) == 0 {
+                continue
+            }
+            let verticalVec = normalize(vector_float2(ab.y, -ab.x))
+            let width = startWidth + (endWidth - startWidth) * Float(i)/Float(count - 1)
+            let v1 = a + verticalVec * width
+            let v2 = a - verticalVec * width
+            
+            vertices.append(v1)
+            vertices.append(v2)
+            
+            indices.append(contentsOf: [UInt32(vertices.count - 1), UInt32(vertices.count - 2), UInt32(vertices.count - 3),
+                                        UInt32(vertices.count - 4), UInt32(vertices.count - 3), UInt32(vertices.count - 2)])
+        }
+        
+        // allocate data
+        let metalAllocator = MTKMeshBufferAllocator(device: device)
+        
+        let vertiesPtr = UnsafeMutableRawPointer.allocate(byteCount: vertices.count * MemoryLayout<vector_float2>.stride, alignment: 1)
+        defer {
+            vertiesPtr.deallocate()
+        }
+        
+        for i in 0..<vertices.count {
+            let dataPtr = vertiesPtr.advanced(by: i * MemoryLayout<vector_float2>.stride)
+            withUnsafePointer(to: vertices[i]) {
+                dataPtr.copyMemory(from: $0, byteCount: MemoryLayout<vector_float2>.stride)
+            }
+        }
+        
+        let vertiesData = Data(bytes: vertiesPtr, count: vertices.count * MemoryLayout<vector_float2>.stride)
+        
+        let vertexBuffer = metalAllocator.newBuffer(with: vertiesData, type: .vertex)
+        
+        let indexData = Data(bytes: indices, count: MemoryLayout<Int32>.stride * indices.count)
+        let indexBuffer = metalAllocator.newBuffer(with: indexData, type: .index)
+        
+        let submesh = MDLSubmesh(indexBuffer: indexBuffer, indexCount: indices.count, indexType: .uInt32, geometryType: geometryType, material: nil)
+        
+        let modelIOVertexDescriptor = MTKModelIOVertexDescriptorFromMetal(vertexDescriptor)
+        for attr in attributesMap {
+            (modelIOVertexDescriptor.attributes[attr.key] as! MDLVertexAttribute).name = attr.value
+        }
+        
+        let linesMesh = MDLMesh(vertexBuffer: vertexBuffer,
+                                vertexCount: vertices.count,
+                                descriptor: modelIOVertexDescriptor,
+                                submeshes: [submesh])
+        
+        return try MTKMesh(mesh: linesMesh, device: device)
+        
+    }
+    
+    public class func newQuadraticBezier2DCurve(withVertexDescriptor vertexDescriptor: MTLVertexDescriptor,
+                               withAttributesMap attributesMap: [Int: String],
+                               device: MTLDevice,
+                               rawPtr: UnsafeRawPointer,
+                               count: Int,
+                               lineSegments: Int = 20,
+                               startWidth: Float = 0.1,
+                               endWidth: Float = 0.1,
+                               geometryType: MDLGeometryType = .triangles) throws -> MTKMesh {
+        let isAttributesInvalide = attributesMap.values.contains(where: { name in
+            name != MDLVertexAttributePosition
+        })
+        
+        if isAttributesInvalide {
+            throw Errors.runtimeError("Attribute only support Position")
+        }
+        
+        try attributesMap.forEach { (key, value) in
+            let format = vertexDescriptor.attributes[key].format
+            if format != .float2 {
+                throw Errors.runtimeError("2D beizer curve don't support vertex format \(format) ")
+            }
+        }
+        
+        var points: [vector_float2] = []
+        var float2Ptr = rawPtr.assumingMemoryBound(to: vector_float2.self)
+        
+        var p0 = float2Ptr.pointee
+        var c0 = float2Ptr.advanced(by: 1).pointee
+        var p1 = float2Ptr.advanced(by: 2).pointee
+        float2Ptr = float2Ptr.advanced(by: 3)
+        
+        for i in 0...lineSegments {
+            points.append(getQuadraticBeizerPoint(t: Float(i) / Float(lineSegments), p0: p0, c0: c0, p1: p1))
+        }
+        
+        var index = 2
+        while index < (count - 1){
+            p0 = p1
+            c0 = p1 - c0 + p1
+            p1 = float2Ptr.pointee
+            float2Ptr = float2Ptr.advanced(by: 1)
+            
+            for i in 1...lineSegments {
+                points.append(getQuadraticBeizerPoint(t: Float(i) / Float(lineSegments), p0: p0, c0: c0, p1: p1))
+            }
+            
+            index += 1
+        }
+        
+        return try new2DLines(withVertexDescriptor: vertexDescriptor,
+                              withAttributesMap: attributesMap,
+                              device: device,
+                              rawPtr: points,
+                              count: points.count,
+                              startWidth: startWidth,
+                              endWidth: endWidth,
+                              geometryType: geometryType)
+    }
+    
+    public class func newCubicBezier2DCurve(withVertexDescriptor vertexDescriptor: MTLVertexDescriptor,
+                                          withAttributesMap attributesMap: [Int: String],
+                                          device: MTLDevice,
+                                          rawPtr: UnsafeRawPointer,
+                                          count: Int,
+                                          lineSegments: Int = 20,
+                                          startWidth: Float = 0.1,
+                                          endWidth: Float = 0.1,
+                                          geometryType: MDLGeometryType = .triangles) throws -> MTKMesh {
+        let isAttributesInvalide = attributesMap.values.contains(where: { name in
+            name != MDLVertexAttributePosition
+        })
+        
+        if isAttributesInvalide {
+            throw Errors.runtimeError("Attribute only support Position")
+        }
+        
+        try attributesMap.forEach { (key, value) in
+            let format = vertexDescriptor.attributes[key].format
+            if format != .float2 {
+                throw Errors.runtimeError("2D beizer curve don't support vertex format \(format) ")
+            }
+        }
+        
+        var points: [vector_float2] = []
+        
+        var float2Ptr = rawPtr.assumingMemoryBound(to: vector_float2.self)
+        
+        var p0 = float2Ptr.pointee
+        var c0 = float2Ptr.advanced(by: 1).pointee
+        var c1 = float2Ptr.advanced(by: 2).pointee
+        var p1 = float2Ptr.advanced(by: 3).pointee
+        float2Ptr = float2Ptr.advanced(by: 4)
+        
+        for i in 0...lineSegments {
+            points.append(getCubicBeizerPoint(t: Float(i) / Float(lineSegments), p0: p0, c0: c0, c1: c1, p1: p1))
+        }
+        
+        
+        var index = 3
+        while index < (count - 2){
+            p0 = p1
+            c0 = p1 - c1 + p1
+            c1 = float2Ptr.pointee
+            p1 = float2Ptr.advanced(by: 1).pointee
+            float2Ptr = float2Ptr.advanced(by: 2)
+            
+            for i in 1...lineSegments {
+                points.append(getCubicBeizerPoint(t: Float(i) / Float(lineSegments), p0: p0, c0: c0, c1: c1, p1: p1))
+            }
+            
+            index += 2
+        }
+        
+        return try new2DLines(withVertexDescriptor: vertexDescriptor,
+                              withAttributesMap: attributesMap,
+                              device: device,
+                              rawPtr: points,
+                              count: points.count,
+                              startWidth: startWidth,
+                              endWidth: endWidth,
+                              geometryType: geometryType)
+    }
+    
     public class func new3DLines(withVertexDescriptor vertexDescriptor: MTLVertexDescriptor,
                                  withAttributesMap attributesMap: [Int: String],
                                  device: MTLDevice,
@@ -186,7 +405,7 @@ extension MTKMesh {
             p1 = float3Ptr.advanced(by: 1).pointee
             float3Ptr = float3Ptr.advanced(by: 2)
             
-            for i in 0...lineSegments {
+            for i in 1...lineSegments {
                 points.append(getCubicBeizerPoint(t: Float(i) / Float(lineSegments), p0: p0, c0: c0, c1: c1, p1: p1))
             }
             

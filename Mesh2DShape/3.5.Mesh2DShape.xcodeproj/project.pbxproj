@@ -1,0 +1,637 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		37E01350264292FE0050C6AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E0134F264292FE0050C6AF /* AppDelegate.swift */; };
+		37E01352264292FE0050C6AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E01351264292FE0050C6AF /* ViewController.swift */; };
+		37E01354264293010050C6AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37E01353264293010050C6AF /* Assets.xcassets */; };
+		37E01357264293010050C6AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37E01355264293010050C6AF /* Main.storyboard */; };
+		37E01363264293010050C6AF /* Mesh2DShapeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E01362264293010050C6AF /* Mesh2DShapeTests.swift */; };
+		37E0136E264293010050C6AF /* Mesh2DShapeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E0136D264293010050C6AF /* Mesh2DShapeUITests.swift */; };
+		37E0137E264294740050C6AF /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E0137C264294740050C6AF /* Metal.framework */; };
+		37E0137F264294740050C6AF /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E0137D264294740050C6AF /* MetalKit.framework */; };
+		37E013812642947D0050C6AF /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E013802642947D0050C6AF /* common.framework */; };
+		37E013822642947D0050C6AF /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 37E013802642947D0050C6AF /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		37E01388264295E50050C6AF /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 37E01387264295D70050C6AF /* Shader.metal */; };
+		37E0138A2642962A0050C6AF /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E013892642962A0050C6AF /* Renderer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		37E0135F264293010050C6AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37E01344264292FE0050C6AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37E0134B264292FE0050C6AF;
+			remoteInfo = Mesh2DShape;
+		};
+		37E0136A264293010050C6AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37E01344264292FE0050C6AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37E0134B264292FE0050C6AF;
+			remoteInfo = Mesh2DShape;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		37E013832642947E0050C6AF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				37E013822642947D0050C6AF /* common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		37E0134C264292FE0050C6AF /* 3.5.Mesh2DShape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3.5.Mesh2DShape.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37E0134F264292FE0050C6AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		37E01351264292FE0050C6AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		37E01353264293010050C6AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37E01356264293010050C6AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		37E01358264293010050C6AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37E01359264293010050C6AF /* Mesh2DShape.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mesh2DShape.entitlements; sourceTree = "<group>"; };
+		37E0135E264293010050C6AF /* Mesh2DShapeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Mesh2DShapeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37E01362264293010050C6AF /* Mesh2DShapeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mesh2DShapeTests.swift; sourceTree = "<group>"; };
+		37E01364264293010050C6AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37E01369264293010050C6AF /* Mesh2DShapeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Mesh2DShapeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37E0136D264293010050C6AF /* Mesh2DShapeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mesh2DShapeUITests.swift; sourceTree = "<group>"; };
+		37E0136F264293010050C6AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37E0137C264294740050C6AF /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		37E0137D264294740050C6AF /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		37E013802642947D0050C6AF /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37E01384264294EB0050C6AF /* ShaderType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderType.h; sourceTree = "<group>"; };
+		37E013862642955F0050C6AF /* Mesh2D-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mesh2D-Bridging-Header.h"; sourceTree = "<group>"; };
+		37E01387264295D70050C6AF /* Shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader.metal; sourceTree = "<group>"; };
+		37E013892642962A0050C6AF /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37E01349264292FE0050C6AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37E0137E264294740050C6AF /* Metal.framework in Frameworks */,
+				37E013812642947D0050C6AF /* common.framework in Frameworks */,
+				37E0137F264294740050C6AF /* MetalKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37E0135B264293010050C6AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37E01366264293010050C6AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		37E01343264292FE0050C6AF = {
+			isa = PBXGroup;
+			children = (
+				37E0134E264292FE0050C6AF /* Mesh2DShape */,
+				37E01361264293010050C6AF /* Mesh2DShapeTests */,
+				37E0136C264293010050C6AF /* Mesh2DShapeUITests */,
+				37E0134D264292FE0050C6AF /* Products */,
+				37E0137B264294740050C6AF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		37E0134D264292FE0050C6AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37E0134C264292FE0050C6AF /* 3.5.Mesh2DShape.app */,
+				37E0135E264293010050C6AF /* Mesh2DShapeTests.xctest */,
+				37E01369264293010050C6AF /* Mesh2DShapeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37E0134E264292FE0050C6AF /* Mesh2DShape */ = {
+			isa = PBXGroup;
+			children = (
+				37E0134F264292FE0050C6AF /* AppDelegate.swift */,
+				37E01351264292FE0050C6AF /* ViewController.swift */,
+				37E01353264293010050C6AF /* Assets.xcassets */,
+				37E01355264293010050C6AF /* Main.storyboard */,
+				37E01358264293010050C6AF /* Info.plist */,
+				37E01359264293010050C6AF /* Mesh2DShape.entitlements */,
+				37E01384264294EB0050C6AF /* ShaderType.h */,
+				37E013862642955F0050C6AF /* Mesh2D-Bridging-Header.h */,
+				37E01387264295D70050C6AF /* Shader.metal */,
+				37E013892642962A0050C6AF /* Renderer.swift */,
+			);
+			path = Mesh2DShape;
+			sourceTree = "<group>";
+		};
+		37E01361264293010050C6AF /* Mesh2DShapeTests */ = {
+			isa = PBXGroup;
+			children = (
+				37E01362264293010050C6AF /* Mesh2DShapeTests.swift */,
+				37E01364264293010050C6AF /* Info.plist */,
+			);
+			path = Mesh2DShapeTests;
+			sourceTree = "<group>";
+		};
+		37E0136C264293010050C6AF /* Mesh2DShapeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				37E0136D264293010050C6AF /* Mesh2DShapeUITests.swift */,
+				37E0136F264293010050C6AF /* Info.plist */,
+			);
+			path = Mesh2DShapeUITests;
+			sourceTree = "<group>";
+		};
+		37E0137B264294740050C6AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37E013802642947D0050C6AF /* common.framework */,
+				37E0137C264294740050C6AF /* Metal.framework */,
+				37E0137D264294740050C6AF /* MetalKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37E0134B264292FE0050C6AF /* 3.5.Mesh2DShape */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37E01372264293010050C6AF /* Build configuration list for PBXNativeTarget "3.5.Mesh2DShape" */;
+			buildPhases = (
+				37E01348264292FE0050C6AF /* Sources */,
+				37E01349264292FE0050C6AF /* Frameworks */,
+				37E0134A264292FE0050C6AF /* Resources */,
+				37E013832642947E0050C6AF /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 3.5.Mesh2DShape;
+			productName = Mesh2DShape;
+			productReference = 37E0134C264292FE0050C6AF /* 3.5.Mesh2DShape.app */;
+			productType = "com.apple.product-type.application";
+		};
+		37E0135D264293010050C6AF /* Mesh2DShapeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37E01375264293010050C6AF /* Build configuration list for PBXNativeTarget "Mesh2DShapeTests" */;
+			buildPhases = (
+				37E0135A264293010050C6AF /* Sources */,
+				37E0135B264293010050C6AF /* Frameworks */,
+				37E0135C264293010050C6AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37E01360264293010050C6AF /* PBXTargetDependency */,
+			);
+			name = Mesh2DShapeTests;
+			productName = Mesh2DShapeTests;
+			productReference = 37E0135E264293010050C6AF /* Mesh2DShapeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		37E01368264293010050C6AF /* Mesh2DShapeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37E01378264293010050C6AF /* Build configuration list for PBXNativeTarget "Mesh2DShapeUITests" */;
+			buildPhases = (
+				37E01365264293010050C6AF /* Sources */,
+				37E01366264293010050C6AF /* Frameworks */,
+				37E01367264293010050C6AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37E0136B264293010050C6AF /* PBXTargetDependency */,
+			);
+			name = Mesh2DShapeUITests;
+			productName = Mesh2DShapeUITests;
+			productReference = 37E01369264293010050C6AF /* Mesh2DShapeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		37E01344264292FE0050C6AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					37E0134B264292FE0050C6AF = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					37E0135D264293010050C6AF = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 37E0134B264292FE0050C6AF;
+					};
+					37E01368264293010050C6AF = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 37E0134B264292FE0050C6AF;
+					};
+				};
+			};
+			buildConfigurationList = 37E01347264292FE0050C6AF /* Build configuration list for PBXProject "3.5.Mesh2DShape" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 37E01343264292FE0050C6AF;
+			productRefGroup = 37E0134D264292FE0050C6AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37E0134B264292FE0050C6AF /* 3.5.Mesh2DShape */,
+				37E0135D264293010050C6AF /* Mesh2DShapeTests */,
+				37E01368264293010050C6AF /* Mesh2DShapeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		37E0134A264292FE0050C6AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37E01354264293010050C6AF /* Assets.xcassets in Resources */,
+				37E01357264293010050C6AF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37E0135C264293010050C6AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37E01367264293010050C6AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		37E01348264292FE0050C6AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37E0138A2642962A0050C6AF /* Renderer.swift in Sources */,
+				37E01388264295E50050C6AF /* Shader.metal in Sources */,
+				37E01352264292FE0050C6AF /* ViewController.swift in Sources */,
+				37E01350264292FE0050C6AF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37E0135A264293010050C6AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37E01363264293010050C6AF /* Mesh2DShapeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37E01365264293010050C6AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37E0136E264293010050C6AF /* Mesh2DShapeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		37E01360264293010050C6AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37E0134B264292FE0050C6AF /* 3.5.Mesh2DShape */;
+			targetProxy = 37E0135F264293010050C6AF /* PBXContainerItemProxy */;
+		};
+		37E0136B264293010050C6AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37E0134B264292FE0050C6AF /* 3.5.Mesh2DShape */;
+			targetProxy = 37E0136A264293010050C6AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		37E01355264293010050C6AF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37E01356264293010050C6AF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		37E01370264293010050C6AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		37E01371264293010050C6AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		37E01373264293010050C6AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Mesh2DShape/Mesh2DShape.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Mesh2DShape/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.Mesh2DShape;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mesh2DShape/Mesh2D-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		37E01374264293010050C6AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Mesh2DShape/Mesh2DShape.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Mesh2DShape/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.Mesh2DShape;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mesh2DShape/Mesh2D-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		37E01376264293010050C6AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = Mesh2DShapeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.Mesh2DShapeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mesh2DShape.app/Contents/MacOS/Mesh2DShape";
+			};
+			name = Debug;
+		};
+		37E01377264293010050C6AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = Mesh2DShapeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.Mesh2DShapeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mesh2DShape.app/Contents/MacOS/Mesh2DShape";
+			};
+			name = Release;
+		};
+		37E01379264293010050C6AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = Mesh2DShapeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.Mesh2DShapeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Mesh2DShape;
+			};
+			name = Debug;
+		};
+		37E0137A264293010050C6AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = Mesh2DShapeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.Mesh2DShapeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Mesh2DShape;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		37E01347264292FE0050C6AF /* Build configuration list for PBXProject "3.5.Mesh2DShape" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37E01370264293010050C6AF /* Debug */,
+				37E01371264293010050C6AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37E01372264293010050C6AF /* Build configuration list for PBXNativeTarget "3.5.Mesh2DShape" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37E01373264293010050C6AF /* Debug */,
+				37E01374264293010050C6AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37E01375264293010050C6AF /* Build configuration list for PBXNativeTarget "Mesh2DShapeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37E01376264293010050C6AF /* Debug */,
+				37E01377264293010050C6AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37E01378264293010050C6AF /* Build configuration list for PBXNativeTarget "Mesh2DShapeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37E01379264293010050C6AF /* Debug */,
+				37E0137A264293010050C6AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 37E01344264292FE0050C6AF /* Project object */;
+}

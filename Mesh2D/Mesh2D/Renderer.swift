@@ -79,9 +79,9 @@ class Renderer: NSObject {
 //                                      device: device,
 //                                      rawPtr: points,
 //                                      count: points.count,
-//                                      lineSegments: 40,
-//                                      radii: 0.08,
-//                                      radialSegments: 60,
+//                                      lineSegments: 20,
+//                                      radii: 0.02,
+//                                      radialSegments: 10,
 //                                      geometryType: .triangles,
 //                                      inwardNormals: false)
         
@@ -173,7 +173,7 @@ extension Renderer: MTKViewDelegate {
                 renderEncoder.setFragmentBytes($0, length: MemoryLayout<vector_float3>.stride, index: 0)
             }
             renderEncoder.drawMesh(quadCurveMesh)
-            
+
             // draw cubic beizer
             renderEncoder.setVertexMesh(cubicBeizerMesh, index: Int(VertexInputIndexPosition.rawValue))
             uniform.modelMatrix = matrix4x4_rotation(Float.pi * Float(i * 3 + 2) / 60.0, vector_float3(0.0, 1.0, 0.0))
