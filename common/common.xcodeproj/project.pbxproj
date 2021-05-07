@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3706D2EB26043EED000568B4 /* MetalMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3706D2EA26043EED000568B4 /* MetalMesh.swift */; };
 		3706D2EF2604548A000568B4 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3706D2EE2604548A000568B4 /* Errors.swift */; };
+		372157FB2643F66300BD8D1D /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372157FA2643F66300BD8D1D /* Geometry.swift */; };
+		372157FD2644030700BD8D1D /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372157FC2644030700BD8D1D /* Transform.swift */; };
+		372157FF26440FC200BD8D1D /* Mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372157FE26440FC200BD8D1D /* Mesh.swift */; };
 		3721927725F9CB9600558BBB /* MetalBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3721927625F9CB9600558BBB /* MetalBuffer.swift */; };
 		372B5422260A0BEE00EAE90C /* skybox in Resources */ = {isa = PBXBuildFile; fileRef = 372B5421260A0BEE00EAE90C /* skybox */; };
 		372B543A260A1F2D00EAE90C /* TextureCubeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372B5439260A1F2D00EAE90C /* TextureCubeLoader.swift */; };
@@ -64,6 +67,9 @@
 /* Begin PBXFileReference section */
 		3706D2EA26043EED000568B4 /* MetalMesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalMesh.swift; sourceTree = "<group>"; };
 		3706D2EE2604548A000568B4 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		372157FA2643F66300BD8D1D /* Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
+		372157FC2644030700BD8D1D /* Transform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transform.swift; sourceTree = "<group>"; };
+		372157FE26440FC200BD8D1D /* Mesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mesh.swift; sourceTree = "<group>"; };
 		3721927625F9CB9600558BBB /* MetalBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalBuffer.swift; sourceTree = "<group>"; };
 		372B5421260A0BEE00EAE90C /* skybox */ = {isa = PBXFileReference; lastKnownFileType = folder; path = skybox; sourceTree = "<group>"; };
 		372B5439260A1F2D00EAE90C /* TextureCubeLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureCubeLoader.swift; sourceTree = "<group>"; };
@@ -198,6 +204,9 @@
 				37473FAA26365284005E5A8D /* SimpleCamera.m */,
 				37473FB026368779005E5A8D /* JsonMesh.swift */,
 				3747401C2637AE41005E5A8D /* RenderPipelineBuilder.swift */,
+				372157FA2643F66300BD8D1D /* Geometry.swift */,
+				372157FC2644030700BD8D1D /* Transform.swift */,
+				372157FE26440FC200BD8D1D /* Mesh.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -338,7 +347,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				372157FD2644030700BD8D1D /* Transform.swift in Sources */,
 				37473F8D2635AB16005E5A8D /* ForwardCameraController.m in Sources */,
+				372157FB2643F66300BD8D1D /* Geometry.swift in Sources */,
 				37473F7826357291005E5A8D /* ModelIOMesh.swift in Sources */,
 				37C65A7C2633FFA2008F4C08 /* GeometryMesh+Torus.swift in Sources */,
 				37674A9E263A321000296FAC /* RenderPipeline.swift in Sources */,
@@ -356,6 +367,7 @@
 				37DD618725F38769005D7A42 /* AAPLMathUtilities.m in Sources */,
 				372B543A260A1F2D00EAE90C /* TextureCubeLoader.swift in Sources */,
 				3747401D2637AE41005E5A8D /* RenderPipelineBuilder.swift in Sources */,
+				372157FF26440FC200BD8D1D /* Mesh.swift in Sources */,
 				3706D2EB26043EED000568B4 /* MetalMesh.swift in Sources */,
 				3721927725F9CB9600558BBB /* MetalBuffer.swift in Sources */,
 			);

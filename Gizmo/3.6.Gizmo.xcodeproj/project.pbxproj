@@ -1,0 +1,645 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		372157BE2643DA9500BD8D1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372157BD2643DA9500BD8D1D /* AppDelegate.swift */; };
+		372157C02643DA9500BD8D1D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372157BF2643DA9500BD8D1D /* ViewController.swift */; };
+		372157C22643DA9700BD8D1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 372157C12643DA9700BD8D1D /* Assets.xcassets */; };
+		372157C52643DA9700BD8D1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372157C32643DA9700BD8D1D /* Main.storyboard */; };
+		372157D12643DA9700BD8D1D /* GizmoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372157D02643DA9700BD8D1D /* GizmoTests.swift */; };
+		372157DC2643DA9700BD8D1D /* GizmoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372157DB2643DA9700BD8D1D /* GizmoUITests.swift */; };
+		372157EB2643DAC400BD8D1D /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372157EA2643DAC400BD8D1D /* common.framework */; };
+		372157EC2643DAC400BD8D1D /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 372157EA2643DAC400BD8D1D /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		372157F02643DACB00BD8D1D /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372157EE2643DACB00BD8D1D /* Metal.framework */; };
+		372157F12643DACB00BD8D1D /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372157EF2643DACB00BD8D1D /* MetalKit.framework */; };
+		372157F72643DC4300BD8D1D /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 372157F62643DC4300BD8D1D /* Shader.metal */; };
+		372157F92643DC7200BD8D1D /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372157F82643DC7200BD8D1D /* Renderer.swift */; };
+		372158012644BC9F00BD8D1D /* Gizmo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372158002644BC9F00BD8D1D /* Gizmo.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		372157CD2643DA9700BD8D1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 372157B22643DA9500BD8D1D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 372157B92643DA9500BD8D1D;
+			remoteInfo = Gizmo;
+		};
+		372157D82643DA9700BD8D1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 372157B22643DA9500BD8D1D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 372157B92643DA9500BD8D1D;
+			remoteInfo = Gizmo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		372157ED2643DAC400BD8D1D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				372157EC2643DAC400BD8D1D /* common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		372157BA2643DA9500BD8D1D /* 3.6.Gizmo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3.6.Gizmo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		372157BD2643DA9500BD8D1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		372157BF2643DA9500BD8D1D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		372157C12643DA9700BD8D1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		372157C42643DA9700BD8D1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		372157C62643DA9700BD8D1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		372157C72643DA9700BD8D1D /* Gizmo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Gizmo.entitlements; sourceTree = "<group>"; };
+		372157CC2643DA9700BD8D1D /* GizmoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GizmoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		372157D02643DA9700BD8D1D /* GizmoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GizmoTests.swift; sourceTree = "<group>"; };
+		372157D22643DA9700BD8D1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		372157D72643DA9700BD8D1D /* GizmoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GizmoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		372157DB2643DA9700BD8D1D /* GizmoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GizmoUITests.swift; sourceTree = "<group>"; };
+		372157DD2643DA9700BD8D1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		372157EA2643DAC400BD8D1D /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		372157EE2643DACB00BD8D1D /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		372157EF2643DACB00BD8D1D /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		372157F22643DB0300BD8D1D /* ShapeType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShapeType.h; sourceTree = "<group>"; };
+		372157F32643DB3400BD8D1D /* Gizmo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gizmo-Bridging-Header.h"; sourceTree = "<group>"; };
+		372157F62643DC4300BD8D1D /* Shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader.metal; sourceTree = "<group>"; };
+		372157F82643DC7200BD8D1D /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		372158002644BC9F00BD8D1D /* Gizmo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gizmo.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		372157B72643DA9500BD8D1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372157F12643DACB00BD8D1D /* MetalKit.framework in Frameworks */,
+				372157F02643DACB00BD8D1D /* Metal.framework in Frameworks */,
+				372157EB2643DAC400BD8D1D /* common.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372157C92643DA9700BD8D1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372157D42643DA9700BD8D1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		372157B12643DA9500BD8D1D = {
+			isa = PBXGroup;
+			children = (
+				372157BC2643DA9500BD8D1D /* Gizmo */,
+				372157CF2643DA9700BD8D1D /* GizmoTests */,
+				372157DA2643DA9700BD8D1D /* GizmoUITests */,
+				372157BB2643DA9500BD8D1D /* Products */,
+				372157E92643DAC400BD8D1D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		372157BB2643DA9500BD8D1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				372157BA2643DA9500BD8D1D /* 3.6.Gizmo.app */,
+				372157CC2643DA9700BD8D1D /* GizmoTests.xctest */,
+				372157D72643DA9700BD8D1D /* GizmoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		372157BC2643DA9500BD8D1D /* Gizmo */ = {
+			isa = PBXGroup;
+			children = (
+				372157BD2643DA9500BD8D1D /* AppDelegate.swift */,
+				372157BF2643DA9500BD8D1D /* ViewController.swift */,
+				372157C12643DA9700BD8D1D /* Assets.xcassets */,
+				372157C32643DA9700BD8D1D /* Main.storyboard */,
+				372157C62643DA9700BD8D1D /* Info.plist */,
+				372157C72643DA9700BD8D1D /* Gizmo.entitlements */,
+				372157F22643DB0300BD8D1D /* ShapeType.h */,
+				372157F32643DB3400BD8D1D /* Gizmo-Bridging-Header.h */,
+				372157F62643DC4300BD8D1D /* Shader.metal */,
+				372157F82643DC7200BD8D1D /* Renderer.swift */,
+				372158002644BC9F00BD8D1D /* Gizmo.swift */,
+			);
+			path = Gizmo;
+			sourceTree = "<group>";
+		};
+		372157CF2643DA9700BD8D1D /* GizmoTests */ = {
+			isa = PBXGroup;
+			children = (
+				372157D02643DA9700BD8D1D /* GizmoTests.swift */,
+				372157D22643DA9700BD8D1D /* Info.plist */,
+			);
+			path = GizmoTests;
+			sourceTree = "<group>";
+		};
+		372157DA2643DA9700BD8D1D /* GizmoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				372157DB2643DA9700BD8D1D /* GizmoUITests.swift */,
+				372157DD2643DA9700BD8D1D /* Info.plist */,
+			);
+			path = GizmoUITests;
+			sourceTree = "<group>";
+		};
+		372157E92643DAC400BD8D1D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				372157EE2643DACB00BD8D1D /* Metal.framework */,
+				372157EF2643DACB00BD8D1D /* MetalKit.framework */,
+				372157EA2643DAC400BD8D1D /* common.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		372157B92643DA9500BD8D1D /* 3.6.Gizmo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 372157E02643DA9700BD8D1D /* Build configuration list for PBXNativeTarget "3.6.Gizmo" */;
+			buildPhases = (
+				372157B62643DA9500BD8D1D /* Sources */,
+				372157B72643DA9500BD8D1D /* Frameworks */,
+				372157B82643DA9500BD8D1D /* Resources */,
+				372157ED2643DAC400BD8D1D /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 3.6.Gizmo;
+			productName = Gizmo;
+			productReference = 372157BA2643DA9500BD8D1D /* 3.6.Gizmo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		372157CB2643DA9700BD8D1D /* GizmoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 372157E32643DA9700BD8D1D /* Build configuration list for PBXNativeTarget "GizmoTests" */;
+			buildPhases = (
+				372157C82643DA9700BD8D1D /* Sources */,
+				372157C92643DA9700BD8D1D /* Frameworks */,
+				372157CA2643DA9700BD8D1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				372157CE2643DA9700BD8D1D /* PBXTargetDependency */,
+			);
+			name = GizmoTests;
+			productName = GizmoTests;
+			productReference = 372157CC2643DA9700BD8D1D /* GizmoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		372157D62643DA9700BD8D1D /* GizmoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 372157E62643DA9700BD8D1D /* Build configuration list for PBXNativeTarget "GizmoUITests" */;
+			buildPhases = (
+				372157D32643DA9700BD8D1D /* Sources */,
+				372157D42643DA9700BD8D1D /* Frameworks */,
+				372157D52643DA9700BD8D1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				372157D92643DA9700BD8D1D /* PBXTargetDependency */,
+			);
+			name = GizmoUITests;
+			productName = GizmoUITests;
+			productReference = 372157D72643DA9700BD8D1D /* GizmoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		372157B22643DA9500BD8D1D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					372157B92643DA9500BD8D1D = {
+						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
+					};
+					372157CB2643DA9700BD8D1D = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 372157B92643DA9500BD8D1D;
+					};
+					372157D62643DA9700BD8D1D = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 372157B92643DA9500BD8D1D;
+					};
+				};
+			};
+			buildConfigurationList = 372157B52643DA9500BD8D1D /* Build configuration list for PBXProject "3.6.Gizmo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 372157B12643DA9500BD8D1D;
+			productRefGroup = 372157BB2643DA9500BD8D1D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				372157B92643DA9500BD8D1D /* 3.6.Gizmo */,
+				372157CB2643DA9700BD8D1D /* GizmoTests */,
+				372157D62643DA9700BD8D1D /* GizmoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		372157B82643DA9500BD8D1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372157C22643DA9700BD8D1D /* Assets.xcassets in Resources */,
+				372157C52643DA9700BD8D1D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372157CA2643DA9700BD8D1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372157D52643DA9700BD8D1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		372157B62643DA9500BD8D1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372157F92643DC7200BD8D1D /* Renderer.swift in Sources */,
+				372158012644BC9F00BD8D1D /* Gizmo.swift in Sources */,
+				372157F72643DC4300BD8D1D /* Shader.metal in Sources */,
+				372157C02643DA9500BD8D1D /* ViewController.swift in Sources */,
+				372157BE2643DA9500BD8D1D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372157C82643DA9700BD8D1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372157D12643DA9700BD8D1D /* GizmoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372157D32643DA9700BD8D1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372157DC2643DA9700BD8D1D /* GizmoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		372157CE2643DA9700BD8D1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 372157B92643DA9500BD8D1D /* 3.6.Gizmo */;
+			targetProxy = 372157CD2643DA9700BD8D1D /* PBXContainerItemProxy */;
+		};
+		372157D92643DA9700BD8D1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 372157B92643DA9500BD8D1D /* 3.6.Gizmo */;
+			targetProxy = 372157D82643DA9700BD8D1D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		372157C32643DA9700BD8D1D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				372157C42643DA9700BD8D1D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		372157DE2643DA9700BD8D1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		372157DF2643DA9700BD8D1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		372157E12643DA9700BD8D1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Gizmo/Gizmo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Gizmo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.Gizmo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Gizmo/Gizmo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		372157E22643DA9700BD8D1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Gizmo/Gizmo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Gizmo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.Gizmo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Gizmo/Gizmo-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		372157E42643DA9700BD8D1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = GizmoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.GizmoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gizmo.app/Contents/MacOS/Gizmo";
+			};
+			name = Debug;
+		};
+		372157E52643DA9700BD8D1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = GizmoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.GizmoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gizmo.app/Contents/MacOS/Gizmo";
+			};
+			name = Release;
+		};
+		372157E72643DA9700BD8D1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = GizmoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.GizmoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Gizmo;
+			};
+			name = Debug;
+		};
+		372157E82643DA9700BD8D1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4X75RZ9C85;
+				INFOPLIST_FILE = GizmoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.suzp1984.GizmoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Gizmo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		372157B52643DA9500BD8D1D /* Build configuration list for PBXProject "3.6.Gizmo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				372157DE2643DA9700BD8D1D /* Debug */,
+				372157DF2643DA9700BD8D1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		372157E02643DA9700BD8D1D /* Build configuration list for PBXNativeTarget "3.6.Gizmo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				372157E12643DA9700BD8D1D /* Debug */,
+				372157E22643DA9700BD8D1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		372157E32643DA9700BD8D1D /* Build configuration list for PBXNativeTarget "GizmoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				372157E42643DA9700BD8D1D /* Debug */,
+				372157E52643DA9700BD8D1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		372157E62643DA9700BD8D1D /* Build configuration list for PBXNativeTarget "GizmoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				372157E72643DA9700BD8D1D /* Debug */,
+				372157E82643DA9700BD8D1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 372157B22643DA9500BD8D1D /* Project object */;
+}

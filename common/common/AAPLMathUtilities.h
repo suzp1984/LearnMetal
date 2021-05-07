@@ -200,7 +200,7 @@ quaternion_float AAPL_SIMD_OVERLOAD quaternion(vector_float3 v, float w);
 quaternion_float AAPL_SIMD_OVERLOAD quaternion(float radians, float x, float y, float z);
 
 /// Constructs a unit-norm quaternion that represents rotation by the given angle about the specified axis.
-quaternion_float AAPL_SIMD_OVERLOAD quaternion(float radians, vector_float3 axis);
+//quaternion_float AAPL_SIMD_OVERLOAD quaternion_from_radians_vector(float radians, vector_float3 axis);
 
 /// Constructs a unit-norm quaternion from the given matrix.
 /// The result is undefined if the matrix does not represent a pure rotation.
