@@ -26,11 +26,11 @@ public class JsonMesh: NSObject {
         let jsonData = try Data(contentsOf: jsonURL, options: .mappedIfSafe)
         let jsonResult = try JSONSerialization.jsonObject(with: jsonData, options: .mutableLeaves)
         
-        let dict = jsonResult as! Dictionary<String, Array<NSNumber>>
-
-        let positions = dict["position"]!
-        let uvs = dict["uv"]!
-        let normals = dict["normal"]!
+        let dict = jsonResult as! Dictionary<String, AnyObject>
+        
+        let positions = dict["position"] as! Array<NSNumber>
+        let uvs = dict["uv"] as! Array<NSNumber>
+        let normals = dict["normal"] as! Array<NSNumber>
                 
         let textureLoader = MTKTextureLoader(device: device)
         let colorTexture = try textureLoader.newTexture(URL: textureURL, options: nil)
