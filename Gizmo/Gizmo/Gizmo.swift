@@ -124,7 +124,7 @@ class Gizmo : Transform {
         
         let xAxisArrowMesh = GizmoMesh(geometry: cone, material: material)
         xAxisArrowMesh.position = vector_float3(0.5, 0.0, 0.0)
-        xAxisArrowMesh.quaternionVect = quaternion_from_axis_angle(vector_float3(0.0, 0.0, 1.0), -Float.pi / 2.0)
+        xAxisArrowMesh.quaternionVect = quaternion_from_axis_angle(vector_float3(0.0, 0.0, 1.0), Float.pi / 2.0)
         xAxisArrowMesh.scale = vector_float3(0.4, 0.1, 0.4)
         
         self.add(child: xAxisArrowMesh)
@@ -149,13 +149,13 @@ class Gizmo : Transform {
 
         let zAxisMesh = GizmoMesh(geometry: cylinder, material: material)
         zAxisMesh.position = vector_float3(0.0, 0.0, 0.25)
-        zAxisMesh.quaternionVect = quaternion_from_axis_angle(vector_float3(1.0, 0.0, 0.0), -Float.pi / 2.0)
+        zAxisMesh.quaternionVect = quaternion_from_axis_angle(vector_float3(1.0, 0.0, 0.0), Float.pi / 2.0)
         zAxisMesh.scale = vector_float3(0.1, 0.5, 0.1)
         self.add(child: zAxisMesh)
         
         let zAxisArrowMesh = GizmoMesh(geometry: cone, material: material)
         zAxisArrowMesh.position = vector_float3(0.0, 0.0, 0.5)
-        zAxisArrowMesh.quaternionVect = quaternion_from_axis_angle(vector_float3(1.0, 0.0, 0.0), Float.pi / 2.0)
+        zAxisArrowMesh.quaternionVect = quaternion_from_axis_angle(vector_float3(1.0, 0.0, 0.0), -Float.pi / 2.0)
         zAxisArrowMesh.scale = vector_float3(0.4, 0.1, 0.4)
         self.add(child: zAxisArrowMesh)
         

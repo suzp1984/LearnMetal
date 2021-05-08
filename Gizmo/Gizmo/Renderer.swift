@@ -35,6 +35,9 @@ class Renderer: NSObject {
         
         depthState = device.makeDepthStencilState(descriptor: depthDescriptor)!
         gizmo = Gizmo(device: device)
+//        gizmo.position = vector_float3(1.0, 0.0, 0.0)
+//        gizmo.quaternionVect = quaternion_from_axis_angle(vector_float3(1.0, 1.0, 1.0), Float.pi / 4.0)
+        gizmo.scale = vector_float3(1.5, 1.5, 1.5)
         
         let width = mtkView.frame.width
         let height = mtkView.frame.height

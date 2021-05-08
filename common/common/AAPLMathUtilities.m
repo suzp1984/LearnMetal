@@ -385,21 +385,17 @@ matrix_float4x4 AAPL_SIMD_OVERLOAD matrix_inverse_transpose(matrix_float4x4 m) {
     return matrix_invert(matrix_transpose(m));
 }
 
-quaternion_float AAPL_SIMD_OVERLOAD quaternion(float x, float y, float z, float w) {
-    return (quaternion_float){ x, y, z, w };
-}
-
 quaternion_float AAPL_SIMD_OVERLOAD quaternion(vector_float3 v, float w) {
     return (quaternion_float){ v.x, v.y, v.z, w };
 }
 
 quaternion_float AAPL_SIMD_OVERLOAD quaternion_identity() {
-    return quaternion(0, 0, 0, 1);
+    return quaternion((vector_float3){0, 0, 0}, 1);
 }
 
 quaternion_float AAPL_SIMD_OVERLOAD quaternion_from_axis_angle(vector_float3 axis, float radians) {
     float t = radians * 0.5;
-    return quaternion(axis.x * sinf(t), axis.y * sinf(t), axis.z * sinf(t), cosf(t));
+    return quaternion((vector_float3) {axis.x * sinf(t), axis.y * sinf(t), axis.z * sinf(t)}, cosf(t));
 }
 
 quaternion_float AAPL_SIMD_OVERLOAD quaternion_from_euler(vector_float3 euler) {
@@ -428,7 +424,7 @@ quaternion_float AAPL_SIMD_OVERLOAD quaternion(matrix_float3x3 m) {
     float y = sqrtf(1 - m00 + m11 - m22) * 0.5;
     float z = sqrtf(1 - m00 - m11 + m22) * 0.5;
     float w = sqrtf(1 + m00 + m11 + m22) * 0.5;
-    return quaternion(x, y, z, w);
+    return quaternion((vector_float3){x, y, z}, w);
 }
 
 quaternion_float AAPL_SIMD_OVERLOAD quaternion(matrix_float4x4 m) {
@@ -480,7 +476,7 @@ quaternion_float AAPL_SIMD_OVERLOAD quaternion_inverse(quaternion_float q) {
 }
 
 quaternion_float AAPL_SIMD_OVERLOAD quaternion_conjugate(quaternion_float q) {
-    return quaternion(-q.x, -q.y, -q.z, q.w);
+    return quaternion((vector_float3) {-q.x, -q.y, -q.z}, q.w);
 }
 
 quaternion_float AAPL_SIMD_OVERLOAD quaternion_multiply(quaternion_float q0, quaternion_float q1) {

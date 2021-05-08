@@ -68,18 +68,19 @@ open class Transform: NSObject {
         }
     }
     
-//    public func getModelMatrix() -> matrix_float4x4 {
-//        return modelMatrix
-//    }
-    
     public func forceCalculateModelMatrix() {
-        let mat = matrix_multiply(matrix4x4_translation(position),
+        // let translation to be the left-hand metal normlized space.
+        let mat = matrix_multiply(matrix4x4_translation(vector_float3(-position.x, position.y, -position.z)),
                                   matrix_multiply(matrix4x4_from_quaternion(quaternionVect), matrix4x4_scale(scale)))
         
         if parent != nil {
             modelMatrix = matrix_multiply(parent!.modelMatrix, mat)
         } else {
             modelMatrix = mat
+        }
+        
+        children.forEach {
+            $0.forceCalculateModelMatrix()
         }
     }
     

@@ -190,17 +190,8 @@ matrix_float4x4 AAPL_SIMD_OVERLOAD matrix_inverse_transpose(matrix_float4x4 m);
 /// Constructs an identity quaternion.
 quaternion_float AAPL_SIMD_OVERLOAD quaternion_identity(void);
 
-/// Constructs a quaternion of the form w + xi + yj + zk.
-quaternion_float AAPL_SIMD_OVERLOAD quaternion(float x, float y, float z, float w);
-
 /// Constructs a quaternion of the form w + v.x*i + v.y*j + v.z*k.
 quaternion_float AAPL_SIMD_OVERLOAD quaternion(vector_float3 v, float w);
-
-/// Constructs a unit-norm quaternion that represents rotation by the given angle about the axis (x, y, z).
-quaternion_float AAPL_SIMD_OVERLOAD quaternion(float radians, float x, float y, float z);
-
-/// Constructs a unit-norm quaternion that represents rotation by the given angle about the specified axis.
-//quaternion_float AAPL_SIMD_OVERLOAD quaternion_from_radians_vector(float radians, vector_float3 axis);
 
 /// Constructs a unit-norm quaternion from the given matrix.
 /// The result is undefined if the matrix does not represent a pure rotation.
