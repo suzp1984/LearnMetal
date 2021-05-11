@@ -35,3 +35,27 @@ extension MTKGeometry : Geometry {
     }
     
 }
+
+@objc
+public class BufferGeometry: NSObject {
+    private var buffer: MTLBuffer!
+    private var vertexCount: Int!
+    
+    public init(buffer: MTLBuffer, vertexCount: Int) {
+        self.buffer = buffer
+        self.vertexCount = vertexCount
+    }
+}
+
+@objc
+extension BufferGeometry : Geometry {
+    public func setVertexTo(_ renderEncoder: MTLRenderCommandEncoder, index: Int) {
+        renderEncoder.setVertexBuffer(buffer, offset: 0, index: index)
+    }
+    
+    public func drawTo(_ renderEncoder: MTLRenderCommandEncoder) {
+        renderEncoder.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: vertexCount)
+    }
+    
+    
+}

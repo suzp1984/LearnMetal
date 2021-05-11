@@ -14,6 +14,13 @@
 		376FC53B2646C2A800E799F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 376FC53A2646C2A800E799F7 /* main.m */; };
 		376FC5462646C2A800E799F7 /* SkinAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 376FC5452646C2A800E799F7 /* SkinAnimationTests.m */; };
 		376FC5512646C2A800E799F7 /* SkinAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 376FC5502646C2A800E799F7 /* SkinAnimationUITests.m */; };
+		379D917E2646CD4A00495391 /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379D917D2646CD4A00495391 /* common.framework */; };
+		379D917F2646CD4A00495391 /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 379D917D2646CD4A00495391 /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		379D91832646CD5200495391 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379D91812646CD5200495391 /* Metal.framework */; };
+		379D91842646CD5200495391 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379D91822646CD5200495391 /* MetalKit.framework */; };
+		379D91872646D2E900495391 /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 379D91862646D2E900495391 /* Shader.metal */; };
+		379D918A2646E1D700495391 /* Renderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 379D91892646E1D700495391 /* Renderer.m */; };
+		379D918F26477E5300495391 /* JsonAnimationMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 379D918E26477E5300495391 /* JsonAnimationMesh.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,8 +40,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		379D91802646CD4A00495391 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				379D917F2646CD4A00495391 /* common.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		376FC52B2646C2A500E799F7 /* SkinAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkinAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		376FC52B2646C2A500E799F7 /* 3.7.SkinAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3.7.SkinAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		376FC52E2646C2A500E799F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		376FC52F2646C2A500E799F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		376FC5312646C2A500E799F7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -50,6 +71,15 @@
 		376FC54C2646C2A800E799F7 /* SkinAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkinAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		376FC5502646C2A800E799F7 /* SkinAnimationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkinAnimationUITests.m; sourceTree = "<group>"; };
 		376FC5522646C2A800E799F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		379D917D2646CD4A00495391 /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		379D91812646CD5200495391 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		379D91822646CD5200495391 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		379D91852646D28A00495391 /* ShaderType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderType.h; sourceTree = "<group>"; };
+		379D91862646D2E900495391 /* Shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader.metal; sourceTree = "<group>"; };
+		379D91882646E1C400495391 /* Renderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
+		379D91892646E1D700495391 /* Renderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Renderer.m; sourceTree = "<group>"; };
+		379D918D26477D7200495391 /* JsonAnimationMesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JsonAnimationMesh.h; sourceTree = "<group>"; };
+		379D918E26477E5300495391 /* JsonAnimationMesh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JsonAnimationMesh.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +87,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				379D91842646CD5200495391 /* MetalKit.framework in Frameworks */,
+				379D91832646CD5200495391 /* Metal.framework in Frameworks */,
+				379D917E2646CD4A00495391 /* common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,13 +117,14 @@
 				376FC5442646C2A800E799F7 /* SkinAnimationTests */,
 				376FC54F2646C2A800E799F7 /* SkinAnimationUITests */,
 				376FC52C2646C2A500E799F7 /* Products */,
+				379D917C2646CD4A00495391 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		376FC52C2646C2A500E799F7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				376FC52B2646C2A500E799F7 /* SkinAnimation.app */,
+				376FC52B2646C2A500E799F7 /* 3.7.SkinAnimation.app */,
 				376FC5412646C2A800E799F7 /* SkinAnimationTests.xctest */,
 				376FC54C2646C2A800E799F7 /* SkinAnimationUITests.xctest */,
 			);
@@ -109,6 +143,12 @@
 				376FC5392646C2A800E799F7 /* Info.plist */,
 				376FC53A2646C2A800E799F7 /* main.m */,
 				376FC53C2646C2A800E799F7 /* SkinAnimation.entitlements */,
+				379D91852646D28A00495391 /* ShaderType.h */,
+				379D91862646D2E900495391 /* Shader.metal */,
+				379D91882646E1C400495391 /* Renderer.h */,
+				379D91892646E1D700495391 /* Renderer.m */,
+				379D918D26477D7200495391 /* JsonAnimationMesh.h */,
+				379D918E26477E5300495391 /* JsonAnimationMesh.m */,
 			);
 			path = SkinAnimation;
 			sourceTree = "<group>";
@@ -131,24 +171,35 @@
 			path = SkinAnimationUITests;
 			sourceTree = "<group>";
 		};
+		379D917C2646CD4A00495391 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				379D91812646CD5200495391 /* Metal.framework */,
+				379D91822646CD5200495391 /* MetalKit.framework */,
+				379D917D2646CD4A00495391 /* common.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		376FC52A2646C2A500E799F7 /* SkinAnimation */ = {
+		376FC52A2646C2A500E799F7 /* 3.7.SkinAnimation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 376FC5552646C2A800E799F7 /* Build configuration list for PBXNativeTarget "SkinAnimation" */;
+			buildConfigurationList = 376FC5552646C2A800E799F7 /* Build configuration list for PBXNativeTarget "3.7.SkinAnimation" */;
 			buildPhases = (
 				376FC5272646C2A500E799F7 /* Sources */,
 				376FC5282646C2A500E799F7 /* Frameworks */,
 				376FC5292646C2A500E799F7 /* Resources */,
+				379D91802646CD4A00495391 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SkinAnimation;
+			name = 3.7.SkinAnimation;
 			productName = SkinAnimation;
-			productReference = 376FC52B2646C2A500E799F7 /* SkinAnimation.app */;
+			productReference = 376FC52B2646C2A500E799F7 /* 3.7.SkinAnimation.app */;
 			productType = "com.apple.product-type.application";
 		};
 		376FC5402646C2A800E799F7 /* SkinAnimationTests */ = {
@@ -208,7 +259,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 376FC5262646C2A500E799F7 /* Build configuration list for PBXProject "SkinAnimation" */;
+			buildConfigurationList = 376FC5262646C2A500E799F7 /* Build configuration list for PBXProject "3.7.SkinAnimation" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -221,7 +272,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				376FC52A2646C2A500E799F7 /* SkinAnimation */,
+				376FC52A2646C2A500E799F7 /* 3.7.SkinAnimation */,
 				376FC5402646C2A800E799F7 /* SkinAnimationTests */,
 				376FC54B2646C2A800E799F7 /* SkinAnimationUITests */,
 			);
@@ -259,9 +310,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				379D91872646D2E900495391 /* Shader.metal in Sources */,
 				376FC5332646C2A500E799F7 /* ViewController.m in Sources */,
 				376FC53B2646C2A800E799F7 /* main.m in Sources */,
+				379D918A2646E1D700495391 /* Renderer.m in Sources */,
 				376FC5302646C2A500E799F7 /* AppDelegate.m in Sources */,
+				379D918F26477E5300495391 /* JsonAnimationMesh.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,12 +340,12 @@
 /* Begin PBXTargetDependency section */
 		376FC5432646C2A800E799F7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 376FC52A2646C2A500E799F7 /* SkinAnimation */;
+			target = 376FC52A2646C2A500E799F7 /* 3.7.SkinAnimation */;
 			targetProxy = 376FC5422646C2A800E799F7 /* PBXContainerItemProxy */;
 		};
 		376FC54E2646C2A800E799F7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 376FC52A2646C2A500E799F7 /* SkinAnimation */;
+			target = 376FC52A2646C2A500E799F7 /* 3.7.SkinAnimation */;
 			targetProxy = 376FC54D2646C2A800E799F7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -538,7 +592,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		376FC5262646C2A500E799F7 /* Build configuration list for PBXProject "SkinAnimation" */ = {
+		376FC5262646C2A500E799F7 /* Build configuration list for PBXProject "3.7.SkinAnimation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				376FC5532646C2A800E799F7 /* Debug */,
@@ -547,7 +601,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		376FC5552646C2A800E799F7 /* Build configuration list for PBXNativeTarget "SkinAnimation" */ = {
+		376FC5552646C2A800E799F7 /* Build configuration list for PBXNativeTarget "3.7.SkinAnimation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				376FC5562646C2A800E799F7 /* Debug */,
