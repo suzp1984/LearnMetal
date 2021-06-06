@@ -43,6 +43,7 @@
 		37951FC92610259C00628968 /* rock in Resources */ = {isa = PBXBuildFile; fileRef = 37951FC82610259C00628968 /* rock */; };
 		37951FDB2610313B00628968 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37951FDA2610313B00628968 /* Bundle.swift */; };
 		379526FD262149B400628968 /* backpack in Resources */ = {isa = PBXBuildFile; fileRef = 379526FC262149B400628968 /* backpack */; };
+		379D91E0265537EC00495391 /* usdz in Resources */ = {isa = PBXBuildFile; fileRef = 379D91DF265537EC00495391 /* usdz */; };
 		37C36D1926293ACD008586E7 /* rusted_iron in Resources */ = {isa = PBXBuildFile; fileRef = 37C36D1826293ACD008586E7 /* rusted_iron */; };
 		37C65A7C2633FFA2008F4C08 /* GeometryMesh+Torus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C65A7B2633FFA2008F4C08 /* GeometryMesh+Torus.swift */; };
 		37DD617325F38714005D7A42 /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DD616925F38714005D7A42 /* common.framework */; };
@@ -102,6 +103,7 @@
 		37951FC82610259C00628968 /* rock */ = {isa = PBXFileReference; lastKnownFileType = folder; path = rock; sourceTree = "<group>"; };
 		37951FDA2610313B00628968 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		379526FC262149B400628968 /* backpack */ = {isa = PBXFileReference; lastKnownFileType = folder; path = backpack; sourceTree = "<group>"; };
+		379D91DF265537EC00495391 /* usdz */ = {isa = PBXFileReference; lastKnownFileType = folder; path = usdz; sourceTree = "<group>"; };
 		37C36D1826293ACD008586E7 /* rusted_iron */ = {isa = PBXFileReference; lastKnownFileType = folder; path = rusted_iron; sourceTree = "<group>"; };
 		37C65A7B2633FFA2008F4C08 /* GeometryMesh+Torus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GeometryMesh+Torus.swift"; sourceTree = "<group>"; };
 		37DD616925F38714005D7A42 /* common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				376FC55E2646C39900E799F7 /* snout */,
+				379D91DF265537EC00495391 /* usdz */,
 				37473FB526368E62005E5A8D /* fox */,
 				3789FD8C262E78A900D9F85B /* wall */,
 				3789FD88262E789700D9F85B /* plastic */,
@@ -321,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37473FB626368E62005E5A8D /* fox in Resources */,
+				379D91E0265537EC00495391 /* usdz in Resources */,
 				3789FD81262E787000D9F85B /* gold in Resources */,
 				37DD618D25F38790005D7A42 /* Assets.xcassets in Resources */,
 				3789FD89262E789700D9F85B /* plastic in Resources */,

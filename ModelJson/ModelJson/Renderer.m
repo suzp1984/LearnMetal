@@ -46,8 +46,6 @@
         depthStencilDesc.depthCompareFunction = MTLCompareFunctionLess;
         depthStencilDesc.depthWriteEnabled = YES;
         _depthState = [device newDepthStencilStateWithDescriptor:depthStencilDesc];
-                
-        NSAssert([MDLAsset canImportFileExtension:@"obj"], @"MDL Asset can not import obj file");
         
         MTLVertexDescriptor *mtlVertexDescriptor = [[MTLVertexDescriptor alloc] init];
         // position

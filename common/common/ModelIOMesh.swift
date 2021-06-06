@@ -28,6 +28,8 @@ public class ModelIOMesh: NSObject {
                 mtlVertexDescriptor: MTLVertexDescriptor,
                 attributeMap: [Int : String]) throws {
         
+        super.init()
+        
         // model io vertex descriptor
         let mdlVertexDescriptor = MTKModelIOVertexDescriptorFromMetal(mtlVertexDescriptor)
         for attr in attributeMap {
@@ -45,6 +47,11 @@ public class ModelIOMesh: NSObject {
         
         for i in 0..<mdlAsset.count {
             guard let mdlObject = mdlAsset.object(at: i) as? MDLMesh else {
+                let object = mdlAsset.object(at: i)
+                
+                NSLog("name: \(object.name)")
+                parseMDLObject(object)
+                
                 continue
             }
             
@@ -92,6 +99,19 @@ public class ModelIOMesh: NSObject {
         }
         
         mtkMesh = try! MTKMesh(mesh: mdlMesh!, device: device)
+    }
+    
+    private func parseMDLObject(_ object: MDLObject) {
+        for i in 0..<object.children.count {
+            let o = object.children[i]
+            NSLog("\(o.name)")
+            parseMDLObject(o)
+        }
+//        object.children.objects.forEach {
+//            NSLog("\($0.name)")
+//            parseMDLObject($0)
+//        }
+        
     }
     
     
