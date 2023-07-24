@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreGraphics
 
 @objc
 public class ImageUtils: NSObject {
