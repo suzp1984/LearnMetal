@@ -8,195 +8,195 @@
       location = "group:common/common.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/HelloWindow/1.1.HelloWindow.xcodeproj">
+      location = "group:HelloWindow/1.1.HelloWindow.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/HelloTriangle/1.2.HelloTriangle.xcodeproj">
+      location = "group:HelloTriangle/1.2.HelloTriangle.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/Uniforms/1.3.Uniforms.xcodeproj">
+      location = "group:Uniforms/1.3.Uniforms.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/Texture/1.4.Texture.xcodeproj">
+      location = "group:Texture/1.4.Texture.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/TextureMix/1.5.TextureMix.xcodeproj">
+      location = "group:TextureMix/1.5.TextureMix.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/mvp/1.6.mvp.xcodeproj">
+      location = "group:mvp/1.6.mvp.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/IndexedElements/1.7.IndexedElements.xcodeproj">
+      location = "group:IndexedElements/1.7.IndexedElements.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/RotatingCube/1.8.RotatingCube.xcodeproj">
+      location = "group:RotatingCube/1.8.RotatingCube.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/MultipleDraw/1.9.MultipleDrawByIndirectCmdBuf.xcodeproj">
+      location = "group:MultipleDraw/1.9.MultipleDrawByIndirectCmdBuf.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/MultipleDrawByInstances/1.10.MultipleDrawByInstances.xcodeproj">
+      location = "group:MultipleDrawByInstances/1.10.MultipleDrawByInstances.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/DrawTwoObjectsByOneEncoder/1.11.1.DrawTwoObjectsByOneEncoder.xcodeproj">
+      location = "group:DrawTwoObjectsByOneEncoder/1.11.1.DrawTwoObjectsByOneEncoder.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/DrawTwoObjects/1.11.2.DrawTwoObjects.xcodeproj">
+      location = "group:DrawTwoObjects/1.11.2.DrawTwoObjects.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/Camera/1.12.Camera.xcodeproj">
+      location = "group:Camera/1.12.Camera.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/Colors/2.1.Colors.xcodeproj">
+      location = "group:Colors/2.1.Colors.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/DiffuseLighting/2.2.DiffuseLighting.xcodeproj">
+      location = "group:DiffuseLighting/2.2.DiffuseLighting.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/SpecularLighting/2.3.SpecularLighting.xcodeproj">
+      location = "group:SpecularLighting/2.3.SpecularLighting.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/Materials/2.4.Materials.xcodeproj">
+      location = "group:Materials/2.4.Materials.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/DiffuseMap/2.5.DiffuseMap.xcodeproj">
+      location = "group:DiffuseMap/2.5.DiffuseMap.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/SpecularMap/2.6.SpecularMap.xcodeproj">
+      location = "group:SpecularMap/2.6.SpecularMap.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/EmissionMap/2.7.EmissionMap.xcodeproj">
+      location = "group:EmissionMap/2.7.EmissionMap.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/DirectionalLight/2.8.DirectionalLight.xcodeproj">
+      location = "group:DirectionalLight/2.8.DirectionalLight.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/PointLight/2.9.PointLight.xcodeproj">
+      location = "group:PointLight/2.9.PointLight.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/SpotLight/2.10.SpotLight.xcodeproj">
+      location = "group:SpotLight/2.10.SpotLight.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/SpotLightSoft/2.11.SpotLightSoft.xcodeproj">
+      location = "group:SpotLightSoft/2.11.SpotLightSoft.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/MultipleLight/2.12.MultipleLight.xcodeproj">
+      location = "group:MultipleLight/2.12.MultipleLight.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/ModelLoadingObj/3.1.ModelLoadingObj.xcodeproj">
+      location = "group:ModelLoadingObj/3.1.ModelLoadingObj.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/Mesh/3.2.Mesh.xcodeproj">
+      location = "group:Mesh/3.2.Mesh.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/Mesh2D/3.3.Mesh2D.xcodeproj">
+      location = "group:Mesh2D/3.3.Mesh2D.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/ModelJson/3.4.ModelJson.xcodeproj">
+      location = "group:ModelJson/3.4.ModelJson.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/Mesh2DShape/3.5.Mesh2DShape.xcodeproj">
+      location = "group:Mesh2DShape/3.5.Mesh2DShape.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/Gizmo/3.6.Gizmo.xcodeproj">
+      location = "group:Gizmo/3.6.Gizmo.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/SkinAnimation/3.7.SkinAnimation.xcodeproj">
+      location = "group:SkinAnimation/3.7.SkinAnimation.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/DepthTesting/4.1.DepthTesting.xcodeproj">
+      location = "group:DepthTesting/4.1.DepthTesting.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/StencilTesting/4.2.StencilTesting.xcodeproj">
+      location = "group:StencilTesting/4.2.StencilTesting.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/BlendingDiscard/4.3.BlendingDiscard.xcodeproj">
+      location = "group:BlendingDiscard/4.3.BlendingDiscard.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/BlendingSorted/4.4.BlendingSorted.xcodeproj">
+      location = "group:BlendingSorted/4.4.BlendingSorted.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/FaceCulling/4.5.FaceCulling.xcodeproj">
+      location = "group:FaceCulling/4.5.FaceCulling.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/FrameBuffers/4.6.FrameBuffers.xcodeproj">
+      location = "group:FrameBuffers/4.6.FrameBuffers.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/CubeMaps/4.7.CubeMaps.xcodeproj">
+      location = "group:CubeMaps/4.7.CubeMaps.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/EnvironmentMap/4.8.EnvironmentMap.xcodeproj">
+      location = "group:EnvironmentMap/4.8.EnvironmentMap.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/GeometryHouses/4.9.GeometryHouses.xcodeproj">
+      location = "group:GeometryHouses/4.9.GeometryHouses.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/ExploadingMesh/4.10.ExploadingMesh.xcodeproj">
+      location = "group:ExploadingMesh/4.10.ExploadingMesh.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/GeometryNormals/4.11.GeometryNormals.xcodeproj">
+      location = "group:GeometryNormals/4.11.GeometryNormals.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/InstanceQuad/4.12.InstanceQuad.xcodeproj">
+      location = "group:InstanceQuad/4.12.InstanceQuad.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/Asteroids/4.13.Asteroids.xcodeproj">
+      location = "group:Asteroids/4.13.Asteroids.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/MSAA/4.14.MSAA.xcodeproj">
+      location = "group:MSAA/4.14.MSAA.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/BlinnPhong/5.1.BlinnPhong.xcodeproj">
+      location = "group:BlinnPhong/5.1.BlinnPhong.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/GammaCorrection/5.2.GammaCorrection.xcodeproj">
+      location = "group:GammaCorrection/5.2.GammaCorrection.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/ShadowMapping/5.3.ShadowMapping.xcodeproj">
+      location = "group:ShadowMapping/5.3.ShadowMapping.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/PointShadows/5.4.PointShadows.xcodeproj">
+      location = "group:PointShadows/5.4.PointShadows.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/NormalMapping/5.5.NormalMapping.xcodeproj">
+      location = "group:NormalMapping/5.5.NormalMapping.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/ParallaxMapping/5.6.ParallaxMapping.xcodeproj">
+      location = "group:ParallaxMapping/5.6.ParallaxMapping.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/hdr/5.7.hdr.xcodeproj">
+      location = "group:hdr/5.7.hdr.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/Bloom/5.8.Bloom.xcodeproj">
+      location = "group:Bloom/5.8.Bloom.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/DeferredShading/5.9.DeferredShading.xcodeproj">
+      location = "group:DeferredShading/5.9.DeferredShading.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/SSAO/5.10.SSAO.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/PBRLighting/6.1.PBRLighting.xcodeproj">
+      location = "group:PBRLighting/6.1.PBRLighting.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/PBRTextured/6.2.PBRTextured.xcodeproj">
+      location = "group:PBRTextured/6.2.PBRTextured.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/RadianceToCubemap/6.3.RadianceToCubemap.xcodeproj">
+      location = "group:RadianceToCubemap/6.3.RadianceToCubemap.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/RadianceHDR/6.4.RadianceHDR.xcodeproj">
+      location = "group:RadianceHDR/6.4.RadianceHDR.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/IBLDiffuse/6.5.IBLDiffuse.xcodeproj">
+      location = "group:IBLDiffuse/6.5.IBLDiffuse.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/IBLSpecular/6.6.IBLSpecular.xcodeproj">
+      location = "group:IBLSpecular/6.6.IBLSpecular.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/IBLTextured/6.7.IBLTextured.xcodeproj">
+      location = "group:IBLTextured/6.7.IBLTextured.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/Text/7.1.Text.xcodeproj">
+      location = "group:Text/7.1.Text.xcodeproj">
    </FileRef>
 </Workspace>
