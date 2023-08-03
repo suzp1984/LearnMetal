@@ -173,7 +173,7 @@
       location = "group:DeferredShading/5.9.DeferredShading.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/jacobsu/hack/macos-app/LearnMetal/SSAO/5.10.SSAO.xcodeproj">
+      location = "group:SSAO/5.10.SSAO.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:PBRLighting/6.1.PBRLighting.xcodeproj">
