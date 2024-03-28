@@ -389,7 +389,7 @@ quaternion_float AAPL_SIMD_OVERLOAD quaternion(vector_float3 v, float w) {
     return (quaternion_float){ v.x, v.y, v.z, w };
 }
 
-quaternion_float AAPL_SIMD_OVERLOAD quaternion_identity() {
+quaternion_float AAPL_SIMD_OVERLOAD quaternion_identity(void) {
     return quaternion((vector_float3){0, 0, 0}, 1);
 }
 

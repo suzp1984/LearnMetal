@@ -60,7 +60,7 @@ public struct MetalBuffer<Element>: Resource {
     }
     
     /// Replaces the buffer's memory with the values in the array.
-    public func assign<Element>(with array: [Element]) {
+    public func assign(with array: [Element]) {
         let byteCount = array.count * stride
         precondition(byteCount == buffer.length, "Mismatch between the byte count of the array's contents and the MTLBuffer length.")
         buffer.contents().copyMemory(from: array, byteCount: byteCount)
